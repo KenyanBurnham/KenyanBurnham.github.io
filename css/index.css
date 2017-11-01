@@ -13,7 +13,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: 212121;
+    color: #212121;
 }
 
 /* mouse over link */
@@ -23,7 +23,11 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: 343434;
+    color: #343434;
+}
+
+h3{
+    color: #212121;
 }
 
 .clear-default-style{
