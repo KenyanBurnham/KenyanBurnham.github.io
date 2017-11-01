@@ -21,13 +21,15 @@ a:visited {
 /* mouse over link */
 a:hover {
     text-decoration: none;
-    color: #708090;
+    color: black;
+    opacity: 60%;
 }
 
 /* selected link */
 a:active {
     text-decoration: none;
-    color: #343434;
+    color: black;
+    opacity: 60%;
 }
 
 h3{
