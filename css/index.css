@@ -21,7 +21,6 @@ body{
 
 .page-holder{
     background-color: white;
-    overflow: auto;
-    scroll-behavior: auto;
+    overflow: hidden;
     width: 75vw;
 }
