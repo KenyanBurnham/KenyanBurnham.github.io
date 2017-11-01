@@ -5,7 +5,7 @@ body{
     width: 100vh;
 }
 .common{
-    display: inline;
+    display: inline-block;
     float: left;
     height: 100vh;
     margin: 0px;
