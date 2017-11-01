@@ -61,7 +61,7 @@ h1, h2, h3{
 .nav-dom{
     font-size: 2.5vh;
     font-weight: bold;
-    padding: 0px 1vw 0px 1vw;
+    padding: 1vw 1vw 0px 1vw;
 }
 
 .nav-sub{
