@@ -46,6 +46,7 @@ h3{
     float: left;
     height: 100vh;
 }
+
 .nav{
     background-color: #FAFAFA;
     width: 25vw;
@@ -53,15 +54,15 @@ h3{
 
 .nav-dom{
     font-weight: bold;
+    padding: 1vw 0px;
 }
 
 .nav-link-section{
     overflow: auto;
-    padding-left: 1vw;
 }
 
 .nav-sub{
-    padding: 1vw;
+    padding: 2vw 0px;
 }
 
 .make-block-item{
