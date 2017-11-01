@@ -50,16 +50,13 @@ h3{
 
 .nav{
     background-color: #FAFAFA;
+    overflow: auto;
     width: 25vw;
 }
 
 .nav-dom{
     font-weight: bold;
     padding: 0px 1vw;
-}
-
-.nav-link-section{
-    overflow: auto;
 }
 
 .nav-sub{
