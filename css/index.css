@@ -49,6 +49,10 @@ h3{
     width: 25vw;
 }
 
+.nav-dom{
+    font-weight: bold;
+}
+
 .nav-header-section{
     padding-left: 1vw;
 }
