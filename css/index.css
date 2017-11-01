@@ -37,6 +37,10 @@ h1{
     color: #00858E;
 }
 
+table, th, td {
+    border: 1px solid #00858E;
+}
+
 .clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
