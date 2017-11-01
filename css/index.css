@@ -50,6 +50,14 @@ h3{
     width: 25vw;
 }
 
+.nav-header-section{
+    padding-left: 1vw;
+}
+
+.nav-link-section{
+    padding-left: 1vw;
+}
+
 .nav-sub{
     padding-left: 1vw;
 }
