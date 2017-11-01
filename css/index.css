@@ -21,6 +21,10 @@ body{
     width: 25vw;
 }
 
+.nav-sub{
+    padding-left: 1vw;
+}
+
 .make-block-item{
     display: block;
 }
