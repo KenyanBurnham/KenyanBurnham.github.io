@@ -55,7 +55,7 @@ h3{
 
 .nav-dom{
     font-weight: bold;
-    padding: 1vw 0px;
+    padding: 0px 1vw;
 }
 
 .nav-link-section{
@@ -63,7 +63,7 @@ h3{
 }
 
 .nav-sub{
-    padding: 2vw 0px;
+    padding: 0px 0px 2vw 1vw;
 }
 
 .make-block-item{
