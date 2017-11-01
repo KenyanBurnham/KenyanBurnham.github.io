@@ -4,16 +4,20 @@ body{
 }
 .nav{
     background-color: #F0F0F0;
-    display: block;
+    border: 1px black;
+    display: inline;
     float: left;
     height: 100vh;
+    margin: 0px;
     width: 25vw;
 }
 
 .page{
     background-color: white;
-    display: block;
+    border: 1px red;
+    display: inline;
     float: left;
     height: 100vh;
+    margin: 0px;
     width: 7vw;
 }
