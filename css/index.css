@@ -1,14 +1,17 @@
 body{
     height: 100vh;
-    margin: 0px;
-    padding: 0px;
     width: 100vh;
 }
+
+.clear{
+    margin: 0px;
+    padding: 0px;
+}
+
 .common{
     display: inline-block;
     float: left;
     height: 100vh;
-    margin: 0px;
 }
 .nav{
     background-color: #FAFAFA;
