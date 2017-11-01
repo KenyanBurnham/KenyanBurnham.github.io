@@ -3,7 +3,7 @@ body{
     width: 100vw;
 }
 
-.clear{
+.clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
 }
@@ -12,6 +12,7 @@ body{
     display: inline;
     float: left;
     height: 100vh;
+    margin: 2vh 2vw;
 }
 .nav{
     background-color: #FAFAFA;
