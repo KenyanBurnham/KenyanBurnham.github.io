@@ -6,6 +6,26 @@ body{
     width: 100vw;
 }
 
+/* unvisited link */
+a:link {
+    color: #212121;
+}
+
+/* visited link */
+a:visited {
+    color: 212121;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: 343434;
+}
+
 .clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
