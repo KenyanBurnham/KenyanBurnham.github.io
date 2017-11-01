@@ -19,6 +19,10 @@ body{
     width: 25vw;
 }
 
+.make-block-item{
+    display: block;
+}
+
 .page{
     width: 100%;
 }
