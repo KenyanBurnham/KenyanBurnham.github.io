@@ -10,7 +10,7 @@
 - The door labeled 206 to the South side of the lab is NOT an exit.
 - The __*Emergency Exit*__ to the DOSMA is located on the North side of the lab.
 
-###### PSPE Workspace 253-A
+###### PSPE Workspace 253
 
     < INSERT LAYOUT OF OFFICE >
 

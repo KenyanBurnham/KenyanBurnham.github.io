@@ -52,6 +52,10 @@ h1{
     color: red;
 }
 
+.emphasis{
+    color: color: #00858E;
+}
+
 .nav{
     background-color: #F5F5F5;
     overflow: auto;
