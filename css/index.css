@@ -22,8 +22,8 @@ a:visited {
 /* mouse over link */
 a:hover {
     text-decoration: none;
-    color: black;
-    opacity: 60%;
+    color: #00858E;
+    opacity: 85%;
 }
 
 /* selected link */
@@ -49,7 +49,7 @@ h3{
 }
 
 .nav{
-    background-color: #FAFAFA;
+    background-color: #E6E7E8;
     overflow: auto;
     width: 25vw;
 }
