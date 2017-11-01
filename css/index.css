@@ -55,11 +55,13 @@ h3{
 }
 
 .nav-dom{
+    font-size: 2.5vh;
     font-weight: bold;
     padding: 0px 1vw;
 }
 
 .nav-sub{
+    font-size: 2vh;
     padding: 0px 0px 2vw 1vw;
 }
 
