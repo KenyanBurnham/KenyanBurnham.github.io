@@ -10,13 +10,13 @@ body{
 /* unvisited link */
 a:link {
     text-decoration: none;
-    color: #212121;
+    color: white;
 }
 
 /* visited link */
 a:visited {
     text-decoration: none;
-    color: #212121;
+    color: white;
 }
 
 /* mouse over link */
@@ -29,7 +29,7 @@ a:hover {
 /* selected link */
 a:active {
     text-decoration: none;
-    color: black;
+    color: white;
     opacity: 60%;
 }
 
