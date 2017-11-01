@@ -33,7 +33,7 @@ a:active {
     opacity: 60%;
 }
 
-h3{
+h1{
     color: #212121;
 }
 
@@ -46,6 +46,10 @@ h3{
     display: inline;
     float: left;
     height: 100vh;
+}
+
+.edit-later{
+    color: red;
 }
 
 .nav{
