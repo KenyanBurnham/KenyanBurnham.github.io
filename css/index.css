@@ -96,3 +96,7 @@ table, th, td {
 .title{
     opacity: 60%;
 }
+
+.top-title{
+    font-size: 5vh;
+}
