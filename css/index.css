@@ -9,7 +9,7 @@ body{
 }
 
 .common{
-    display: block;
+    display: inline;
     float: left;
     height: 100vh;
 }
