@@ -12,12 +12,14 @@ body{
 }
 .nav{
     background-color: #FAFAFA;
-    border: 1px black;
     width: 25vw;
 }
 
 .page{
+    width: 100%;
+}
+
+.page-holder{
     background-color: white;
-    border: 1px red;
-    width: 7vw;
+    width: 75vw;
 }
