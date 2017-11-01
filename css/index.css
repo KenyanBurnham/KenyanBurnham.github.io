@@ -46,7 +46,6 @@ h3{
 }
 .nav{
     background-color: #FAFAFA;
-    overflow: auto;
     width: 25vw;
 }
 
@@ -55,6 +54,7 @@ h3{
 }
 
 .nav-link-section{
+    overflow: auto;
     padding-left: 1vw;
 }
 
