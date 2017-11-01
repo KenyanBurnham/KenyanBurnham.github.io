@@ -10,26 +10,26 @@ body{
 /* unvisited link */
 a:link {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /* visited link */
 a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /* mouse over link */
 a:hover {
     text-decoration: none;
-    color: #E6E7E8;
+    color: #00858E;
     opacity: 85%;
 }
 
 /* selected link */
 a:active {
     text-decoration: none;
-    color: white;
+    color: black;
     opacity: 60%;
 }
 
@@ -53,7 +53,7 @@ h1{
 }
 
 .nav{
-    background-color: #00858E;
+    background-color: #F5F5F5;
     overflow: auto;
     width: 25vw;
 }
