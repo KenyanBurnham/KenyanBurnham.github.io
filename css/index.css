@@ -1,5 +1,7 @@
 body{
     height: 100vh;
+    margin: 0px;
+    padding: 0px;
     width: 100vh;
 }
 .common{
@@ -9,7 +11,7 @@ body{
     margin: 0px;
 }
 .nav{
-    background-color: #F0FFFF;
+    background-color: #FAFAFA;
     border: 1px black;
     width: 25vw;
 }
