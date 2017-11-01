@@ -76,3 +76,7 @@ h3{
     overflow: auto;
     width: 74vw;
 }
+
+.title{
+    opacity: 60%;
+}
