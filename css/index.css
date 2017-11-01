@@ -29,6 +29,6 @@ body{
 
 .page-holder{
     background-color: white;
-    overflow: hidden;
+    overflow: auto;
     width: 74vw;
 }
