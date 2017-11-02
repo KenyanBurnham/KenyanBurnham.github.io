@@ -39,6 +39,7 @@ h1{
 
 table, th, td {
     border: 1px solid #00858E;
+    padding: .2vh .5vw .2vh .5vw;
 }
 
 .clear-default-style{
