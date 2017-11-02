@@ -68,6 +68,7 @@ table, th, td {
 }
 
 .nav-dom{
+    color: white;
     font-size: 2.5vh;
     font-weight: bold;
     padding: 1vw 1vw 0px 1vw;
