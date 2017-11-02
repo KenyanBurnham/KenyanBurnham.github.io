@@ -101,3 +101,7 @@ table, th, td {
 .top-title{
     font-size: 10vh;
 }
+
+.visible-link{
+    color: #FAFAFA;
+}
