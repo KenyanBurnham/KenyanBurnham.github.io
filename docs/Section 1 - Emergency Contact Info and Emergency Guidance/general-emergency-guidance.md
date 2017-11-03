@@ -7,5 +7,3 @@ __For the Department of Electrical and Computer Engineering the DOSMA's are:__
 - East of the building on the Engineering Key.
 - The far West end of the parking lot located near the Linda and Terry Fuller Track and Field Complex.
 - And South of the building on the open arcade.
-
-> INSERT PICTURE OF ECE WITH LANDMARKS

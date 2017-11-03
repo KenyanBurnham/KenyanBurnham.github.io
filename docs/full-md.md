@@ -94,7 +94,7 @@ Email: | kenyan.burnham@ttu.edu
 
 ###### PSPE Lab 252
 
-    < INSERT PICTURE OF LAB 252 >
+![PSPE Layout][https://github.com/KenyanBurnham/KenyanBurnham.github.io/tree/master/docs/Untitled.png]
 
 - Emergency medical kit located in the NorthWest wall.
 - Safety glasses and all relevant PPE are located along the West corner of the lab.
@@ -103,8 +103,6 @@ Email: | kenyan.burnham@ttu.edu
 - The __*Emergency Exit*__ to the DOSMA is located on the North side of the lab.
 
 ###### PSPE Workspace 253
-
-    < INSERT LAYOUT OF OFFICE >
 
 - The Emergency Exit to the DOSMA is located on the North side of the work space.
 
