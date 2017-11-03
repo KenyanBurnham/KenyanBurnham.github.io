@@ -63,7 +63,6 @@ table, th, td {
 }
 
 .nav{
-
     overflow: auto;
     width: 25vw;
 }
@@ -85,7 +84,7 @@ table, th, td {
 }
 
 .page{
-    padding-left: 1vw;
+    padding-left: 2.5vw;
     width: 100%;
 }
 
