@@ -94,7 +94,7 @@ Email: | kenyan.burnham@ttu.edu
 
 ###### PSPE Lab 252
 
-![PSPE Layout][https://github.com/KenyanBurnham/KenyanBurnham.github.io/tree/master/docs/Untitled.png]
+![PSPE Layout](../docs/Untitled.png)
 
 - Emergency medical kit located in the NorthWest wall.
 - Safety glasses and all relevant PPE are located along the West corner of the lab.
@@ -122,8 +122,6 @@ __For the Department of Electrical and Computer Engineering the DOSMA's are:__
 - East of the building on the Engineering Key.
 - The far West end of the parking lot located near the Linda and Terry Fuller Track and Field Complex.
 - And South of the building on the open arcade.
-
-> INSERT PICTURE OF ECE WITH LANDMARKS
 
 
 <div class="page-break"></div>
