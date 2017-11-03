@@ -33,7 +33,7 @@ a:active {
     opacity: 60%;
 }
 
-a, .nav-dom{
+a .nav-dom{
     color: blue;
 }
 
