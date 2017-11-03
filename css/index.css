@@ -10,11 +10,13 @@ body{
 /* unvisited link */
 a:link {
     text-decoration: none;
+    color: black;
 }
 
 /* visited link */
 a:visited {
     text-decoration: none;
+    color: black;
 }
 
 /* mouse over link */
@@ -27,6 +29,7 @@ a:hover {
 /* selected link */
 a:active {
     text-decoration: none;
+    color: black;
     opacity: 60%;
 }
 
