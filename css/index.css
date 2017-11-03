@@ -77,10 +77,6 @@ table, th, td {
     padding: 1vw 1vw 0px 1vw;
 }
 
-.nav-link-section{
-    box-shadow: 10px 10px 5px grey;
-}
-
 .nav-sub{
     font-size: 2vh;
     padding: 0px 2vw 0px 1vw;
