@@ -41,6 +41,12 @@ h1{
     color: #00858E;
 }
 
+hr{
+  color: #00858E;
+  height: 1px;
+  border: 0;
+}
+
 table, th, td {
     border: 1px solid #00858E;
     padding: .2vh .5vw .2vh .5vw;
