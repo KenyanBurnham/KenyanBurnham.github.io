@@ -57,6 +57,11 @@ table, th{
     padding: .1vh .1vw .1vw .1vw;
 }
 
+th{
+    background-color: #00858E;
+    color: white;
+}
+
 .clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
