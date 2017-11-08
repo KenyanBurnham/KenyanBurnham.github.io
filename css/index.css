@@ -19,7 +19,7 @@ a:visited{
 
 /* visited link */
 a:visited .nav-dom{
-    color: #18FFFF;
+    color: #0091EA;
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ a .nav-dom{
 }
 
 h1{
-    color: #18FFFF;
+    color: #0091EA;
 }
 
 hr{
@@ -53,12 +53,12 @@ hr{
 }
 
 table, th{
-    border: 1px solid #18FFFF;
+    border: 1px solid #0091EA;
     padding: .1vh .1vw .1vw .1vw;
 }
 
 th{
-    background-color: #18FFFF;
+    background-color: #0091EA;
     color: white;
 }
 
@@ -78,7 +78,7 @@ th{
 }
 
 .emphasis{
-    color: #18FFFF;
+    color: #0091EA;
     font-weight: bold;
 }
 
@@ -88,7 +88,7 @@ th{
 }
 
 .nav-dom{
-    color: #18FFFF;
+    color: #0091EA;
     font-size: 2.5vh;
     font-weight: bold;
     padding: 1vw 1vw .25vw 1vw;
