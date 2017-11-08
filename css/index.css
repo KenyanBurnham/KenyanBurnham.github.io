@@ -14,7 +14,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: inherit;
+    color: #00858E;
     text-decoration: none;
 }
 
@@ -83,12 +83,14 @@ th{
 }
 
 .nav-dom{
+    color: #00858E;
     font-size: 2.5vh;
     font-weight: bold;
     padding: 1vw 1vw 0px 1vw;
 }
 
 .nav-sub{
+    color: black;
     font-size: 2vh;
     padding: 0px 2vw 0px 1vw;
 }
