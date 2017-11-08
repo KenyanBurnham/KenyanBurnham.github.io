@@ -15,21 +15,16 @@ a:link {
 /* visited link */
 a:visited {
     text-decoration: none;
-    color: black;
 }
 
 /* mouse over link */
 a:hover {
     text-decoration: none;
-    color: #00858E;
-    opacity: 85%;
 }
 
 /* selected link */
 a:active {
     text-decoration: none;
-    color: black;
-    opacity: 60%;
 }
 
 a .nav-dom{
@@ -119,8 +114,4 @@ th{
 
 .top-title{
     font-size: 10vh;
-}
-
-.visible-link{
-    color: #FAFAFA;
 }
