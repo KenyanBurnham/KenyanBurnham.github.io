@@ -13,7 +13,12 @@ a:link {
 }
 
 /* visited link */
-a:visited {
+a:visited{
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited .nav-dom{
     color: #00858E;
     text-decoration: none;
 }
