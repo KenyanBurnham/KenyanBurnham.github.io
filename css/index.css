@@ -56,14 +56,13 @@ hr{
     width: 70vw;
 }
 
-table, th{
-    border: 1px solid #0091EA;
-    padding: .1vh .1vw .1vw .1vw;
-}
-
 th{
     background-color: #0091EA;
     color: white;
+}
+
+table, td{
+    border: 1px solid #E0EEEE;
 }
 
 .clear-default-style{
