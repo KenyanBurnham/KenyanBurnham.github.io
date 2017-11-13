@@ -109,13 +109,13 @@ table, td{
 
 .page{
     padding-left: 2.5vw;
+    padding-right: 2.5vw;
     width: 100%;
 }
 
 .page-holder{
     background-color: white;
     overflow: auto;
-    padding-right: 10vw;
     width: 74vw;
     z-index: -1;
 }
