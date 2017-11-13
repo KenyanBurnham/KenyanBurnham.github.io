@@ -5,11 +5,15 @@ body{
 
 .column{
   height: 85vh;
-  position: absolute;
   width: 50vw;
 }
 
+.common{
+  position: absolute;
+}
+
 .header{
+  display: block;
   font-size: 10vh;
   height: 15vh;
   margin: 0px 0px;
@@ -17,13 +21,6 @@ body{
   width: 100vw;
 }
 
-.left-column{
-
-}
-
-.right-column{
-
-}
 .test{
     border: 1px solid black;
 }
