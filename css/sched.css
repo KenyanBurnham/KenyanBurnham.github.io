@@ -14,6 +14,15 @@ h1{
   margin: 0px 0px;
 }
 
+th{
+    background-color: #0091EA;
+    color: white;
+}
+
+table, th{
+    border: 1px solid #0091EA;
+}
+
 .column{
   float: left;
   height: 84vh;
