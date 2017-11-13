@@ -54,8 +54,9 @@ table, td{
 }
 
 .sched-table{
-  vertical-align: middle;
+  background-color: #E0EEEE;
   height: 35vh;
+  vertical-align: middle;
   width: 40vw;
 }
 
