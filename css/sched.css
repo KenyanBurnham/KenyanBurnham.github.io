@@ -25,8 +25,8 @@ table, td{
 
 .column{
   float: left;
-  height: 84vh;
-  top: 15vh;
+  height: 80vh;
+  top: 10vh;
   width: 49.5vw;
 }
 
@@ -36,7 +36,7 @@ table, td{
 
 .header{
   display: block;
-  height: 15vh;
+  height: 10vh;
   left: 0px;
   margin: 0px 0px;
   padding: 0px 0px;
