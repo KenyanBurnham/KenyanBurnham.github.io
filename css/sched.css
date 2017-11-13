@@ -1,3 +1,8 @@
+body{
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
 .column{
   height: 85vh;
   position: absolute;
