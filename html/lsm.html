@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/lsm.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class = "clear-default-style nav common">
+            <section class="nav-link-section">
+                <a href="https://kenyanburnham.github.io" class="make-block-item nav-dom">Introduction</a>
+                    <a href="#overview" class="make-block-item nav-sub">Overview</a>
+                    <a href="#student" class="make-block-item nav-sub">To the Student</a>
+                    <a href="#contribute" class="make-block-item nav-sub">Contribute</a>
+                <a href="#section0-header" class="make-block-item nav-dom">Emergency Guidance</a>
+                    <a href="#s00" class="make-block-item nav-sub">Emergency Contact Information</a>
+                    <a href="#s01" class="make-block-item nav-sub">Emergency Response Equipment Location</a>
+                    <a href="#s02" class="make-block-item nav-sub">General Emergency Guidance</a>
+                    <a href="#s03" class="make-block-item nav-sub">Medical Emergency Guidance</a>
+                    <a href="#s04" class="make-block-item nav-sub">Fire Emergency Guidance</a>
+                    <a href="#s05" class="make-block-item nav-sub">Electrocution Emergency Guidance</a>
+                    <a href="#s06" class="make-block-item nav-sub">Active Shooter Emergency Guidance</a>
+                    <a href="#s07" class="make-block-item nav-sub">Tornado Emergency Guidance</a>
+                <a href="#section1-header" class="make-block-item nav-dom">General Information</a>
+                    <a href="#s10" class="make-block-item nav-sub">Guidance Statement</a>
+                    <a href="#s11" class="make-block-item nav-sub">Minimum Training Required</a>
+                    <a href="#s12" class="make-block-item nav-sub">Hazard Identification</a>
+                    <a href="#s13" class="make-block-item nav-sub">Location of Laboratory/Workspace Documents</a>
+                    <a href="#s14" class="make-block-item nav-sub">Minimum PPE required</a>
+                    <a href="#s15" class="make-block-item nav-sub">Responsible Personnel</a>
+                <a href="#section2-header" class="make-block-item nav-dom">Laboratory Operating Procedures</a>
+                    <a href="#s20" class="make-block-item nav-sub">General Safety Requirements</a>
+                    <a href="#s21" class="make-block-item nav-sub">Facility Safety Requirements</a>
+                    <a href="#s22" class="make-block-item nav-sub">Incident Reporting Procedure</a>
+                <a href="#section3-header" class="make-block-item nav-dom">Equipment Operating Procedures</a>
+                    <a href="#s30" class="make-block-item nav-sub">General Equipment Requirements</a>
+                    <a href="#s31" class="make-block-item nav-sub">Function Generator</a>
+                    <a href="#s32" class="make-block-item nav-sub">Oscilloscope</a>
+                    <a href="#s33" class="make-block-item nav-sub">Power Supply</a>
+                    <a href="#s34" class="make-block-item nav-sub">Soldering Station</a>
+                    <a href="#s35" class="make-block-item nav-sub">Hand Drill</a>
+                    <a href="#s36" class="make-block-item nav-sub">Source Meter</a>
+                    <a href="#s37" class="make-block-item nav-sub">DC Electronic Load</a>
+                    <a href="#s38" class="make-block-item nav-sub">NI Virtual Bench</a>
+                    <a href="#s39" class="make-block-item nav-sub">ETS</a>
+                    <a href="#s40" class="make-block-item nav-sub">STS</a>
+                <a href="#section4-header" class="make-block-item nav-dom">Important References</a>
+                    <a href="#s39" class="make-block-item nav-sub">Section 5</a>
+                    <a href="#s40" class="make-block-item nav-sub">Section 11</a>
+            </section>
+        </div>
+
+        <div id = "page-holder" class = "clear-default-style page-holder common">
+
+            <section class="intro-holder page">
+                <h1 id = "intro" class="title top-title">PSPE Lab Safety Manual</h1>
+                <h2 id = "overview">Welcome to the Lab Safety Manual for the Program for Semiconductor Product Engineers!</h2>
+                <p>This laboratory manual is curated by students of the the PSPE program in the Department of Electrical and Computer Engineering from the College of Engineering at Texas Tech University. Our mission is to provide a platform where students can actively participate in the betterment and growth of safety culture by allowing them give feedback in the form of a GIT repository hosted by GitHub Pages.</p>
+                <p>Changes made to the operation of the PSPE lab can be found <a href="../html/changes.html">here</a>.</p>
+                <h2 id="student">To the Student</h2>
+                <p>The following are hyperlinks to the general topics a testing student in the PSPE lab needs to know:</p>
+                <ol>
+                    <li><a href="#s11"  class="">What training do I need to complete?</a></li>
+                    <li><a href="#s14"  class="">What is acceptable to wear in the lab?</a></li>
+                    <li><a href="#s00"  class="">Who do I call if something bad happens?</a></li>
+                    <li><a href="#s20"  class="">What rules do I have to follow in the lab?</a></li>
+                </ol>
+                <h2 id="contribute">Contribute</h2>
+                <p>This laboratory safety manual is a living document and requires constant revision and feedback from students. The PSPE Lab Safety Program is a student maintained effort and any member who wishes to sustain and improve the program are encouraged to do so.</p>
+                <h3>How to contribute.</h3>
+                <p>The PSPE Lab Safety Manual forms the backbone of the safety program. The document uses GitHub to control changes and contributions from students. Students can make a pull request, make changes, and push changes to the repository. The Laboratory Safety Captain then decides whether to accept the changes and merge the changes to the master branch.</p>
+                <p>Students who wish to contribute should become familiar with:</p>
+                <ul>
+                    <li>The document itself.</li>
+                    <li>The reference material.</li>
+                    <li>GitHub and GIT version control.</li>
+                </ul>
+
+                <p>Here are a list of resources that can help you make a difference in the PSPE Safety program:</p>
+                <ul>
+                    <li><a href="http://www.dept.ehs.ttu.edu/ehs/ehshome/docs/UNIVERSITY%20LABORATORY%20SAFETY%20MANUAL_06082016.pdf">Texas Tech University Chemical Hygiene Plan</a></li>
+                    <li><a href="https://github.com/KenyanBurnham/KenyanBurnham.github.io">Lab Safety Manual Repository</a></li>
+                    <li><a href="https://guides.github.com/activities/hello-world/">GitHub Introductory Material</a></li>
+                </ul>
+                <hr>
+            </section>
+
+            <section class="section0-holder page">
+                <h1 id = "section0-header" class = "title">Emergency Guidance</h1>
+
+
+                <h2 id = "s00" class ="title">Emergency Contact Information</h2>
+                <h3>TTU Police (UPD)</h3>
+                <table>
+                    <tr>
+                        <td>Emergency</td>
+                        <td>9-911</td>
+                    </tr>
+                    <tr>
+                        <td>Non-Emergency</td>
+                        <td>742-3931</td>
+                    </tr>
+                </table>
+                <h3>TTU Environmental Health and Safety (EH&amp;S)</h3>
+                <table>
+                    <tr>
+                        <td>Daytime Emergencies (M-F, 8:00 AM – 5:00 PM)</td>
+                        <td> 742-2876 </td>
+                    </tr>
+                    <tr>
+                        <td>Non-Daytime Emergencies (24 hrs/day, 7 days/week)</td>
+                        <td>742-3328</td>
+                    </tr>
+                </table>
+                <h3>After Emergency Is Reported, Contact:</h3>
+                <table>
+                    <tr>
+                      <th>Responsible Principle Investigator</th>
+                      <th>Richard Gale</th>
+                    </tr>
+                    <tr>
+                        <td>Office Number:</td>
+                        <td>ECE 236</td>
+                    </tr>
+                    <tr>
+                        <td>Primary:</td>
+                        <td>(806) 535-9576</td>
+                    </tr>
+                    <tr>
+                        <td>Office Phone:</td>
+                        <td>(806) 834-0007</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>richard.gale@ttu.edu</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>Department Safety Officer</th>
+                        <th>Richard Woodcock</th>
+                    </tr>
+                    <tr>
+                        <td>Office Number:</td>
+                        <td>ECE 02</td>
+                    </tr>
+                    <tr>
+                        <td>Primary:</td>
+                        <td>(806) 834-3095</td>
+                    </tr>
+                    <tr>
+                        <td>Office Phone:</td>
+                        <td>(806) 470-9290</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>richard.woodcock@ttu.edu</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>Responsible Lab Safety Captain</th>
+                        <th>Kenyan Burnham</th>
+                    </tr>
+                    <tr>
+                        <td>Primary:</td>
+                        <td>(806) 319-2773</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>kenyan.burnham@ttu.edu</td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+
+                <h2 id = "s01" class="title">Emergency Response Equipment Location</h2>
+                    <h3>PSPE Lab 252</h3>
+                    <img src="../docs/Untitled.png" alt="PSPE Lab Layout">
+                    <ul>
+                        <li>If there is an emergency or threat, leave the laboratory immediately and call 911.</li>
+                        <li>Each Department has a DOSMA (Designated Outside Safe Meeting Area). This area is designed to remove individuals from any present danger from any emergency.</li>
+                    </ul>
+                    <h3>For the Department of Electrical and Computer Engineering the DOSMA's are:</h3>
+                    <ul>
+                        <li>East of the building on the Engineering Key.</li>
+                        <li>The far West end of the parking lot located near the Linda and Terry Fuller Track and Field Complex.</li>
+                        <li>And South of the building on the open arcade.</li>
+                    </ul>
+                <hr>
+
+                <h2 id = "s02" class="title">General Emergency Guidance</h2>
+                <ul>
+                    <li>If there is an emergency or threat, leave the laboratory immediately and call 911.</li>
+                    <li>Each Department has a DOSMA (Designated Outside Safe Meeting Area). This area is designed to remove individuals from any present danger from any emergency.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s03" class="title">Medical Emergency Guidance</h2>
+                <p>First aid treatment for the potential hazards of equipment in lab 252 that may cause bodily injury or chemical exposure should be known and employed in any medical emergency.</p>
+                <p class="emphasis"> Always call 911 when a medical emergency occurs.</p>
+                <table>
+                    <tr>
+                        <th>Situation</th>
+                        <th>Response</th>
+                    </tr>
+                    <tr>
+                        <td>Minor Injury</td>
+                        <td>
+                            <ul>
+                                <li>Seek to contain and seal the wound using wraps and bandages located in the medical kit.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vapor Exposure</td>
+                        <td>
+                            <ul>
+                                <li>Leave area and go outside for fresh air.</li>
+                                <li>Symptoms of any degree warrant calling 911.</li>
+                                <li>If unsure of a suitable response to a specific agent call <a href="#s00">EH&amp;S.</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exposure to Liquid Chemical Agent</td>
+                        <td>
+                            <ul>
+                                <li>Follow instructions laid out in MSDS (if available).</li>
+                                <li> Any present symptoms warrant calling 911.</li>
+                                <li>If unsure of a suitable response to a specific agent call <a href="#s00">EH&amp;S.</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Machine Injury</td>
+                        <td>
+                            <ul>
+                                <li class="emphasis">TURN OFF THE MACHINE in every instance.</li>
+                                <li> Reduce blood loss by immediately beginning to wrapping area in absorbent and containing material that may be found in the medical kit.</li>
+                                <li> If a member is separated do not try and reattach the severed member.</li>
+                                <li> Immediately seek medical emergency assistance.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+
+                <h2 id = "s04" class="title">Fire Emergency Guidance</h2>
+                <p class="emphasis">Even if one strongly suspects the alarm may be false, Texas Tech and the Fire Department of Lubbock assume every event is in fact real.</p>
+                <h3>If the building fire alarm sounds:</h3>
+                <ul>
+                    <li>Follow all emergency shut down procedures for your experiment.</li>
+                    <li>Exit the building through the nearest exit.</li>
+                </ul>
+                <h3>In the event that a fire is detected or suspected:</h3>
+                <ul>
+                    <li>All occupants of the building should evacuate immediately.</li>
+                    <li>If the alarm has not been sounded, the nearest fire alarm pull station should be activated.</li>
+                </ul>
+                <h3>In all cases immediately proceed to the Designated Outside Meeting Area (DOSMA).</h3>
+                <ul>
+                    <li>The DOSMA for lab 252 and the 253 workspace is to the West adjacent to the Linda and Terry Fuller Track and Field Complex located behind the Electrical and Computer Engineering building.</li>
+                </ul>
+                <h3>Situational Fire Responses:</h3>
+                <table>
+                  <tr>
+                      <th>Situation</th>
+                      <th>Response</th>
+                  </tr>
+                    <tr>
+                        <td>Caught in smoke</td>
+                        <td>
+                            <ul>
+                                <li>Drop to hands and knees and crawl towards nearest exit. </li>
+                                <li>Hold breath as much as possible; breathe through your nose and use shirt or cloth as a filter.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Trapped in a room.</td>
+                        <td>
+                            <ul>
+                                <li>Close as many doors as possible in between you and the fire. </li>
+                                <li>Wet and place cloth material around or under the door to help prevent smoke from entering the room.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Clothing on fire.</td>
+                        <td>
+                            <ul>
+                                <li>Direct or assist a person to roll around on the floor to smother the flames.</li>
+                                <li>Only drench with water if safety shower is nearby.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+
+                <h2 id = "s05" class="title">Electrocution Emergency Guidance</h2>
+                <p>The following steps are to be followed in the event of an electrocution emergency:</p>
+                <table>
+                    <tr>
+                      <th>Step</th>
+                      <th>Response</th>
+                    </tr>
+                    <tr>
+                        <td>Approach</td>
+                        <td>
+                            <ul>
+                                <li>Call emergency responders as soon as possible.</li>
+                                <li>If a coworker trained in electrical emergency protocols is nearby, marshal their assistance immediately.</li>
+                                <li>The approach to where a coworker has succumbed to electrical shock should be made cautiously to help ensure the current that incapacitated the victim does not harm you.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Examine</td>
+                        <td>
+                            <ul>
+                                <li>A quick look at the scene will reveal whether the victim remains in contact with the object inducing the electrical shock.</li>
+                                <li>Avoid nearby conductors and do not touch the victim until the electrical circuit that powers the area is de-energized.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>De-Energize</td>
+                        <td>
+                            <ul>
+                                <li>If the only source of power to the victim's locale is a power cord to portable equipment, simply disconnect it at the power source.</li>
+                                <li> However, using an emergency stop button is also recommended.</li>
+                                <li>For information regarding the safety switched located in 252/253 see the <a href="#s01">Emergency Response Equipment Location</a> procedure</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Insulate</td>
+                        <td>
+                            <ul>
+                                <li>In the event that de-energization is impossible, the victim will need to be removed from the electrical source using an insulated material to move the victim without endangering the emergency respondent.</li>
+                                <li class="emphasis"> DO NOT USE WOOD BROOM HANDLES to remove victims. They have a conductive finish and will only endanger emergency respondents.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rescue</td>
+                        <td>
+                            <ul>
+                                <li>Do not touch electrocuted victims unless actively standing on an insulated material with the power source disconnected.</li>
+                                <li>If there is a risk of neck injury or contingency do not remove the victim at all. Ensure the victim's airway is unobstructed, check pulse, and perform CPR if necessary.</li>
+                                <li> Use of an Automated Emergency Defibrillator (AED) is preferred. You should not hesitate to use the AED even if you believe doing so might make the neck injury worse.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+
+                <h2 id = "s06" class="title">Active Shooter Emergency Guidance</h2>
+                <p class="emphasis">If you witness an armed individual on campus at any time or if an individual is acting in a hostile or belligerent manner, immediately contact the Texas Tech Police at 9-911 on a university phone or 911 on mobile devices.</p>
+                <p>The following are guidelines for situations involving an active shooter:</p>
+                <table>
+                    <tr>
+                        <th>Situation</th>
+                        <th>Response</th>
+                    </tr>
+                    <tr>
+                        <td>Armed subject outside building.</td>
+                        <td>
+                            <ul>
+                                <li>Turn off the lights. Close and lock all doors and windows. </li>
+                                <li>If you can do so safely, move out of the line of fire. </li>
+                                <li>Move to a core area of the building if it is safe to do so and remain there until the "all clear" instruction is given by the Texas Tech Police Department or a university authority. </li>
+                                <li>If you doubt the authenticity or identity of the authority that is giving you instruction do not change your status.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Armed subject inside building.</td>
+                        <td>
+                            <ul>
+                                <li>If at all possible to flee the area safely and avoid danger, do so. </li>
+                                <li>Contact the TTU Police Department immediately at 743-2000 or 9-911 with you location, if possible.</li>
+                                <li>If flight is impossible, lock all doors and secure yourself in your space.</li>
+                                <li>Get down on the floor or under a desk and remain silent. </li>
+                                <li>Get out of the line of fire. </li>
+                                <li>Wait for the "all clear" signal from the TTU Police Department.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Armed subject in workspace.</td>
+                        <td>
+                            <ul>
+                                <li>There is no procedure authorities can recommend in this situation. Do anything necessary to protect yourself.</li>
+                                <li>Attempt to get the word out to others if possible, and call 743-2000 or 9-911 if practical and possible. </li>
+                                <li>Use common sense. If hiding or fleeing is impossible, attempt to negotiate with the individual.</li>
+                                <li>Attempting to overcome and armed subject with force is a last resort and should only be initiated in the most extreme of circumstances.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+
+                <h2 id = "s07" class="title">Tornado Emergency Guidance</h2>
+                <p>If a tornado warning is officially issued in Lubbock County the Backup Emergency Manager, <a href="#s00">Richard Woodcock</a>, will immediately advise building occupants to take shelter.</p>
+                <p class="emphasis">The preferred location for shelter is in the Electrical and Computer Engineering basement rooms 02 and 06.</p>
+                <p>The need to shelter in the event of a tornadic storm threatening TTU may be received from one or more of the following sources.</p>
+                <ul>
+                    <li>The TTU Alert Emergency Notification System</li>
+                    <li>NOAA Weather Station(The Specific Area Message Encoder, "SAME")</li>
+                </ul>
+                <hr>
+            </section>
+
+            <section class="section1-holder page">
+                <h1 id = "section1-header" class="title">General Information</h1>
+
+                <h2 id = "s10" class="title">Guidance Statement</h2>
+                <p>This laboratory safety manual supplements the University Chemical Hygiene Plan. It is designed to emphasize key elements of the University Chemical Hygiene Plan that are important to this laboratory and workspace, and to detail specific and additional safety requirements unique to the activities of this space.</p>
+                <ul>
+                    <li>This document was prepared by and is curated by the current Lab Safety Captain.</li>
+                    <li>It is the ultimate responsibility of the Principle Investigator to ensure the availability of the manual to all laboratory personnel and regulatory bodies.</li>
+                    <li>All laboratory and workplace personnel are responsible for following the regulations and recommendations of the University Chemical Hygiene Plan and Laboratory Safety Manual.</li>
+                </ul>
+                <p>In addition, the Laboratory Safety Manual will be a living document that all workplace and laboratory personnel are encouraged to update and modify in order to create a safe and productive workplace.</p>
+                <hr>
+
+                <h2 id = "s11" class="title">Minimum Training Required</h2>
+                <p>As stated by EH&amp;S and the TTU Chemical Hygiene Plan all students, faculty, and staff are REQUIRED to complete the online training on the EH&amp;S website:</p>
+                <a href="http://www.dept.ehs.ttu.edu/ehs/ehshome/training">EH&amp;S Website.</a>
+                <h3>Locations Covered by This Manual</h3>
+                <ul>
+                    <li>ECE Room 253</li>
+                    <li>ECE Laboratory 252</li>
+                </ul>
+                <h3>Required training:</h3>
+                <ul>
+                    <li>Laboratory Safety Training</li>
+                    <li>Hazard Communication Training</li>
+                    <li>Safety Awareness Training</li>
+                    <li>Electrical Safety Work Practices and Standards Training</li>
+                </ul>
+                <p>Completed certificates must be received and curated by the Laboratory Safety Captain in digital form.</p>
+                <p class="emphasis">Completed course certificates may be sent to: kenyan.burnham@ttu.edu</p>
+                <h3>Not completing the training necessary will lead to immediate removal from the facility.</h3>
+                <hr>
+
+                <h2 id = "s12" class="title">Identification of Potential Hazards</h2>
+                <p>The following are potential hazards with specific examples, locations of the possible hazard, resources for response and mitigation, and source references.</p>
+                <table>
+                    <tr>
+                        <th>Hazard</th>
+                        <th>Example</th>
+                        <th>Location</th>
+                        <th>Mitigation</th>
+                        <th>References</th>
+                    </tr>
+                    <tr>
+                        <td>High Voltage</td>
+                        <td>Greater than 50 Volts</td>
+                        <td>Throughout laboratory 252</td>
+                        <td>Procedures</td>
+                        <td>
+                            <ul>
+                                <li><a href="#section3-header"> Equipment Operating Procedures</a> </li>
+                                <li><a href="#section0-header"> Emergency Guidance</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Burns</td>
+                        <td>Greater than 600 degrees Fahrenheit</td>
+                        <td>Throughout laboratory 252</td>
+                        <td>Procedures and PPE</td>
+                        <td>
+                            <ul>
+                                <li><a href="#section3-header"> Equipment Operating Procedures</a></li>
+                                <li><a href="#section0-header"> Emergency Guidance</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Physical</td>
+                        <td>Hand Drills</td>
+                        <td>Throughout laboratory 252</td>
+                        <td>Procedures and PPE</td>
+                        <td>
+                            <ul>
+                                <li><a href="#section3-header"> Equipment Operating Procedures</a></li>
+                                <li><a href="#section0-header"> Emergency Guidance</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+
+                <h2 id = "s13" class="title">Location of Laboratory/Workspace Documents</h2>
+                <p>The following are all documents required by the Texas Tech University Chemical Hygiene Plan and where they may be found in Laboratory 252.</p>
+                <table>
+                    <tr>
+                        <th>Document</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>MSDS</td>
+                        <td>N/A No chemicals are used in this lab.</td>
+                    </tr>
+                    <tr>
+                        <td>Chemical Inventory</td>
+                        <td>N/A No chemicals are used in this lab.</td>
+                    </tr>
+                    <tr>
+                        <td>University Chemical Hygiene Plan</td>
+                        <td>Located in Safety Equipment cabinet</td>
+                    </tr>
+                    <tr>
+                        <td>Laboratory Safety Manual</td>
+                        <td>Located in Safety Equipment cabinet</td>
+                    </tr>
+                    <tr>
+                        <td>Training Records</td>
+                        <td>Digital copies stored on PSPE file server. Individual records given upon request.</td>
+                    </tr>
+                </table>
+                <hr>
+
+                <h2 id = "s14" class="title">Minimum PPE required</h2>
+                <p>The following is a list of minimum personal protective equipment requirements for lab personnel:</p>
+                <ul>
+                    <li>Long pants.</li>
+                    <li>Closed-toed shoes.</li>
+                    <li>Safety glasses while operating soldering stations.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s15" class="title">Responsible Personnel</h2>
+                <p>Current Responsible Parties are identified in Emergency Contact Info.</p>
+                <table>
+                    <tr>
+                      <th>Role</th>
+                      <th>Responsible Party</th>
+                      <th>Responsibilities</th>
+                    </tr>
+                    <tr>
+                        <td>User</td>
+                        <td>All Laboratory Personnel</td>
+                        <td>
+                            <ul>
+                                <li>Are responsible for ensuring their own personal safety. </li>
+                                <li>The safety of others around them.</li>
+                                <li>And for reading and understanding the Chemical Hygiene Plan and this Laboratory Safety Manual.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Principle Investigator or Workplace Supervisor </td>
+                        <td>Richard Gale</td>
+                        <td>
+                            <ul>
+                                <li>Ultimately responsible for all activities in the workspace and laboratory.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laboratory Safety Captain</td>
+                        <td>Kenyan Burnham</td>
+                        <td>
+                            <ul>
+                                <li>Acts as a liaison between the Department Safety Officer and the Principle Investigator or Workplace Supervisor. </li>
+                                <li>Is responsible for the ongoing improving of safety measures and enforcing of safety culture.</li>
+                                <li>Implements and updates laboratory safety policies and documentation.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Department Safety Officer </td>
+                        <td>Richard Woodcock</td>
+                        <td>
+                            <ul>
+                                <li>Is the liaison between the Laboratory Safety Captains and EH&amp;S.</li>
+                                <li>Provides guidance on safety-related issues and ensures compliance with the Chemical Hygiene Plan.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p>In addition, <a href="#s42">Section 5</a> of University Chemical Hygiene Plan Responsibilities and Roles of Individuals details the expectations and responsibilities of all parties.</p>
+                <hr>
+
+            </section>
+
+            <section class="section2-holder page">
+                <h1 id = "section2-header" class="title">Laboratory Operating Procedures</h1>
+
+                <h2 id = "s20" class="title">General Safety Requirements</h2>
+                <p>The following are general guidelines and expectations of laboratory and workplace personnel.</p>
+                <h3 class="emphasis">All Personnel</h3>
+                <ul>
+                    <li>Must have completed the proper training before they are permitted into the lab space.</li>
+                    <li>Will not allow access to non-permitted personnel.</li>
+                    <li>Will adhere to the guidelines specified or they will be subject to immediate removal from the space.</li>
+                    <li>Will wear appropriate personal protective equipment when any hazard is present.</li>
+                    <li>Safety glasses are required when using any soldering station or portable and stationary power tool.</li>
+                    <li>Will not bring consumables such as food, beverage, cosmetics, tobacco, or gum. Unless otherwise permitted by the Principal Investigator for research purposes only.</li>
+                    <li>Will keep the door to the laboratory shut at all times.</li>
+                    <li>Will not wear headphones when working with tools or equipment in the lab.</li>
+                    <li>When performing research or work in the lab after normal day-time operating hours will ensure a second individual is present or near in case of an emergency.</li>
+                    <li>Working individually is considered dangerous during night-time hours and it is the safety culture of the PSPE program to always have someone accountable for you in case of an emergency.</li>
+                    <li>Will ensure their behavior does not lead to the destruction or defacement of Texas Tech University property. Individuals suspected or apprehended will immediately be removed from the area.</li>
+                    <li>Will ensure no property of Texas tech University is removed from the laboratory without the written permission of the Laboratory Safety Captain or Principal Investigator.</li>
+                    <li>Will not bring foreign chemicals or flammables into the lab without the express permission of the Principal Investigator or Laboratory Safety captain.</li>
+                    <li>Will be responsible for maintaining the culture of good laboratory housekeeping on an ongoing basis.</li>
+                </ul>
+                <h3 class="emphasis">The Laboratory Safety captain, Principal Investigator, and Department Chemical Hygiene Officer</h3>
+                <ul>
+                    <li>Have explicit right to remove any individual.</li>
+                    <li>Can take photographic evidence of any action not in compliance to the safety guidelines.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s21" class="title">Facility Safety Requirements</h2>
+                <p>The following are the general guidelines any Texas Tech facility must follow:</p>
+                <ul>
+                    <li>Housekeeping will be maintained on an ongoing basis.</li>
+                    <li>Solvents or other chemicals that volatize must be worked with under a fume hood.</li>
+                    <li>All storage containers should be labeled with required information, segregating by their hazard class, stored in the appropriate manner, and removed by Waste Management</li>
+                    <li>Large or heavy items are to be stored as close to the ground level as possible to make them easier to move and prevent them from falling.</li>
+                    <li>Exits, Emergency eyewash and safety showers, aisles, and walkways must be completely unobstructed.</li>
+                    <li>Trip hazards must be removed or mitigated.</li>
+                    <li>Sharps in the laboratory need to be secured when not in use.</li>
+                    <li>Overhead storage must be at least 18" lower than the fire sprinkler head.</li>
+                    <li>When working with energetic or potentially energetic materials, a blast shield must be in place.</li>
+                    <li>The laboratory shall be designed so that it can be easily cleaned.</li>
+                    <li>Carpets and rugs shall not be placed in the laboratory.</li>
+                    <li>Laboratory furniture will be routinely cleaned.</li>
+                    <li>Bench tops will be impervious to water and resistant to heat, organic solvents, acids, alkalis, soldering equipment, and other chemicals.</li>
+                    <li>Chairs in the laboratory should be covered in non-porous material.</li>
+                    <li>Doors shall have a locking mechanism so that it can be secured when there are no laboratory personnel present.</li>
+                    <li>Physical and electrical hazard signs must be clearly posted on all the doors entering the laboratory so that any individual can see the sign prior to entering the laboratory space.</li>
+                    <li>The Texas Tech Chemical Hygiene plan dictates that laboratories must be furnished and or be located near sinks or portable sinks for hand washing.</li>
+                    <li>Signs should be posted for all safety concerns throughout the workspace, laboratory, and entrances.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s22" class="title">Incident Reporting Procedure</h2>
+                <p>The following are the guidelines for individuals when a Near Miss or Accident occurs.</p>
+                <h3>When a Near Miss or Accident Occurs</h3>
+                <ul>
+                    <li>An Incident Report Form found in the Texas Tech University Chemical Hygiene Plan must be filled out and submitted to the Principal Investigator.</li>
+                    <li>The Principal Investigator must turn in the Incident Report Form to the Department Chemical Hygiene Officer.</li>
+                </ul>
+                <hr>
+            </section>
+
+            <section class="section3-holder page">
+                <h1 id = "section3-header" class="title">Equipment Operating Procedures</h1>
+                <p>The following are the generalized standard operating procedures for working with the equipment in the laboratory.</p>
+
+                <h2 id = "s30" class="title">General Equipment Requirements</h2>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Power sources that are improvised or not factory standard should not be used.</li>
+                    <li>When working with voltages over 40V and current over 10A another person must be present.</li>
+                    <li>One should always know the ratings of the device under test and should make adjustments before applying voltage to a device.</li>
+                    <li>Exploding components (especially electrolytic capacitors) and arcing circuits can cause blindness and severe burns.</li>
+                    <li>Components that arc can cause fires and should be avoided.</li>
+                    <li>A emergency stop switch should be included in any power supplied circuit so that when opened, the switch will de-energize the entire setup. Place these switches so that you can reach them quickly in case of emergency, and without reaching across hot or high voltage components.</li>
+                    <li class="emphasis">Always turn off equipment when you exit the laboratory. </li>
+                    <li class="emphasis">Never leave any device unattended running.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s31" class="title">Function Generator</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Disconnect the power cord before removing the instrument covers when replacing components. Under certain conditions, even when if the power cable is removed, dangerous voltages may exist. To avoid injuries, always disconnect the power and discharge circuits before handling or adjusting.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s32" class="title">Oscilloscope</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Use only isolated power sources (either isolated power supplies or AC power through isolated power transformers). This reduces possible risk by grounding the oscilloscope to a factory tested and approved source.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s33" class="title">Power Supply</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Disconnect the power cord before removing the instrument covers when replacing components. Under certain conditions, even when if the power cable is removed, dangerous voltages may exist. To avoid injuries, always disconnect the power and discharge circuits before handling or adjusting.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the power supply is operating.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s34" class="title">Soldering Station</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">Burn Hazard</li>
+                    <li class="emphasis">Potential Lead Poisoning (PPE NEEDED: Safety Glasses)</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Turn the soldering iron off when not in use. Leaving a hot iron can prevent a risk to peers and can damage the tip if it has not been correctly tinned.</li>
+                    <li>Always solder in a ventilated area and avoid inhaling.</li>
+                    <li>Lead-based solder can pose a lead poisoning risk. Always remember to wash hands thoroughly when finished.</li>
+                    <li class="emphasis">Eye protection should always be worn when working with soldering stations.</li>
+                    <li>Always place iron or pencil in holder when not in use. Do not place a hot or cold pencil on any surface.</li>
+                    <li>Solder over the bench top to prevent hot solder from dropping on to the operator's legs.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s35" class="title">Hand Drill</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Speed Rotating Equipment (PPE Needed: Safety Glasses or Side Shields)</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Always know the properties of the material to be drilled. The density, thickness of sheet, and porousness of the material can effect the performance of the drill and the bit needed for the job.</li>
+                    <li>All work should be secured to the table when drilling. In general, if the drill is capable of spinning the material towards the operator it should be secured.</li>
+                    <li>When drilling on a bench be sure the drill bit will not drill into the table surface. This can be avoided by securing a scrap piece of material underneath the material to be drilled or by ensuring the drilled hole will be off the table.</li>
+                    <li>Make adjustments and change the drill bits only when the drill safety is on, or if it is a corded drill, with the cord unplugged.</li>
+                    <li>Battery powered drills have limited current, and limited torque. Corded drills have an almost unlimited current, and thus have more torque.</li>
+                    <li>When drilling with a corded drill; use caution and accelerate the drill slowly. It has the ability to injury your wrist if the flute of the drill becomes stuck.</li>
+                    <li>If a drill begins to twist your hand release the trigger and remove your hand to avoid injury.</li>
+                    <li>When drilling with a cordless drill be careful not to overheat the drill and be sure to place the battery on it's charger when finished.</li>
+                    <li>The proper way to hold and drill is with the trigger hand connected to the trigger and your other hand on the back base of the drill to guide and provide steady pressure to the surface of the material being drilled.</li>
+                    <li>Do not attempt to make a smaller hole larger by wallowing it out, this damages the flute of the bit and will likely cause wrist and hand injury when the material catches the flute and twists the drill from the operator's hands.</li>
+                    <li>When drilling deep holes withdraw the bit several times to clear the drilled area of debris inside the hole.</li>
+                    <li class="emphasis">When using any rotating apparatus; hair, loose-clothing, and jewelry should be removed before operating.</li>
+                    <li class="emphasis">As with any machine if you are unsure how to use it in a safe way ask for help.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s36" class="title">Source Meter</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Disconnect the power cord before removing the instrument covers when replacing components. Under certain conditions, even when if the power cable is removed, dangerous voltages may exist. To avoid injuries, always disconnect the power and discharge circuits before handling or adjusting.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the device is operating.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s37" class="title">DC Electronic Load</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Disconnect the power cord before removing the instrument covers when replacing components. Under certain conditions, even when if the power cable is removed, dangerous voltages may exist. To avoid injuries, always disconnect the power and discharge circuits before handling or adjusting.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the device is operating.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s38" class="title">NI Virtual Bench</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Know the operational procedures and guidelines from the documentation of the device.</li>
+                    <li>Do not operate this instrument in the presence of flammable gases or fumes. Operation of an electrical instrument in such an environment constitutes a definite safety risk.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the device is operating.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s39" class="title">ETS</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Know the operational procedures and guidelines from the documentation of the device.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the device is operating.</li>
+                </ul>
+                <hr>
+
+                <h2 id = "s40" class="title">STS</h2>
+                <p>This equipment has the following hazards:</p>
+                <ul>
+                    <li class="emphasis">High Voltages</li>
+                </ul>
+                <p>The following safety practices are required in addition to the general lab safety requirements.</p>
+                <ul>
+                    <li>Know the operational procedures and guidelines from the documentation of the device.</li>
+                    <li>Wear safety glasses when working with a circuit at high power or high voltage.</li>
+                    <li>Use rubber floor mats (if available) to insulate yourself from ground, when working in the lab.</li>
+                    <li>Do not exceed the limits of the device you are testing.</li>
+                    <li>Make sure connections to terminals are secured properly.</li>
+                    <li>Make sure the voltage adjustment knob is zeroed before operating.</li>
+                    <li>Never modify a connection when the device is operating.</li>
+                </ul>
+                <hr>
+
+            </section>
+
+            <section class="section4-holder page">
+                <h1 id = "section4-header" class="title">Important References</h1>
+
+                <p>The following are excerpts from the <a href="http://www.dept.ehs.ttu.edu/ehs/ehshome/docs/CHP-5.19.15.pdf">Texas Tech University Chemical Hygiene Plan</a>.</p>
+
+                <h2 id = "s39" class="title"><a class="" href="http://www.dept.ehs.ttu.edu/ehs/ehshome/docs/UNIVERSITY%20LABORATORY%20SAFETY%20MANUAL_06082016.pdf#page=22">Section 5</a></h2>
+                <h2 id = "s40" class="title"><a class="" href="http://www.dept.ehs.ttu.edu/ehs/ehshome/docs/UNIVERSITY%20LABORATORY%20SAFETY%20MANUAL_06082016.pdf#page=35">Section 11</a></h2>
+            </section>
+
+        </div>
+    </body>
+</html>
