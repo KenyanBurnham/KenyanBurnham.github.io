@@ -115,7 +115,7 @@ table, td{
 .page-holder{
     background-color: white;
     overflow: auto;
-    width: 74vw;
+    width: 60vw;
     z-index: -1;
 }
 
