@@ -113,11 +113,15 @@ table, td{
     width: 100%;
 }
 
+.content-holder{
+  overflow: auto;
+  width: calc(70vw + 26);
+}
+
 .page-holder{
     background-color: white;
-    overflow: scroll;
-    width: 74vw;
-    z-index: -1;
+    overflow: hidden;
+    width: 70vw;
 }
 
 .title{
