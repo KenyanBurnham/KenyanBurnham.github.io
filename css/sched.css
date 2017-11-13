@@ -6,7 +6,12 @@ body{
 }
 
 table{
+  border: 1px solid black;
   margin-left: 5vw;
+}
+
+h1{
+  margin: 0px 0px;
 }
 
 .column{
@@ -42,8 +47,4 @@ table{
   vertical-align: middle;
   height: 35vh;
   width: 40vw;
-}
-
-.test{
-    border: 1px solid black;
 }
