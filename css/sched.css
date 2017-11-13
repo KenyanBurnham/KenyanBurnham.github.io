@@ -5,6 +5,10 @@ body{
   padding: 0px 0px;
 }
 
+table .left-column{
+  left: 5vw;
+}
+
 .column{
   float: left;
   height: 84vh;
