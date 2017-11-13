@@ -25,11 +25,11 @@ body{
 }
 
 .left-column{
-  left: 0px;
+  left: 1px;
 }
 
 .right-column{
-  right: 100vw;
+  right: 99vw;
 }
 
 .test{
