@@ -1,5 +1,4 @@
 .column{
-  border: 1px solid black;
   height: 85vh;
   position: absolute;
   width: 50vw;
@@ -17,4 +16,7 @@
 
 .right-column{
 
+}
+.test{
+    border: 1px solid black;
 }
