@@ -49,6 +49,10 @@ table, td{
   left: 0px;
 }
 
+.reserved{
+  background-color: #4b1d3f;
+}
+
 .right-column{
   left: 49.5vw;
 }
