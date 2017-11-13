@@ -12,6 +12,8 @@ body{
 .header{
   font-size: 10vh;
   height: 15vh;
+  margin: 0px 0px;
+  padding: 0px 0px;
   width: 100vw;
 }
 
