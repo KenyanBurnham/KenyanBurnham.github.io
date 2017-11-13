@@ -5,9 +5,9 @@ body{
 
 .column{
   float: left;
-  height: 85vh;
+  height: 84vh;
   top: 15vh;
-  width: 50vw;
+  width: 49.5vw;
 }
 
 .common{
