@@ -116,7 +116,7 @@ table, td{
 .content-holder{
   height: 100vh;
   overflow: auto;
-  width: calc(70vw + 26);
+  width: calc(70vw + 26px);
 }
 
 .page-holder{
