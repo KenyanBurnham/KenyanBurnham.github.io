@@ -65,6 +65,10 @@ table, td{
     border: 1px solid #E0EEEE;
 }
 
+table, p{
+  max-width: 100px;
+}
+
 .clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
