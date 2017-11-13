@@ -33,6 +33,12 @@ body{
   left: 49.5vw;
 }
 
+.sched-table{
+  vertical-align: middle;
+  height: 35vh;
+  width: 30vw;
+}
+
 .test{
     border: 1px solid black;
 }
