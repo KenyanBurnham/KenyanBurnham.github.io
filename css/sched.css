@@ -57,3 +57,7 @@ table, td{
   height: 35vh;
   width: 40vw;
 }
+
+.time{
+  opacity: 60%;
+}
