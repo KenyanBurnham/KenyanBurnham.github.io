@@ -114,11 +114,13 @@ table, td{
 }
 
 .content-holder{
+  height: 100vh;
   overflow: auto;
   width: calc(70vw + 26);
 }
 
 .page-holder{
+    height: 100vh;
     background-color: white;
     overflow: hidden;
     width: 70vw;
