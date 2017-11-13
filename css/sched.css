@@ -36,6 +36,7 @@ table, td{
 
 .header{
   display: block;
+  font-size: 3vh;
   height: 10vh;
   left: 0px;
   margin: 0px 0px;
