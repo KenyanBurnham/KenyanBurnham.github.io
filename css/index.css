@@ -131,7 +131,8 @@ table, p, li{
 }
 
 .title{
-    opacity: 60%;
+    color: #0091EA;
+    opacity: .6;
 }
 
 .top-title{
