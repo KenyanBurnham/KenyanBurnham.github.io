@@ -133,6 +133,13 @@ table, p, li{
   width: calc(70vw + 26px);
 }
 
+.link-box{
+  background-color: #0091EA;
+   color: white;
+  margin-left: 2.5vw;
+  width: 20vw;
+}
+
 .page-holder{
     height: 100vh;
     background-color: white;
