@@ -133,29 +133,12 @@ table, p, li{
   width: calc(70vw + 26px);
 }
 
-.equipment-box{}
-
-.link-box{
-  background-color: #0091EA;
-  color: white;
-  position: absolute;
-  width: 20vw;
-}
-
-.new-student-box{
-  left: 5vw;
-}
-
 .page-holder{
     height: 100vh;
     background-color: white;
     overflow: hidden;
     width: 70vw;
 }
-
-.safety-box{}
-
-.schedule-box{}
 
 .test{
     border: 1px solid black;
