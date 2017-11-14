@@ -65,7 +65,7 @@ table, td{
     border: 1px solid #E0EEEE;
 }
 
-table, p{
+table, p, li{
   max-width: 67vw;
 }
 
