@@ -74,6 +74,11 @@ table, p, li{
   max-width: 67vw;
 }
 
+.bottom-container{
+  height: 45vh;
+  width: 100vw;
+}
+
 .clear-default-style{
     margin: 0px 0px;
     padding: 0px 0px;
@@ -135,9 +140,18 @@ table, p, li{
     width: 70vw;
 }
 
+.test{
+    border: 1px solid black;
+}
+
 .title{
     color: #0091EA;
     opacity: .85;
+}
+
+.top-container{
+  height: 55vh;
+  width: 100vw;
 }
 
 .top-title{
