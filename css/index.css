@@ -138,6 +138,7 @@ table, p, li{
 .link-box{
   background-color: #0091EA;
   color: white;
+  position: absolute;
   width: 20vw;
 }
 
