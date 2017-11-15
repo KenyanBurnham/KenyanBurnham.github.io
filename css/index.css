@@ -76,7 +76,7 @@ table, p, li{
 
 .bottom-container{
   background-color: #0091EA;
-  height: 45vh;
+  height: 55vh;
   width: 100vw;
 }
 
@@ -163,7 +163,7 @@ table, p, li{
 }
 
 .top-container{
-  height: 55vh;
+  height: 45vh;
   position: relative;
   text-align: center;
   width: 100vw;
