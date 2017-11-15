@@ -105,11 +105,11 @@ table, p, li{
     background-color: white;
     color: #0091EA;
     float: left;
-    height: 10vw;
+    height: 15vw;
     margin-left: 10vw;
     margin-top: 7vh;
     position: relative;
-    width: 10vw;
+    width: 15vw;
 }
 
 .nav{
