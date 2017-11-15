@@ -75,6 +75,7 @@ table, p, li{
 }
 
 .bottom-container{
+  background-color: #0091EA;
   height: 45vh;
   width: 100vw;
 }
@@ -97,6 +98,17 @@ table, p, li{
 .emphasis{
     color: #0091EA;
     font-weight: bold;
+}
+
+.link-box{
+    border: 1px solid black;
+    color: white;
+    float: left;
+    height: 20vw;
+    margin-left: 4vw;
+    margin-top: 7vh;
+    position: relative;
+    width: 20vw;
 }
 
 .nav{
