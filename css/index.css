@@ -151,6 +151,8 @@ table, p, li{
 
 .top-container{
   height: 55vh;
+  position: relative;
+  text-align: center;
   width: 100vw;
 }
 
