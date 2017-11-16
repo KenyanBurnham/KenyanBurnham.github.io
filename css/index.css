@@ -122,6 +122,10 @@ table, p, li{
     background-image: url("../docs/img/new-student.png");
 }
 
+.link-box-2{
+    background-image: url("../docs/img/safety-manual.png");
+}
+
 .nav{
     overflow: auto;
     width: 25vw;
