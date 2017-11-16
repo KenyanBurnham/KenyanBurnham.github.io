@@ -23,6 +23,10 @@ table, td{
     border: 1px solid #E0EEEE;
 }
 
+.color-header{
+    color: #0091EA;
+}
+
 .column{
   float: left;
   height: 80vh;
