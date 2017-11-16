@@ -116,6 +116,10 @@ table, p, li{
     width: 15vw;
 }
 
+.link-box-1{
+    background-image: url("../docs/img/new-student.png");
+}
+
 .nav{
     overflow: auto;
     width: 25vw;
