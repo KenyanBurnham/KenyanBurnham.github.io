@@ -105,10 +105,13 @@ table, p, li{
     font-weight: bold;
 }
 
+.link-box:hover{
+    box-shadow: 10px 10px 5px #555555;
+}
+
 .link-box{
     background-size: 15vw 15vw;
     background-repeat: no-repeat;
-    box-shadow: 10px 10px 5px #555555;
     color: #0091EA;
     float: left;
     height: 15vw;
