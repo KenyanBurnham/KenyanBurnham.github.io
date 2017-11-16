@@ -133,6 +133,10 @@ table, p, li{
     background-image: url("../docs/img/datasheets2.png");
 }
 
+.link-box-4{
+    background-image: url("../docs/img/schedule.png");
+}
+
 .nav{
     overflow: auto;
     width: 25vw;
