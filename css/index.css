@@ -129,6 +129,10 @@ table, p, li{
     background-image: url("../docs/img/safety-manual.png");
 }
 
+.link-box-3{
+    background-image: url("../docs/img/datasheets.png");
+}
+
 .nav{
     overflow: auto;
     width: 25vw;
