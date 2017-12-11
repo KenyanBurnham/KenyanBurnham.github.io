@@ -43,10 +43,10 @@ table, td{
   font-size: 3vh;
   height: 10vh;
   left: 0px;
-  margin: 0px 0px;
+  margin: 0px 24vw;
   padding: 2vh 0px;
   top: 0px;
-  width: 100vw;
+  width: 50vw;
 }
 
 .left-column{
