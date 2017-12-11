@@ -105,7 +105,7 @@ table, p, li{
     font-weight: bold;
 }
 
-.link-box:hover{
+.link-button:hover{
     box-shadow: 5px 5px 3px #555555;
 }
 
@@ -129,7 +129,6 @@ table, p, li{
   color: white;
   float: left;
   height: 9vw;
-  margin-left: 8vw;
   margin-top: 2vh;
   position: relative;
   width: 15vw;
