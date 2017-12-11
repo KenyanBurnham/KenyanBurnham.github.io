@@ -127,6 +127,9 @@ table, p, li{
 
 .link-button{
   background-color: white;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   color: #0091EA;
   font-size: 3vh;
   height: 3vw;
