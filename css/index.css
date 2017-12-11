@@ -175,6 +175,10 @@ table, p, li{
     width: 70vw;
 }
 
+.page-holder-changes{
+    margin-left: 15vw;
+}
+
 .test{
     border: 1px solid black;
 }
