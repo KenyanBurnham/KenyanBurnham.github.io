@@ -121,22 +121,6 @@ table, p, li{
     width: 15vw;
 }
 
-.link-box-1{
-    background-image: url("../docs/img/new-student.png");
-}
-
-.link-box-2{
-    background-image: url("../docs/img/safety-manual.png");
-}
-
-.link-box-3{
-    background-image: url("../docs/img/datasheets2.png");
-}
-
-.link-box-4{
-    background-image: url("../docs/img/schedule.png");
-}
-
 .nav{
     overflow: auto;
     width: 25vw;
