@@ -52,6 +52,10 @@ table, td{
 .left-column{
   left: 0px;
 }
+.reservation-link{
+  float: left;
+  margin-right: 5vw;
+}
 
 .reserved{
   background-color: #1ccad8;
