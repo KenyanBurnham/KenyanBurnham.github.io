@@ -54,7 +54,7 @@ table, td{
 }
 .reservation-link{
   float: left;
-  margin-right: 5vw;
+  margin-left: 5vw;
 }
 
 .reserved{
