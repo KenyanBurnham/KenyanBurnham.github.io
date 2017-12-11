@@ -109,10 +109,17 @@ table, p, li{
     box-shadow: 5px 5px 3px #555555;
 }
 
+.link-box-top{
+    margin-top: 7vh;
+}
+
+.link-box-bottom{
+    margin-top: 4vh;
+}
+
 .link-box{
     float: left;
     margin-left: 8vw;
-    margin-top: 7vh;
     padding-top: 1vh;
     position: relative;
     width: 15vw;
