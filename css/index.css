@@ -110,11 +110,10 @@ table, p, li{
 }
 
 .link-box{
-    background-size: 15vw 15vw;
-    background-repeat: no-repeat;
+    background-color: white;
     color: #0091EA;
     float: left;
-    height: 15vw;
+    height: 5vw;
     margin-left: 8vw;
     margin-top: 7vh;
     position: relative;
