@@ -120,6 +120,16 @@ table, p, li{
     width: 15vw;
 }
 
+.link-descriptions{
+  color: white;
+  float: left;
+  height: 9vw;
+  margin-left: 8vw;
+  margin-top: 2vh;
+  position: relative;
+  width: 15vw;
+}
+
 .nav{
     overflow: auto;
     width: 25vw;
