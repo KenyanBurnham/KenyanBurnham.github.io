@@ -110,16 +110,19 @@ table, p, li{
 }
 
 .link-box{
-    background-color: white;
-    color: #0091EA;
-    font-size: 3vh;
     float: left;
-    height: 3vw;
     margin-left: 8vw;
     margin-top: 7vh;
     padding-top: 1vh;
     position: relative;
     width: 15vw;
+}
+
+.link-button{
+  background-color: white;
+  color: #0091EA;
+  font-size: 3vh;
+  height: 3vw;
 }
 
 .link-descriptions{
