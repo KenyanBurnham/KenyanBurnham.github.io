@@ -134,7 +134,7 @@ table, p, li{
   font-size: 3vh;
   height: 3vw;
   padding: 1vh 1vh;
-  width: 14vw;
+  width: 100%;
 }
 
 .link-descriptions{
