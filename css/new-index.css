@@ -1,22 +1,25 @@
-.inner-section{
-    background-color: white;
-    width: 50vw;
-}
-
-.inner-section-top{
-    font-size: 4vh;
-    margin-top: 20vh;
-    opacity: 0.86;
-    text-align: center;
-}
-
-.outer-section{
+.background-blue{
     background-color: #0091EA;
-    width: 25vw;
 }
 
-.sections{
-    float: left;
-    height: 100vh;
-    position: relative;
+.background-white{
+    background-color: white;
+}
+
+.main-bottom-section{
+    height: 60vh;
+}
+
+.main-middle-section {
+  height: 35vh;
+}
+
+.main-section{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: 100vw;
+}
+
+.main-top-section{
+    height: 5vh;
 }
