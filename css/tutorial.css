@@ -7,6 +7,17 @@ body{
     width: 100vw;
 }
 
+/* unvisited link */
+a:link {
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited{
+    text-decoration: none;
+}
+
+
 .left-icon{
 
     background-color: white;
