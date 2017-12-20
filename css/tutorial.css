@@ -8,6 +8,7 @@ body{
 }
 
 .left-icon{
+
     background-color: white;
     border-radius: 100%;
     color: #0091EA;
@@ -15,6 +16,7 @@ body{
     height: 10vh;
     margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
     padding: 2vh 2vh;
+    text-align: center;
     width: 10vh;
 }
 
