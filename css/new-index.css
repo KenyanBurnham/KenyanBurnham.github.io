@@ -8,6 +8,8 @@
     width: 25vw;
 }
 
-.section-height{
+.sections{
+    float: left;
     height: 100vh;
+    position: relative;
 }
