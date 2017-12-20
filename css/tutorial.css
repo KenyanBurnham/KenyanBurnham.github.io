@@ -10,6 +10,8 @@ body{
 .left-icon{
     background-color: white;
     border-radius: 100%;
+    color: #0091EA;
+    font-size: 2vh;
     height: 5vh;
     width: 5vh;
 }
