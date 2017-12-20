@@ -62,6 +62,7 @@ a:visited{
 .tutorial-right-header{
     font-size: 5vh;
     margin-top: 20vh;
+    opacity: 0.86;
 }
 
 .tutorial-right-margin-left{
