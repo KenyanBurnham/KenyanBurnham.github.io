@@ -1,24 +1,6 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    margin: 0px 0px;
-    overflow: hidden;
-    padding: 0px 0px;
-    width: 100vw;
-}
 
 a{
     color: #0091EA;
-}
-
-/* unvisited link */
-a:link {
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited{
-    text-decoration: none;
 }
 
 .left-icon{
