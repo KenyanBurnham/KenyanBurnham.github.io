@@ -25,10 +25,10 @@ a:visited{
     background-color: white;
     background-image: url("../docs/img/pspe-logo.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 80%;
     border-radius: 100%;
-    height: 10vh;
-    margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
+    height: 15vh;
+    margin: 20vh calc(calc(25vw - 15vh)/2) 0px;
     text-align: center;
     width: 10vh;
 }
