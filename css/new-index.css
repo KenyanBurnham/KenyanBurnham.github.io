@@ -1,0 +1,13 @@
+.inner-section{
+    background-color: white;
+    width: 50vw;
+}
+
+.outer-section{
+    background-color: #0091EA;
+    width: 25vw;
+}
+
+.section-height{
+    height: 100vh;
+}
