@@ -3,6 +3,10 @@ a{
     color: #0091EA;
 }
 
+.back-button{
+    margin-right: 10vw;
+}
+
 .left-icon{
     background-color: white;
     background-image: url("../docs/img/pspe-logo.png");
