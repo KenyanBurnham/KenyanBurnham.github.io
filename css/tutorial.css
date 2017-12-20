@@ -13,7 +13,7 @@ body{
     color: #0091EA;
     font-size: 4vh;
     height: 10vh;
-    margin: 10vh calc(calc(25vw - 10vh)/2) 0px;
+    margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
     padding: 1vh 1vh;
     width: 10vh;
 }
@@ -36,9 +36,9 @@ body{
 }
 
 .tutorial-right-header{
-
+    margin-top: 20vh;
 }
 
-.tutorial-right-margin{
+.tutorial-right-margin-left{
     margin-left: 7vw;
 }
