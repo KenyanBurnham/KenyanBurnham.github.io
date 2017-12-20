@@ -23,13 +23,12 @@ a:visited{
 
 .left-icon{
 
-    background-color: white;
+    background-image: url("../docs/img/pspe-logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     border-radius: 100%;
-    color: #0091EA;
-    font-size: 7vh;
     height: 10vh;
     margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
-    padding: 2.5vh 2vh 2.25vh;
     text-align: center;
     width: 10vh;
 }
