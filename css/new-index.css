@@ -3,6 +3,13 @@
     width: 50vw;
 }
 
+.inner-section-top{
+    font-size: 5vh;
+    margin-top: 20vh;
+    opacity: 0.86;
+    text-align: center;
+}
+
 .outer-section{
     background-color: #0091EA;
     width: 25vw;
