@@ -20,6 +20,13 @@ body{
     width: 10vh;
 }
 
+.next-button{
+    background-color: #0091EA;
+    color: white;
+    height: 2vw;
+    width: 5vw;
+}
+
 .tutorial-class-left{
     background-color: #0091EA;
     width: 25vw;
