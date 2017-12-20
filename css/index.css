@@ -137,10 +137,10 @@ table, p, li{
 .link-descriptions{
   color: white;
   float: center;
-  height: 9vw;
+  height: 12vw;
   margin-top: 2vh;
   position: relative;
-  width: 15vw;
+  width: 20vw;
 }
 
 .nav{
