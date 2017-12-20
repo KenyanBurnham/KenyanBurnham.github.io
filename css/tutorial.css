@@ -22,7 +22,7 @@ a:visited{
 }
 
 .left-icon{
-
+    background-color: white;
     background-image: url("../docs/img/pspe-logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
