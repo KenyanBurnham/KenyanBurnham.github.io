@@ -21,10 +21,7 @@ body{
 }
 
 .next-button{
-    background-color: #0091EA;
-    color: white;
-    height: 2vw;
-    width: 5vw;
+    color: #0091EA;
 }
 
 .tutorial-class-left{
