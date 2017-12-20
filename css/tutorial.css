@@ -7,6 +7,13 @@ body{
     width: 100vw;
 }
 
+.left-icon{
+    background-color: white;
+    border-radius: 1vw;
+    height: 5vh;
+    width: 5vh;
+}
+
 .tutorial-class-left{
     background-color: #0091EA;
     width: 25vw;
@@ -25,5 +32,5 @@ body{
 }
 
 .tutorial-right-header{
-    position:
+
 }
