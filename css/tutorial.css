@@ -30,7 +30,7 @@ a:visited{
     height: 15vh;
     margin: 20vh calc(calc(25vw - 15vh)/2) 0px;
     text-align: center;
-    width: 10vh;
+    width: 15vh;
 }
 
 .next-button{
