@@ -14,7 +14,7 @@ body{
     font-size: 7vh;
     height: 10vh;
     margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
-    padding: 2vh 3vh;
+    padding: 2vh 2vh;
     width: 10vh;
 }
 
@@ -36,7 +36,7 @@ body{
 }
 
 .tutorial-right-header{
-    font-size: 10vh;
+    font-size: 7vh;
     margin-top: 20vh;
 }
 
@@ -45,5 +45,5 @@ body{
 }
 
 .tutorial-right-ul{
-    font-size: 5vh;
+    font-size: 3vh;
 }
