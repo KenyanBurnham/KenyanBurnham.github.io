@@ -129,18 +129,18 @@ table, p, li{
   background-color: white;
   color: #0091EA;
   font-size: 3vh;
-  height: 3vw;
+  height: 5vw;
   padding: 1vh 1vh;
-  width: 100%;
+  width: 14vw;
 }
 
 .link-descriptions{
   color: white;
   float: center;
-  height: 12vw;
+  height: 9vw;
   margin-top: 2vh;
   position: relative;
-  width: 20vw;
+  width: 15vw;
 }
 
 .nav{
