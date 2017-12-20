@@ -1,6 +1,7 @@
 
 
 .tutorial-class-left{
+    background-color: #0091EA;
     width: 25vw;
 }
 
@@ -14,4 +15,8 @@
     margin: 0px 0px;
     padding: 0px 0px;
     position: relative;
+}
+
+.tutorial-right-header{
+    position:
 }
