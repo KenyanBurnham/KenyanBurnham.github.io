@@ -11,10 +11,10 @@ body{
     background-color: white;
     border-radius: 100%;
     color: #0091EA;
-    font-size: 4vh;
+    font-size: 7vh;
     height: 10vh;
     margin: 20vh calc(calc(25vw - 10vh)/2) 0px;
-    padding: 1vh 1vh;
+    padding: 2vh 2vh;
     width: 10vh;
 }
 
