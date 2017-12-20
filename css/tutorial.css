@@ -13,7 +13,7 @@ body{
     color: #0091EA;
     font-size: 4vh;
     height: 10vh;
-    margin: 10vh calc(calc(25vw - 10vh)/2) 0px; 
+    margin: 10vh calc(calc(25vw - 10vh)/2) 0px;
     width: 10vh;
 }
 
@@ -36,4 +36,8 @@ body{
 
 .tutorial-right-header{
 
+}
+
+.tutorial-right-margin{
+    margin-left: 7vw;
 }
