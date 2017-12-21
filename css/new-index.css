@@ -34,6 +34,7 @@
 .main-bottom-section{
     height: 55vh;
     margin: 0px 0px;
+    overflow: scroll;
     padding: 0px 0px;
 }
 
