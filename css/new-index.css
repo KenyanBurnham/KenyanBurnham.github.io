@@ -6,12 +6,23 @@
     background-color: white;
 }
 
+.bottom-sections{
+    float: left;
+    width: 50vw;
+}
+
+.bottom-section-height{
+    height: calc(55vh / 2);
+}
+
 .main-bottom-section{
     height: 55vh;
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 .main-middle-section {
-  height: 38vh;
+  height: 40vh;
   text-align: center;
 }
 
@@ -22,5 +33,5 @@
 }
 
 .main-top-section{
-    height: 7vh;
+    height: 5vh;
 }
