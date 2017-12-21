@@ -13,6 +13,7 @@
 
 .bottom-section-height{
     height: calc(40vh / 2);
+    padding: 2vh 5vw 0vh;
 }
 
 .bottom-section-button{
