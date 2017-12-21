@@ -7,19 +7,6 @@ a{
     margin-right: 3vw;
 }
 
-.left-icon{
-    background-color: white;
-    background-image: url("../docs/img/pspe-logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    border-radius: 100%;
-    height: 15vh;
-    margin: 20vh calc(calc(25vw - 15vh)/2) 0px;
-    text-align: center;
-    width: 15vh;
-}
-
 .next-button-container{
     margin-top: 5vh;
 }
