@@ -3,6 +3,10 @@ a{
     color: #0091EA;
 }
 
+a .white-link{
+    color: white;
+}
+
 .back-button{
     margin-right: 3vw;
 }
