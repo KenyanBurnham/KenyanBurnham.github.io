@@ -3,7 +3,7 @@ a{
     color: #0091EA;
 }
 
-a .white-link{
+.white-link{
     color: white;
     display: block;
 }
