@@ -27,14 +27,14 @@
 }
 
 .main-bottom-section{
-    height: 55vh;
+    height: 70vh;
     margin: 0px 0px;
     overflow: scroll;
     padding: 0px 0px;
 }
 
 .main-middle-section {
-  height: 40vh;
+  height: 25vh;
   text-align: center;
 }
 
