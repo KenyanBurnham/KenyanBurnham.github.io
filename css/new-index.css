@@ -42,10 +42,14 @@
 }
 
 .middle-button{
+    background-color: #0091EA;
     border-radius: 1vw;
     border: 2px solid white;
     color: white;
-    background-color: #0091EA;
+    font-size: 2vh;
+    height: 4vh;
+    padding: 1vh 1vh 1vh;
+    width: 7vw;
 }
 
 .middle-section-button{
