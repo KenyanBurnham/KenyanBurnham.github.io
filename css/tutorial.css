@@ -5,6 +5,7 @@ a{
 
 a .white-link{
     color: white;
+    display: block;
 }
 
 .back-button{
