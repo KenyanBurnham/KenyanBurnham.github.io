@@ -15,10 +15,12 @@
     height: calc(55vh / 2);
 }
 
-.bottom-section-left{
+.bottom-section-button{
+    border: 5px solid red;
 }
 
-.bottom-section-right{
+.bottom-section-text{
+    border: 5px solid red;
 }
 
 
@@ -49,12 +51,10 @@
 }
 
 .middle-section-button{
-  border: 5px solid red;
     width: 100vw;
 }
 
 .middle-section-text{
-  border: 5px solid red;
     color: white;
     font-size: 3vh;
     text-align: center;
