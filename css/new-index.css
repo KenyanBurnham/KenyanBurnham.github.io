@@ -33,7 +33,6 @@
 
 .main-section{
     margin: 0px 0px;
-    padding: 0px 0px;
     width: 100vw;
 }
 
@@ -44,7 +43,7 @@
 .middle-section-text{
     color: white;
     font-size: 3vh;
-    margin-top: 2vh;
     text-align: center;
+    padding: 3vh 3vw;
     width: 100vw;
 }
