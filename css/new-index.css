@@ -15,6 +15,11 @@
     height: calc(55vh / 2);
 }
 
+.left-header-text{
+    float: left;
+    font-size: 2vh;
+}
+
 .main-bottom-section{
     height: 55vh;
     margin: 0px 0px;
