@@ -41,6 +41,17 @@
     height: 5vh;
 }
 
+.middle-button{
+    border-radius: 1vw;
+    border: 2px solid white;
+    color: white;
+    background-color: #0091EA;
+}
+
+.middle-section-button{
+    width: 100vw;
+}
+
 .middle-section-text{
     color: white;
     font-size: 3vh;
