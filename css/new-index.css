@@ -13,6 +13,7 @@
 
 .bottom-section-height{
     height: calc(55vh / 2);
+    padding: 2vh 10vw 2vh;
 }
 
 .left-header-text{
