@@ -9,7 +9,7 @@
 }
 
 .button-shadowing:hover {
-    box-shadow: 1px 4px 18px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 8px 8px 1px rgba(0, 0, 0, 0.2);
 }
 
 .white-button{
