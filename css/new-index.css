@@ -15,10 +15,6 @@
     height: calc(55vh / 2);
 }
 
-.button-shadowing:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .left-header-text{
     float: left;
     font-size: 3vh;
@@ -43,16 +39,6 @@
 
 .main-top-section{
     height: 5vh;
-}
-
-.middle-button{
-    background-color: #0091EA;
-    border: 2px solid white;
-    color: white;
-    font-size: 2vh;
-    height: 4vh;
-    padding: 1vh 1vh 1vh;
-    width: 7vw;
 }
 
 .middle-section-button{
