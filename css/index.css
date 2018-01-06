@@ -165,11 +165,6 @@ table, p, li{
     display: block;
 }
 
-.normalize-text{
-    color: black;
-    opacity: .85;
-}
-
 .page{
     padding-left: 2.5vw;
     padding-right: 2.5vw;
@@ -211,4 +206,9 @@ table, p, li{
 
 .top-title{
     font-size: 7vh;
+}
+
+.normalize-text{
+    color: black;
+    opacity: .85;
 }
