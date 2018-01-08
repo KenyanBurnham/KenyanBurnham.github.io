@@ -216,6 +216,7 @@ table, p, li{
 .normalize-text{
     color: black;
     opacity: .85;
+    margin-top: 5vh;
 }
 
 .pxi-yes{
