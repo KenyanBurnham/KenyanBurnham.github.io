@@ -197,6 +197,10 @@ table, p, li{
     opacity: .85;
 }
 
+.title-margin{
+    margin-top: 3vh;
+}
+
 .top-container{
   height: 45vh;
   position: relative;
