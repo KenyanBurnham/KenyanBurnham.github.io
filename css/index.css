@@ -212,3 +212,7 @@ table, p, li{
     color: black;
     opacity: .85;
 }
+
+.pxi-yes{
+    background-color: #0091EA;
+}
