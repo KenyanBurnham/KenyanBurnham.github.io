@@ -53,7 +53,8 @@
 
 .middle-section-text{
     color: white;
-    font-size: 1.5vh;
+    font-size: 2vh;
+    margin: 3vh auto;
     text-align: center;
     padding: 3vh 0vw 0vh;
     width: 60vw;
