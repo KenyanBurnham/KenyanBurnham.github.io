@@ -59,6 +59,11 @@ table, td{
   width: 40vw;
 }
 
+.table-sections{
+    margin-top: 15vh;
+    text-align: center;
+}
+
 .time{
   opacity: .6;
 }
