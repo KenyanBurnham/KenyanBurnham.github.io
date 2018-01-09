@@ -23,6 +23,10 @@ table, td{
     border: 1px solid #E0EEEE;
 }
 
+.center-table{
+     margin: 0px auto;
+}
+
 .color-header{
     color: #0091EA;
 }
