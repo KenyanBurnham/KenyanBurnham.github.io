@@ -27,13 +27,6 @@ table, td{
     color: #0091EA;
 }
 
-.column{
-  float: left;
-  height: 80vh;
-  top: 10vh;
-  width: 49.5vw;
-}
-
 .common{
   position: absolute;
 }
@@ -49,9 +42,6 @@ table, td{
   width: 50vw;
 }
 
-.left-column{
-  left: 0px;
-}
 .reservation-link{
   float: left;
   margin-left: 15vw;
@@ -61,10 +51,6 @@ table, td{
 .reserved{
   background-color: #1ccad8;
   color: white;
-}
-
-.right-column{
-  left: 49.5vw;
 }
 
 .sched-table{
