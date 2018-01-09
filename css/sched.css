@@ -6,6 +6,11 @@ body{
   width: 100vw;
 }
 
+blockquote{
+    background-color: #E5E5E5;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
 table{
   border: 1px solid black;
   margin-left: 5vw;
@@ -13,6 +18,17 @@ table{
 
 h1{
   margin: 0px 0px;
+}
+
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    padding: 0;
+    width: 70vw;
 }
 
 th{
