@@ -46,12 +46,6 @@ h1{
     color: #0091EA;
 }
 
-h1, .section-header{
-    font-size: 5vh;
-    color: black;
-    opacity: .85;
-}
-
 hr{
     display: block;
     height: 1px;
@@ -193,6 +187,12 @@ table, p, li{
 
 .page-holder-changes{
     margin-left: 15vw;
+}
+
+.section-header{
+    font-size: 5vh;
+    color: black;
+    opacity: .85;
 }
 
 .test{
