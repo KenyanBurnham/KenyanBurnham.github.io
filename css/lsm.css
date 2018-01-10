@@ -114,11 +114,7 @@ th{
     overflow: auto;
     width: 74vw;
     z-index: -1;
-}
-
-.title{
-    opacity: 60%;
-}
+}}
 
 .top-title{
     font-size: 10vh;
