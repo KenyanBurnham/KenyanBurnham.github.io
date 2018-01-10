@@ -1,3 +1,7 @@
+.back-button{
+    margin-right: 3vw;
+}
+
 .blue-button{
     background-color: white;
     border: 2px solid #0091EA;
@@ -10,6 +14,10 @@
 
 .button-shadowing:hover{
     box-shadow: 0px 8px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.next-button-container{
+    margin-top: 5vh;
 }
 
 .white-button{
