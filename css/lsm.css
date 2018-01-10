@@ -114,7 +114,13 @@ th{
     overflow: auto;
     width: 74vw;
     z-index: -1;
-}}
+}
+
+.section-header{
+    font-size: 5vh;
+    color: black;
+    opacity: .85;
+}
 
 .top-title{
     font-size: 10vh;
