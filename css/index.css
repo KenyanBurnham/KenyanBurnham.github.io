@@ -46,6 +46,12 @@ h1{
     color: #0091EA;
 }
 
+h1, .section-header{
+    font-size: 7vh;
+    color: black;
+    opacity: .85;
+}
+
 hr{
     display: block;
     height: 1px;
