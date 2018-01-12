@@ -1,17 +1,17 @@
 # KenyanBurnham.github.io
 
-##### Overview
+### Overview
 This resource site is curated by the lab manager of the Program for Semiconductor Product Engineering Testing Lab in the Department of Electrical and Computer Engineering at the Whitacre College of Engineering, Texas Tech University.
 Our mission is to provide a simple and accessible way to reserve lab time for assignments and experiements.
 
-##### Features
+#### Features
 - Links to necessary training, resources, and guidelines for the laboratory
 - Online access to our equipment datasheet database
 - An weekly updated schedule of lab activity
 - A google form that allows students to reserve time in the laboratory
 - A feedback form for students to help improve the PSPE Testing Lab Student Portal
 
-### New Students
+#### New Students
 
 1. Visit the New Student Portal to learn how the lab will operate.
 2. Visit the Lab Safety Manual and follow instructions given for completing safety tests. Know the rules that you must abide by!
