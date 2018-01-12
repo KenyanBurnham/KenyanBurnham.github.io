@@ -20,6 +20,10 @@ h1{
   margin: 0px 0px;
 }
 
+h2{
+  opacity: .86;
+}
+
 hr{
     display: block;
     height: 1px;
