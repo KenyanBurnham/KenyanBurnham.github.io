@@ -28,6 +28,9 @@ $(function(){
     //empty reservation[]
     $(".clear-reservations").click(function(){
         console.log("Hey, I was clicked");
+        $(".reserved").each(function(){
+            console.log(index + ":" + $(this).attr('class'));
+        });
     });
 
     $(".selectable").click(function(){
