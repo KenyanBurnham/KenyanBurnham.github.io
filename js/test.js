@@ -27,11 +27,14 @@ $(function(){
     //remove class "reserved"
     //empty reservation[]
     $(".clear-reservations").click(function(){
-        console.log("Hey, I was clicked");
+        //removes class "reserved" from all td
         $(".reserved").each(function(){
           $(this).removeClass("reserved");
-          console.log("removed class");
         });
+        //empty reservation array
+        while(reservation.length > 0) {
+            reservation.pop();
+        }
     });
 
     $(".selectable").click(function(){
