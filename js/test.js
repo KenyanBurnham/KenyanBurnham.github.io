@@ -35,6 +35,7 @@ $(function(){
         while(reservation.length) {
             reservation.pop();
         }
+        console.log(reservation);
     });
 
     $(".selectable").click(function(){
