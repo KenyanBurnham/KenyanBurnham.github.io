@@ -4,13 +4,13 @@
 
 $(function(){
     // Gets all td elements with the class "selectable"
-    // returns an onclick listener that adds class "reserved"
+    // Returns an onclick listener that adds class "reserved"
     // Logs 1st and 2nd class names
     $(".selectable").click(function(){
-        //colors selected cells
+        // Adds background color to selected cells by changing class
         $(this).addClass("reserved");
 
-        //gets class of object and logs the first and second class
+        // Gets class of object and logs the first and second class
         var classList = $(this).attr('class').split(/\s+/);
         console.log(classList[1]);
     });
