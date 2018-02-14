@@ -3,6 +3,6 @@
 // Will have to add to db
 
 function reserveCSS(){
-    var daySelection = document.getElementById("days").selectedIndex;
-    console.log(document.getElementById("days"));
+    var daySelection = document.getElementById("days");
+    console.log(daySelection);
 }
