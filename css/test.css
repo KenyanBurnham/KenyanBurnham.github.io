@@ -22,11 +22,9 @@ td{
 .schedule-box{
   background-color: white;
   border: 1px solid #0091EA;
-  height: 80vh;
   position: absolute;
   left: 25vw;
   top: 10vw;
-  width: 50vw;
 }
 
 .reserved{
