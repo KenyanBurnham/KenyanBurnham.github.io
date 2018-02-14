@@ -2,7 +2,8 @@
 // Will have to add a reservation input form
 // Will have to add to db
 
-//Adds a background color to the selected time and day
-(function(){
-  console.log("hello");
-})();
+$(function(){
+    $(".selectable").click(function(){
+        console.log("selected!");
+    });
+});
