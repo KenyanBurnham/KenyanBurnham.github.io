@@ -3,11 +3,6 @@
 // Will have to add to db
 
 function reserveCSS(){
-    var daySelection = document.getElementsByName("days").selectedIndex;
-console.log(document.getElementsByTagName("option")[daySelection].value);
-    var timeSelection = document.getElementsByName("times").selectedIndex;
-
-
-  //var selectTableData = document.getElementsByClassName(timeOptions.value + " " + dayOptions.value + "");
-  //selectTableData.className += " reserved";
+    var daySelection = document.getElementsById("days").selectedIndex;
+    console.log(document.getElementsById("days"));
 }
