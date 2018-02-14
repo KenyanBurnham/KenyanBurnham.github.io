@@ -4,10 +4,11 @@
 
 var reservation = [];
 
+// Gets all td elements with the class "selectable"
+// Returns an onclick listener that adds class "reserved"
+// Logs 1st and 2nd class names
 $(function(){
-    // Gets all td elements with the class "selectable"
-    // Returns an onclick listener that adds class "reserved"
-    // Logs 1st and 2nd class names
+
     $(".selectable").click(function(){
         // Adds background color to selected cells by changing class
         $(this).addClass("reserved");
@@ -17,4 +18,5 @@ $(function(){
         var addReservation = classList[1] + " " + classList[2];
         console.log(addReservation);
     });
-});
+
+});//end of auto-invoking function
