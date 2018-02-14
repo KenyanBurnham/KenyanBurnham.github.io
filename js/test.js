@@ -8,6 +8,6 @@ function reserveCSS(){
     var dayOption = daySelection.options[daySelection.selectedIndex].value;
     var timeSelection = document.getElementById("getTimes");
     var timeOption = timeSelection.options[timeSelection.selectedIndex].value;
-
-    console.log(dayOption + " " + timeOption);
+    var tdToChange = document.getElementsByClassName('' + timeOption + " " + dayOption + "");
+    tdToChange.className += " reserved";
 }
