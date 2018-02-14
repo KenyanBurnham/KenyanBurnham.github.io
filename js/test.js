@@ -2,6 +2,8 @@
 // Will have to add a reservation input form
 // Will have to add to db
 
+var reservation = [];
+
 $(function(){
     // Gets all td elements with the class "selectable"
     // Returns an onclick listener that adds class "reserved"
@@ -12,6 +14,6 @@ $(function(){
 
         // Gets class of object and logs the first and second class
         var classList = $(this).attr('class').split(/\s+/);
-        console.log(classList[1]);
+        reservation.push[classList[1] + " " + classList[2]];
     });
 });
