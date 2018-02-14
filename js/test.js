@@ -3,6 +3,8 @@
 // Will have to add to db
 
 $(function(){
+    //Get's all of the td with the class "selectable" and adds an onclick listener that echoes
+    //it's second and first class names and adds the class reserve
     $(".selectable").click(function(){
         console.log($(this).classList[1]);
         $(this).addClass("reserve");
