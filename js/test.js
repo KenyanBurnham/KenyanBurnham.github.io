@@ -4,7 +4,9 @@
 
 function reserveCSS(){
     var daySelection = document.getElementById("getDays");
-    console.log(daySelection);
     var dayOption = daySelection.options[daySelection.selectedIndex].value;
-    console.log(dayOption);
+    var timeSelection = document.getElementById("getTimes");
+    var timeOption = timeSelection.options[timeSelection.selectedIndex].value;
+
+    console.log(dayOption + " " + timeOption);
 }
