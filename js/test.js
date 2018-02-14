@@ -15,13 +15,10 @@ Description:
 var reservation = [];
 //-----------------------------------------------------------------------------
 
-// Gets all td elements with the class "selectable"
-// Returns an onclick listener that adds class "reserved"
-// Logs 1st and 2nd class names
 $(function(){
-    //find all td elements with class "selectable"
-    //remove class "reserved"
-    //empty reservation[]
+
+    // Finds all elements with the class "reserved" and removes the classList
+    // Clears all strings stored in reservation array
     $(".clear-reservations").click(function(){
         //removes class "reserved" from all td
         $(".reserved").each(function(){
@@ -33,6 +30,8 @@ $(function(){
         }
     });
 
+    // Adds class "reserved" to selected td elements
+    // Adds the 2nd and 3rd classNames to the reservation array
     $(".selectable").click(function(){
         // Adds background color to selected cells by changing class
         $(this).addClass("reserved");
