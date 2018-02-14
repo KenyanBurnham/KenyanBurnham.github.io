@@ -12,6 +12,6 @@ $(function(){
 
         //gets class of object and logs the first and second class
         var classList = $(this).attr('class').split(/\s+/);
-        console.log(classList);
+        console.log(classList[1]);
     });
 });
