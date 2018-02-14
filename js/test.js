@@ -1,20 +1,31 @@
-/*
+/*------------------------------------------------------------------------------
 Developed by Kenyan Burnham
 For: the Program for Semiconductor Product Engineering Testing Laboratory
 Dependancies: JQuery
 Description:
-*/
+-----------------------------------------------------------------------------*/
 
-//Whetever the current time is should be highlighted in the left column by changing the css of "the-hour siding" to highlight the cell
+// Development Notes:
+// Whetever the current time is should be highlighted in the left column by changing the css of "the-hour siding" to highlight the cell
 // Will have to add a reservation input form
 // Will have to add to db
 
+//-----------------------------------------------------------------------------
+//Global variables
 var reservation = [];
+//-----------------------------------------------------------------------------
+
+function clearReservations(){
+
+}
 
 // Gets all td elements with the class "selectable"
 // Returns an onclick listener that adds class "reserved"
 // Logs 1st and 2nd class names
 $(function(){
+    $(".clear-reservations").click(function(){
+        console.log("Hey, I was clicked");
+    });
 
     $(".selectable").click(function(){
         // Adds background color to selected cells by changing class
@@ -23,9 +34,5 @@ $(function(){
         // Gets class of object and logs the first and second class
         var classList = $(this).attr('class').split(/\s+/);
         reservation[reservation.length] = classList[1] + " " + classList[2];
-        //var addReservation = classList[1] + " " + classList[2];
-        //reservation[reservation.length] = addReservation;
-        console.log(reservation);
     });
-
 });//end of auto-invoking function
