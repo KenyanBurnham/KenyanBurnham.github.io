@@ -4,7 +4,7 @@
 
 $(function(){
     $(".selectable").click(function(){
-        console.log(this.classList);
+        console.log(this.classList.index(1));
         this.addClass("reserve");
     });
 });
