@@ -22,8 +22,9 @@ function getCellByClick(){
 //Auto-invoking function that adds a click listener to all td elements
 (function(){
   var getSelectable = getElementsByClassName("selectable");
-  getSelectable.addEventListener("click", function(){
-      console.log(this.classList);
-  });
+  console.log(getSelectable);
+  //getSelectable.addEventListener("click", function(){
+      //console.log(this.classList);
+  //});
 
 })();
