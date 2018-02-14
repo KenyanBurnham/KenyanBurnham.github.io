@@ -1,7 +1,8 @@
 /*
 Developed by Kenyan Burnham
 For: the Program for Semiconductor Product Engineering Testing Laboratory
-Description: 
+Dependancies: JQuery
+Description:
 */
 
 //Whetever the current time is should be highlighted in the left column by changing the css of "the-hour siding" to highlight the cell
