@@ -6,4 +6,5 @@ function reserveCSS(){
     var daySelection = document.getElementById("getDays");
     console.log(daySelection);
     var dayOption = daySelection.options[daySelection.selectedIndex].value;
+    console.log(dayOption);
 }
