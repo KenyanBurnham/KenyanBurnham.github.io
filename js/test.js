@@ -5,6 +5,6 @@
 $(function(){
     $(".selectable").click(function(){
         console.log(this.classList.index(1));
-        this.addClass("reserve");
+        $(this).addClass("reserve");
     });
 });
