@@ -3,8 +3,9 @@
 // Will have to add to db
 
 $(function(){
-    //Get's all of the td with the class "selectable" and adds an onclick listener that echoes
-    //it's second and first class names and adds the class reserve
+    // Gets all td elements with the class "selectable"
+    // returns an onclick listener that adds class "reserved"
+    // Logs 1st and 2nd class names
     $(".selectable").click(function(){
         //colors selected cells
         $(this).addClass("reserved");
