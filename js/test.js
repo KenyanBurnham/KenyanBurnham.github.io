@@ -13,3 +13,14 @@ function reserveCSS(){
     console.log(tdToChangeClasses);
     //tdToChangeClasses.add("reserved");
 }
+
+function getCellByClick(){
+
+}
+
+
+//Auto-invoking function that adds a click listener to all td elements
+(function(){
+  element.addEventListener("click", function(){ alert("Hello World!"); });
+
+})();
