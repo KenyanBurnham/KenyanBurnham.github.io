@@ -7,6 +7,6 @@ $(function(){
     //it's second and first class names and adds the class reserve
     $(".selectable").click(function(){
         //console.log($(this).classList[1]);
-        $(this).addClass("reserve");
+        $(this).addClass("reserved");
     });
 });
