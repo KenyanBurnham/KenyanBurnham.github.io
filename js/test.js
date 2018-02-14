@@ -18,6 +18,7 @@ $(function(){
         reservation[reservation.length] = classList[1] + " " + classList[2];
         //var addReservation = classList[1] + " " + classList[2];
         //reservation[reservation.length] = addReservation;
+        console.log(reservation);
     });
 
 });//end of auto-invoking function
