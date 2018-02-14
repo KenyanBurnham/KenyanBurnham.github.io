@@ -9,5 +9,6 @@ function reserveCSS(){
     var timeSelection = document.getElementById("getTimes");
     var timeOption = timeSelection.options[timeSelection.selectedIndex].value;
     var tdToChange = document.getElementsByClassName('' + timeOption + ' ' + dayOption + '');
-    tdToChange.className += " reserved";
+    var tdToChangeClasses = tdToChange.classList;
+    tdToChangeClasses.add("reserved");
 }
