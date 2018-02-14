@@ -4,6 +4,6 @@
 
 $(function(){
     $(".selectable").click(function(){
-        console.log("selected!");
+        console.log(this.classList);
     });
 });
