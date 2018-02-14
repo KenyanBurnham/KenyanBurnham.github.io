@@ -32,7 +32,7 @@ $(function(){
           $(this).removeClass("reserved");
         });
         //empty reservation array
-        while(reservation.length > 0) {
+        while(reservation.length) {
             reservation.pop();
         }
     });
