@@ -23,6 +23,9 @@ function clearReservations(){
 // Returns an onclick listener that adds class "reserved"
 // Logs 1st and 2nd class names
 $(function(){
+    //find all td elements with class "selectable"
+    //remove class "reserved"
+    //empty reservation[]
     $(".clear-reservations").click(function(){
         console.log("Hey, I was clicked");
     });
