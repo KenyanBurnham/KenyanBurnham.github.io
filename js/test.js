@@ -15,5 +15,6 @@ $(function(){
         // Gets class of object and logs the first and second class
         var classList = $(this).attr('class').split(/\s+/);
         reservation.push[classList[1] + " " + classList[2]];
+        console.log(reservation);
     });
 });
