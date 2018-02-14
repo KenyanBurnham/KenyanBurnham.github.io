@@ -15,10 +15,6 @@ Description:
 var reservation = [];
 //-----------------------------------------------------------------------------
 
-function clearReservations(){
-
-}
-
 // Gets all td elements with the class "selectable"
 // Returns an onclick listener that adds class "reserved"
 // Logs 1st and 2nd class names
