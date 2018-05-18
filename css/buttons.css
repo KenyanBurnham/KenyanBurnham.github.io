@@ -20,6 +20,16 @@
     margin-top: 5vh;
 }
 
+.primary-red-button{
+    background-color: white;
+    border: 2px solid #CC0000;
+    color: #CC0000;
+    font-size: 2vh;
+    height: 4vh;
+    padding: 1vh 1vh 1vh;
+    width: 7vw;
+}
+
 .white-button{
     background-color: #0091EA;
     border: 2px solid white;
