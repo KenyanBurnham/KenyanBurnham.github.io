@@ -1,0 +1,65 @@
+/*==============================================================
+
+      Texas Tech defines their Primary and Secondary color pallette by a
+      primary colors and a secondary colors, the naming convention has a
+      primary and a secondary.
+
+       Source: http://www.depts.ttu.edu/communications/identityguidelines/elements/colors/
+
+ =============================================================*/
+
+/* =============== Primary Color Palette =================== */
+
+.primary-black{
+  color:           black;
+}
+
+.primary-red{
+  color:           #CC0000;
+}
+
+.primary-white{
+  color:           white;
+}
+
+/*============= Secondary Color Palette =================== */
+
+.primary-blue{
+  color:           #899FB4;
+}
+
+.primary-gray{
+  color:           #333333;
+}
+
+.primary-green{
+  color:           #B0B37B;
+}
+
+.primary-tan{
+  color:           #EAE0C6;
+}
+
+.secondary-black{
+  color:           #1B1B1B;
+}
+
+.secondary-blue{
+  color:           #20303F;
+}
+
+.secondary-green{
+  color:           #4D5B2A;
+}
+
+.secondary-red{
+  color:           #7B0F0F;
+}
+
+.secondary-tan{
+  color:           #F0DDAC;
+}
+
+.secondary-white{
+  color:           #F8F8F8;
+}
