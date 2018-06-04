@@ -1,0 +1,124 @@
+body {
+    font-family: 'ITC Charter W01',Georgia,Garamond,serif;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  opacity: .75;
+}
+
+header{
+    z-index: 1;
+}
+
+main{
+    margin-top: 20vh;
+    padding: 0px 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+p {
+  font-size: 1.15em;
+  line-height: 150%;
+}
+
+.A0-header-section {
+  background-color: white;
+  display: block;
+  height: 20vh;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+}
+
+.A0-img-section {
+  display: inline-block;
+  height: 16vh;
+  position: absolute;
+}
+
+.A0-breadcrumb-section{
+  background-color: #343538;
+  display: block;
+  height: 4vh;
+  padding: 0px 0px;
+  position: absolute;
+  top: 16vh;
+  width: 100vw;
+}
+
+.A0-breadcrumb {
+  height: 100%;
+  list-style-type: none;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  width: 100%;
+}
+
+.A0-breadcrumb-link {
+  display: inline-block;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.25em;
+  height: 100%;
+  margin: 0px 5px;
+  padding: 0px 5px;
+}
+
+a.A0-breadcrumb-a{
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.A0-breadcrumb-a:link{
+  color: white;
+}
+
+li.A0-breadcrumb-link {
+  background-color: rgb(52, 53, 56);
+}
+
+li.A0-breadcrumb-link:hover {
+  background-color: #5f5f5f;
+}
+
+.A0-breadcrumb-current-program{
+  margin-left: 20vw;
+}
+
+.A0-breadcrumb-current-students{
+  float: right;
+  margin-right: 20vw;
+}
+
+.A0-section{
+  display: block;
+  left: 20vw;
+  position: relative;
+  width: 60vw;
+}
+
+.A0-carousel-section {
+  height: 65vh;
+  padding-top: 5vh;
+}
+
+.A0-main-content-offwhite {
+  background-color: #FAFAFA;
+}
+
+
+
+
+.debug-red {
+  border: 1px solid red;
+}
+
+.debug-black {
+  border: 1px solid black;
+}
