@@ -3,9 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>PSPE Student Portal</title>
-    <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <!-- Add additional services you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAOPzk-KGKr6fd7g6aX4SEO3dR0oagYFG4",
+        authDomain: "pspe-inventory.firebaseapp.com",
+        databaseURL: "https://pspe-inventory.firebaseio.com",
+        projectId: "pspe-inventory",
+        storageBucket: "pspe-inventory.appspot.com",
+        messagingSenderId: "364993379091"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="/dist/helloweek.min.js"></script>
+    <script type="text/javascript">
+        const myCalendar = new HelloWeek();
+        const prev = document.querySelector('.demo-prev');
+        const next = document.querySelector('.demo-next');
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="./css/index.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/helloweek.min.css">
   </head>
   <body>
-    <iframe class="iframe-document" src="https://docs.google.com/forms/d/e/1FAIpQLSfjVj7bVOi4D7jgpn_yzpWFAkWl84HTgMz8wcKv4dTcFJ1oUQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>  </body>
+    <div class="hello-week">
+        <div class="hello-week__header">
+          <button class="btn demo-prev">◀</button>
+          <div class="hello-week__label"></div>
+          <button class="btn demo-next">▶</button>
+        </div>
+        <div class="hello-week__week"></div>
+        <div class="hello-week__month"></div>
+    </div>
   </body>
 </html>
