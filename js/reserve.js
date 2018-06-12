@@ -4,7 +4,11 @@
     //Need to fix nav buttons
     //disable disabledDaysOfWeek on the weekends (0 & 6)?
     let today = new Date().getDate();
+    today = today + 1;
+    today.toISOString();
     let month = new Date().getMonth();
+    month = month + 1;
+    month.toISOString();
     let year = new Date().getFullYear();
 
     console.log(year + "-" + month + "-" + today);
@@ -42,5 +46,5 @@
         onSelect: () => { /** callback function */ },
         onClear: () => { /** callback function */ },
     });
-    
+
 console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
