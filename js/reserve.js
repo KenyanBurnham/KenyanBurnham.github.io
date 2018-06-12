@@ -66,7 +66,7 @@ Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
         onChange: () => { /** callback function */ },
         onSelect: () => {
                             //grabs custom "data-" attribute called "time-stamp"
-                            console.log("I clicked: " + this.getAttribute('data-timestamp'));
+                            console.log("I clicked: " + document.activeElement.getAttribute('data-timestamp'));
                           },
         onClear: () => { /** callback function */ },
     });
