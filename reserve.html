@@ -21,25 +21,64 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="hello-week-master/dist/helloweek.min.js"></script>
-    <script type="text/javascript">
-        const myCalendar = new HelloWeek();
-        const prev = document.getElementById('demo-prev');
-        const next = document.getElementById('demo-next');
-    </script>
+
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="./css/index.css" />
     <link type="text/css" rel="stylesheet" href="hello-week-master/dist/helloweek.min.css">
   </head>
   <body>
-    <div class="hello-week">
+      <div class="hello-week">
         <div class="hello-week__header">
-            <button class="btn demo-prev">◀</button>
+            <button class="demo-prev">Prev</button>
             <div class="hello-week__label"></div>
-            <button class="btn demo-next">▶</button>
+            <button class="demo-next">Next</button>
         </div>
         <div class="hello-week__week"></div>
         <div class="hello-week__month"></div>
-    </div>
+      </div>
+
+      <script src="hello-week.min.js"></script>
+      <script type="text/javascript">
+          const myCalendar = new HelloWeek();
+          const prev = document.getElementById('demo-prev');
+          const next = document.getElementById('demo-next');
+      </script>
+      <!--
+      <script>
+          new HelloWeek({
+        langFolder: '../dist/langs/',
+        lang: 'en',
+        format: 'DD-MM-YYYY',
+        defaultDate: '2018-06-01', // Only format YYYY-MM-DD
+        multiplePick: true,
+        daysHighlight: [
+          {
+          days: [
+            ['2018-05-16', '2018-05-24'],
+            ['2018-06-08', '2018-06-14']
+          ],
+          backgroundColor: '#6495ed',
+          color: '#fff',
+          title: 'Summer Holidays'
+          },
+          {
+          days: ['2018-07-24'],
+          backgroundColor: '#f08080',
+          title: 'John Doe Birthday'
+          }
+        ],
+        todayHighlight: true,
+        disableDates: false,
+        disablePastDays: false,
+        disabledDaysOfWeek: [0],
+        weekStart: 0,
+        range: false,
+        onLoad: () => { /** callback function */ },
+        onChange: () => { /** callback function */ },
+        onSelect: () => { /** callback function */ },
+        onClear: () => { /** callback function */ },
+          });
+      </script>
+      -->
   </body>
 </html>
