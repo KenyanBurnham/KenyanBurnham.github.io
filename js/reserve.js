@@ -6,28 +6,34 @@ Source: https://github.com/maurovieirareis/hello-week
 Integrated into site: 06/12/2018
 ==============================================================================*/
 
-  function cleanUpDate(){
-        let today = new Date().getDate();
-        today = today + 1;
-        let month = new Date().getMonth();
-        month = month + 1;
-        let year = new Date().getFullYear();
-        if(month <= 9){
-            month = "0" + month;
-        }
-        if(today <= 9){
-            today = "0" + today;
-        }
-        let todayDateDefault = year + "-" + month + "-" + today;
-        return todayDateDefault;
-  }
-    //minDate I can set to yesterday
-    //maxDate I can set to the end of the semester
-    //Need to fix nav buttons
-    //disable disabledDaysOfWeek on the weekends (0 & 6)?
+/*=============================================================================
+cleanUpDate function:
+1. primitive way of formating the date to be correct for the calendar
+===============================================================================*/
+function cleanUpDate(){
+      let today = new Date().getDate();
+      today = today + 1;
+      let month = new Date().getMonth();
+      month = month + 1;
+      let year = new Date().getFullYear();
+      if(month <= 9){
+          month = "0" + month;
+      }
+      if(today <= 9){
+          today = "0" + today;
+      }
+      let todayDateDefault = year + "-" + month + "-" + today;
+      return todayDateDefault;
+}
 
-    console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
+//Just a simple message to the explorative user
+console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
+/*=============================================================================
+required header for hello-week:
+1. sets the options for the calendar
+Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
+===============================================================================*/
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
         lang: 'en',
