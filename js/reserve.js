@@ -1,4 +1,8 @@
 
+    //minDate I can set to yesterday
+    //maxDate I can set to the end of the semester
+    //Need to fix nav buttons
+    //disable disabledDaysOfWeek on the weekends (0 & 6)?
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
         lang: 'en',
@@ -23,8 +27,8 @@
         ],
         todayHighlight: true,
         disableDates: false,
-        disablePastDays: false,
-        disabledDaysOfWeek: [0],
+        disablePastDays: true,
+        disabledDaysOfWeek: [0,6],
         weekStart: 0,
         range: false,
         onLoad: () => { /** callback function */ },
