@@ -55,6 +55,6 @@ Integrated into site: 06/12/2018
         range: false,
         onLoad: () => { /** callback function */ },
         onChange: () => { /** callback function */ },
-        onSelect: () => { console.log("I clicked": this); },
+        onSelect: () => { console.log("I clicked" + this); },
         onClear: () => { /** callback function */ },
     });
