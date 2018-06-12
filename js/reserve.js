@@ -23,7 +23,7 @@
         format: 'DD-MM-YYYY',
         defaultDate: todayDateDefault, // Only format YYYY-MM-DD
         multiplePick: true,
-        daysHighlight: [
+        daysHighlight: []/*[
           {
           days: [
             ['2018-05-16', '2018-05-24'],
@@ -38,7 +38,7 @@
           backgroundColor: '#f08080',
           title: 'John Doe Birthday'
           }
-        ],
+        ]*/,
         todayHighlight: true,
         disableDates: false,
         disablePastDays: true,
