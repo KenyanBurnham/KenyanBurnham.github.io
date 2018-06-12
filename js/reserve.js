@@ -3,6 +3,12 @@
     //maxDate I can set to the end of the semester
     //Need to fix nav buttons
     //disable disabledDaysOfWeek on the weekends (0 & 6)?
+    let today = new Date().getDate();
+    let month = new Date().getMonth();
+    let year = new Date().getFullYear();
+
+    console.log(year + "-" + month + "-" + today);
+
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
         lang: 'en',
