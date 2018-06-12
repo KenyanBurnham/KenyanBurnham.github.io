@@ -8,9 +8,16 @@
     let month = new Date().getMonth();
     month = month + 1;
     let year = new Date().getFullYear();
-
-    console.log(year + "-" + month + "-" + today);
-    console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
+    let currentDay;
+    if(month <= 9){
+        month = "0" + month;
+    }
+    if(day <= 9){
+        today = "0" + today;
+    }
+    let todayDateDefault = year + "-" + monthString + "-" + todayString;
+    console.log(todayDateDefault);
+    console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
