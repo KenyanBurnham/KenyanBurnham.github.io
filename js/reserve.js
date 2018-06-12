@@ -12,7 +12,7 @@
     if(month <= 9){
         month = "0" + month;
     }
-    if(day <= 9){
+    if(today <= 9){
         today = "0" + today;
     }
     let todayDateDefault = year + "-" + monthString + "-" + todayString;
