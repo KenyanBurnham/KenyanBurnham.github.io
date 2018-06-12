@@ -4,9 +4,9 @@
     //Need to fix nav buttons
     //disable disabledDaysOfWeek on the weekends (0 & 6)?
     let today = new Date().getDate();
-    today = (today + 1).toISOString();
+    today = today + 1;
     let month = new Date().getMonth();
-    month = (month + 1).toISOString();
+    month = month + 1;
     let year = new Date().getFullYear();
 
     console.log(year + "-" + month + "-" + today);
