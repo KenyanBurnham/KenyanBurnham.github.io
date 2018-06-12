@@ -1,3 +1,11 @@
+/*==============================================================================
+"Hello-week" solution provided by:
+      Mauro Reis Vieira, "maurovieirareis": https://github.com/maurovieirareis
+      Samuel Fontebasso, "fontebasso": https://github.com/fontebasso
+Source: https://github.com/maurovieirareis/hello-week
+Integrated into site: 06/12/2018
+==============================================================================*/
+
 
     //minDate I can set to yesterday
     //maxDate I can set to the end of the semester
@@ -47,6 +55,6 @@
         range: false,
         onLoad: () => { /** callback function */ },
         onChange: () => { /** callback function */ },
-        onSelect: () => { console.log("I clicked"); },
+        onSelect: () => { console.log("I clicked": this); },
         onClear: () => { /** callback function */ },
     });
