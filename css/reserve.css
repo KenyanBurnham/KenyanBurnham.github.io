@@ -3,7 +3,8 @@ body{
   padding: 0px 0px;
 }
 
-.iframe-document{
-    height: 100vh;
-    width: 100vw;
+.calendar{
+    text-align: center;
+    height: 40vh;
+    width: 60vw;
 }
