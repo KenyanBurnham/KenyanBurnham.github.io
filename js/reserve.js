@@ -15,7 +15,7 @@
     if(today <= 9){
         today = "0" + today;
     }
-    let todayDateDefault = year + "-" + monthString + "-" + todayString;
+    let todayDateDefault = year + "-" + month + "-" + today;
     console.log(todayDateDefault);
     console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
