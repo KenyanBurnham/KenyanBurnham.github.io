@@ -8,7 +8,6 @@
     let month = new Date().getMonth();
     month = month + 1;
     let year = new Date().getFullYear();
-    let currentDay;
     if(month <= 9){
         month = "0" + month;
     }
@@ -16,7 +15,6 @@
         today = "0" + today;
     }
     let todayDateDefault = year + "-" + month + "-" + today;
-    console.log(todayDateDefault);
     console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
     new HelloWeek({
