@@ -47,6 +47,6 @@
         range: false,
         onLoad: () => { /** callback function */ },
         onChange: () => { /** callback function */ },
-        onSelect: () => { /** callback function */ },
+        onSelect: () => { console.log("I clicked"); },
         onClear: () => { /** callback function */ },
     });
