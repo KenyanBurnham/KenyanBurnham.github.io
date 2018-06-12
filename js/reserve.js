@@ -12,6 +12,7 @@
     let year = new Date().getFullYear();
 
     console.log(year + "-" + month + "-" + today);
+    console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
 
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
@@ -46,5 +47,3 @@
         onSelect: () => { /** callback function */ },
         onClear: () => { /** callback function */ },
     });
-
-console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
