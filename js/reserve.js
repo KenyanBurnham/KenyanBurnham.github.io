@@ -65,10 +65,11 @@ Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
         onLoad: () => { /** callback function */ },
         onChange: () => { /** callback function */ },
         onSelect: () => {
+                            // This is a parameter list for a function
                             //calling "this" does not work because of the arrow function call
                             //Arrow functions do not have their own this value
                             //grabs custom "data-" attribute called "time-stamp"
-                            console.log("this does not work and I have no way of using this event listener");
+                            console.log(this);
                           },
         onClear: () => { /** callback function */ },
     });
