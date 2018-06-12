@@ -17,13 +17,13 @@
     }
     let todayDateDefault = year + "-" + month + "-" + today;
     console.log(todayDateDefault);
-    console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
+    console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
         lang: 'en',
         format: 'DD-MM-YYYY',
-        defaultDate: '2018-06-01', // Only format YYYY-MM-DD
+        defaultDate: todayDateDefault, // Only format YYYY-MM-DD
         multiplePick: true,
         daysHighlight: [
           {
