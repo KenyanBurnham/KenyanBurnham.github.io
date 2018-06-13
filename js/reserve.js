@@ -18,7 +18,7 @@ Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
     selected = selected.toString();
-    console.log(/\d-\d-\d-\d-\d-\d-\d-\d-\d-\d/.test(selected));
+    console.log(/\d\d\d\d\d\d\d\d\d\d/.test(selected));
 }
 
 /*=============================================================================
