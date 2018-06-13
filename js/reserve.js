@@ -20,7 +20,7 @@ function listener(){
     console.log(selected);
     selected = selected.toString();
     console.log(selected);
-    console.log(/([0-9])\w+/.test(selected));
+    console.log(/\d{10}/.test(selected));
 }
 
 /*=============================================================================
