@@ -17,7 +17,7 @@ Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
 */
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
-    console.log(selected.dataset["data-timestamp"]);
+    console.log(selected.dataset.timeStamp);
     //console.log(/\d{10}/.test(selected));
 }
 
