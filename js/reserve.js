@@ -17,6 +17,7 @@ Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
 */
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
+    let result;
     if (selected.hasAttributes()) {
        let attrs = selected.attributes;
        var output = "";
@@ -28,7 +29,7 @@ function listener(){
           result.value = "No attributes to show";
      }
     //selected = selected.getAttribute("data-timestamp");
-    console.log(selected);
+    console.log(result);
 }
 
 /*=============================================================================
