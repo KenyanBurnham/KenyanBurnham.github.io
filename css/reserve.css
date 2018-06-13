@@ -6,9 +6,9 @@ body{
 .calendar{
     bottom: 50vh;
     height: 40vh;
-    left: 20vw;
+    left: 30vw;
     top: 10vh;
-    right: 20vw;
+    right: 30vw;
     position: fixed;
-    width: 60vw;
+    width: 40vw;
 }
