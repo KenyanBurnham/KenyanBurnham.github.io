@@ -12,12 +12,12 @@ listener function:
 ===============================================================================
 -------------------------------------------------------------------------------
 Solution from: Mozilla Developer Network
-Source: 
+Source:
 -------------------------------------------------------------------------------
 */
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
-    console.log(selected.dataset.timeStamp);
+    console.log(selected);
 }
 
 /*=============================================================================
