@@ -19,7 +19,7 @@ function listener(){
     let selected = document.getElementsByClassName('is-selected');
     console.log(selected.attributes[1]);
     //selected = selected.toString();
-    /console.log(selected[1]);
+    console.log(selected[1]);
     //console.log(/\d{10}/.test(selected));
 }
 
