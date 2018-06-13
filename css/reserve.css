@@ -4,9 +4,11 @@ body{
 }
 
 .calendar{
-    position: fixed;
     bottom: 50vh;
-    right: 20vw;
     height: 40vh;
+    left: 20vw;
+    top: 10vh;
+    right: 20vw;
+    position: fixed;
     width: 60vw;
 }
