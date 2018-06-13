@@ -16,7 +16,6 @@ Source:
 -------------------------------------------------------------------------------
 */
 function listener(){
-
     console.log($('.is-selected').attr("data-timestamp"));
     console.log($('.is-selected').attr("timestamp"));
 }
