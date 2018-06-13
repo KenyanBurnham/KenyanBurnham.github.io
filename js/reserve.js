@@ -6,6 +6,12 @@ Source: https://github.com/maurovieirareis/hello-week
 Integrated into site: 06/12/2018
 ==============================================================================*/
 
+function listener(){
+    let selected = document.getElementsByClassName('is-selected');
+    selected = selected.getAttribute("data-timestamp");
+    console.log(selected);
+}
+
 /*=============================================================================
 cleanUpDate function:
 1. primitive way of formating the date to be correct for the calendar
@@ -64,12 +70,6 @@ Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
         range: false,
         onLoad: () => { /** callback function */ },
         onChange: () => { /** callback function */ },
-        onSelect: () => {
-                            // This is a parameter list for a function
-                            //calling "this" does not work because of the arrow function call
-                            //Arrow functions do not have their own this value
-                            //grabs custom "data-" attribute called "time-stamp"
-                            console.log(this);
-                          },
+        onSelect: () => { listener(); },
         onClear: () => { /** callback function */ },
     });
