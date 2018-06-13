@@ -4,7 +4,9 @@ body{
 }
 
 .calendar{
-    text-align: center;
+    position: fixed;
+    bottom: 50vh;
+    right: 20vw;
     height: 40vh;
     width: 60vw;
 }
