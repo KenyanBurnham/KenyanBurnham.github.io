@@ -16,8 +16,7 @@ Source:
 -------------------------------------------------------------------------------
 */
 function listener(){
-    let selected = document.getElementsByClassName('is-selected');
-    console.log(selected);
+    console.log(document.getElementsByClassName('is-selected').selected.dataset.timeStamp);
 }
 
 /*=============================================================================
