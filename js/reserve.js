@@ -16,7 +16,9 @@ Source:
 -------------------------------------------------------------------------------
 */
 function listener(){
-    console.log(document.getElementsByClassName('is-selected').selected.dataset.timeStamp);
+    let select = document.getElementsByClassName('is-selected');
+    console.log(select.attr("data-timestamp"));
+    console.log(select.attr("timestamp"));
 }
 
 /*=============================================================================
