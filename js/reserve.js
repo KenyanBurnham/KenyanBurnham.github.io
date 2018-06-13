@@ -18,9 +18,9 @@ Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
     console.log(selected);
-    selected = selected.toString();
-    console.log(selected);
-    console.log(/\d{10}/.test(selected));
+    //selected = selected.toString();
+    console.log(selected[1]);
+    //console.log(/\d{10}/.test(selected));
 }
 
 /*=============================================================================
