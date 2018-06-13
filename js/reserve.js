@@ -8,7 +8,7 @@ Integrated into site: 06/12/2018
 
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
-    selected = selected.getAttribute("data-timestamp");
+    //selected = selected.getAttribute("data-timestamp");
     console.log(selected);
 }
 
