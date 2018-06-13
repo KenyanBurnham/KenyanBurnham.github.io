@@ -6,17 +6,26 @@ Source: https://github.com/maurovieirareis/hello-week
 Integrated into site: 06/12/2018
 ==============================================================================*/
 
+/*=============================================================================
+listener function:
+1. Grabs the "is-selected" dix attributes
+===============================================================================
+-------------------------------------------------------------------------------
+Solution from: Mozilla Developer Network
+Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
+-------------------------------------------------------------------------------
+*/
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
     if (selected.hasAttributes()) {
        let attrs = selected.attributes;
        var output = "";
        for(let i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
+          output += attrs[i].name + "->" + attrs[i].value;
        }
-       result.value = output;
+          result.value = output;
      } else {
-       result.value = "No attributes to show";
+          result.value = "No attributes to show";
      }
     //selected = selected.getAttribute("data-timestamp");
     console.log(selected);
