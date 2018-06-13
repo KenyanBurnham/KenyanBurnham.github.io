@@ -6,18 +6,32 @@ Source: https://github.com/maurovieirareis/hello-week
 Integrated into site: 06/12/2018
 ==============================================================================*/
 
+//Just a simple message to the explorative user
+console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
+
 /*=============================================================================
 listener function:
-1. Grabs the "is-selected" dix attributes
-===============================================================================
--------------------------------------------------------------------------------
-Solution from: Mozilla Developer Network
-Source:
--------------------------------------------------------------------------------
-*/
+1. Grabs the "is-selected" custom "timestamp" data assigned to the div
+// TODO: ask database for any APPROVED reservations made on that Date
+        // path = "requests/reservations/approved/"
+// TODO: asks database how much time is still reservable by this group/user
+        // start with group (# of members*5) and individuals 5
+// TODO: builds table of selectable elements with all times
+        // For disables days, displays "reserved" in text
+// TODO: Adds onClickListener to all elements
+        //Adds all currently selected times to a constant Array
+        //When clicked and selected item exists, it removes
+        //Checks to see if it is a time that's already approved, does not add to list
+// TODO: disables all times that are APPROVED
+// TODO: displays what times have been selected, user can remove times
+// TODO: request gets sent to database on confirmation
+        // Adds a time requested, will show to the lab manager what order requests were made in
+// TODO: student is not longer allowed to select those times
+
+===============================================================================*/
 function listener(){
-    console.log($('.is-selected').attr("data-timestamp"));
-    console.log($('.is-selected').attr("timestamp"));
+    let timestamp = $('.is-selected').attr("data-timestamp");
+    console.log(timestamp);
 }
 
 /*=============================================================================
@@ -40,9 +54,6 @@ function cleanUpDate(){
       return todayDateDefault;
 }
 
-//Just a simple message to the explorative user
-console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
-
 /*=============================================================================
 required header for hello-week:
 1. sets the options for the calendar
@@ -54,7 +65,8 @@ Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
         format: 'DD-MM-YYYY',
         defaultDate: cleanUpDate(), // Only format YYYY-MM-DD
         multiplePick: true,
-        daysHighlight: []/*[
+        daysHighlight: []
+        /*[
           {
           days: [
             ['2018-05-16', '2018-05-24'],
