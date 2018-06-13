@@ -12,13 +12,12 @@ listener function:
 ===============================================================================
 -------------------------------------------------------------------------------
 Solution from: Mozilla Developer Network
-Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
+Source: 
 -------------------------------------------------------------------------------
 */
 function listener(){
     let selected = document.getElementsByClassName('is-selected');
     console.log(selected.dataset.timeStamp);
-    //console.log(/\d{10}/.test(selected));
 }
 
 /*=============================================================================
