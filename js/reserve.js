@@ -19,7 +19,7 @@ function listener(){
     let selected = document.getElementsByClassName('is-selected');
     selected = selected.toString();
     console.log(selected);
-    console.log(/\d\d\d\d\d\d\d\d\d\d/.test(selected));
+    console.log(/([0-9])\w+/.test(selected));
 }
 
 /*=============================================================================
