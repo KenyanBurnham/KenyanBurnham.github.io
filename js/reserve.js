@@ -36,7 +36,6 @@ function getReservations(timeStamp){
 
       //toDisplay.innerHTML = "Hello, " + displayFirstName;
     });
-
 }
 
 
@@ -46,7 +45,7 @@ listener function:
 ===============================================================================*/
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
-    getReservations(timestamp);
+    getReservations(timeStamp);
 }
 
 /*=============================================================================
