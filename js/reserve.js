@@ -28,12 +28,11 @@ console.log("%cHello {NAME}, I see you are interested in my code. If you have an
 
 function saveToLocal(time){
     console.log(time);
-    let hours;
-    let minutes;
+    let hours = 0;
+    let minutes = 0;
     switch(time) {
         case (time == "eight"):
             hours = 07;
-            minutes = 00;
             break;
         case (time == "eight-thirty"):
             hours = 07;
@@ -41,7 +40,6 @@ function saveToLocal(time){
             break;
         case (time == "nine"):
             hours = 08;
-            minutes = 00;
             break;
         case (time == "nine-thirty"):
             hours = 08;
@@ -49,7 +47,6 @@ function saveToLocal(time){
             break;
         case (time == "ten"):
             hours = 09;
-            minutes = 00;
             break;
         case (time == "ten-thirty"):
             hours = 09;
@@ -57,7 +54,6 @@ function saveToLocal(time){
             break;
         case (time == "eleven"):
             hours = 10;
-            minutes = 00;
             break;
         case (time == "eleven-thirty"):
             hours = 10;
@@ -65,7 +61,6 @@ function saveToLocal(time){
             break;
         case (time == "twelve"):
             hours = 11;
-            minutes = 00;
             break;
         case (time == "twelve-thirty"):
             hours = 11;
@@ -73,7 +68,6 @@ function saveToLocal(time){
             break;
         case (time == "one"):
             hours = 12;
-            minutes = 00;
             break;
         case (time == "one-thirty"):
             hours = 12;
@@ -81,7 +75,6 @@ function saveToLocal(time){
             break;
         case (time == "two"):
             hours = 13;
-            minutes = 00;
             break;
         case (time == "two-thirty"):
             hours = 13;
@@ -89,7 +82,6 @@ function saveToLocal(time){
             break;
         case (time == "three"):
             hours = 14;
-            minutes = 00;
             break;
         case (time == "three-thirty"):
             hours = 14;
@@ -97,7 +89,6 @@ function saveToLocal(time){
             break;
         case (time == "four"):
             hours = 15;
-            minutes = 00;
             break;
         case (time == "four-thirty"):
             hours = 15;
@@ -160,7 +151,7 @@ function cleanUpDate(){
 required header for hello-week:
 1. sets the options for the calendar
 Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
-Notes: All epoch times for days start at 4:00 AM
+Notes: All epoch times for days start at 12:00 AM
 ===============================================================================*/
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
