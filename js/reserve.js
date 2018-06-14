@@ -28,7 +28,85 @@ console.log("%cHello {NAME}, I see you are interested in my code. If you have an
 
 function saveToLocal(time){
     console.log(time);
-    
+    let hours;
+    let minutes;
+    switch(time) {
+        case (time == "eight"):
+            hours = 07;
+            minutes = 00;
+            break;
+        case (time == "eight-thirty"):
+            hours = 07;
+            minutes = 30;
+            break;
+        case (time == "nine"):
+            hours = 08;
+            minutes = 00;
+            break;
+        case (time == "nine-thirty"):
+            hours = 08;
+            minutes = 30;
+            break;
+        case (time == "ten"):
+            hours = 09;
+            minutes = 00;
+            break;
+        case (time == "ten-thirty"):
+            hours = 09;
+            minutes = 30;
+            break;
+        case (time == "eleven"):
+            hours = 10;
+            minutes = 00;
+            break;
+        case (time == "eleven-thirty"):
+            hours = 10;
+            minutes = 30;
+            break;
+        case (time == "twelve"):
+            hours = 11;
+            minutes = 00;
+            break;
+        case (time == "twelve-thirty"):
+            hours = 11;
+            minutes = 30;
+            break;
+        case (time == "one"):
+            hours = 12;
+            minutes = 00;
+            break;
+        case (time == "one-thirty"):
+            hours = 12;
+            minutes = 30;
+            break;
+        case (time == "two"):
+            hours = 13;
+            minutes = 00;
+            break;
+        case (time == "two-thirty"):
+            hours = 13;
+            minutes = 30;
+            break;
+        case (time == "three"):
+            hours = 14;
+            minutes = 00;
+            break;
+        case (time == "three-thirty"):
+            hours = 14;
+            minutes = 30;
+            break;
+        case (time == "four"):
+            hours = 15;
+            minutes = 00;
+            break;
+        case (time == "four-thirty"):
+            hours = 15;
+            minutes = 30;
+            break;
+        //default:
+        //    code block
+    }//end of switch
+    console.log(time + ": " + hours + " " + minutes);
 }
 
 /*=============================================================================
@@ -82,6 +160,7 @@ function cleanUpDate(){
 required header for hello-week:
 1. sets the options for the calendar
 Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
+Notes: All epoch times for days start at 4:00 AM
 ===============================================================================*/
     new HelloWeek({
         langFolder: 'hello-week-master/dist/langs/',
