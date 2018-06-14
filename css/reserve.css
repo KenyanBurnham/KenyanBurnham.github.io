@@ -4,11 +4,20 @@ body{
 }
 
 .calendar{
-    bottom: 50vh;
-    height: 40vh;
+    bottom: 30vh;
+    height: 20vh;
     left: 30vw;
     top: 10vh;
-    right: 30vw;
     position: fixed;
-    width: 40vw;
+    width: 20vw;
+}
+
+.time-select-table{
+  background-color: #FBFEFB;
+  bottom: 50vh;
+  height: 40vh;
+  left: 50vw;
+  top: 10vh;
+  position: fixed;
+  width: 10vh;
 }

@@ -37,8 +37,6 @@ function getReservations(timeStamp){
         }else{
             console.log("No reservations.");
         }
-
-      //toDisplay.innerHTML = "Hello, " + displayFirstName;
     });
 }
 
