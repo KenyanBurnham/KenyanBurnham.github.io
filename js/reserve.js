@@ -52,8 +52,8 @@ function listener(){
     let td = tr.children();
     console.log(table);
     for(let i = 1; i < 19; i++){
-        console.log(tr.children(i));
-        console.log(td.children(i));
+        console.log(tr.children[i]);
+        console.log(td.children[i]);
     }
     //console.log(td);
     //Finding reservation
