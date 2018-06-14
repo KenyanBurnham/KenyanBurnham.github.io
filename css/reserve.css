@@ -16,10 +16,10 @@ body{
   background-color: #FBFEFB;
   bottom: 50vh;
   height: 40vh;
-  left: 50vw;
+  left: 55vw;
   top: 10vh;
   position: fixed;
-  width: 10vh;
+  width: 10vw;
 }
 
 td.time-select-td:hover{

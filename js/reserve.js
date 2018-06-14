@@ -5,9 +5,6 @@
 Source: https://github.com/maurovieirareis/hello-week
 Integrated into site: 06/12/2018
 ==============================================================================*/
-
-//Just a simple message to the explorative user
-console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 // TODO: ask database for any APPROVED reservations made on that Date
         // path = "requests/reservations/approved/"
 // TODO: asks database how much time is still reservable by this group/user
@@ -23,6 +20,15 @@ console.log("%cHello {NAME}, I see you are interested in my code. If you have an
 // TODO: request gets sent to database on confirmation
         // Adds a time requested, will show to the lab manager what order requests were made in
 // TODO: student is not longer allowed to select those times
+
+//Used to store the times selected
+let times = [];
+//Just a simple message to the explorative user
+console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
+
+function saveToLocal(time){
+    console.log(time);
+}
 
 /*=============================================================================
 getReservations function:
