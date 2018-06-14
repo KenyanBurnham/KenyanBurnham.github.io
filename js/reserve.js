@@ -48,11 +48,14 @@ function listener(){
     //Current Strategy, index through table and assign an id that has the unix time added to the date
     let hours = 3600;
     let table = $('#time-select').children();
+    let tr = table.children();
+    let td = tr.children();
+    console.log(table);
     for(let i = 1; i < 19; i++){
-        let tr = table.children();
         console.log(tr.children(i));
+        console.log(td.children(i));
     }
-    console.log(td);
+    //console.log(td);
     //Finding reservation
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
