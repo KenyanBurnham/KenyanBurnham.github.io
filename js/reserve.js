@@ -53,6 +53,9 @@ function listener(){
     //building table
     let hours = 3600;
     let td = $('#time-select').children(1);
+    for(let i = 1; i < 19; i++){
+        console.log($('#time-select').children(i));
+    }
     console.log(td);
     //Finding reservation
     let path = "requests/reservation/approved/" + timeStamp;
