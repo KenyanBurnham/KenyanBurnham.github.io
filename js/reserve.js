@@ -50,7 +50,7 @@ function listener(){
     let table = $('#time-select').children();
     for(let i = 1; i < 19; i++){
         let tr = table.children();
-        console.log(tr.children(i););
+        console.log(tr.children(i));
     }
     console.log(td);
     //Finding reservation
