@@ -28,6 +28,7 @@ console.log("%cHello {NAME}, I see you are interested in my code. If you have an
 
 function saveToLocal(time){
     console.log(time);
+    
 }
 
 /*=============================================================================
