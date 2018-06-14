@@ -47,9 +47,9 @@ function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
     //building table
     let hours = 3600;
-    let td = $('#time-select').children(1);
+    let td = $('#time-select').children();
     for(let i = 1; i < 19; i++){
-        console.log($('#time-select').children(i));
+        console.log(td.children(i));
     }
     console.log(td);
     //Finding reservation
