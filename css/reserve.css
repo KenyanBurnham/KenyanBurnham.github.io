@@ -21,3 +21,8 @@ body{
   position: fixed;
   width: 10vh;
 }
+
+td.time-select-td:hover{
+    background-color: #7FCBC3;
+    color: white;
+}
