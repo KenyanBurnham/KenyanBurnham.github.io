@@ -87,7 +87,7 @@ Source: https://maurovieirareis.github.io/hello-week/demos/documentation.html
         lang: 'en',
         format: 'DD-MM-YYYY',
         defaultDate: cleanUpDate(), // Only format YYYY-MM-DD
-        multiplePick: true,
+        multiplePick: false,
         daysHighlight: []
         /*[
           {
