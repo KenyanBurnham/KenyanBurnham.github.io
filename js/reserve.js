@@ -39,7 +39,6 @@ function setReservation(){
     console.log("setReservations");
 }
 
-
 /*=============================================================================
 listener function:
 1. Grabs the "is-selected" custom "timestamp" data assigned to the div
