@@ -45,11 +45,12 @@ listener function:
 ===============================================================================*/
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
-    //building table
+    //Current Strategy, index through table and assign an id that has the unix time added to the date
     let hours = 3600;
-    let td = $('#time-select').children();
+    let table = $('#time-select').children();
     for(let i = 1; i < 19; i++){
-        console.log(td.children(i));
+        let tr = table.children();
+        console.log(tr.children(i););
     }
     console.log(td);
     //Finding reservation
