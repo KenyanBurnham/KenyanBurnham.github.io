@@ -8,10 +8,6 @@ Integrated into site: 06/12/2018
 
 //Just a simple message to the explorative user
 console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
-
-/*=============================================================================
-listener function:
-1. Grabs the "is-selected" custom "timestamp" data assigned to the div
 // TODO: ask database for any APPROVED reservations made on that Date
         // path = "requests/reservations/approved/"
 // TODO: asks database how much time is still reservable by this group/user
@@ -28,10 +24,29 @@ listener function:
         // Adds a time requested, will show to the lab manager what order requests were made in
 // TODO: student is not longer allowed to select those times
 
+function getReservations(timeStamp){
+    let path = "requests/reservation/approved/" + timeStamp;
+    firebase.database().ref(path).once('value').then(function(snapshot){
+        let displayReservation = (snapshot.val() && snapshot.val());
+        if(displayReservation){
+            console.log("Reservation: " + displayReservation);
+        }else{
+            console.log("No reservations.");
+        }
+
+      //toDisplay.innerHTML = "Hello, " + displayFirstName;
+    });
+
+}
+
+
+/*=============================================================================
+listener function:
+1. Grabs the "is-selected" custom "timestamp" data assigned to the div
 ===============================================================================*/
 function listener(){
-    let timestamp = $('.is-selected').attr("data-timestamp");
-    console.log(timestamp);
+    let timeStamp = $('.is-selected').attr("data-timestamp");
+    getReservations(timestamp);
 }
 
 /*=============================================================================
