@@ -24,6 +24,10 @@ console.log("%cHello {NAME}, I see you are interested in my code. If you have an
         // Adds a time requested, will show to the lab manager what order requests were made in
 // TODO: student is not longer allowed to select those times
 
+/*=============================================================================
+getReservations function:
+1. Grabs the approved reservations for that day and displays them
+===============================================================================*/
 function getReservations(timeStamp){
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
@@ -36,6 +40,15 @@ function getReservations(timeStamp){
 
       //toDisplay.innerHTML = "Hello, " + displayFirstName;
     });
+}
+
+/*=============================================================================
+getReservations function:
+1. Set's reservation time based on user input
+2. puts reservation in "pending" reservations
+===============================================================================*/
+function setReservation(){
+    console.log("setReservations");
 }
 
 
