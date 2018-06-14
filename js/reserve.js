@@ -32,22 +32,6 @@ function saveToLocal(time){
 
 /*=============================================================================
 getReservations function:
-1. Grabs the approved reservations for that day and displays them
-===============================================================================*/
-function getReservations(timeStamp){
-    let path = "requests/reservation/approved/" + timeStamp;
-    firebase.database().ref(path).once('value').then(function(snapshot){
-        let displayReservation = (snapshot.val() && snapshot.val());
-        if(displayReservation){
-            console.log("Reservation: " + displayReservation);
-        }else{
-            console.log("No reservations.");
-        }
-    });
-}
-
-/*=============================================================================
-getReservations function:
 1. Set's reservation time based on user input
 2. puts reservation in "pending" reservations
 ===============================================================================*/
@@ -62,7 +46,15 @@ listener function:
 ===============================================================================*/
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
-    getReservations(timeStamp);
+    let path = "requests/reservation/approved/" + timeStamp;
+    firebase.database().ref(path).once('value').then(function(snapshot){
+        let displayReservation = (snapshot.val() && snapshot.val());
+        if(displayReservation){
+            console.log("Reservation: " + displayReservation);
+        }else{
+            console.log("No reservations.");
+        }
+    });
 }
 
 /*=============================================================================
