@@ -59,6 +59,7 @@ function listener(){
         $("#" + tdID).addClass("time-select-td");
         //Add click listener that makes an object in a display below
         $("#" + tdID).click(function(){
+            console.log("clicked");
             console.log($("#" + tdID).attr('data-timestamp'));
         });
     }
