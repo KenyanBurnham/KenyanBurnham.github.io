@@ -75,6 +75,7 @@ function listener(){
             console.log("clicked");
             console.log($("#" + tdID).attr('data-timestamp'));
         });
+        // TODO: Add listener for "hello-week__prev" & "hello-week__next" to put the diabled css on
     }
     let path = "requests/reservation/approved/" + timeStamp; // A.
     firebase.database().ref(path).once('value').then(function(snapshot){ // B.
