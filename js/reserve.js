@@ -43,6 +43,7 @@ function listener(){
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
         let tdID = 'td' + i;
         $(tdID).attr('data-timestamp', newTimeStamp);
+        $(tdID).css("background-color", "#7fcbc3");
         console.log($(tdID).attr("data-timestamp"));
     }
     let path = "requests/reservation/approved/" + timeStamp;
