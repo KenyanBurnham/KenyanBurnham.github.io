@@ -56,13 +56,18 @@ function listener(){
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
+        //If there is data at that snapshot, then...
         if((snapshot.val() && snapshot.val())){
             console.log("snapshot value exists");
+            //... for each of those data points...
             snapshot.forEach(function(childSnapshot){
                 let childData = childSnapshot.val();
+                //... compare which times match those data points...
                 for(let j=0; j<times.length; j++){
+                    //...if they match...
                     if(childData == times[j]){
                         console.log("childData: " + childData + " is equal to times[j]: " + times[j]);
+                        //if they don't
                     }else{
                         console.log("there is no reservation for: " + times[j]);
                     }
