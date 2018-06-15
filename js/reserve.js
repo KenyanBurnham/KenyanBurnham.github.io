@@ -60,7 +60,13 @@ function listener(){
             console.log("snapshot value exists");
             snapshot.forEach(function(childSnapshot){
                 let childData = childSnapshot.val();
-                console.log(childData);
+                for(let j=0; j<times.length; j++){
+                    if(childData == times[j]){
+                        console.log("childData: " + childData + " is equal to times[j]: " + times[j]);
+                    }else{
+                        console.log("there is no reservation for: " + times[j]);
+                    }
+                }
             });
         }else{
             console.log("No data to display");
