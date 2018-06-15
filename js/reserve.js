@@ -39,9 +39,7 @@ listener function:
 ===============================================================================*/
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
-    //Current Strategy, index through table and assign an id that has the unix time added to the date
     for(let i = 0; i<18; i++){
-        //let td = document.getElementById('td' + i);
         let newTimeStamp = timeStamp + (3600*8) + (1800*i);
         $('td' + i + '').attr("name", newTimeStamp);
     }
