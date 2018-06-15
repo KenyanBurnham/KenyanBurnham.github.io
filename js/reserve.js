@@ -46,14 +46,10 @@ listener function:
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
     //Current Strategy, index through table and assign an id that has the unix time added to the date
-    let hours = 3600;
-    let table = $('#time-select').children();
-    let tr = table.children();
-    let td = tr.children();
-    console.log(table);
-    for(let i = 1; i < 19; i++){
-        console.log(tr.children[i]);
-        console.log(td.children[i]);
+    for(let i = 0; i<18; i++){
+        //let td = document.getElementById('td' + i);
+        let newTimeStamp = timeStamp + (3600*8) + (1800*i);
+        $('td' + i + '').attr("name", newTimeStamp);
     }
     //console.log(td);
     //Finding reservation
