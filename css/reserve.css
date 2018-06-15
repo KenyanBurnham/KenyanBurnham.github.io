@@ -15,6 +15,7 @@ body{
 .time-select-disabled{
     background-color: #F7F8FB;
     color: #B3BDD9;
+    cursor: no-drop;
 }
 
 .time-select-table{
