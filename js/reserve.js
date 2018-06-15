@@ -67,6 +67,7 @@ function listener(){
                     //...if they match...
                     if(childData == times[j]){
                       console.log("They do match, but did the class change?");
+                        $("td[data-timestamp='" + times[j] + "']").removeClass("time-select-td");
                         $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled");
                         //if they don't
                     }else{
