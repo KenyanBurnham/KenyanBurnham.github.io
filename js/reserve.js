@@ -56,10 +56,16 @@ function listener(){
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
-        snapshot.forEach(function(childSnapshot){
-            let childData = childSnapshot.val();
-            console.log(childData);
-        });
+        if((snapshot.val() && snapshot.val())){
+            console.log("snapshot value exists");
+            snapshot.forEach(function(childSnapshot){
+                let childData = childSnapshot.val();
+                console.log(childData);
+            });
+        }else{
+            console.log("No data to display");
+        }
+
         //let displayReservation = (snapshot.val() && snapshot.val());
         /*Asks database if there are any reservations on that day*/
         //if(displayReservation){
