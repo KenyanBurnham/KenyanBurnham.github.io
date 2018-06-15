@@ -20,6 +20,8 @@ Integrated into site: 06/12/2018
 // TODO: request gets sent to database on confirmation
         // Adds a time requested, will show to the lab manager what order requests were made in
 // TODO: student is not longer allowed to select those times
+// TODO: Need to also remove the times in time-select-table when the celendar changes
+        //and delete data-timestamp value just for safety
 
 //Just a simple message to the explorative user
 console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
