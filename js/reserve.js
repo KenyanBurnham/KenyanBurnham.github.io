@@ -57,6 +57,10 @@ function listener(){
         $("#" + tdID).attr('data-timestamp', newTimeStamp);
         $("#" + tdID).removeClass("time-select-disabled");
         $("#" + tdID).addClass("time-select-td");
+        //Add click listener that makes an object in a display below
+        $("#" + tdID).click(function(){
+            console.log($("#" + tdID).attr('data-timestamp'));
+        });
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
