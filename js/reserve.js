@@ -40,17 +40,23 @@ listener function:
 function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
     for(let i = 0; i<18; i++){
+        // TODO: clear the reservations currenly displayed
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
         let tdID = 'td' + i;
         $("#" + tdID).attr('data-timestamp', newTimeStamp);
+        /*Adds the epoch time onto the epoch date
+        and assigns it to the time table*/
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
         let displayReservation = (snapshot.val() && snapshot.val());
+        /*Asks database if there are any reservations on that day*/
         if(displayReservation){
+            /*If there are then disable the sections on the table*/
             console.log("Reservation: " + displayReservation);
         }else{
             console.log("No reservations.");
+            /*if there aren't any then do nothing*/
         }
     });
 }
