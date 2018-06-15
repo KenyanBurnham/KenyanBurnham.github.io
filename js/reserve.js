@@ -42,7 +42,7 @@ function listener(){
     for(let i = 0; i<18; i++){
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
         let tdID = 'td' + i;
-        $('' + tdID + '').attr("name", newTimeStamp);
+        $(tdID).attr("name", newTimeStamp);
         console.log(newTimeStamp);
         console.log(tdID);
     }
