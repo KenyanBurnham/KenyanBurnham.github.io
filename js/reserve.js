@@ -60,7 +60,6 @@ function listener(){
     firebase.database().ref(path).once('value').then(function(snapshot){
         //If there is data at that snapshot, then...
         if((snapshot.val() && snapshot.val())){
-            console.log("snapshot value exists");
             //... for each of those data points...
             snapshot.forEach(function(childSnapshot){
                 let childData = childSnapshot.val();
@@ -68,7 +67,6 @@ function listener(){
                 for(let j=0; j<times.length; j++){
                     //...if they match...
                     if(childData == times[j]){
-                      console.log("They do match, but did the class change?");
                         $("td[data-timestamp='" + times[j] + "']").removeClass("time-select-td");
                         $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled");
                         //if they don't
