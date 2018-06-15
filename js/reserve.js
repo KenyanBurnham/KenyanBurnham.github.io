@@ -41,9 +41,10 @@ function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
     for(let i = 0; i<18; i++){
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
-        $('td' + i + '').attr("name", newTimeStamp);
+        let tdID = 'td' + i;
+        $(tdID).attr("name", newTimeStamp);
         console.log(newTimeStamp);
-        console.log($('td' + i + '').attr("name"));
+        console.log($(tdID).attr("name"));
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
