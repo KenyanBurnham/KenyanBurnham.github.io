@@ -25,7 +25,7 @@ Integrated into site: 06/12/2018
 console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
 /*=============================================================================
-getReservations function:
+// TODO: getReservations function:
 1. Set's reservation time based on user input
 2. puts reservation in "pending" reservations
 ===============================================================================*/
@@ -35,13 +35,20 @@ function setReservation(){
 
 /*=============================================================================
 listener function:
-1. Grabs the "is-selected" custom "timestamp" data assigned to the div
+1. calendar object is clicked
+2. TODO: Clears currently disabled reservations
+3. Grabs the "is-selected" custom "timestamp" data
+4. Gives a custom "data-timestamp" data type to the time cells
+5. FIXME: Asks server for any reservations on that day
+6. TODO: if any, applies disabled class to times reserved
 ===============================================================================*/
 function listener(){
+    let times = [];
     let timeStamp = $('.is-selected').attr("data-timestamp");
     for(let i = 0; i<18; i++){
-        // TODO: clear the reservations currenly displayed
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
+        //Makes a list of data-timestamps displayed in time-select-table
+        times[i] = newTimeStamp;
         let tdID = 'td' + i;
         $("#" + tdID).attr('data-timestamp', newTimeStamp);
         /*Adds the epoch time onto the epoch date
@@ -49,15 +56,19 @@ function listener(){
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
-        let displayReservation = (snapshot.val() && snapshot.val());
+        snapshot.forEach(function(childSnapshot){
+            let childData = childSnapshot.val();
+            console.log(childData);
+        });
+        //let displayReservation = (snapshot.val() && snapshot.val());
         /*Asks database if there are any reservations on that day*/
-        if(displayReservation){
+        //if(displayReservation){
             /*If there are then disable the sections on the table*/
-            console.log("Reservation: " + displayReservation);
-        }else{
-            console.log("No reservations.");
+            //console.log("Reservation: " + displayReservation);
+        //}else{
+            //console.log("No reservations.");
             /*if there aren't any then do nothing*/
-        }
+        //}
     });
 }
 

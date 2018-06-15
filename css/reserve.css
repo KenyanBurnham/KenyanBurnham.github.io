@@ -25,3 +25,7 @@ td.time-select-td:hover{
     background-color: #7FCBC3;
     color: white;
 }
+
+td.time-select-disabled{
+    opacity: .65;
+}
