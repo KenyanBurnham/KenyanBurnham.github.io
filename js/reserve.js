@@ -41,7 +41,7 @@ function listener(){
     let timeStamp = $('.is-selected').attr("data-timestamp");
     console.log(timeStamp);
     for(let i = 0; i<18; i++){
-        let newTimeStamp = (timeStamp + (3600*8) + (1800*i));
+        let newTimeStamp = (Number(timeStamp) + (3600*8) + (1800*i));
         $('td' + i + '').attr("name", newTimeStamp);
         console.log(newTimeStamp);
         console.log($('td' + i + '').attr("name"));
