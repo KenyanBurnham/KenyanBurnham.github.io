@@ -31,3 +31,8 @@ td.time-select-td:hover{
     background-color: #7FCBC3;
     color: white;
 }
+
+td.time-select-td:active{
+    background-color: #7FCBC3;
+    color: white;
+}
