@@ -2,9 +2,13 @@
 "Hello-week" solution provided by:
       Mauro Reis Vieira, "maurovieirareis": https://github.com/maurovieirareis
       Samuel Fontebasso, "fontebasso": https://github.com/fontebasso
-Source: https://github.com/maurovieirareis/hello-week
-Integrated into site: 06/12/2018
-==============================================================================*/
+      Source: https://github.com/maurovieirareis/hello-week
+      Integrated into site: 06/12/2018
+==============================================================================
+------------------------------------------------------------------------------
+Resources:
+    1. To check epoch time: https://www.epochconverter.com/
+------------------------------------------------------------------------------*/
 // TODO: ask database for any APPROVED reservations made on that Date
         // path = "requests/reservations/approved/"
 // TODO: asks database how much time is still reservable by this group/user
@@ -37,41 +41,50 @@ function setReservation(){
 
 /*=============================================================================
 listener function:
-1. calendar object is clicked
-2. Clears currently disabled reservations
-3. Grabs the "is-selected" custom "timestamp" data
-4. Gives a custom "data-timestamp" data type to the time cells
-5. Asks server for any reservations on that day
-6. If any, applies disabled class to times reserved
-7. If a time is selected I need to make an object that stays on the dom
-8. TODO: When submit button is pressed it needs to remove all objects and make a reservation request
-9. TODO: remove ".time-select-disabled" class when "hello-week__prev" & "hello-week__next" are pushed
+1. Get's data-timestamp from day that is clicked..
+2. For each td cell...
+3. Create a new data-timestamp...
+4. And save a copy for comparison later.
+5. At each table data cell...
+6. Add a data-timestamp that correlates to the date and time
+7. Remove the "disabled" class
+8. Add the "selectable" class
+9. Add click listener that makes an object in a display below
+................................................................................
+A. Create unique path to check reservations in database
+B. Calls database for anything at that path, if path doesn't exist noothing happens
+C. Asks if data exists at this path
+D. For each data point that exists, create a variable with that dataset
+E. For however many reservations exist at "on that day" if they match the times variable...
+F. Remove the selectable class
+G. And add the diabled class
+TODO: When submit button is pressed it needs to remove all objects and make a reservation request
+TODO: remove ".time-select-disabled" class when "hello-week__prev" & "hello-week__next" are pushed
 ===============================================================================*/
 function listener(){
     let times = [];
-    let timeStamp = $('.is-selected').attr("data-timestamp");
-    for(let i = 0; i<18; i++){
-        let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
-        times[i] = newTimeStamp;
-        let tdID = 'td' + i;
-        $("#" + tdID).attr('data-timestamp', newTimeStamp);
-        $("#" + tdID).removeClass("time-select-disabled");
-        $("#" + tdID).addClass("time-select-td");
-        //Add click listener that makes an object in a display below
-        $("#" + tdID).click(function(){
+    let timeStamp = $('.is-selected').attr("data-timestamp"); // 1.
+    for(let i = 0; i<18; i++){ // 2.
+        let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i)); // 3.
+        times[i] = newTimeStamp; // 4.
+        let tdID = 'td' + i; // 5.
+        $("#" + tdID).attr('data-timestamp', newTimeStamp); // 6.
+        $("#" + tdID).removeClass("time-select-disabled"); // 7.
+        $("#" + tdID).addClass("time-select-td"); // 8.
+        $("#" + tdID).click(function(){ // 9.
             console.log("clicked");
             console.log($("#" + tdID).attr('data-timestamp'));
         });
     }
-    let path = "requests/reservation/approved/" + timeStamp;
-    firebase.database().ref(path).once('value').then(function(snapshot){
-        if((snapshot.val() && snapshot.val())){
+    let path = "requests/reservation/approved/" + timeStamp; // A.
+    firebase.database().ref(path).once('value').then(function(snapshot){ // B.
+        if((snapshot.val() && snapshot.val())){ // C.
             snapshot.forEach(function(childSnapshot){
-                let childData = childSnapshot.val();
+                let childData = childSnapshot.val(); // D.
                 for(let j=0; j<times.length; j++){
-                    if(childData == times[j]){
-                        $("td[data-timestamp='" + times[j] + "']").removeClass("time-select-td");
-                        $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled");
+                    if(childData == times[j]){ // E.
+                        $("td[data-timestamp='" + times[j] + "']").removeClass("time-select-td"); // F.
+                        $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled"); // SG.
                     }
                 }
             });
