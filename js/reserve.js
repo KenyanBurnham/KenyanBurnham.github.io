@@ -52,6 +52,7 @@ function listener(){
         let tdID = 'td' + i;
         $("#" + tdID).attr('data-timestamp', newTimeStamp);
         $("#" + tdID).removeClass("time-select-disabled");
+        $("#" + tdID).addClass("time-select-td");
         /*Adds the epoch time onto the epoch date
         and assigns it to the time table*/
     }
