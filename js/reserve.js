@@ -44,7 +44,7 @@ function listener(){
         let tdID = 'td' + i;
         console.log(tdID);
         console.log(tdID.toString());
-        $(tdID).val(newTimeStamp);
+        $(tdID).val() = newTimeStamp;
         console.log(tdID.val());
     }
     let path = "requests/reservation/approved/" + timeStamp;
