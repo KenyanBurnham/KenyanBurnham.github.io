@@ -12,6 +12,11 @@ body{
     width: 20vw;
 }
 
+.time-select-disabled{
+    background-color: #F7F8FB;
+    color: #B3BDD9;
+}
+
 .time-select-table{
   bottom: 50vh;
   height: 40vh;
@@ -24,8 +29,4 @@ body{
 td.time-select-td:hover{
     background-color: #7FCBC3;
     color: white;
-}
-
-td.time-select-disabled{
-    opacity: .65;
 }

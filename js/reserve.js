@@ -66,7 +66,8 @@ function listener(){
                 for(let j=0; j<times.length; j++){
                     //...if they match...
                     if(childData == times[j]){
-                        console.log("childData: " + childData + " is equal to times[j]: " + times[j]);
+                      console.log("They do match, but did the class change?");
+                        $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled");
                         //if they don't
                     }else{
                         console.log("there is no reservation for: " + times[j]);
