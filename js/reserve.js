@@ -76,16 +76,6 @@ function listener(){
         }else{
             console.log("No data to display");
         }
-
-        //let displayReservation = (snapshot.val() && snapshot.val());
-        /*Asks database if there are any reservations on that day*/
-        //if(displayReservation){
-            /*If there are then disable the sections on the table*/
-            //console.log("Reservation: " + displayReservation);
-        //}else{
-            //console.log("No reservations.");
-            /*if there aren't any then do nothing*/
-        //}
     });
 }
 
