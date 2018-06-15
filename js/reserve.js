@@ -38,47 +38,38 @@ function setReservation(){
 /*=============================================================================
 listener function:
 1. calendar object is clicked
-2. TODO: Clears currently disabled reservations
+2. Clears currently disabled reservations
 3. Grabs the "is-selected" custom "timestamp" data
 4. Gives a custom "data-timestamp" data type to the time cells
-5. FIXME: Asks server for any reservations on that day
-6. TODO: if any, applies disabled class to times reserved
+5. Asks server for any reservations on that day
+6. If any, applies disabled class to times reserved
+7. If a time is selected I need to make an object that stays on the dom
+8. TODO: When submit button is pressed it needs to remove all objects and make a reservation request
+9. TODO: remove ".time-select-disabled" class when "hello-week__prev" & "hello-week__next" are pushed
 ===============================================================================*/
 function listener(){
     let times = [];
     let timeStamp = $('.is-selected').attr("data-timestamp");
     for(let i = 0; i<18; i++){
         let newTimeStamp = (Number(timeStamp) + (3600*8) + Number(1800*i));
-        //Makes a list of data-timestamps displayed in time-select-table
         times[i] = newTimeStamp;
         let tdID = 'td' + i;
         $("#" + tdID).attr('data-timestamp', newTimeStamp);
         $("#" + tdID).removeClass("time-select-disabled");
         $("#" + tdID).addClass("time-select-td");
-        /*Adds the epoch time onto the epoch date
-        and assigns it to the time table*/
     }
     let path = "requests/reservation/approved/" + timeStamp;
     firebase.database().ref(path).once('value').then(function(snapshot){
-        //If there is data at that snapshot, then...
         if((snapshot.val() && snapshot.val())){
-            //... for each of those data points...
             snapshot.forEach(function(childSnapshot){
                 let childData = childSnapshot.val();
-                //... compare which times match those data points...
                 for(let j=0; j<times.length; j++){
-                    //...if they match...
                     if(childData == times[j]){
                         $("td[data-timestamp='" + times[j] + "']").removeClass("time-select-td");
                         $("td[data-timestamp='" + times[j] + "']").addClass("time-select-disabled");
-                        //if they don't
-                    }else{
-                        console.log("there is no reservation for: " + times[j]);
                     }
                 }
             });
-        }else{
-            console.log("No data to display");
         }
     });
 }
