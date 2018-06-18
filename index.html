@@ -45,13 +45,24 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">Create a PSPE Account</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+                <p>To create an account fill out the following Information.</p>
+                <form class="form-signin" action="index.html" method="post">
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                    <label for="inputFName" class="sr-only">First Name</label>
+                    <input type="name" id="inputFName" class="form-control" placeholder="First Name" required="" autofocus="">
+                    <label for="inputLName" class="sr-only">Last Name</label>
+                    <input type="name" id="inputLName" class="form-control" placeholder="Last Name" required="" autofocus="">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+                </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary">Save changes</button>
