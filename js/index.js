@@ -1,4 +1,4 @@
 $('#createAccount').on('click', function () {
-    $('#accountModal').modal(show)
+    $('#accountModal').modal('show');
     console.log("Show modal");
 })
