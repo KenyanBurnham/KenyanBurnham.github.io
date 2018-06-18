@@ -35,8 +35,33 @@
         };
         firebase.initializeApp(config);
       </script>
+      <script src="js/index.js"></script>
     </head>
+    <!-- Courtesy of Bootstrap 4 Sign In template
+      Source: https://getbootstrap.com/docs/4.0/examples/sign-in/ -->
     <body class="text-center">
+      <!-- Sign Up Modal-->
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign In Functionality-->
       <form class="form-signin">
       <img class="mb-4" src="img/circuit-logo.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -45,9 +70,10 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p> <a onclick=""> Create Account </a> </p>
+      <p> <a onclick="launchMyModal()"> Create Account </a> </p>
       <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
     </form>
+
       <!-- Old site here-->
       <!--
         <section class="main-section main-section main-top-section background-white">
