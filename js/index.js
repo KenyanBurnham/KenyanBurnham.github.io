@@ -1,3 +1,4 @@
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
+$('#createAccount').on('click', function () {
+    $('#accountModal').modal(show)
+    console.log("Show modal");
 })

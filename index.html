@@ -41,7 +41,7 @@
       Source: https://getbootstrap.com/docs/4.0/examples/sign-in/ -->
     <body class="text-center">
       <!-- Sign Up Modal-->
-      <div class="modal" tabindex="-1" role="dialog">
+      <div id="accountModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -70,7 +70,7 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p> <a onclick="launchMyModal()"> Create Account </a> </p>
+      <p> <a id="createAccount"> Create Account </a> </p>
       <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
     </form>
 
