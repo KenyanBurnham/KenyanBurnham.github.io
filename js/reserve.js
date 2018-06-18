@@ -75,6 +75,8 @@ function listener(){
             console.log(tdID);
             console.log("clicked");
             console.log($("#" + tdID).attr('data-timestamp'));
+            $("#" + tdID).removeClass("time-select-disabled");
+            $("#" + tdID).addClass("time-select-selected");
         });
         // TODO: Add listener for "hello-week__prev" & "hello-week__next" to put the diabled css on
     }

@@ -36,3 +36,8 @@ td.time-select-td:active{
     background-color: #7FCBC3;
     color: white;
 }
+
+.time-select-selected{
+    background-color: #7FCBC3;
+    color: white;
+}
