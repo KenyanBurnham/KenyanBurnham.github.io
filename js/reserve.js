@@ -72,6 +72,7 @@ function listener(){
         $("#" + tdID).removeClass("time-select-disabled"); // 7.
         $("#" + tdID).addClass("time-select-td"); // 8.
         $("#" + tdID).click(function(){ // 9.
+            console.log(tdID);
             console.log("clicked");
             console.log($("#" + tdID).attr('data-timestamp'));
         });
