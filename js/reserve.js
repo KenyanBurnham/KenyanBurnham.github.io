@@ -30,6 +30,10 @@ Resources:
 //Just a simple message to the explorative user
 console.log("%cHello {NAME}, I see you are interested in my code. If you have any feedback or issues you would like to discuss with me then email me at: kenyan.burnham@ttu.edu", "color: blue; font-size: x-large");
 
+function Reservation(){
+    this.
+}
+
 /*=============================================================================
 // TODO: getReservations function:
 1. Set's reservation time based on user input
@@ -61,7 +65,7 @@ G. And add the diabled class
 TODO: When submit button is pressed it needs to remove all objects and make a reservation request
 TODO: remove ".time-select-disabled" class when "hello-week__prev" & "hello-week__next" are pushed
 ===============================================================================*/
-function listener(){
+//function listener(){
     let times = [];
     let timeStamp = $('.is-selected').attr("data-timestamp"); // 1.
     for(let i = 0; i<18; i++){ // 2.
