@@ -44,8 +44,10 @@ blockquote{
 
 footer{
     background-color: #F8F9FA;
-    bottom: 100vh;
+    bottom: 0vh;
+    color: #212529;
     display: block;
+    font-size: 1rem;
     position: absolute;
     width: 100vw;
 }
