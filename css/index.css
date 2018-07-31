@@ -44,10 +44,17 @@ blockquote{
 
 footer{
     background-color: #F8F9FA;
+    width: 100vw;
 }
 
 h1{
     color: #0091EA;
+}
+
+header{
+    position: sticky;
+    top: 0vh;
+    width: 100vw;
 }
 
 hr{
