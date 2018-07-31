@@ -44,6 +44,8 @@ blockquote{
 
 footer{
     background-color: #F8F9FA;
+    bottom: 100vh;
+    position: absolute;
     width: 100vw;
 }
 
