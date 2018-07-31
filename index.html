@@ -7,11 +7,16 @@
       <meta name="author" content="Program for Semiconductor Product Engineering">
       <title>PSPE Student Portal</title>
       <!-- Bootstrap core CSS -->
-      <link href="bootstrap-4.0.0\dist\css\bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
       <link href="css/signin.css" rel="stylesheet">
+      <!-- Old styles
+      <link rel="stylesheet" type="text/css" href="css/buttons.css">
+      <link rel="stylesheet" type="text/css" href="css/common.css">
+      <link rel="stylesheet" type="text/css" href="css/new-index.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script src="bootstrap-4.0.0\dist\js\bootstrap.min.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
       <!-- Firebase App is always required and must be first -->
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
@@ -19,6 +24,7 @@
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
       <script>
+        // Initialize Firebase
         var config = {
           apiKey: "AIzaSyAOPzk-KGKr6fd7g6aX4SEO3dR0oagYFG4",
           authDomain: "pspe-inventory.firebaseapp.com",
@@ -51,7 +57,7 @@
                             <a class="nav-link" href="equipment.html">Equipment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  href="schedule.html">Reserve</a>
+                            <a class="nav-link"  href="schedule.html">Schedule</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,5 +98,11 @@
               </div>
           </div>
       </section>
+
+      <footer>
+          <p>Developed by <a>Kenyan Burnham</a> for the <a>PSPE Program</a>, <a>Texas Tech University<a> in 2018.</p>
+            <p>Contact <a>Kenyan</a>.</p>
+      </footer>
+      
     </body>
 </html>
