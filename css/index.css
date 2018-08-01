@@ -48,7 +48,7 @@ footer{
     color: #212529;
     display: block;
     font-size: 1rem;
-    position: absolute;
+    position: sticky;
     width: 100vw;
 }
 
