@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>PSPE Student Portal</title>
-    <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="This is the student protal for the PSPE lab.">
+      <meta name="author" content="Program for Semiconductor Product Engineering">
+      <title>PSPE Student Portal</title>
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/oldcss.css" rel="stylesheet">
+      <!-- Old styles
+      <link rel="stylesheet" type="text/css" href="css/buttons.css">
+      <link rel="stylesheet" type="text/css" href="css/common.css">
+      <link rel="stylesheet" type="text/css" href="css/new-index.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+      <!-- Firebase App is always required and must be first -->
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+      <!-- Add additional services you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAOPzk-KGKr6fd7g6aX4SEO3dR0oagYFG4",
+          authDomain: "pspe-inventory.firebaseapp.com",
+          databaseURL: "https://pspe-inventory.firebaseio.com",
+          projectId: "pspe-inventory",
+          storageBucket: "pspe-inventory.appspot.com",
+          messagingSenderId: "364993379091"
+        };
+        firebase.initializeApp(config);
+      </script>
   </head>
   <body>
     <header class="main-nav">
