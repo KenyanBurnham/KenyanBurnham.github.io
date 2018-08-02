@@ -6,7 +6,7 @@ function fillTable(selector){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
         $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
-        $("#tr" + i).click(function(){
+        $("tr[data-timestamp='" + (Number(timeStamp) + (3600*9) + Number(1800*i)) + "']").click(function(){
             console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
         });
     }
