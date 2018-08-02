@@ -1,15 +1,16 @@
 
 
 function fillTable(select){
+    let timeStamp;
     switch (select) {
       case "today":
-          let timeStamp = $('.is-today').attr("data-timestamp");
-        break;
+          timeStamp = $('.is-today').attr("data-timestamp");
+          break;
       case "select":
-          let timeStamp = $('.is-selected').attr("data-timestamp");
-        break;
+          timeStamp = $('.is-selected').attr("data-timestamp");
+          break;
       default:
-          let timeStamp = $('.is-selected').attr("data-timestamp");
+          timeStamp = $('.is-selected').attr("data-timestamp");
     }
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
