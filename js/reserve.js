@@ -45,6 +45,6 @@ new HelloWeek({
     range: false,
     onLoad: () => { /** callback function */ },
     onChange: () => { /** callback function */ },
-    onSelect: () => { doSomething(); },
+    onSelect: () => { doSomething() },
     onClear: () => { /** callback function */ },
 });
