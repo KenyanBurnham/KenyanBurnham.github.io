@@ -7,9 +7,10 @@ function fillTable(selector){
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
-        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
+        let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i))
+        $("#tr" + i).attr('data-timestamp', newTimeStamp);
         $("#tr" + i).click(function(){
-            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
+            console.log(newTimeStamp);
         });
     }
     //filter out unavailable times and allow the button to be interacted with
