@@ -1,7 +1,16 @@
 
 
-function fillTable(){
-    let timeStamp = $('.is-selected').attr("data-timestamp");
+function fillTable(select){
+    switch (select) {
+      case "today":
+          let timeStamp = $('.is-today').attr("data-timestamp");
+        break;
+      case "select":
+          let timeStamp = $('.is-selected').attr("data-timestamp");
+        break;
+      default:
+          let timeStamp = $('.is-selected').attr("data-timestamp");
+    }
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
@@ -14,6 +23,8 @@ function fillTable(){
     //filterPending(user);
     //filterApproved();
 }
+
+fillTable("today");
 
 /*=============================================================================
 cleanUpDate function:
@@ -56,6 +67,6 @@ new HelloWeek({
     range: false,
     onLoad: () => { /** callback function */ },
     onChange: () => { /** callback function */ },
-    onSelect: () => { fillTable() },
+    onSelect: () => { fillTable("select") },
     onClear: () => { /** callback function */ },
 });
