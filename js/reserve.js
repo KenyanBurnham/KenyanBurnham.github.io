@@ -1,15 +1,6 @@
 
 
-function fillTable(select){
-    let selector;
-    switch (select) {
-      case "today":
-          selector = "today";
-          break;
-      case "select":
-          selector = "selected";
-          break;
-    }
+function fillTable(selector){
     let timeStamp = $('.is-' + selector).attr("data-timestamp");
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
@@ -67,7 +58,7 @@ new HelloWeek({
     range: false,
     onLoad: () => { /** callback function */ },
     onChange: () => { /** callback function */ },
-    onSelect: () => { fillTable("select") },
+    onSelect: () => { fillTable("selected") },
     onClear: () => { /** callback function */ },
 });
 
