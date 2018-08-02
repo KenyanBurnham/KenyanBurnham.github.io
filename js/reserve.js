@@ -1,9 +1,8 @@
 
 
 function fillTable(selector){
-    selector.toString();
-    console.log(selector);
-    let timeStamp = $('.is-' + selector).attr("data-timestamp");
+    let toGrab = ".is-" + selector.toString();
+    let timeStamp = $(toGrab).attr("data-timestamp");
     console.log(Number(timeStamp));
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
