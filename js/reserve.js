@@ -19,6 +19,7 @@ function fillTable(selector){
         //filterPending(newTimeStamp);
         //filterApproved(newTimeStamp);
     }
+  }
 
 /*=============================================================================
 cleanUpDate function:
