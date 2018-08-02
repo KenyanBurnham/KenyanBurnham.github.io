@@ -1,7 +1,7 @@
 
 
-function doSomething(){
-    console.log("yeah");
+function doSomething(that){
+    console.log(that);
 }
 
 /*=============================================================================
@@ -45,6 +45,6 @@ new HelloWeek({
     range: false,
     onLoad: () => { /** callback function */ },
     onChange: () => { /** callback function */ },
-    onSelect: () => { doSomething() },
+    onSelect: () => { doSomething(this) },
     onClear: () => { /** callback function */ },
 });
