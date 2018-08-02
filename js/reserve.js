@@ -16,7 +16,7 @@ function fillTable(select){
         then adds the number of half hours (1800 seconds * i) to get the time*/
         $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
         $("#tr" + i).click(function(){
-            console.log(timeStamp);
+            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
         });
     }
     //filter out unavailable times and allow the button to be interacted with
