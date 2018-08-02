@@ -1,16 +1,13 @@
 
 
-function fillTable(selector){
-    let toGrab = ".is-" + selector.toString();
-    let timeStamp = $(toGrab).attr("data-timestamp");
-    console.log(Number(timeStamp));
+function fillTable(){
+    let timeStamp = $(".is-selected").attr("data-timestamp");
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
-        let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i))
-        $("#tr" + i).attr('data-timestamp', newTimeStamp);
+        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
         $("#tr" + i).click(function(){
-            console.log(newTimeStamp);
+            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
         });
     }
     //filter out unavailable times and allow the button to be interacted with
@@ -66,5 +63,13 @@ new HelloWeek({
 });
 
 $( document ).ready(function() {
-    fillTable("today");
+    let timeStamp = $(".is-today").attr("data-timestamp");
+    for(let i = 0; i<16; i++){
+        /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
+        then adds the number of half hours (1800 seconds * i) to get the time*/
+        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
+        $("#tr" + i).click(function(){
+            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
+        });
+    }
 });
