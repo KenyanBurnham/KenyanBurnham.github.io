@@ -1,6 +1,8 @@
 
 
 function fillTable(selector){
+    selector.toString();
+    console.log(selector);
     let timeStamp = $('.is-' + selector).attr("data-timestamp");
     console.log(Number(timeStamp));
     for(let i = 0; i<16; i++){
