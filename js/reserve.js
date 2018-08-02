@@ -8,20 +8,17 @@ function fillTable(selector){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
         let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
-        let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "'>" +
+        let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + i + "'></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-
         $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
           console.log(newTimeStamp);
         });
+        //filterPending(newTimeStamp);
+        //filterApproved(newTimeStamp);
     }
-    //filter out unavailable times and allow the button to be interacted with
-    //filterPending(user);
-    //filterApproved();
-}
 
 /*=============================================================================
 cleanUpDate function:
