@@ -1,7 +1,7 @@
 
 
-function fillTable(){
-    let timeStamp = $(".is-selected").attr("data-timestamp");
+function fillTable(selector){
+    let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
@@ -14,8 +14,6 @@ function fillTable(){
     //filterPending(user);
     //filterApproved();
 }
-
-
 
 /*=============================================================================
 cleanUpDate function:
@@ -56,20 +54,12 @@ new HelloWeek({
     disabledDaysOfWeek: [0,6],
     weekStart: 0,
     range: false,
-    onLoad: () => { /** callback function */ },
+    onLoad: () => { fillTable(".is-today") },
     onChange: () => { /** callback function */ },
-    onSelect: () => { fillTable() },
+    onSelect: () => { fillTable(".is-selected") },
     onClear: () => { /** callback function */ },
 });
 
 $( document ).ready(function() {
-    let timeStamp = $(".is-today").attr("data-timestamp");
-    for(let i = 0; i<16; i++){
-        /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
-        then adds the number of half hours (1800 seconds * i) to get the time*/
-        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
-        $("#tr" + i).click(function(){
-            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
-        });
-    }
+
 });
