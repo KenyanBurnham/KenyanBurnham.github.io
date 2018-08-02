@@ -24,7 +24,7 @@ function fillTable(select){
     //filterApproved();
 }
 
-fillTable("today");
+
 
 /*=============================================================================
 cleanUpDate function:
@@ -69,4 +69,8 @@ new HelloWeek({
     onChange: () => { /** callback function */ },
     onSelect: () => { fillTable("select") },
     onClear: () => { /** callback function */ },
+});
+
+$( document ).ready(function() {
+    fillTable("today");
 });
