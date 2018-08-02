@@ -1,7 +1,7 @@
 
 
 function fillTable(selector){
-    $("#tableToFill").detach();
+    $("#tableToFill").empty();
     let times = ["9:00 AM", " ", "10:00 AM", " ", "11:00 AM", " ", "12:00 PM", " ", "1:00 PM", " ", "2:00 PM", " ", "3:00 PM", " ", "4:00 PM", " "];
     let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
