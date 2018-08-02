@@ -40,83 +40,34 @@
   </head>
   <body>
       <section>
-          <!-- Sign Up Modal-->
           <div id="reservationModal" class="modal fade" tabindex="-1" role="dialog">
               <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
+                      <!-- Header -->
                       <div class="modal-header">
-                          <h5 id="reservationName" class="modal-title"></h5>
+                          <h5 id="reservationName" class="modal-title">Modal</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                       </div>
+                      <!-- Main Content -->
                       <div class="modal-body">
                           <div class="row">
-                              <table class="reservation-modal-table">
-                                  <thead>
-                                        <th>Who</th>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                        <td> Reserver: </td>
-                                        <td id="modalReserver"> Unavailable</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Group: </td>
-                                        <td id="modalGroup"> Unavailable</td>
-                                    </tr>
-                                  </tbody>
-                              </table>
-                              <hr>
+                              <div class="col-2"></div>
+                              <div class="col">
+                                Content
+                              </div>
+                              <div class="col-2"></div>
                           </div>
-                          <div class="row">
-                              <table class="reservation-modal-table">
-                                  <thead>
-                                        <th>When</th>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                        <td> Date: </td>
-                                        <td id="modalDate"> Unavailable</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Time: </td>
-                                        <td id="modalTime"> Unavailable</td>
-                                    </tr>
-                                  </tbody>
-                              </table>
-                              <hr>
-                          </div>
-                          <div class="row">
-                              <table class="reservation-modal-table">
-                                  <thead>
-                                        <th>What</th>
-                                  </thead>
-                                  <tbody id="modalEquipmentBody">
-                                    <tr>
-                                        <td> <b class="greyed-header">Type:</b> </td>
-                                        <td> <b class="greyed-header">Manufacturer:</b> </td>
-                                        <td> <b class="greyed-header">Model:</b> </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="modalEquipType"> Unavailable </td>
-                                        <td id="modalEquipManufacturer"> Unavailable</td>
-                                        <td id="modalEquipModel"> Unavailable</td>
-                                    </tr>
-                                  </tbody>
-                              </table>
-                              <hr>
-                          </div>
+                          <!-- Alerts -->
                           <div class="row">
                               <div id="successfulAction" class="alert alert-success" role="alert" hidden></div>
                               <div id="deleteAction" class="alert alert-danger" role="alert" hidden>Reservation deleted</div>
                           </div>
                       </div>
+                      <!-- Footer -->
                       <div id="modalFooterButtons" class="modal-footer">
                           <button id="acceptButton" class="btn btn-md btn-success" type="button" name="button" hidden onclick="acceptReservation()">Accept</button>
-                          <button id="rejectButton" class="btn btn-md btn-info" type="button" name="button" hidden onclick="changeModal('reject')">Reject</button>
-                          <button id="cancelButton" class="btn btn-md btn-warning" type="button" name="button" hidden onclick="changeModal('cancel')">Cancel</button>
-                          <button id="deleteButton" class="btn btn-md btn-danger" type="button" name="button" hidden onclick="deleteReservation()">Delete</button>
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                   </div>
