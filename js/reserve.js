@@ -1,7 +1,18 @@
 
 
-function doSomething(that){
-    console.log(that);
+function fillTable(){
+    let timeStamp = $('.is-selected').attr("data-timestamp");
+    for(let i = 0; i<16; i++){
+        /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
+        then adds the number of half hours (1800 seconds * i) to get the time*/
+        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i));
+        $("#tr" + i).click(function(){
+            console.log(this.attr("data-timestamp"));
+        });
+    }
+    //filter out unavailable times and allow the button to be interacted with
+    //filterPending(user);
+    //filterApproved();
 }
 
 /*=============================================================================
@@ -45,6 +56,6 @@ new HelloWeek({
     range: false,
     onLoad: () => { /** callback function */ },
     onChange: () => { /** callback function */ },
-    onSelect: () => { doSomething(this) },
+    onSelect: () => { fillTable() },
     onClear: () => { /** callback function */ },
 });
