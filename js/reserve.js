@@ -1,13 +1,21 @@
 
 
 function fillTable(selector){
+    $("#tableToFill").detach();
+    let times = ["9:00 AM", " ", "10:00 AM", " ", "11:00 AM", " ", "12:00 PM", " ", "1:00 PM", " ", "2:00 PM", " ", "3:00 PM". " ", "4:00 PM", " "];
     let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
         /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         then adds the number of half hours (1800 seconds * i) to get the time*/
-        $("#tr" + i).attr('data-timestamp', (Number(timeStamp) + (3600*9) + Number(1800*i)));
-        $("tr[data-timestamp='" + (Number(timeStamp) + (3600*9) + Number(1800*i)) + "']").click(function(){
-            console.log((Number(timeStamp) + (3600*9) + Number(1800*i)));
+        let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
+        let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "'>" +
+                      "<td>" + times[i] + "</td>" +
+                      "<td id='td" + i + "'></td>" +
+                  "</tr>";
+        $("#tableToFill").append(tr);
+
+        $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
+          console.log(newTimeStamp);
         });
     }
     //filter out unavailable times and allow the button to be interacted with
