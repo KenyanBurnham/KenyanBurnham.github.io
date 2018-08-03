@@ -38,7 +38,8 @@ function modalBuilder(timeStamp){
     let timeToDisplay = humanReadableTime(hour, minute);
     console.log(timeStamp);
     firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
-        if(snapshot){
+      console.log(snapshot.key);
+        if(snapshot.key == timeStamp){
             //If it's already reserved
             //let snapData = snapshot.val();
             //let snapKey = snapshot.key();
