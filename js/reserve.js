@@ -1,4 +1,19 @@
-
+function modalBuilder(timeStamp){
+    firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
+        if(snapshot){
+            //If it's already reserved
+            let snapData = snapshot.val();
+            let snapKey = snapshot.key();
+            $("#takenAlert").prop("hidden", false);
+            $("#freeAlert").prop("hidden", true);
+        }else{
+            //If theres no reservation
+            $("#freeAlert").prop("hidden", false);
+            $("#takenAlert").prop("hidden", true);
+        }
+    });
+    $("#reservationModal").modal("show");
+}
 
 function fillTable(selector){
     $("#tableToFill").empty();
@@ -14,9 +29,9 @@ function fillTable(selector){
                   "</tr>";
         $("#tableToFill").append(tr);
         $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-            console.log(newTimeStamp);
-            $("#reservationModal").modal("show");
-            $("#modalTitle").text(newTimeStamp.toString());
+            $("#freeAlert").prop("hidden", true);
+            $("#takenAlert").prop("hidden", true);
+            modalBuilder(newTimeStamp.toString());
         });
         //filterPending(newTimeStamp);
         //filterApproved(newTimeStamp);
