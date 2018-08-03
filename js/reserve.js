@@ -38,7 +38,6 @@ function modalBuilder(timeStamp){
     let timeToDisplay = humanReadableTime(hour, minute);
     $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
     $("#freeAlert").prop("hidden", false);
-    $("#takenAlert").prop("hidden", true);
     $("#reservationModal").modal("show");
 }
 
@@ -56,7 +55,6 @@ function filter(timeStamp){
             }else{
                 $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                     $("#freeAlert").prop("hidden", true);
-                    $("#takenAlert").prop("hidden", true);
                     modalBuilder(timeStamp.toString());
                 });
             }
