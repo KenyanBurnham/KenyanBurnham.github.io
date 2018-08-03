@@ -42,35 +42,25 @@ function modalBuilder(timeStamp){
     $("#reservationModal").modal("show");
 }
 
-function filterPending(timeStamp){
-    firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(snapshot){
-        if(snapshot.exists()){
-            $("#td" + timeStamp).text("Pending Reservation");
-            $("#td" + timeStamp).addClass("pending-text");
-            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-        }else{
-            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                $("#freeAlert").prop("hidden", true);
-                $("#takenAlert").prop("hidden", true);
-                modalBuilder(timeStamp.toString());
-            });
-        }
-    });
-}
-
-function filterApproved(timeStamp){
-    firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
-        if(snapshot.exists()){
-            $("#td" + timeStamp).text("Reserved");
-            $("#td" + timeStamp).addClass("reserved-text");
-            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-        }else{
-            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                $("#freeAlert").prop("hidden", true);
-                $("#takenAlert").prop("hidden", true);
-                modalBuilder(timeStamp.toString());
-            });
-        }
+function filter(timeStamp){
+    firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(pendingSnap){
+        firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(approveSnap){
+            if(pendingSnap.exists()){
+                $("#td" + timeStamp).text("Pending Reservation");
+                $("#td" + timeStamp).addClass("pending-text");
+                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+            }else if(approvedSnap.exists()){
+                $("#td" + timeStamp).text("Reserved");
+                $("#td" + timeStamp).addClass("reserved-text");
+                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+            }else{
+              $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                  $("#freeAlert").prop("hidden", true);
+                  $("#takenAlert").prop("hidden", true);
+                  modalBuilder(timeStamp.toString());
+              });
+            }
+        });
     });
 }
 
@@ -87,8 +77,7 @@ function fillTable(selector){
                       "<td id='td" + newTimeStamp + "'></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        filterPending(newTimeStamp);
-        filterApproved(newTimeStamp);
+        filter(newTimeStamp);
     }
   }
 
