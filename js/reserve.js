@@ -33,8 +33,6 @@ function modalBuilder(timeStamp){
             $("#freeAlert").text( dateToDisplay + " is reservable.");
             $("#freeAlert").prop("hidden", false);
             $("#takenAlert").prop("hidden", true);
-
-
         }
     });
     $("#reservationModal").modal("show");
