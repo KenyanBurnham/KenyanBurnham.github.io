@@ -54,7 +54,7 @@ function filterPending(timeStamp){
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                 $("#freeAlert").prop("hidden", true);
                 $("#takenAlert").prop("hidden", true);
-                modalBuilder(newTimeStamp.toString());
+                modalBuilder(timeStamp.toString());
             });
         }
     });
@@ -70,7 +70,7 @@ function filterApproved(timeStamp){
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                 $("#freeAlert").prop("hidden", true);
                 $("#takenAlert").prop("hidden", true);
-                modalBuilder(newTimeStamp.toString());
+                modalBuilder(timeStamp.toString());
             });
         }
     });
