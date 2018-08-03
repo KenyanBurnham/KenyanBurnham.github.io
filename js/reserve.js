@@ -36,8 +36,6 @@ function modalBuilder(timeStamp){
     let minute = grabNewDate.getMinutes();
     let dateToDisplay = humanReadableDate(day, date, month);
     let timeToDisplay = humanReadableTime(hour, minute);
-    console.log(timeStamp);
-
     $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
     $("#freeAlert").prop("hidden", false);
     $("#takenAlert").prop("hidden", true);
