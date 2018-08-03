@@ -5,9 +5,9 @@ function humanReadableTime(hour, minute){
     console.log(minute);
     let toReturn ="";
     if(minute != 0){
-      toReturn = timeHalf[hour].toString();
+      toReturn = timeHalf[Number(hour - 9)].toString();
     }else{
-      toReturn = timeWhole[hour].toString();
+      toReturn = timeWhole[Number(hour - 9)].toString();
     }
     return toReturn;
 }
