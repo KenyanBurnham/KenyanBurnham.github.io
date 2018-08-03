@@ -1,3 +1,16 @@
+function humanReadableTime(hour, minute){
+    let timesWhole = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
+    let timeHalf = ["9:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "1:30 PM", "2:30 PM", "3:30 PM", "4:30 PM"];
+    console.log(minute);
+    let toReturn;
+    if(minute != 0){
+      toReturn = timeHalf[hour];
+    }else{
+      toReturn = timeWhole[hour];
+    }
+    return toReturn.toString();
+}
+
 function humanReadableDate(day, date, month){
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -23,17 +36,18 @@ function modalBuilder(timeStamp){
     let hour = grabNewDate.getHours();
     let minute = grabNewDate.getMinutes();
     let dateToDisplay = humanReadableDate(day, date, month);
+    let timeToDisplay = humanReadableTime(hour, minute);
     firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
         if(snapshot){
             //If it's already reserved
             //let snapData = snapshot.val();
             //let snapKey = snapshot.key();
-            $("#takenAlert").text( dateToDisplay + " at " + hour + ":" + minute + " is already reserved.");
+            $("#takenAlert").text( dateToDisplay + " at " + timeToDisplay + " is already reserved.");
             $("#takenAlert").prop("hidden", false);
             $("#freeAlert").prop("hidden", true);
         }else{
             //If theres no reservation
-            $("#freeAlert").text( dateToDisplay + " at " + hour + ":" + minute + " is available.");
+            $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
             $("#freeAlert").prop("hidden", false);
             $("#takenAlert").prop("hidden", true);
         }
@@ -69,19 +83,19 @@ cleanUpDate function:
 1. primitive way of formating the date to be correct for the calendar
 ===============================================================================*/
 function cleanUpDate(){
-      let today = new Date().getDate();
-      today = today + 1;
-      let month = new Date().getMonth();
-      month = month + 1;
-      let year = new Date().getFullYear();
-      if(month <= 9){
-          month = "0" + month;
-      }
-      if(today <= 9){
-          today = "0" + today;
-      }
-      let todayDateDefault = year + "-" + month + "-" + today;
-      return todayDateDefault;
+    let today = new Date().getDate();
+    today = today + 1;
+    let month = new Date().getMonth();
+    month = month + 1;
+    let year = new Date().getFullYear();
+    if(month <= 9){
+        month = "0" + month;
+    }
+    if(today <= 9){
+        today = "0" + today;
+    }
+    let todayDateDefault = year + "-" + month + "-" + today;
+    return todayDateDefault;
 }
 
 /*=============================================================================
