@@ -15,22 +15,25 @@ function humanReadableDate(day, date, month){
 }
 
 function modalBuilder(timeStamp){
+    //let now = 	Math.round(new Date().getTime()/1000);
     let grabNewDate = new Date(Number(timeStamp)*1000);
     let day = grabNewDate.getDay();
     let date = grabNewDate.getDate();
     let month = grabNewDate.getMonth() + 1;
+    let hour = grabNewDate.getHours();
+    let minute = grabNewDate.getMinutes();
     let dateToDisplay = humanReadableDate(day, date, month);
     firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
         if(snapshot){
             //If it's already reserved
             //let snapData = snapshot.val();
             //let snapKey = snapshot.key();
-            $("#takenAlert").text( dateToDisplay + " is already reserved.");
+            $("#takenAlert").text( dateToDisplay + " at " + hour + ":" + minute + " is already reserved.");
             $("#takenAlert").prop("hidden", false);
             $("#freeAlert").prop("hidden", true);
         }else{
             //If theres no reservation
-            $("#freeAlert").text( dateToDisplay + " is reservable.");
+            $("#freeAlert").text( dateToDisplay + " at " + hour + ":" + minute + " is available.");
             $("#freeAlert").prop("hidden", false);
             $("#takenAlert").prop("hidden", true);
         }
