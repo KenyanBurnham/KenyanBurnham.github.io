@@ -1,15 +1,40 @@
+function humanReadableDate(day, date, month){
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let formattedDate = "";
+    if((date == 1) || (date == 21) || (date == 31)){
+        formattedDate = days[day] + ", " + months[month] + " " + date + "st";
+    }else if((date == 2) || (date == 22)){
+        formattedDate = days[day] + ", " + months[month] + " " + date + "nd";
+    }else if((date == 3) || (date == 23)){
+        formattedDate = days[day] + ", " + months[month] + " " + date + "rd";
+    }else{
+        formattedDate = days[day] + ", " + months[month] + " " + date + "th";
+    }
+    return formattedDate.toString();
+}
+
 function modalBuilder(timeStamp){
+    let grabNewDate = new Date(Number(timeStamp)*1000);
+    let day = grabNewDate.getDay();
+    let date = grabNewDate.getDate();
+    let month = grabNewDate.getMonth() + 1;
+    let dateToDisplay = humanReadableDate(day, date, month);
     firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
         if(snapshot){
             //If it's already reserved
             let snapData = snapshot.val();
             let snapKey = snapshot.key();
+            $("#takenAlert").text( dateToDisplay + " is already reserved.");
             $("#takenAlert").prop("hidden", false);
             $("#freeAlert").prop("hidden", true);
         }else{
             //If theres no reservation
+            $("#freeAlert").text( dateToDisplay + " is reservable.");
             $("#freeAlert").prop("hidden", false);
             $("#takenAlert").prop("hidden", true);
+
+
         }
     });
     $("#reservationModal").modal("show");
