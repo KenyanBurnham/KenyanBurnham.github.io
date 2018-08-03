@@ -54,11 +54,11 @@ function filter(timeStamp){
                 $("#td" + timeStamp).addClass("reserved-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
             }else{
-              $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                  $("#freeAlert").prop("hidden", true);
-                  $("#takenAlert").prop("hidden", true);
-                  modalBuilder(timeStamp.toString());
-              });
+                $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                    $("#freeAlert").prop("hidden", true);
+                    $("#takenAlert").prop("hidden", true);
+                    modalBuilder(timeStamp.toString());
+                });
             }
         });
     });
