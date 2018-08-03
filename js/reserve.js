@@ -49,6 +49,12 @@ function filterPending(timeStamp){
         if(snapshot.exists()){
             $("tr[data-timestamp='" + timeStamp + "']").addClass("pending");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+        }else{
+            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                $("#freeAlert").prop("hidden", true);
+                $("#takenAlert").prop("hidden", true);
+                modalBuilder(newTimeStamp.toString());
+            });
         }
     });
 }
@@ -58,6 +64,12 @@ function filterApproved(timeStamp){
         if(snapshot.exists()){
             $("tr[data-timestamp='" + timeStamp + "']").addClass("reserved");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+        }else{
+            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                $("#freeAlert").prop("hidden", true);
+                $("#takenAlert").prop("hidden", true);
+                modalBuilder(newTimeStamp.toString());
+            });
         }
     });
 }
@@ -75,11 +87,6 @@ function fillTable(selector){
                       "<td id='td" + i + "'></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-            $("#freeAlert").prop("hidden", true);
-            $("#takenAlert").prop("hidden", true);
-            modalBuilder(newTimeStamp.toString());
-        });
         filterPending(newTimeStamp);
         filterApproved(newTimeStamp);
     }
