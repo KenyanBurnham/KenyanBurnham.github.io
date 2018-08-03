@@ -23,8 +23,8 @@ function modalBuilder(timeStamp){
     firebase.database().ref("reservation/" + timeStamp).once("value", function(snapshot){
         if(snapshot){
             //If it's already reserved
-            let snapData = snapshot.val();
-            let snapKey = snapshot.key();
+            //let snapData = snapshot.val();
+            //let snapKey = snapshot.key();
             $("#takenAlert").text( dateToDisplay + " is already reserved.");
             $("#takenAlert").prop("hidden", false);
             $("#freeAlert").prop("hidden", true);
