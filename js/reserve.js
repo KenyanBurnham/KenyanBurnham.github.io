@@ -37,22 +37,29 @@ function modalBuilder(timeStamp){
     let dateToDisplay = humanReadableDate(day, date, month);
     let timeToDisplay = humanReadableTime(hour, minute);
     console.log(timeStamp);
-    firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
-        if(snapshot){
-            //If it's already reserved
-            //let snapData = snapshot.val();
-            //let snapKey = snapshot.key();
-            $("#takenAlert").text( dateToDisplay + " at " + timeToDisplay + " is already reserved.");
-            $("#takenAlert").prop("hidden", false);
-            $("#freeAlert").prop("hidden", true);
-        }else{
-            //If theres no reservation
-            $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
-            $("#freeAlert").prop("hidden", false);
-            $("#takenAlert").prop("hidden", true);
+
+    $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
+    $("#freeAlert").prop("hidden", false);
+    $("#takenAlert").prop("hidden", true);
+    $("#reservationModal").modal("show");
+}
+
+function filterPending(timeStamp){
+    firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(snapshot){
+        if(snapshot.exists()){
+            $("tr[data-timestamp='" + newTimeStamp + "']").addClass("pending");
+            $("tr[data-timestamp='" + newTimeStamp + "']").prop("disabled", true);
         }
     });
-    $("#reservationModal").modal("show");
+}
+
+function filterApproved(timeStamp){
+    firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
+        if(snapshot.exists()){
+            $("tr[data-timestamp='" + newTimeStamp + "']").addClass("reserved");
+            $("tr[data-timestamp='" + newTimeStamp + "']").prop("disabled", true);
+        }
+    });
 }
 
 function fillTable(selector){
@@ -73,8 +80,8 @@ function fillTable(selector){
             $("#takenAlert").prop("hidden", true);
             modalBuilder(newTimeStamp.toString());
         });
-        //filterPending(newTimeStamp);
-        //filterApproved(newTimeStamp);
+        filterPending(newTimeStamp);
+        filterApproved(newTimeStamp);
     }
   }
 

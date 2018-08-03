@@ -1,0 +1,10 @@
+.reserved{
+    background-color: #007bff;
+    color: white;
+}
+
+.pending{
+    background-color: #007bff;
+    color: white;
+    opacity: .85;
+}
