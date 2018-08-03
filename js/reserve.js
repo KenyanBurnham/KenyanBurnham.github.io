@@ -47,7 +47,7 @@ function modalBuilder(timeStamp){
 function filterPending(timeStamp){
     firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
-            $("tr[data-timestamp='" + timeStamp + "']").addClass("pending");
+            $("#td" + timeStamp).text("Pending Reservation");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }else{
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
@@ -62,7 +62,7 @@ function filterPending(timeStamp){
 function filterApproved(timeStamp){
     firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
-            $("tr[data-timestamp='" + timeStamp + "']").addClass("reserved");
+            $("#td" + timeStamp).text("Reserved");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }else{
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
@@ -84,7 +84,7 @@ function fillTable(selector){
         let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
-                      "<td id='td" + i + "'></td>" +
+                      "<td id='td" + newTimeStamp + "'></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
         filterPending(newTimeStamp);
