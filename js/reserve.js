@@ -15,8 +15,8 @@ function fillTable(selector){
         $("#tableToFill").append(tr);
         $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
             console.log(newTimeStamp);
-            $("#reservationModal").modal("toggle");
-            $("#reservationName").text(newTimeStamp.toString());
+            $("#reservationModal").modal("show");
+            $("#modalTitle").text(newTimeStamp.toString());
         });
         //filterPending(newTimeStamp);
         //filterApproved(newTimeStamp);
