@@ -1,10 +1,7 @@
-.reserved{
-    background-color: #007bff;
-    color: white;
+.reserved-text{
+    color: #007bff;
 }
 
-.pending{
-    background-color: #007bff;
-    color: white;
-    opacity: .85;
+.pending-text{
+    color: #007bff;
 }

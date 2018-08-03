@@ -48,6 +48,7 @@ function filterPending(timeStamp){
     firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
             $("#td" + timeStamp).text("Pending Reservation");
+            $("#td" + timeStamp).addClass("pending-text");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }else{
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
@@ -63,6 +64,7 @@ function filterApproved(timeStamp){
     firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
             $("#td" + timeStamp).text("Reserved");
+            $("#td" + timeStamp).addClass("reserved-text");
             $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }else{
             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
