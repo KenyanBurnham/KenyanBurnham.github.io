@@ -47,8 +47,8 @@ function modalBuilder(timeStamp){
 function filterPending(timeStamp){
     firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
-            $("tr[data-timestamp='" + newTimeStamp + "']").addClass("pending");
-            $("tr[data-timestamp='" + newTimeStamp + "']").prop("disabled", true);
+            $("tr[data-timestamp='" + timeStamp + "']").addClass("pending");
+            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }
     });
 }
@@ -56,8 +56,8 @@ function filterPending(timeStamp){
 function filterApproved(timeStamp){
     firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(snapshot){
         if(snapshot.exists()){
-            $("tr[data-timestamp='" + newTimeStamp + "']").addClass("reserved");
-            $("tr[data-timestamp='" + newTimeStamp + "']").prop("disabled", true);
+            $("tr[data-timestamp='" + timeStamp + "']").addClass("reserved");
+            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
         }
     });
 }
