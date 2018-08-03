@@ -49,7 +49,7 @@ function filter(timeStamp){
                 $("#td" + timeStamp).text("Pending Reservation");
                 $("#td" + timeStamp).addClass("pending-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-            }else if(approvedSnap.exists()){
+            }else if(approveSnap.exists()){
                 $("#td" + timeStamp).text("Reserved");
                 $("#td" + timeStamp).addClass("reserved-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
