@@ -4,11 +4,11 @@ function humanReadableTime(hour, minute){
     console.log(minute);
     let toReturn;
     if(minute != 0){
-      toReturn = timeHalf[hour];
+      toReturn = timeHalf[hour].toString();
     }else{
-      toReturn = timeWhole[hour];
+      toReturn = timeWhole[hour].toString();
     }
-    return toReturn.toString();
+    return toReturn;
 }
 
 function humanReadableDate(day, date, month){
