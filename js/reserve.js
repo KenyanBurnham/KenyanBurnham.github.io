@@ -168,6 +168,8 @@ new HelloWeek({
 });
 
 $( document ).ready(function() {
+
+    $('#equipInput').multiSelect();
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
       $('.btn-toggle').click(function() {
