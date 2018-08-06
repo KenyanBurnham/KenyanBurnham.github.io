@@ -11,7 +11,7 @@ function equipmentList(){
                     $("#equipInput").append(newOptGroup);
                     $("#optgroup" + equipmentData.type).append(newEquipment);
               } else {
-                  $("#optgroup" + equipmentData.type).append(newEquipmentInExistingCategory);
+                  $("#optgroup" + equipmentData.type).append(newEquipment);
               }
           });
       });
