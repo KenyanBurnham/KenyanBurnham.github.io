@@ -1,6 +1,19 @@
-function addEquipment(){
-  //"<optgroup label='" + type + "' data-max-options='" + maxOptionsPerSection + "' data-max-options="6">";
-    //  "<option data-identifier='" + equipmentID + "' data-tokens='" + keywords + "'>Hot Dog, Fries and a Soda</option>";
+function equipmentList(){
+      $("#equipInput").empty();
+      firebase.database().ref("equipment").once("value").then(function(inventory){
+          inventory.forEach(function(equipment){
+              let equipmentData = equipment.val();
+              let newEquipment = "<option value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+              //if this optgroup does not exist
+              if ($("#optgroup" + equipmentData.type).length == 0) {
+                    let newOptGroup = "<optgroup id='optgroup" + equipmentData.type + "' label ='" + equipmentData.type + "'></optgroup>";
+                    $("#equipInput").append(newOptGroup);
+                    $("#optgroup" + equipmentData.type).append(newEquipment);
+              } else {
+                  $("#optgroup" + equipmentData.type).append(newEquipmentInExistingCategory);
+              }
+          });
+      });
 }
 
 function humanReadableTime(hour, minute){
@@ -43,7 +56,7 @@ function modalBuilder(timeStamp){
     let timeToDisplay = humanReadableTime(hour, minute);
     $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
     $("#freeAlert").prop("hidden", false);
-    addEquipment();
+    equipmentList();
     $("#reservationModal").modal("show");
 }
 
