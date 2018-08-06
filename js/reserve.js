@@ -76,10 +76,6 @@ function filter(timeStamp){
     });
 }
 
-function setStatus(status){
-    console.log(status);
-}
-
 function fillTable(selector){
     $("#tableToFill").empty();
     let times = ["9:00 AM", " ", "10:00 AM", " ", "11:00 AM", " ", "12:00 PM", " ", "1:00 PM", " ", "2:00 PM", " ", "3:00 PM", " ", "4:00 PM", " "];
@@ -160,9 +156,11 @@ $( document ).ready(function() {
           }
 
           $(this).find('.btn').toggleClass('btn-default');
+
           let radioValue = $("input[name='options']:checked").val();
           if(radioValue){
               console.log("You selected - " + radioValue);
            };
+           console.log("clicked");
     });
 });
