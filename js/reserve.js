@@ -103,7 +103,7 @@ function filter(timeStamp){
 function fillTable(selector){
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
     //If there is anything other than ".is-selected" it will default to "is-today"
-    if(selector == null || selector === null || selector != ".is-selected"){
+    if((selector == null) || (selector != ".is-selected") || (selector == undefined)){
         selector = ".is-today";
     }
     $("#tableToFill").empty();
