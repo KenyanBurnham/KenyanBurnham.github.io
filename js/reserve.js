@@ -42,22 +42,41 @@ function modalBuilder(timeStamp){
 }
 
 function filter(timeStamp){
-    firebase.database().ref("reservation/pending/" + timeStamp).once("value").then(function(pendingSnap){
-        firebase.database().ref("reservation/approved/" + timeStamp).once("value").then(function(approveSnap){
-            if(pendingSnap.exists()){
-                $("#td" + timeStamp).text("Pending Reservation");
-                $("#td" + timeStamp).addClass("pending-text");
-                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-            }else if(approveSnap.exists()){
-                $("#td" + timeStamp).text("Reserved");
-                $("#td" + timeStamp).addClass("reserved-text");
-                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-            }else{
-                $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                    $("#freeAlert").prop("hidden", true);
-                    modalBuilder(timeStamp.toString());
+
+    firebase.database().ref("reservation/bench1/pending/" + timeStamp).once("value").then(function(pendingBench1Snap){
+      firebase.database().ref("reservation/bench2/pending/" + timeStamp).once("value").then(function(pendingBench2Snap){
+        firebase.database().ref("reservation/bench1/approved/" + timeStamp).once("value").then(function(approveBench1Snap){
+          firebase.database().ref("reservation/bench2/approved/" + timeStamp).once("value").then(function(approveBench2Snap){
+              let bench1PendingStatus = pendingBench1Snap.exists();
+              let bench2PendingStatus = pendingBench2Snap.exists();
+              let bench1ApproveStatus = approveBench1Snap.exists();
+              let bench2ApproveStatus = approveBench2Snap.exists();
+                  //There is a reservation on both benches at this time
+                  switch (expression) {
+                    case expression:
+
+                      break;
+                    default:
+
+                  }
+
+
+                        if(pendingSnap.exists()){
+                            $("#td" + timeStamp).text("Pending Reservation");
+                            $("#td" + timeStamp).addClass("pending-text");
+                            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                        }else if(approveSnap.exists()){
+                            $("#td" + timeStamp).text("Reserved");
+                            $("#td" + timeStamp).addClass("reserved-text");
+                            $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                        }else{
+                            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                                $("#freeAlert").prop("hidden", true);
+                                modalBuilder(timeStamp.toString());
+                            });
+                        }
                 });
-            }
+            });
         });
     });
 }
