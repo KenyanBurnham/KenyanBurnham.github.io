@@ -21,6 +21,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
       <!-- Enable bootstrap 4 theme -->
       <script>window.__theme = 'bs4';</script>
+      <script src="bootstrap-select-1.12.4\js\bootstrap-select.js"></script>
       <script>
         // Initialize Firebase
         var config = {
@@ -89,9 +90,19 @@
                           <small>If you are unsure choose "Other".</small>
                       </div>
 
+                      <div class="input-group mb-3">
+                          <label for="classInput">Equipment</label>
+                          <select class="selectpicker" data-live-search="true">
+                              <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                              <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                              <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                          </select>
+
+                      </div>
+
                       <div class="form-group">
-                          <label for="equipmentInput">Equipment</label>
-                          <textarea class="form-control" id="equipmentInput" rows="3"></textarea>
+                          <label for="requestsInput">Additional Requests</label>
+                          <textarea class="form-control" id="requestsInput" rows="3"></textarea>
                           <small>Be as specific as possible, include additional leads or features. <b>The lab is not responsible for supplying consummables.</b></small>
                       </div>
 
