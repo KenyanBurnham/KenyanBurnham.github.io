@@ -21,7 +21,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
       <!-- Enable bootstrap 4 theme -->
       <script>window.__theme = 'bs4';</script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 
@@ -100,10 +100,15 @@
 
                       <div class="input-group mb-3">
                           <label for="classInput">Equipment</label>
-                          <select class="selectpicker" data-live-search="true">
-                              <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                              <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                              <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                          <select class="selectpicker" data-live-search="true" multiple title="Choose one or more of the following...">
+                              <optgroup label="DC Power Supplies" data-max-options="2">
+                                  <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                  <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                  <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                              <optgroup label="Function Generators" data-max-options="2">
+                                  <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                  <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                  <option data-tokens="frosting">Sugar, Spice and all things nice</option>
                           </select>
 
                       </div>
