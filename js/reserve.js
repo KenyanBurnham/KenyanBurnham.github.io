@@ -160,14 +160,9 @@ $( document ).ready(function() {
           }
 
           $(this).find('.btn').toggleClass('btn-default');
-
-    });
-
-    $('form').submit(function(){
-        let radioValue = $("input[name='options']:checked").val();
-        if(radioValue){
-            console.log("You selected - " + radioValue);
-         };
-            return false;
+          let radioValue = $("input[name='options']:checked").val();
+          if(radioValue){
+              console.log("You selected - " + radioValue);
+           };
     });
 });
