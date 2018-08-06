@@ -150,13 +150,9 @@
                       <div class="col-2"></div>
                       <div class="col">
                           <p class="lead">Pick a bench.</p>
-                          <!--On off switch: https://proto.io/freebies/onoff/-->
-                          <div class="onoffswitch">
-                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                              <label class="onoffswitch-label" for="myonoffswitch">
-                                  <span class="onoffswitch-inner" onclick="setStatus(true)"></span>
-                                  <span class="onoffswitch-switch" onclick="setStatus(false)"></span>
-                              </label>
+                          <div class="btn-group btn-toggle">
+                            <button class="btn btn-default">Bench 1</button>
+                            <button class="btn btn-primary active">Bench 2</button>
                           </div>
                       </div>
                       <div class="col-2"></div>
