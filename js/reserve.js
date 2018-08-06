@@ -42,7 +42,13 @@ function modalBuilder(timeStamp){
 }
 
 function filter(timeStamp){
-
+    let b1 = $("#b1").hasClass("active");
+    let b2 = $("#b2").hasClass("active");
+    if(b1 == true && b2 == false){
+      //then Bench one is the one that needs to be filtered
+    }else if(b2 == true && b1 == false){
+      //then Bench 2 is the one that needs to be filtered through
+    }
     firebase.database().ref("reservation/bench1/pending/" + timeStamp).once("value").then(function(pendingBench1Snap){
       firebase.database().ref("reservation/bench2/pending/" + timeStamp).once("value").then(function(pendingBench2Snap){
         firebase.database().ref("reservation/bench1/approved/" + timeStamp).once("value").then(function(approveBench1Snap){
@@ -77,6 +83,11 @@ function filter(timeStamp){
 }
 
 function fillTable(selector){
+    // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
+    //If there is anything other than ".is-selected" it will default to "is-today"
+    if(selector == null || selector === null || selector != ".is-selected"){
+        selector = ".is-today";
+    }
     $("#tableToFill").empty();
     let times = ["9:00 AM", " ", "10:00 AM", " ", "11:00 AM", " ", "12:00 PM", " ", "1:00 PM", " ", "2:00 PM", " ", "3:00 PM", " ", "4:00 PM", " "];
     let timeStamp = $(selector.toString()).attr("data-timestamp");
@@ -139,6 +150,8 @@ new HelloWeek({
 });
 
 $( document ).ready(function() {
+      //https://codepen.io/kwsim/pen/xqNpLQ
+      //Kenneth Sim
       $('.btn-toggle').click(function() {
           $(this).find('.btn').toggleClass('active');
 
@@ -154,13 +167,8 @@ $( document ).ready(function() {
           if ($(this).find('.btn-info').length>0) {
               $(this).find('.btn').toggleClass('btn-info');
           }
-
           $(this).find('.btn').toggleClass('btn-default');
-
-          let radioValue = $("input[name='options']:checked").val();
-          if(radioValue){
-              console.log("You selected - " + radioValue);
-           };
-           console.log("clicked");
+          //Calls after css change to make sure table gets updated
+          fillTable(".is-selected");
     });
 });
