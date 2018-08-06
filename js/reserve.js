@@ -55,14 +55,6 @@ function filter(timeStamp){
 
 
                   //There is a reservation on both benches at this time
-                  switch (expression) {
-                    case expression:
-
-                      break;
-                    default:
-
-                  }
-
 
                         if(pendingSnap.exists()){
                             $("#td" + timeStamp).text("Pending Reservation");
@@ -82,6 +74,10 @@ function filter(timeStamp){
             });
         });
     });
+}
+
+function setStatus(status){
+    console.log(status);
 }
 
 function fillTable(selector){
