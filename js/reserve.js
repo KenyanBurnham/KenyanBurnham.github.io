@@ -51,6 +51,9 @@ function filter(timeStamp){
               let bench2PendingStatus = pendingBench2Snap.exists();
               let bench1ApproveStatus = approveBench1Snap.exists();
               let bench2ApproveStatus = approveBench2Snap.exists();
+                //If bench one approved or bench one pending,, then place pending on bench 1
+
+
                   //There is a reservation on both benches at this time
                   switch (expression) {
                     case expression:
