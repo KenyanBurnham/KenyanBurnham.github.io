@@ -1,5 +1,5 @@
-function removeEquipment(key){
-    $("#showing" + key.toString()).detach();
+function submitRequest(){
+    //if forms have more then "" || standardValue then submit
 }
 
 function equipmentList(){
@@ -18,7 +18,6 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  console.log(equipment.key);
                   let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<div class='d-flex w-100 justify-content-between'>" +"<small id='xButton" + equipment.key + "' style='float:right'>X</small>" + "</div>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
