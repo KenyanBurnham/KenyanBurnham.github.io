@@ -1,5 +1,5 @@
 function removeEquipment(key){
-  $("#showing" + key.toString()).detach();
+    $("#showing" + key.toString()).detach();
 }
 
 function equipmentList(){
