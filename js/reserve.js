@@ -13,7 +13,9 @@ function equipmentList(){
               } else {
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
-              //multiselectlistener
+              $("<option value='" + equipment.key + "'>").click(function(){
+                  this.prop("selected", true);
+              });
           });
       });
       //$('#equipInput').multiSelect();
