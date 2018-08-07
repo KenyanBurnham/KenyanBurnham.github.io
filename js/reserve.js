@@ -1,5 +1,15 @@
 function submitRequest(){
     //if forms have more then "" || standardValue then submit
+    let email = $("#emailAddressInput").val();
+    let name = $("#nameInput").val();
+    let group = $("#groupMemberInput").val();
+    let inClass = $("#classInput").val();
+    let additional = $("#requestsInput").val();
+
+    let storageBin = localStorage.getItem('equipment');
+    let storageSnapshot = JSON.parse(storageBin);
+    //let token = storageSnapshot["token"];
+    console.log(storageSnapshot);
 }
 
 function equipmentList(){
@@ -18,6 +28,7 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
+                  localStorage.setItem('equipment/' + equipment.key + " " , JSON.stringify(equipment.key));
                   let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
@@ -25,6 +36,7 @@ function equipmentList(){
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
                       $("#showing" + equipment.key).detach();
+                      localStorage.removeItem('currentSession/' + equipment.key + " ");
                   });
               });
           });
