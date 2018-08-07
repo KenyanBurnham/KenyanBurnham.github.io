@@ -6,13 +6,14 @@ function equipmentList(){
               let newEquipment = "<option value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
               //if this optgroup does not exist
               //https://www.sitepoint.com/jquery-check-element-exists/
-              if ($("#optgroup" + equipmentData.type).length == 0) {
-                    let newOptGroup = "<optgroup id='optgroup" + equipmentData.type + "' label ='" + equipmentData.type + "'></optgroup>";
+              if ($("#optgroup" + equipmentData.sku).length == 0) {
+                    let newOptGroup = "<optgroup id='optgroup" + equipmentData.sku + "' label ='" + equipmentData.type + "'></optgroup>";
                     $("#equipInput").append(newOptGroup);
-                    $("#optgroup" + equipmentData.type).append(newEquipment);
+                    $("#optgroup" + equipmentData.sku).append(newEquipment);
               } else {
-                  $("#optgroup" + equipmentData.type).append(newEquipment);
+                  $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
+              //multiselectlistener
           });
       });
       //$('#equipInput').multiSelect();
