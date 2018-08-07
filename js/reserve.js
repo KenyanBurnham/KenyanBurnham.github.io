@@ -7,7 +7,7 @@ function equipmentList(){
       firebase.database().ref("equipment").once("value").then(function(inventory){
           inventory.forEach(function(equipment){
               let equipmentData = equipment.val();
-              let newEquipment = "<option value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+              let newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
               //if this optgroup does not exist
               //https://www.sitepoint.com/jquery-check-element-exists/
               if ($("#optgroup" + equipmentData.sku).length == 0) {
@@ -17,7 +17,7 @@ function equipmentList(){
               } else {
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
-              $("<option value='" + equipment.key + "'>").click(function(){
+              $("#option" + equipment.key).click(function(){
                   console.log(equipment.key);
                   let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<div class='d-flex w-100 justify-content-between'>" +"<small onclick='removeEquipment(" + equipment.key + ")'>X/small>" + "</div>" +
