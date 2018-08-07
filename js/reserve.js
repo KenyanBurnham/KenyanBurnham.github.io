@@ -20,8 +20,8 @@ function equipmentList(){
               $("#option" + equipment.key).click(function(){
                   console.log(equipment.key);
                   let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
-                  "<div class='d-flex w-100 justify-content-between'>" +"<small onclick='removeEquipment(" + equipment.key + ")'>X/small>" + "</div>" +
-                  "<p class='mb-1'>" + equipmentData.manufacturer + equipmentData.model + "</p>" +
+                  "<div class='d-flex w-100 justify-content-between'>" +"<small style='float:right' onclick='removeEquipment(" + equipment.key + ")'>X</small>" + "</div>" +
+                  "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
               });
