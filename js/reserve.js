@@ -19,7 +19,6 @@ function equipmentList(){
               });
           });
       });
-      $('#equipInput').multiSelect({});
 }
 
 function humanReadableTime(hour, minute){
