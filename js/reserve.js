@@ -25,7 +25,7 @@ function equipmentList(){
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
-                      $("#option" + equipment.key).detach();
+                      $("#showing" + equipment.key).detach();
                   });
               });
           });
