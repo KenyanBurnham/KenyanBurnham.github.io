@@ -1,5 +1,5 @@
 function equipmentList(){
-      //$("#equipInput").empty();
+      $("#equipInput").empty();
       firebase.database().ref("equipment").once("value").then(function(inventory){
           inventory.forEach(function(equipment){
               let equipmentData = equipment.val();
