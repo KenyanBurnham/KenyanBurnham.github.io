@@ -13,7 +13,8 @@ function equipmentList(){
               } else {
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
-              $("<option value='" + equipment.key + "'>").click(function(){
+              $("<option value='" + equipment.key + "'>").click(function(event){
+                  event.preventDefault();
                   this.prop("selected", true);
               });
           });
