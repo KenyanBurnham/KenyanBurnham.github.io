@@ -1,3 +1,7 @@
+function removeEquipment(key){
+  $("#showing" + key.toString()).detach();
+}
+
 function equipmentList(){
       $("#equipInput").empty();
       firebase.database().ref("equipment").once("value").then(function(inventory){
@@ -15,7 +19,11 @@ function equipmentList(){
               }
               $("<option value='" + equipment.key + "'>").click(function(event){
                   event.preventDefault();
-                  this.prop("selected", true);
+                  let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
+                  "<div class='d-flex w-100 justify-content-between'>" +"<small onclick='removeEquipment(" + equipment.key + ")'>X/small>" + "</div>" +
+                  "<p class='mb-1'>" + equipmentData.manufacturer + equipmentData.model + "</p>" +
+                  "<small>" + equipmentData.type + "</small>" + "</a>";
+                  $("#equipmentChosen").append(selected);
               });
           });
       });
