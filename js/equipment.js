@@ -30,7 +30,7 @@ function generatePage(){
                     $("#benchTopEquipment").append(newRow2);
                 }
             }else{
-                  let newLi = ";"
+                  let newLi = "";
                   if(gpib == false){
                       newLi = "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + model + "</a></li>";
                   }
