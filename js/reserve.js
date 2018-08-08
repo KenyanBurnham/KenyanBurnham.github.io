@@ -5,7 +5,9 @@ let equipment = [];
 function submitRequest(){
   //find elements with class 'submission'
   //for all of those elemenys add custome data type vale 'data-submission' to equipment
-
+    let equipChildren = $("a .submission");
+    console.log(equipChildren);
+    console.log(equipChildren.length);
     reservation.equipment = equipment;
 
     let email = $("#emailAddressInput").val();
@@ -68,18 +70,14 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  let keyString = equipment.key.toString();
-                  equipment.push("" + keyString + "");
                   $("#option" + equipment.key).prop("data-submisison", keyString);
-                  $("#option" + equipment.key).addClass("submisison");
+                  $("#option" + equipment.key).addClass("submission");
                   let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
-                      let indexToSplice = equipment.find(keyString);
-                      equipment.splice(Number(indexToSplice), 0);
                       $("#" + equipment.key).detach();
                   });
               });
