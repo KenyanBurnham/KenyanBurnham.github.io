@@ -7,9 +7,12 @@ function submitRequest(){
     let classToFind = $(".submission");
     let allEquipment = $("#equipmentChosen").find(classToFind);
 
-    ///for(let i = 0; i< allEquipment.children().length){
-
-  //  }
+    for(let i = 0; i< allEquipment.children().length; i++){
+          let child = allEquipment.children(i);
+          console.log(child);
+          equipment[i] = child.id;
+          console.log(child.id);
+    }
     console.log(allEquipment);
     console.log(allEquipment.children());
     console.log(allEquipment.children().length);
