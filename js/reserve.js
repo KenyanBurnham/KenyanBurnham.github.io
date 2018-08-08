@@ -24,8 +24,10 @@ function submitRequest(){
     for(let i = 0; i < equipElement.children().length; i++){
         let individual = equipElement[i];
         console.log(individual);
-        equipment[i] = $("#showing" + individual.id).prop("data-submission");
-        console.log(individual + " " + equipment[i]);
+        if(individual != undefined){
+            equipment[i] = $("#showing" + individual.id).prop("data-submission");
+            console.log(individual + " " + equipment[i]);
+        }
     }
     let reservation = {
         reserver: name,
@@ -38,7 +40,7 @@ function submitRequest(){
     };
     firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
         if(!error){
-
+            //Need to say it was sent
         }
         if(error){
             console.log("Error setting reservation to database.");
