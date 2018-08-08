@@ -8,7 +8,17 @@ function submitRequest(){
     let equipChildren = $("a .submission");
     console.log(equipChildren);
     console.log(equipChildren.length);
+    for(let a = 0; a < equipChildren.length; a++){
+        console.log(a);
+        let eachChild = equipChildren[a];
+        console.log(eachChild);
+        equipment[a] = eachChild.id;
+        console.log(equipment[a]);
+    }
+
     reservation.equipment = equipment;
+    console.log(reservation.equipment);
+
 
     let email = $("#emailAddressInput").val();
     reservation.email = email;
