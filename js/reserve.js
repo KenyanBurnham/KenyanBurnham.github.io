@@ -143,7 +143,7 @@ function filter(timeStamp){
                   if ((bench1PendingStatus == false) && (bench1ApproveStatus == false)){
                         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                             $("#freeAlert").prop("hidden", true);
-                            modalBuilder(timeStamp.toString());
+                            modalBuilder(timeStamp);
                         });
                   } else if ((bench1PendingStatus == true) || (bench1ApproveStatus == false)){
                         $("#td" + timeStamp).text("Pending Reservation");
@@ -165,7 +165,7 @@ function filter(timeStamp){
                   if ((bench2PendingStatus == false) && (bench2ApproveStatus == false)){
                         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                             $("#freeAlert").prop("hidden", true);
-                            modalBuilder(timeStamp.toString());
+                            modalBuilder(timeStamp);
                         });
                   } else if ((bench2PendingStatus == true) || (bench2ApproveStatus == false)){
                         $("#td" + timeStamp).text("Pending Reservation");
