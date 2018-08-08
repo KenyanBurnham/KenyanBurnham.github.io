@@ -3,13 +3,7 @@ let equipIndex = 0;
 let equipmentToSend = [];
 
 function submitRequest(){
-  //find elements with class 'submission'
-  //for all of those elemenys add custome data type vale 'data-submission' to equipment
-
-    console.log(equipmentToSend[0]);
     reservation.equipment = equipmentToSend;
-    console.log(reservation.equipment);
-
 
     let email = $("#emailAddressInput").val();
     reservation.email = email;
@@ -40,8 +34,8 @@ function submitRequest(){
         bench = "bench1";
     }
     reservation.bench = bench;
-
-    firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
+    let reservationName = $("#modalTitle").prop("data-reservation");
+    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, function(error){
         if(!error){
               //Need to say it was sent
               console.log("successful reservation");
@@ -79,9 +73,7 @@ function equipmentList(){
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
                       let editIndex = equipmentToSend.indexOf(equipment.key);
-                      console.log(editIndex);
                       equipmentToSend.splice(editIndex, 1);
-                      console.log(equipmentToSend);
                       $("#" + equipment.key).detach();
                   });
               });
@@ -129,6 +121,7 @@ function modalBuilder(timeStamp){
     let timeToDisplay = humanReadableTime(hour, minute);
     $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
     $("#freeAlert").prop("hidden", false);
+    $("#modalTitle").prop("data-reservation", timeStamp);
     equipmentList();
     $("#reservationModal").modal("show");
 }
