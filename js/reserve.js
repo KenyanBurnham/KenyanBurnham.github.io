@@ -1,23 +1,13 @@
 let reservation = new Object();
 let equipIndex = 0;
-let equipment = [];
+let equipmentToSend = [];
 
 function submitRequest(){
   //find elements with class 'submission'
   //for all of those elemenys add custome data type vale 'data-submission' to equipment
-    let equipNodeList = $("#equipmentChosen").querySelectorAll("a .submission");
-    let equipChildren = equipNodeList.childNodes;
-    console.log(equipChildren);
-    console.log(equipChildren.length);
-    for(let a = 0; a < equipChildren.length; a++){
-        console.log(a);
-        let eachChild = equipChildren[a];
-        console.log(eachChild);
-        equipment[a] = eachChild.prop("data-submission");
-        console.log(equipment[a]);
-    }
 
-    reservation.equipment = equipment;
+    console.log(equipmentToSend[0]);
+    reservation.equipment = equipmentToSend;
     console.log(reservation.equipment);
 
 
@@ -81,7 +71,7 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  $("#option" + equipment.key).prop("data-submission", equipment.key);
+                  equipmentToSend.push(equipment.key);
                   $("#option" + equipment.key).addClass("submission");
                   let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
