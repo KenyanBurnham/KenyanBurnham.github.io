@@ -1,5 +1,8 @@
 function submitRequest(){
     //if forms have more then "" || standardValue then submit
+    let bench = 1;
+    let b1 = $("#b1").hasClass("active");
+    let b2 = $("#b2").hasClass("active");
     let email = $("#emailAddressInput").val();
     let name = $("#nameInput").val();
     let group = $("#groupMemberInput").val();
@@ -7,12 +10,27 @@ function submitRequest(){
     let additional = $("#requestsInput").val();
     let equipment = [];
 
+    if ((b1 == false;) && (b2 == true)){
+        bench = 2;
+        console.log(bench);
+    } else if ((b1 == true) && (b2 == false)){
+        bench = 1;
+        console.log(bench);
+    }
+
     let equipElement = $("#equipmentChosen").children();
-    for(let i = 0; i < equipElement.length; i++){
+    console.log(equipElement);
+    console.log(equipElement.children().length);
+    for(let i = 0; i < equipElement.children().length; i++){
         let individual = equipElement[i];
+        console.log(individual);
         equipment[i] = $("#showing" + individual.id).prop("data-submission");
         console.log(individual + " " + equipment[i]);
     }
+
+
+    //gottaget which bench is active
+    //firebase.database().ref("reservation")
     //could just traverse
 }
 
