@@ -39,6 +39,10 @@ function submitRequest(){
         if(!error){
               //Need to say it was sent
               console.log("successful reservation");
+              $("#successAlert").prop("hidden", false);
+              setTimeout(function(){
+                  window.location.reload(true); //eventually change
+              }, 3000);
         }
         if(error){
               console.log("Error setting reservation to database.");
