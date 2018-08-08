@@ -17,9 +17,6 @@ function submitRequest(){
     reservation.group = group;
 
     let inClass = $("#classInput").val();
-    if((inClass == "") || (inClass == null) || (inClass == undefined)){
-        inClass = "None";
-    }
     reservation.inClass = inClass;
 
     let additional = $("#requestsInput").val();
