@@ -10,11 +10,11 @@ function submitRequest(){
     let additional = $("#requestsInput").val();
     let equipment = [];
 
-    if ((b1 == false;) && (b2 == true)){
-        bench = 2;
+    if ((b1 == false) && (b2 == true)){
+        bench = "bench2";
         console.log(bench);
     } else if ((b1 == true) && (b2 == false)){
-        bench = 1;
+        bench = "bench1";
         console.log(bench);
     }
 
@@ -27,10 +27,25 @@ function submitRequest(){
         equipment[i] = $("#showing" + individual.id).prop("data-submission");
         console.log(individual + " " + equipment[i]);
     }
+    let reservation = {
+        reserver: name,
+        email: email,
+        bench: bench,
+        group: group,
+        inClass: inClass,
+        additional: additional,
+        equipment: equipment
+    };
+    firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
+        if(!error){
 
-
-    //gottaget which bench is active
-    //firebase.database().ref("reservation")
+        }
+        if(error){
+            console.log("Error setting reservation to database.");
+            console.log(error.code);
+            console.log(error.message);
+        }
+    });
     //could just traverse
 }
 
