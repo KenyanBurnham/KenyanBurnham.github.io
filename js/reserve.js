@@ -1,22 +1,25 @@
 function submitRequest(){
-    //if forms have more then "" || standardValue then submit
+    let reservation = new Object();
+    let equipment = [];
+    let email = $("#emailAddressInput").val();
+    reservation.email = email;
+    let name = $("#nameInput").val();
+    reservation.reserver = name;
+    let group = $("#groupMemberInput").val();
+    reservation.group = group;
+    let inClass = $("#classInput").val();
+    reservation.inClass = inClass;
+    let additional = $("#requestsInput").val();
+    reservation.additional = additional;
     let bench = 1;
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
-    let email = $("#emailAddressInput").val();
-    let name = $("#nameInput").val();
-    let group = $("#groupMemberInput").val();
-    let inClass = $("#classInput").val();
-    let additional = $("#requestsInput").val();
-    let equipment = [];
-
     if ((b1 == false) && (b2 == true)){
         bench = "bench2";
-        console.log(bench);
     } else if ((b1 == true) && (b2 == false)){
         bench = "bench1";
-        console.log(bench);
     }
+    reservation.bench = bench;
 
     let equipElement = $("#equipmentChosen").children();
     console.log(equipElement);
@@ -29,15 +32,9 @@ function submitRequest(){
             console.log(individual + " " + equipment[i]);
         }
     }
-    let reservation = {
-        reserver: name,
-        email: email,
-        bench: bench,
-        group: group,
-        inClass: inClass,
-        additional: additional,
-        equipment: equipment
-    };
+
+    reservation.equipment = equipment;
+
     firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
         if(!error){
             //Need to say it was sent
