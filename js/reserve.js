@@ -64,14 +64,14 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  equipment.push((equipment.key).toString());
+                  equipment.push(equipment.key);
                   let selected = "<a href='#' id='showing" + equipment.key + "' data-submission='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
-                      let index = equipment.find((equipment.key).toString());
+                      let index = equipment.find(equipment.key);
                       equipment.splice(index, 1);
                       $("#showing" + equipment.key).detach();
                   });
