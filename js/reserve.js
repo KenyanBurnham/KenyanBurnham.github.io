@@ -5,7 +5,8 @@ let equipment = [];
 function submitRequest(){
   //find elements with class 'submission'
   //for all of those elemenys add custome data type vale 'data-submission' to equipment
-    let equipChildren = $("a .submission");
+    let equipNodeList = $("#equipmentChosen").querySelectorAll("a .submission");
+    let equipChildren = equipNodeList.childNodes;
     console.log(equipChildren);
     console.log(equipChildren.length);
     for(let a = 0; a < equipChildren.length; a++){
