@@ -12,7 +12,7 @@ function submitRequest(){
         console.log(a);
         let eachChild = equipChildren[a];
         console.log(eachChild);
-        equipment[a] = eachChild.id;
+        equipment[a] = eachChild.prop("data-submission");
         console.log(equipment[a]);
     }
 
@@ -80,7 +80,7 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  $("#option" + equipment.key).prop("data-submisison", keyString);
+                  $("#option" + equipment.key).prop("data-submission", equipment.key);
                   $("#option" + equipment.key).addClass("submission");
                   let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
