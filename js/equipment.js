@@ -20,14 +20,15 @@ function generatePage(){
                           "<h4 id = '" + sku + "' class = 'title'>" + type + "</h4><ul id='ul" + sku + "'>" +
                               "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + model + "</a></li>" +
                             "</ul></div><div class='col-2'></div></div>";
+                    $("#benchTopEquipment").append(newRow);
                 }
                 if(gpib == true){
-                    let newRow = "<div class='row'><div class='col-2'></div><div class='col-2'>" +
+                    let newRow2 = "<div class='row'><div class='col-2'></div><div class='col-2'>" +
                           "<h4 id = '" + sku + "' class = 'title'>" + type + "</h4><ul id='ul" + sku + "'>" +
                               "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + model + "</a>" + span + "</li>" +
                             "</ul></div><div class='col-2'></div></div>";
+                    $("#benchTopEquipment").append(newRow2);
                 }
-                $("#benchTopEquipment").append(newRow);
             }else{
                   let newLi = ";"
                   if(gpib == false){
