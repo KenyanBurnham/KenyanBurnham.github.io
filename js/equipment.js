@@ -28,7 +28,7 @@ function generatePage(){
                             "</ul></div><div class='col-2'></div></div>";
                     $("#benchTopEquipment").append(newRow2);
                 }
-            }else{
+            }else if(skuCheck == true){
                   let newLi = "";
                   if(gpib == false){
                       newLi = "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a></li>";
@@ -37,6 +37,8 @@ function generatePage(){
                       newLi = "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a>" + span + "</li>";
                   }
                   $("#ul" + sku).append(newLi);
+            }else{
+                console.log("ERROR: sku check failed.");
             }
         });
     });
