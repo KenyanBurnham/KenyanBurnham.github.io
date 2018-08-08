@@ -12,7 +12,6 @@ function generatePage(){
             let gpib = itemData.gpib;
             let skuCheck = $("#" + sku).hasClass("sku");
             if(skuCheck == false){
-                $("#bookmarkLinks").empty();
                 let bookmark = "<li><a href='#" + sku +"' class='make-block-item nav-sub'>" + type + "</a></li>"
                 $("#bookmarkLinks").append(bookmark);
                 if(gpib == false){
@@ -44,5 +43,7 @@ function generatePage(){
 }
 
 $( document ).ready(function() {
+    $("#benchTopEquipment").empty();
+    $("#bookmarkLinks").empty();
       generatePage();
 });
