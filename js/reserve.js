@@ -68,7 +68,7 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  let keyString = (equipment.key).toString();
+                  let keyString[0] = (equipment.key).toString();
                   equipment.push(keyString);
                   $("#option" + equipment.key).prop("data-submisison", keyString);
                   $("#option" + equipment.key).addClass("submisison");
