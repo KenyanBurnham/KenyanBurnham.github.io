@@ -1,21 +1,11 @@
 let reservation = new Object();
+let equipIndex = 0;
+let equipment = [];
 
 function submitRequest(){
   //find elements with class 'submission'
   //for all of those elemenys add custome data type vale 'data-submission' to equipment
-    let equipment = [];
-    let classToFind = $(".submission");
-    let allEquipment = $("#equipmentChosen").find(classToFind);
 
-    for(let i = 0; i< allEquipment.children().length; i++){
-          let child = allEquipment.children(i);
-          console.log(child);
-          equipment[i] = child.id;
-          console.log(child.id);
-    }
-    console.log(allEquipment);
-    console.log(allEquipment.children());
-    console.log(allEquipment.children().length);
     reservation.equipment = equipment;
 
     let email = $("#emailAddressInput").val();
@@ -79,6 +69,7 @@ function equipmentList(){
               }
               $("#option" + equipment.key).click(function(){
                   let keyString = (equipment.key).toString();
+                  equipment.push(keyString);
                   $("#option" + equipment.key).prop("data-submisison", keyString);
                   $("#option" + equipment.key).addClass("submisison");
                   let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
@@ -87,7 +78,8 @@ function equipmentList(){
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
-                    //remove from list
+                      let indexToSplice = equipment.find(keyString);
+                      equipment.splice(Number(indexToSplice), 0);
                       $("#" + equipment.key).detach();
                   });
               });
