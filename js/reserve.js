@@ -5,11 +5,15 @@ function submitRequest(){
     let group = $("#groupMemberInput").val();
     let inClass = $("#classInput").val();
     let additional = $("#requestsInput").val();
+    let equipment = [];
 
-    let storageBin = localStorage.getItem('equipment');
-    let storageSnapshot = JSON.parse(storageBin);
-    //let token = storageSnapshot["token"];
-    console.log(storageSnapshot);
+    let equipElement = $("#equipmentChosen").children();
+    for(let i = 0; i < equipElement.length; i++){
+        let individual = equipElement[i];
+        equipment[i] = $("#showing" + individual.id).prop("data-submission");
+        console.log(individual + " " + equipment[i]);
+    }
+    //could just traverse
 }
 
 function equipmentList(){
@@ -28,15 +32,13 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  localStorage.setItem('equipment/' + equipment.key + " " , JSON.stringify(equipment.key));
-                  let selected = "<a href='#' id='showing" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
+                  let selected = "<a href='#' id='showing" + equipment.key + "' data-submission='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
                       $("#showing" + equipment.key).detach();
-                      localStorage.removeItem('currentSession/' + equipment.key + " ");
                   });
               });
           });
