@@ -1,6 +1,8 @@
+let reservation = new Object();
+let equipment = [];
+
 function submitRequest(){
-    let reservation = new Object();
-    let equipment = [];
+    reservation.equipment = equipment;
     let email = $("#emailAddressInput").val();
     reservation.email = email;
     let name = $("#nameInput").val();
@@ -21,28 +23,15 @@ function submitRequest(){
     }
     reservation.bench = bench;
 
-    let equipElement = $("#equipmentChosen").children();
-    console.log(equipElement);
-    console.log(equipElement.children().length);
-    for(let i = 0; i < equipElement.children().length; i++){
-        let individual = equipElement[i];
-        console.log(individual);
-        if(individual != undefined){
-            equipment[i] = $("#showing" + individual.id).prop("data-submission");
-            console.log(individual + " " + equipment[i]);
-        }
-    }
-
-    reservation.equipment = equipment;
-
     firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
         if(!error){
-            //Need to say it was sent
+              //Need to say it was sent
+              console.log("successful reservation");
         }
         if(error){
-            console.log("Error setting reservation to database.");
-            console.log(error.code);
-            console.log(error.message);
+              console.log("Error setting reservation to database.");
+              console.log(error.code);
+              console.log(error.message);
         }
     });
     //could just traverse
@@ -64,12 +53,15 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
+                  equipment.push((equipment.key).toString());
                   let selected = "<a href='#' id='showing" + equipment.key + "' data-submission='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
+                      let index = equipment.find((equipment.key).toString());
+                      equipment.splice(index, 1);
                       $("#showing" + equipment.key).detach();
                   });
               });
