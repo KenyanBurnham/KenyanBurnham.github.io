@@ -79,6 +79,10 @@ function equipmentList(){
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
+                      let editIndex = equipmentToSend.find(equipment.key);
+                      console.log(editIndex);
+                      equipmentToSend.splice(editIndex, 1);
+                      console.log(equipmentToSend);
                       $("#" + equipment.key).detach();
                   });
               });
