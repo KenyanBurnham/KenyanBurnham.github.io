@@ -87,9 +87,9 @@ function humanReadableTime(hour, minute){
     let timeHalf = ["9:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "1:30 PM", "2:30 PM", "3:30 PM", "4:30 PM"];
     let toReturn ="";
     if(minute != 0){
-        toReturn = timeHalf[Number(hour - 9)].toString();
+        toReturn = timeHalf[Number(hour - 9)];
     }else{
-        toReturn = timeWhole[Number(hour - 9)].toString();
+        toReturn = timeWhole[Number(hour - 9)];
     }
     return toReturn;
 }
