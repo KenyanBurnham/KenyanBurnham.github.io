@@ -69,7 +69,7 @@ function equipmentList(){
               }
               $("#option" + equipment.key).click(function(){
                   let keyString = equipment.key.toString();
-                  equipment.push(keyString);
+                  equipment.push("" + keyString + "");
                   $("#option" + equipment.key).prop("data-submisison", keyString);
                   $("#option" + equipment.key).addClass("submisison");
                   let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
