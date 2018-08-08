@@ -1,7 +1,12 @@
 let reservation = new Object();
-let equipment = [];
 
 function submitRequest(){
+  //find elements with class 'submission'
+  //for all of those elemenys add custome data type vale 'data-submission' to equipment
+    let equipment = [];
+    let classToFind = $(".submission");
+    let allEquipment = $("#equipmentChosen").find(classToFind);
+    console.log(allEquipment);
     reservation.equipment = equipment;
 
     let email = $("#emailAddressInput").val();
@@ -33,7 +38,7 @@ function submitRequest(){
         bench = "bench1";
     }
     reservation.bench = bench;
-
+    /*
     firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
         if(!error){
               //Need to say it was sent
@@ -45,7 +50,7 @@ function submitRequest(){
               console.log(error.message);
         }
     });
-    //could just traverse
+    */
 }
 
 function equipmentList(){
@@ -64,16 +69,17 @@ function equipmentList(){
                   $("#optgroup" + equipmentData.sku).append(newEquipment);
               }
               $("#option" + equipment.key).click(function(){
-                  equipment.push(equipment.key);
-                  let selected = "<a href='#' id='showing" + equipment.key + "' data-submission='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
+                  let keyString = (equipment.key).toString();
+                  $("#option" + equipment.key).prop("data-submisison", keyString);
+                  $("#option" + equipment.key).addClass("submisison");
+                  let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
                   "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
                   "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
                   "<small>" + equipmentData.type + "</small>" + "</a>";
                   $("#equipmentChosen").append(selected);
                   $("#xButton" + equipment.key).click(function(){
-                      let index = equipment.find(equipment.key);
-                      equipment.splice(index, 1);
-                      $("#showing" + equipment.key).detach();
+                    //remove from list
+                      $("#" + equipment.key).detach();
                   });
               });
           });
