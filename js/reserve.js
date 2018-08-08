@@ -6,7 +6,13 @@ function submitRequest(){
     let equipment = [];
     let classToFind = $(".submission");
     let allEquipment = $("#equipmentChosen").find(classToFind);
+
+    ///for(let i = 0; i< allEquipment.children().length){
+
+  //  }
     console.log(allEquipment);
+    console.log(allEquipment.children());
+    console.log(allEquipment.children().length);
     reservation.equipment = equipment;
 
     let email = $("#emailAddressInput").val();
