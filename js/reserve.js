@@ -3,15 +3,29 @@ let equipment = [];
 
 function submitRequest(){
     reservation.equipment = equipment;
+
     let email = $("#emailAddressInput").val();
     reservation.email = email;
+
     let name = $("#nameInput").val();
     reservation.reserver = name;
+
     let group = $("#groupMemberInput").val();
+    if((group == "") || (group == null) || (group == undefined)){
+        group = "None";
+    }
     reservation.group = group;
+
     let inClass = $("#classInput").val();
+    if((inClass == "") || (inClass == null) || (inClass == undefined)){
+        inClass = "None";
+    }
     reservation.inClass = inClass;
+
     let additional = $("#requestsInput").val();
+    if((additional == "") || (additional == null) || (additional == undefined)){
+        additional = "None";
+    }
     reservation.additional = additional;
     let bench = 1;
     let b1 = $("#b1").hasClass("active");
