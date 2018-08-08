@@ -40,7 +40,7 @@ function submitRequest(){
         bench = "bench1";
     }
     reservation.bench = bench;
-    /*
+
     firebase.database().ref("reservation/" + bench + "/pending").set(reservation, function(error){
         if(!error){
               //Need to say it was sent
@@ -52,7 +52,6 @@ function submitRequest(){
               console.log(error.message);
         }
     });
-    */
 }
 
 function equipmentList(){
