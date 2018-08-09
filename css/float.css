@@ -21,6 +21,8 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 .avatar {
 	width: 150px;
 	height: 150px;
+  background-image: url(docs\img\safety-manual.png);
+  background-size: 150px;
 	box-sizing: border-box;
 	border: 5px white solid;
 	border-radius: 50%;
