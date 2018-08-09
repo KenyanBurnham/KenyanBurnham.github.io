@@ -18,9 +18,11 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 	}
 }
 
-.avatar {
+.avatar-safety {
 	width: 150px;
 	height: 150px;
+  background-color: #007bff;
+	border: 5px white solid;
 	box-sizing: border-box;
 	border-radius: 50%;
 	overflow: hidden;
@@ -30,12 +32,16 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 	img { width: 100%; height: auto; }
 }
 
-.avatar-safety{
-  background-color: #007bff;
-	border: 5px white solid;
-}
-
-.avatar-equipment{
+.avatar-equipment {
+	width: 150px;
+	height: 150px;
   background-color: white;
   border: 5px white solid;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
 }
