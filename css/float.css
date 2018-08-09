@@ -21,6 +21,7 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 .avatar {
 	width: 150px;
 	height: 150px;
+  background-color: #007bff;
 	box-sizing: border-box;
 	border: 5px white solid;
 	border-radius: 50%;
