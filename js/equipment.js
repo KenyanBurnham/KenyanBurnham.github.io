@@ -12,9 +12,11 @@ function generatePage(){
             let gpib = itemData.gpib;
             let skuCheck = $("#" + sku).hasClass("sku");
             if(skuCheck == false){
+                console.log("sku Check false:" +  skuCheck);
                 let bookmark = "<li><a href='#" + sku +"' class='make-block-item nav-sub'>" + type + "</a></li>"
                 $("#bookmarkLinks").append(bookmark);
                 if(gpib == false){
+                    console.log("gpib  false:" +  gpib);
                     let newRow = "<div class='row'><div class='col-2'></div><div class='col-2'>" +
                           "<h4 id = '" + sku + "' class = 'title'>" + type + "</h4><ul id='ul" + sku + "'>" +
                               "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a></li>" +
@@ -22,6 +24,7 @@ function generatePage(){
                     $("#benchTopEquipment").append(newRow);
                 }
                 if(gpib == true){
+                  console.log("gpib  true:" +  gpib);
                     let newRow2 = "<div class='row'><div class='col-2'></div><div class='col-2'>" +
                           "<h4 id = '" + sku + "' class = 'title'>" + type + "</h4><ul id='ul" + sku + "'>" +
                               "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a>" + span + "</li>" +
@@ -29,11 +32,14 @@ function generatePage(){
                     $("#benchTopEquipment").append(newRow2);
                 }
             }else if(skuCheck == true){
+                  console.log("skuCheck  false:" +  skuCheck);
                   let newLi = "";
                   if(gpib == false){
+                      console.log("gpib  false:" +  gpib);
                       newLi = "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a></li>";
                   }
                   if(gpib == true){
+                      console.log("gpib  true:" +  gpib);
                       newLi = "<li id='li" + equipmentKey + "'> <a href='" + url + "'>" + manufacturer + " " + model + "</a>" + span + "</li>";
                   }
                   $("#ul" + sku).append(newLi);
