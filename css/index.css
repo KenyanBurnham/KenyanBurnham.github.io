@@ -69,3 +69,7 @@ hr{
     padding: 0;
     width: 70vw;
 }
+
+.dark-sections{
+    background-color: #e9ecef;
+}
