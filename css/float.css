@@ -38,7 +38,7 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 	width: 150px;
 	height: 150px;
   background-color: white;
-  border: 5px white solid;
+  border: 5px #007bff solid;
 	box-sizing: border-box;
 	border-radius: 50%;
 	overflow: hidden;
