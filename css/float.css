@@ -30,8 +30,3 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 	animation: float 6s ease-in-out infinite;
 	img { width: 100%; height: auto; }
 }
-
-.avatar-safety-img{
-    background-image: url("../docs/img/safety-manual.png");
-    background-size: 150px;
-}
