@@ -273,6 +273,11 @@ $( document ).ready(function() {
           }
           $(this).find('.btn').toggleClass('btn-default');
           //Calls after css change to make sure table gets updated
-          fillTable(".is-selected");
+          if($(".is-selected").hasClass("active")){
+              fillTable(".is-selected");
+          }
+          if($(".is-today").hasClass("active")){
+              fillTable(".is-today");
+          }
     });
 });
