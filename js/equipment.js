@@ -12,6 +12,17 @@ function generatePage(){
             let url = itemData.url;
             let gpib = itemData.gpib;
             let category = itemData.category;
+
+            //asks if category exists
+            //if it doesn't then build a category div
+            
+            //aSKS if bookmark with id of sku exists
+            //if it doesn't it builds one bookmark()
+            //If no book mark exists then the type doesn't exists
+            //Builds the type()
+
+            //need smaller fucntions
+            /*
             let skuCheck = $("#" + sku).hasClass("sku");
             let bookmark = "<li><a href='#" + sku +"' class='make-block-item nav-sub'>" + type + "</a></li>";
             if(skuCheck == false){
@@ -42,6 +53,8 @@ function generatePage(){
             }else{
                 console.log("ERROR: sku check failed.");
             }
+            */
+
         });
     });
 }
