@@ -21,13 +21,21 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 .avatar {
 	width: 150px;
 	height: 150px;
-  background-color: #007bff;
 	box-sizing: border-box;
-	border: 5px white solid;
 	border-radius: 50%;
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 	img { width: 100%; height: auto; }
+}
+
+.avatar-safety{
+  background-color: #007bff;
+	border: 5px white solid;
+}
+
+.avatar-equipment{
+  background-color: #007bff;
+  border: 5px white solid;
 }
