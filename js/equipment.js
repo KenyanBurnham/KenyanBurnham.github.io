@@ -15,11 +15,14 @@ function generatePage(){
 
             //asks if category exists
             //if it doesn't then build a category div
-            
+
             //aSKS if bookmark with id of sku exists
             //if it doesn't it builds one bookmark()
+
             //If no book mark exists then the type doesn't exists
             //Builds the type()
+
+            //Builds li 
 
             //need smaller fucntions
             /*

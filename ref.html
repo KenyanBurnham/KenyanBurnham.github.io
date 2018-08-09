@@ -17,7 +17,7 @@
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-      <script src="js/equipment.js"></script>
+      <!--<script src="js/equipment.js"></script>-->
 
       <script>
         // Initialize Firebase
@@ -74,7 +74,8 @@
                       <div class="col-2"></div>
                       <div class="col">
                           <p>Use this page to research the equipment necessary to perform your test. To researve a bench you must declare what equipment is necessary in your test plan. Below are links to the various equipment types.</p>
-                          <h1>This page is under construction, to see the old page click <a href="old/ref.html">here</a>.</h1>
+
+                          <h4 href="#equipment">Bench-top Equipment</h4>
                           <ul id="bookmarkLinks">
                             <li>
                                 <a href="#dc-power-supplies" class="make-block-item nav-sub">DC Power Supply</a>
@@ -104,6 +105,21 @@
                                 <a href="picoammeters" class="make-block-item nav-sub">Picoammeter</a>
                             </li>
                           </ul>
+                          <h4 href="testing">Testing Systems</h4>
+                          <ul>
+                                <li>
+                                    <a href="#equipment" class="make-block-item nav-dom"> Testing Systems</a>
+                                </li>
+                                <li>
+                                    <a href="#virtual-benches" class="make-block-item nav-sub"> Virtual Benches</a>
+                                </li>
+                                <li>
+                                    <a href="#pxis" class="make-block-item nav-sub">PXIs</a>
+                                </li>
+                                <li>
+                                    <a href="#sts" class="make-block-item nav-sub">STS</a>
+                                </li>
+                          </ul>
                           <div class="">
                             <hr class="my-4">
                             <blockquote>
@@ -121,403 +137,418 @@
           <div class="row">
               <div class="col-2"></div>
               <div class="col-8">
-                  <h2>Bench-top Equipment</h2><br>
+                  <h2 id="equipment">Bench-top Equipment</h2><br>
               </div>
               <div class="col-2"></div>
           </div>
       </section>
 
-      <section id="benchTopEquipment">
-      </section>
+        <section>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col">
+                  <h2 id = "dc-power-supplies" class = "title"> DC Power Supplies </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/power-supplys/Agilent_E3630A.pdf">Agilent E3630A</a> </li>
+                      <li> <a href="../docs/datasheets/power-supplys/Agilent_E3648A.pdf">Agilent E3648A</a>  <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/power-supplys/GoodWillInstruments_GPC-3030D.pdf">Good Will Instruments GPC-3030D</a> </li>
+                      <li> <a href="../docs/datasheets/power-supplys/protek_3003l.pdf">Protek 3003l</a></li>
+                      <li> <a href="../docs/datasheets/power-supplys/ShenzenMastech_HY3002D-2.pdf">Shenzen Mastech HY3002D-2</a> </li>
+                      <li> <a href="../docs/datasheets/power-supplys/Tektronix_E361xA.pdf">Tektronix E361xA</a> </li>
+                      <li> <a href="../docs/datasheets/power-supplys/HP_6443B.pdf">Hewlett Packard 6443B</a> </li>
+                      <li> <a href="../docs/datasheets/power-supplys/Agilent_e3640a.pdf">Agilent E3640A</a>  <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-      <hr>
-<!--
+                  <h2 id = "function-generators" class = "title"> Function Generators </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/function-generators/HP_33120a.pdf">Hewlett Packard 33120a</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/function-generators/Rigol_DG10x2.pdf">Rigol DG10x2</a> </li>
+                      <li> <a href="../docs/datasheets/function-generators/SRS_DS345.pdf">Standford Research Systems DS345</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/function-generators/Agilent_33220A.pdf">Agilent 33220A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/function-generators/Agilent_8165A.pdf">Agilent 8165A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "dc-power-supplies" class = "title"> DC Power Supplies </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/power-supplys/Agilent_E3630A.pdf">Agilent E3630A</a> </li>
-            <li> <a href="../docs/datasheets/power-supplys/Agilent_E3648A.pdf">Agilent E3648A</a>  <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/power-supplys/GoodWillInstruments_GPC-3030D.pdf">Good Will Instruments GPC-3030D</a> </li>
-            <li> <a href="../docs/datasheets/power-supplys/protek_3003l.pdf">Protek 3003l</a></li>
-            <li> <a href="../docs/datasheets/power-supplys/ShenzenMastech_HY3002D-2.pdf">Shenzen Mastech HY3002D-2</a> </li>
-            <li> <a href="../docs/datasheets/power-supplys/Tektronix_E361xA.pdf">Tektronix E361xA</a> </li>
-            <li> <a href="../docs/datasheets/power-supplys/HP_6443B.pdf">Hewlett Packard 6443B</a> </li>
-            <li> <a href="../docs/datasheets/power-supplys/Agilent_e3640a.pdf">Agilent E3640A</a>  <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "source-meters" class = "title"> Source Meters </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2400 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2410</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2420</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2440</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2450</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "function-generators" class = "title"> Function Generators </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/function-generators/HP_33120a.pdf">Hewlett Packard 33120a</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/function-generators/Rigol_DG10x2.pdf">Rigol DG10x2</a> </li>
-            <li> <a href="../docs/datasheets/function-generators/SRS_DS345.pdf">Standford Research Systems DS345</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/function-generators/Agilent_33220A.pdf">Agilent 33220A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/function-generators/Agilent_8165A.pdf">Agilent 8165A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "oscilloscopes" class = "title"> Oscilloscopes </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO9254A.pdf">Agilent MSO9254A</a> </li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_2445A.pdf">Tektronix 2445A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS210</a> </li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS220</a> </li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS320.pdf">Tektronix TDS320</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/HP_54502a.pdf">Hewlett Packard 54502A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO6054A.pdf">Agilent MSO6054A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "source-meters" class = "title"> Source Meters </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2400 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2410</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2420</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2440</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2450</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "multimeters" class = "title"> Multimeters </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf">Agilent 34401A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Multimeters/Fluke_8840A.pdf">Fluke 8840A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Multimeters/Fluke_45.pdf">Fluke 45</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/Multimeters/Fluke_8010a.pdf">Fluke 8010A</a></li>
+                      <li> <a href="../docs/datasheets/Multimeters/HP_3466a.pdf">Hewlett Packard 3466A</a></li>
+                    </ul>
 
-        <h2 id = "oscilloscopes" class = "title"> Oscilloscopes </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO9254A.pdf">Agilent MSO9254A</a> </li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_2445A.pdf">Tektronix 2445A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS210</a> </li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS220</a> </li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS320.pdf">Tektronix TDS320</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/HP_54502a.pdf">Hewlett Packard 54502A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO6054A.pdf">Agilent MSO6054A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "electronic-loads" class = "title">DC Electronic Loads </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8500Series.pdf">BK Precision 8500 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                      <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8600Series.pdf">BK Precision 8600 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "multimeters" class = "title"> Multimeters </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf">Agilent 34401A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Multimeters/Fluke_8840A.pdf">Fluke 8840A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Multimeters/Fluke_45.pdf">Fluke 45</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/Multimeters/Fluke_8010a.pdf">Fluke 8010A</a></li>
-            <li> <a href="../docs/datasheets/Multimeters/HP_3466a.pdf">Hewlett Packard 3466A</a></li>
-          </ul>
+                  <h2 id = "lcr-meters" class = "title">LCR Meters </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/lcr-meters/Agilent_4284A.pdf">Agilent 4284A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "electronic-loads" class = "title">DC Electronic Loads </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8500Series.pdf">BK Precision 8500 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-            <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8600Series.pdf">BK Precision 8600 Series</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "spectrum-analyzers" class = "title">Spectrum Analyzer </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/spectrum-analyzer/Rigol_DSA800.pdf">Rigol DSA800</a> </li>
+                      <li> <a href="../docs/datasheets/spectrum-analyzer/SRS_SR760m.pdf">Standard Research Systems SR760</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "lcr-meters" class = "title">LCR Meters </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/lcr-meters/Agilent_4284A.pdf">Agilent 4284A</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "picoammeters" class = "title">Picoammeters </h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/Picoammeter/Keithley_6485.pdf">Keithley 6485</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
+                    </ul>
 
-        <h2 id = "spectrum-analyzers" class = "title">Spectrum Analyzer </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/spectrum-analyzer/Rigol_DSA800.pdf">Rigol DSA800</a> </li>
-            <li> <a href="../docs/datasheets/spectrum-analyzer/SRS_SR760m.pdf">Standard Research Systems SR760</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+                  <h2 id = "current-probes">Current Probes</h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/current-probes/Keysight_N2782B.pdf">Keysight N2782B</a></li>
+                    </ul>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </section>
 
-        <h2 id = "picoammeters" class = "title">Picoammeters </h2>
-          <ul>
-            <li> <a href="../docs/datasheets/Picoammeter/Keithley_6485.pdf">Keithley 6485</a> <span class="glyphicon glyphicon-ok-circle"></span></li>
-          </ul>
+        <section>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2 id="testing-equipment">Testing Systems</h2><br>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </section>
 
-        <h2 id = "current-probes">Current Probes</h2>
-          <ul>
-            <li> <a href="../docs/datasheets/current-probes/Keysight_N2782B.pdf">Keysight N2782B</a></li>
-          </ul>
+        <section>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col">
+                  <h2 id = "virtual-benches" class = "title normalize-text">National Instruments Virtual Bench</h2>
+                    <ul>
+                      <li> <a href="../docs/datasheets/virtual-benches/NI_VirtualBench_8012.pdf">NI Virtual Bench 8012</a> </li>
+                    </ul>
 
-          <h1 id = "testing-equipment" class = "title title-margin">Testing Systems</h1>
+                  <h2 id = "pxis" class = "title normalize-text">National Instruments PXI </h2>
+                    <blockquote cite="http://www.ni.com/pxi/whatis/">
+                      The PSPE program has 4 distinct PXI chassis and certain PXI cards are cross-compatible. Refer to the list and table below for chassis specifics, card datasheets, and cross-compatibility.
+                    </blockquote>
+                    <ul>
+                        <li><a href="../docs/datasheets/pxi/pxi-1000B/pxi_1000B_datasheet.pdf">PXI-1000B</a> </li>
+                        <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042</a> </li>
+                        <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042Q</a> </li>
+                        <li><a href="../docs/datasheets/pxi/pxi-1075/pxi_1075_datasheet.pdf">PXIe-1075 Chassis</a> </li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <th>Model</th>
+                            <th>Card Type</th>
+                            <th>Description</th>
+                            <th>PXI-1000B Chassis</th>
+                            <th>PXI-1042 Chassis</th>
+                            <th>PXI-1042Q Chassis</th>
+                            <th>PXIe-1075 Chassis</th>
+                        </tr>
+                        <tr>
+                            <td> PXI-8187 </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_8187.pdf">Embedded Controller</a> </td>
+                            <td class="pxi-yes"> &#x2713; </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6025E </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6025E.pdf">Multifunction I/O</a> </td>
+                            <td class="pxi-yes"> &#x2713; </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6071E </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6071E.pdf">Multifunction I/O</a></td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6031E </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6031E.pdf">Multifunction I/O</a> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6528 </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6528.pdf">Isolated Digital I/O</a> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6259 </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6259.pdf">M Series Multifunction DAQ</a> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-7831R </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_7831R.pdf">Reconfigurable I/O</a> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6723 </td>
+                            <td> PXI 1000B Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6723.pdf"> 32 Channel AO, 13 Bit</a> </td>
+                            <td class="pxi-yes">  &#x2713; </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-8196 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (1)</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-8196 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (2)</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-5600 </td>
+                            <td> PXI 1042 Card </td>
+                            <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_5600.pdf"> RF Downconverter</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-5610 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> RF Upconverter * </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-5421 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5421.pdf">16-Bit 100 MS/s AWG</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-5620 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5620.pdf">64 MS/s Digitizer</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6552 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6552.pdf">100 MHZ Digital I/O</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-2515 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2515.pdf">High Speed Digital Signal Insertion Switch</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-8464 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8464.pdf">CAN/XS Series 2</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-2567 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2567.pdf">64 Channel Relay Driver Module </a></td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-2568 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2568.pdf">31 SPST Relay Module</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6132 </td>
+                            <td> PXI 1042 Card </td>
+                            <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf"> S Series 4Ch, 14 bit, 2.5 MS/s Multifunctional DAQ </a></td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-6133 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf">16-Bit Analog Output</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXI-4130 </td>
+                            <td> PXI 1042 Card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_4130.pdf">Power SMU</a> </td>
+                            <td> </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes">  &#x2713;  </td>
+                            <td class="pxi-yes"> 8 slots </td>
+                        </tr>
+                        <tr>
+                            <td> PXIe-8133 </td>
+                            <td> PXIe card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_8133.pdf">Embedded Controller </a></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td class="pxi-yes"> &#x2713; </td>
+                        </tr>
+                        <tr>
+                            <td> PXIe-4132 </td>
+                            <td> PXIe card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4132.pdf"> Precision SMU</a> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td class="pxi-yes"> &#x2713; </td>
+                        </tr>
+                        <tr>
+                            <td> PXIe-4141 </td>
+                            <td> PXIe card </td>
+                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4141.pdf">4-CH Precision SMU</a> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td class="pxi-yes"> &#x2713; </td>
+                        </tr>
+                    </table>
 
-          <h2 id = "virtual-benches" class = "title normalize-text">National Instruments Virtual Bench</h2>
-            <ul>
-              <li> <a href="../docs/datasheets/virtual-benches/NI_VirtualBench_8012.pdf">NI Virtual Bench 8012</a> </li>
-            </ul>
+                    <blockquote cite="">
+                      * The PXI-5610 RF Upconverter datasheet has not been found.
+                    </blockquote>
 
-          <h2 id = "pxis" class = "title normalize-text">National Instruments PXI </h2>
-            <blockquote cite="http://www.ni.com/pxi/whatis/">
-              The PSPE program has 4 distinct PXI chassis and certain PXI cards are cross-compatible. Refer to the list and table below for chassis specifics, card datasheets, and cross-compatibility.
-            </blockquote>
-            <ul>
-                <li><a href="../docs/datasheets/pxi/pxi-1000B/pxi_1000B_datasheet.pdf">PXI-1000B</a> </li>
-                <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042</a> </li>
-                <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042Q</a> </li>
-                <li><a href="../docs/datasheets/pxi/pxi-1075/pxi_1075_datasheet.pdf">PXIe-1075 Chassis</a> </li>
-            </ul>
-            <table>
-                <tr>
-                    <th>Model</th>
-                    <th>Card Type</th>
-                    <th>Description</th>
-                    <th>PXI-1000B Chassis</th>
-                    <th>PXI-1042 Chassis</th>
-                    <th>PXI-1042Q Chassis</th>
-                    <th>PXIe-1075 Chassis</th>
-                </tr>
-                <tr>
-                    <td> PXI-8187 </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_8187.pdf">Embedded Controller</a> </td>
-                    <td class="pxi-yes"> &#x2713; </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6025E </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6025E.pdf">Multifunction I/O</a> </td>
-                    <td class="pxi-yes"> &#x2713; </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6071E </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6071E.pdf">Multifunction I/O</a></td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6031E </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6031E.pdf">Multifunction I/O</a> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6528 </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6528.pdf">Isolated Digital I/O</a> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6259 </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6259.pdf">M Series Multifunction DAQ</a> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-7831R </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_7831R.pdf">Reconfigurable I/O</a> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-6723 </td>
-                    <td> PXI 1000B Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6723.pdf"> 32 Channel AO, 13 Bit</a> </td>
-                    <td class="pxi-yes">  &#x2713; </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> PXI-8196 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (1)</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-8196 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (2)</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-5600 </td>
-                    <td> PXI 1042 Card </td>
-                    <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_5600.pdf"> RF Downconverter</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-5610 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> RF Upconverter * </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-5421 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5421.pdf">16-Bit 100 MS/s AWG</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-5620 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5620.pdf">64 MS/s Digitizer</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-6552 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6552.pdf">100 MHZ Digital I/O</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-2515 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2515.pdf">High Speed Digital Signal Insertion Switch</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-8464 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8464.pdf">CAN/XS Series 2</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-2567 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2567.pdf">64 Channel Relay Driver Module </a></td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-2568 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2568.pdf">31 SPST Relay Module</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-6132 </td>
-                    <td> PXI 1042 Card </td>
-                    <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf"> S Series 4Ch, 14 bit, 2.5 MS/s Multifunctional DAQ </a></td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-6133 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf">16-Bit Analog Output</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXI-4130 </td>
-                    <td> PXI 1042 Card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_4130.pdf">Power SMU</a> </td>
-                    <td> </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes">  &#x2713;  </td>
-                    <td class="pxi-yes"> 8 slots </td>
-                </tr>
-                <tr>
-                    <td> PXIe-8133 </td>
-                    <td> PXIe card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_8133.pdf">Embedded Controller </a></td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="pxi-yes"> &#x2713; </td>
-                </tr>
-                <tr>
-                    <td> PXIe-4132 </td>
-                    <td> PXIe card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4132.pdf"> Precision SMU</a> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="pxi-yes"> &#x2713; </td>
-                </tr>
-                <tr>
-                    <td> PXIe-4141 </td>
-                    <td> PXIe card </td>
-                    <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4141.pdf">4-CH Precision SMU</a> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="pxi-yes"> &#x2713; </td>
-                </tr>
-            </table>
+                  <h2 id = "sts" class = "title normalize-text">National Instruments STS </h2>
+                    <ul>
+                      <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Testing System</a> &#9167;</li>
+                    </ul>
+                    <p> The National Instruments Semiconductor Testing System (STS) houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
+                    <table>
+                      <tr>
+                          <th>Model</th>
+                          <th>Card Type</th>
+                          <th>Description</th>
+                      </tr>
+                      <tr>
+                          <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
+                          <td>PXIe Card</td>
+                          <td>4-CH Precision SMU</td>
+                      </tr>
+                      <tr>
+                          <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
+                          <td>PXIe Card</td>
+                          <td>Digital Waveform Generator/Analyzer with PPMU</td>
+                      </tr>
+                      <tr>
+                          <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
+                          <td>PXI Card</td>
+                          <td>64 Pin Relay Driver</td>
+                      </tr>
+                    </table>
 
-            <blockquote cite="">
-              * The PXI-5610 RF Upconverter datasheet has not been found.
-            </blockquote>
+                    <blockquote cite="http://">
+                        The STS is located on Bench 6
+                    </blockquote>
 
-          <h2 id = "sts" class = "title normalize-text">National Instruments STS </h2>
-            <ul>
-              <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Testing System</a> &#9167;</li>
-            </ul>
-            <p> The National Instruments Semiconductor Testing System (STS) houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
-            <table>
-              <tr>
-                  <th>Model</th>
-                  <th>Card Type</th>
-                  <th>Description</th>
-              </tr>
-              <tr>
-                  <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
-                  <td>PXIe Card</td>
-                  <td>4-CH Precision SMU</td>
-              </tr>
-              <tr>
-                  <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
-                  <td>PXIe Card</td>
-                  <td>Digital Waveform Generator/Analyzer with PPMU</td>
-              </tr>
-              <tr>
-                  <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
-                  <td>PXI Card</td>
-                  <td>64 Pin Relay Driver</td>
-              </tr>
-            </table>
+                    <h3>Additional resources for the STS</h3>
+                    <ul>
+                      <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
+                      <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
+                      <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
+                      <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
+                      <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
+                      <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
+                    </ul>
+                    <blockquote cite="http://">
+                        It is <b>highly</b> recommended to anyone who would like to use the STS to read through Joanna Gatlin's Thesis.
+                    </blockquote>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </section>
 
-            <blockquote cite="http://">
-                The STS is located on Bench 6
-            </blockquote>
-
-            <h3>Additional resources for the STS</h3>
-            <ul>
-              <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
-              <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
-              <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
-              <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
-              <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
-              <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
-            </ul>
-            <blockquote cite="http://">
-                It is <b>highly</b> recommended to anyone who would like to use the STS to read through Joanna Gatlin's Thesis.
-            </blockquote>
-            <br>
-            <br>
-
-      </div>
-    </div>
-    -->
       <script src="js/index.js"></script>
   </body>
 </html>
