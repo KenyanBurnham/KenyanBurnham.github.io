@@ -9,7 +9,8 @@
 }
 
 .heading-dark{
-    background-color: #e9ecef;
+    background-color: #007bff;
     color: white;
     font-size: 3vh;
+    padding-left: 2vw;
 }
