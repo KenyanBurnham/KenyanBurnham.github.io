@@ -23,6 +23,7 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
 	height: 150px;
   margin-left: 5vw;
   margin-right: 5vw;
+	margin-top: calc(50% - 75px);
   background-color: #007bff;
 	border: 5px white solid;
 	box-sizing: border-box;
