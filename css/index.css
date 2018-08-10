@@ -39,3 +39,8 @@
     height: 100vh;
     overflow-y: scroll;
 }
+
+h2 .salmon-header{
+    background-color: #ffa07a;
+    color: white;
+}
