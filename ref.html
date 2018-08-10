@@ -78,33 +78,23 @@
       <section class="">
           <div class="row">
               <div class="col-2"></div>
-              <div class="col-2">
-                  <nav id="toScrollspy" class="navbar navbar-light bg-light">
-                      <a class="navbar-brand" href="#top-equipment"><b>Top</b></a><br>
-                      <a class="navbar-brand" href="bench-equipment">Bench-Top Equipment</a>
+              <div class="col-2 to-scrollspy">
+                  <nav class="navbar navbar-light bg-light">
+                      <a class="navbar-brand" data-scrollspy="top-equipment" href="#top-equipment"><b>Top</b></a><br>
+                      <a class="navbar-brand" data-scrollspy="bench-equipment" href="bench-equipment">Bench-Top Equipment</a>
                       <nav class="nav nav-pills flex-column">
-                          <a class="nav-link" href="#dc-power-supplies">DC Power Supplies</a>
-                          <a class="nav-link" href="#function-generators">Function Generators</a>
-                          <a class="nav-link" href="#source-meters">Source Meters</a>
-                          <a class="nav-link" href="#oscilloscopes">Oscilloscopes</a>
-                          <a class="nav-link" href="#multimeters">Multimeters</a>
-                          <a class="nav-link" href="#electronic-loads">DC Electronic Loads</a>
-                          <a class="nav-link" href="#lcr-meters">LCR Meters</a>
-                          <a class="nav-link" href="#spectrum-analyzers">Spectrum Analyzers</a>
-                          <a class="nav-link" href="#picoammeters">Picoammeters</a>
-                          <a class="nav-link" href="#current-probes">Current Probes</a>
-                          <!--
-                          <nav class="nav nav-pills flex-column">
-                              <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
-                              <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
-                          </nav>
-                          <nav class="nav nav-pills flex-column">
-                              <a class="nav-link ml-3 my-1" href="">Item 1-1</a>
-                              <a class="nav-link ml-3 my-1" href="">Item 1-2</a>
-                          </nav>
-                          -->
+                          <a class="nav-link" data-scrollspy="dc-power-supplies" href="#dc-power-supplies">DC Power Supplies</a>
+                          <a class="nav-link" data-scrollspy="function-generators" href="#function-generators">Function Generators</a>
+                          <a class="nav-link" data-scrollspy="source-meters" href="#source-meters">Source Meters</a>
+                          <a class="nav-link" data-scrollspy="oscilloscopes" href="#oscilloscopes">Oscilloscopes</a>
+                          <a class="nav-link" data-scrollspy="multimeters" href="#multimeters">Multimeters</a>
+                          <a class="nav-link" data-scrollspy="electronic-loads" href="#electronic-loads">DC Electronic Loads</a>
+                          <a class="nav-link" data-scrollspy="lcr-meters" href="#lcr-meters">LCR Meters</a>
+                          <a class="nav-link" data-scrollspy="spectrum-analyzers" href="#spectrum-analyzers">Spectrum Analyzers</a>
+                          <a class="nav-link" data-scrollspy="picoammeters" href="#picoammeters">Picoammeters</a>
+                          <a class="nav-link" data-scrollspy="current-probes" href="#current-probes">Current Probes</a>
                       </nav>
-                  <a class="navbar-brand" href="#testing-systems">Testing Systems</a>
+                      <a class="navbar-brand" data-scrollspy="testing-systems" href="#testing-systems">Testing Systems</a>
                   </nav>
               </div>
               <div class="col-8" data-spy="scroll" data-target="#toScrollspy" data-offset="0">
