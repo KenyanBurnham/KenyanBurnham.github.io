@@ -7,3 +7,9 @@
 .grey-sections{
     background-color: #e9ecef;
 }
+
+.heading-dark{
+    background-color: #e9ecef;
+    color: white;
+    font-size: 3vh;
+}
