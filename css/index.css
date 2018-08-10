@@ -4,11 +4,24 @@
     padding-top: 5vh;
 }
 
+.teal-sections{
+    background-color: #20c997;
+    color: white;
+    padding-top: 5vh;
+}
+
 .grey-sections{
     background-color: #e9ecef;
 }
 
 .heading-dark{
+    background-color: #007bff;
+    color: white;
+    font-size: 3vh;
+    padding-left: 2vw;
+}
+
+.heading-teal{
     background-color: #007bff;
     color: white;
     font-size: 3vh;
