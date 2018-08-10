@@ -103,7 +103,6 @@
                           <br><br>
                           <h3 id="top-equipment">Welcome to the equipment page.</h3><br>
                           <p>You can find information on each of the featured items by clicking on it. Equipment with a "<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M14 6V5h-4V3H8v1H6c-1.03 0-1.77.81-2 2L3 7c-1.66 0-3 1.34-3 3v2h1v-2c0-1.11.89-2 2-2l1 1c.25 1.16.98 2 2 2h2v1h2v-2h4V9h-4V6h4z"/></svg>" symbol have a GPIB port and can be used in automated testing.</p>
-                          <p>Below is a list of bookmarks that will take you to various sections.</p>
                       </div>
                       <div class="col"></div>
                   </div>
@@ -564,66 +563,72 @@
                   </div>
                   <br>
 
+                  <div class="row justify-content-center">
+                      <div class="col"></div>
+                      <div class="col-10">
+                          <h2 id = "sts" class = "salmon-header">National Instruments Semiconductor Testing System</h2>
+                          <ul>
+                            <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Testing System</a> &#9167;</li>
+                          </ul>
+                      </div>
+                      <div class="col"></div>
+                  </div>
+                  <br>
+
+                  <div class="row justify-content-center">
+                      <div class="col"></div>
+                      <div class="col-10">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading heading-salmon">Current STS Configuration</div>
+                            <div class="panel-body">
+                                <p> The National Instruments Semiconductor Testing System ("STS") houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
+                                <br><p>Resources on the current device interface board can be found below:</p>
+                                <ul>
+                                    <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
+                                    <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
+                                    <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
+                                    <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
+                                    <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
+                                    <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
+                                </ul>
+                            </div>
+                            
+                            <table class="table">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Model</th>
+                                      <th scope="col">Card Type</th>
+                                      <th scope="col">Description</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
+                                      <td>PXIe Card</td>
+                                      <td>4-CH Precision SMU</td>
+                                  </tr>
+                                  <tr>
+                                      <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
+                                      <td>PXIe Card</td>
+                                      <td>Digital Waveform Generator/Analyzer with PPMU</td>
+                                  </tr>
+                                  <tr>
+                                      <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
+                                      <td>PXI Card</td>
+                                      <td>64 Pin Relay Driver</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col"></div>
+                  </div>
+                  <br>
               </div>
               <div class="col-2"></div>
           </div>
       </section>
-
-
-      <!--
-
-
-                  <h2 id = "sts" class = "title normalize-text">National Instruments STS </h2>
-                    <ul>
-                      <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Testing System</a> &#9167;</li>
-                    </ul>
-                    <p> The National Instruments Semiconductor Testing System (STS) houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
-                    <table>
-                      <tr>
-                          <th>Model</th>
-                          <th>Card Type</th>
-                          <th>Description</th>
-                      </tr>
-                      <tr>
-                          <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
-                          <td>PXIe Card</td>
-                          <td>4-CH Precision SMU</td>
-                      </tr>
-                      <tr>
-                          <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
-                          <td>PXIe Card</td>
-                          <td>Digital Waveform Generator/Analyzer with PPMU</td>
-                      </tr>
-                      <tr>
-                          <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
-                          <td>PXI Card</td>
-                          <td>64 Pin Relay Driver</td>
-                      </tr>
-                    </table>
-
-                    <blockquote cite="http://">
-                        The STS is located on Bench 6
-                    </blockquote>
-
-                    <h3>Additional resources for the STS</h3>
-                    <ul>
-                      <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
-                      <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
-                      <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
-                      <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
-                      <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
-                      <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
-                    </ul>
-                    <blockquote cite="http://">
-                        It is <b>highly</b> recommended to anyone who would like to use the STS to read through Joanna Gatlin's Thesis.
-                    </blockquote>
-                    <br>
-                    <br>
-                </div>
-                <div class="col-2"></div>
-            </div>
-        </section>
-      -->
 
       <script src="js/index.js"></script>
   </body>
