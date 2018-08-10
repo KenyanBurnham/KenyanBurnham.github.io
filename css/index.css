@@ -47,4 +47,6 @@
 .pxi-yes{
     background-color: #20c997;
     color: white;
+    align-items: center;
+    text-align: center;
 }
