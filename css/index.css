@@ -28,6 +28,13 @@
 }
 
 .heading-salmon{
+    background-color: #ffa07a;
+    color: white;
+    font-size: 3vh;
+    padding-left: 2vw;
+}
+
+.heading-teal{
     background-color: #20c997;
     color: white;
     font-size: 3vh;
