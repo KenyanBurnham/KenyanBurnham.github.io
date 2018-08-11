@@ -28,7 +28,7 @@
 }
 
 .heading-salmon{
-    background-color: #ffa07a;
+    background-color: #20c997;
     color: white;
     font-size: 3vh;
     padding-left: 2vw;
@@ -47,4 +47,8 @@
     color: white;
     align-items: center;
     text-align: center;
+}
+
+.teal-header{
+
 }
