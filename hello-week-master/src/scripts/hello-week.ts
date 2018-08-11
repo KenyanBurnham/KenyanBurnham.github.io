@@ -1,5 +1,5 @@
 import '../styles/hello-week.scss';
-import {CSS_CLASSES, DAYS_WEEK} from './constants';
+import {CSS_CLASSES, DAYS_WEEK, CSS_CEVRONS} from './constants';
 
 type CallbackFunction = (...args: any[]) => void;
 
@@ -522,7 +522,7 @@ export class HelloWeek {
             range: false,
             minDate: false,
             maxDate: false,
-            nav: ['◀', '▶'],
+            nav: [CHEVRON_LEFT, CHEVRON_RIGHT],
             onLoad: () => { /** callback function */ },
             onChange: () => { /** callback function */ },
             onSelect: () => { /** callback function */ },
