@@ -260,8 +260,6 @@ function fillTable(selector){
     }
   }
 
-
-
 /*=============================================================================
 cleanUpDate function:
 1. primitive way of formating the date to be correct for the calendar
@@ -315,7 +313,7 @@ $( document ).ready(function() {
       $('.btn-toggle').click(function() {
           $(this).find('#btn1').toggleClass('active');
           $(this).find('#btn2').toggleClass('active');
-          
+
           if($(".is-selected").hasClass("active")){
               fillTable(".is-selected");
           }
