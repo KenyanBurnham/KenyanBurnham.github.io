@@ -142,21 +142,32 @@ function filter(timeStamp){
     //If this half hour slot is reserved
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
-    let benchChoice = "";
-    if (b1 == true && b2 == false){
-        benchChoice = "bench1/";
-    }if (b2 == true && b1 == false){
-        benchChoice = "bench2/";
-    }else{
-        //Need an error handling scheme
-        console.log("Error: #b1 and #b2 may have the same identifier.");
-    }
-    firebase.database().ref("reservation/" + benchChoice + "pending/" + timeStamp).once("value").then(function(pendingSnapshot){
-        firebase.database().ref("reservation/" + benchChoice + "approved/" + timeStamp).once("value").then(function(approvedSnapshot){
+
+    firebase.database().ref("reservation/bench1/pending/" + timeStamp).once("value").then(function(pendingb1Snapshot){
+        firebase.database().ref("reservation/bench1/approved/" + timeStamp).once("value").then(function(approvedb1Snapshot){
+            firebase.database().ref("reservation/bench2/pending/" + timeStamp).once("value").then(function(pendingb2Snapshot){
+                firebase.database().ref("reservation/bench2/approved/" + timeStamp).once("value").then(function(approvedb2Snapshot){
+
+          /*
+          let benchChoice = "";
+          if (b1 == true && b2 == false){
+              benchChoice = "bench1/";
+          }if (b2 == true && b1 == false){
+              benchChoice = "bench2/";
+          }else{
+              //Need an error handling scheme
+              console.log("Error: #b1 and #b2 may have the same identifier.");
+          }
+          */
             if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
                 //then bench is open for reservation
                 $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                    $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+
+                    if($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
+                        $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                    }else{
+                        $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                    }
                     //build an object of some sort
                 });
             } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
@@ -176,6 +187,8 @@ function filter(timeStamp){
                 //handle error
                 console.log("ERROR: pending reservation snapshot (" + pendingSnapshot.exists() + ") and approved reservation snapshot (" + approvedSnapshot.exists() + ") do not meet the required boolean value.");
             }
+                });
+            });
         });
     });
 
