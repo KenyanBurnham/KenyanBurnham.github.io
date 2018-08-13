@@ -189,10 +189,12 @@ function filter(timeStamp){
         console.log("Error: #b1 and #b2 may have the same identifier.");
     }
 }
+  */
 
 function fillTable(selector){
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
     //If there is anything other than ".is-selected" it will default to "is-today"
+    //Need another case for the hello_week left and right buttons
     if((selector == null) || (selector != ".is-selected") || (selector == undefined)){
         selector = ".is-today";
     }
@@ -203,21 +205,19 @@ function fillTable(selector){
         //Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
         //then adds the number of half hours (1800 seconds * i) to get the time
         let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
-        //Next timesStamp gives you an hour
-        let nextTimeStamp = (Number(timeStamp) + (3600*10) + Number(1800*i));
-        if(i == 15){
-            nextTimeStamp = 42;
-        }
+        //Next timesStamp gives you the ending of the time selected by adding 1800 (a half hour)
+        let nextTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i) + Number(1800));
 
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
+                      "<td id='tdEquipment" + newTimeStamp + "'></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
         filter(newTimeStamp);
     }
   }
-  */
+
 
 
 /*=============================================================================
