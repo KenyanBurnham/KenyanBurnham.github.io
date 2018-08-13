@@ -159,6 +159,7 @@ function filter(timeStamp){
                     } else {
                         $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
                     }
+                  });
             } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
                 //then there is a penidng reservation here
                 $("#td" + timeStamp).text("Pending Reservation");
