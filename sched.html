@@ -46,85 +46,129 @@
 
   </head>
   <body>
-    <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle">Reserve Time</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+
+      <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Reserve Time</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <div id="freeAlert" class="alert alert-info" role="alert" hidden>No reservation</div>
+                              </div>
+                              <div class="col-2"></div>
+                          </div>
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <form>
+
+                                    <div class="form-group">
+                                        <label for="emailAddressInput">Email address</label>
+                                        <input type="email" class="form-control" autocomplete='email' id="emailAddressInput" placeholder="name.name@ttu.edu" required>
+                                        <small>Updates and status of reservation will be sent to this email.</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="nameInput">Reserver Name</label>
+                                        <input type="name" class="form-control" autocomplete='name' id="nameInput" placeholder="Full Name" required>
+                                        <small>Updates and status of reservation will be sent to this email.</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="groupMemberInput">Group Members</label>
+                                        <textarea class="form-control" id="groupMemberInput" rows="2" required></textarea>
+                                        <small>This lets the lab manager know who to expect.</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="classInput">Class</label>
+                                        <select class="form-control" id="classInput" placeholder="Choose Class..." required>
+                                            <option> Testing of Digital Systems</option>
+                                            <option> Parametric/Functional Device Testing</option>
+                                            <option> Power Electronics</option>
+                                            <option> Independent Study</option>
+                                            <option> Research</option>
+                                            <option> Other</option>
+                                        </select>
+                                        <small>If you are unsure choose "Other".</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="requestsInput">Additional Requests</label>
+                                        <textarea class="form-control" id="requestsInput" rows="3"></textarea>
+                                        <small>Be as specific as possible, include additional leads or features. <b>The lab is not responsible for supplying consummables.</b></small>
+                                    </div>
+
+
+                                  </form>
+                              </div>
+                              <div class="col-2"></div>
+                          </div>
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <div id="successAlert" class="alert alert-info" role="alert" hidden>Reservation Successful!</div>
+                              </div>
+                              <div class="col-2"></div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="submitRequest()">Submit</button>
+                    </div>
+              </div>
+          </div>
         </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col">
-                    <div id="freeAlert" class="alert alert-info" role="alert" hidden>No reservation</div>
+
+        <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                          <h5 class="modal-title" id="modalTitle">Add Equipment</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <h3>Equipment Category</h3>
+                                    <select class="form-control" id="categoryInput" placeholder="Choose Category..." required></select>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <h3>Equipment Type</h3>
+                                    <select class="form-control" id="typeInput" placeholder="Choose type..." required disabled></select>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <h3>Equipment Model</h3>
+                                    <select class="form-control" id="modelInput" placeholder="Choose type..." required disabled></select>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="addEquipmentToPage() disabled">Add</button>
+                      </div>
                 </div>
-                <div class="col-2"></div>
             </div>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col">
-                    <form>
-
-                      <div class="form-group">
-                          <label for="emailAddressInput">Email address</label>
-                          <input type="email" class="form-control" autocomplete='email' id="emailAddressInput" placeholder="name.name@ttu.edu" required>
-                          <small>Updates and status of reservation will be sent to this email.</small>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="nameInput">Reserver Name</label>
-                          <input type="name" class="form-control" autocomplete='name' id="nameInput" placeholder="Full Name" required>
-                          <small>Updates and status of reservation will be sent to this email.</small>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="groupMemberInput">Group Members</label>
-                          <textarea class="form-control" id="groupMemberInput" rows="2" required></textarea>
-                          <small>This lets the lab manager know who to expect.</small>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="classInput">Class</label>
-                          <select class="form-control" id="classInput" placeholder="Choose Class..." required>
-                              <option> Testing of Digital Systems</option>
-                              <option> Parametric/Functional Device Testing</option>
-                              <option> Power Electronics</option>
-                              <option> Independent Study</option>
-                              <option> Research</option>
-                              <option> Other</option>
-                          </select>
-                          <small>If you are unsure choose "Other".</small>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="requestsInput">Additional Requests</label>
-                          <textarea class="form-control" id="requestsInput" rows="3"></textarea>
-                          <small>Be as specific as possible, include additional leads or features. <b>The lab is not responsible for supplying consummables.</b></small>
-                      </div>
-
-
-                    </form>
-                </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col">
-                    <div id="successAlert" class="alert alert-info" role="alert" hidden>Reservation Successful!</div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="submitRequest()">Submit</button>
-        </div>
-      </div>
-      </div>
-      </div>
+          </div>
 
       <header class="main-nav">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -223,7 +267,7 @@
             <div class="col-6">
                 <h3>Add Equipment.</h3><br>
                   <div class="form-group">
-                      <button type="button" class="btn btn-primary">Add +</button>
+                      <button id="addEquipmentButton" type="button" class="btn btn-primary">Add +</button>
                   </div> <br>
 
                   <div class="form-group">

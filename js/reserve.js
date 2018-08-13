@@ -322,4 +322,8 @@ $( document ).ready(function() {
               fillTable(".is-today");
           }
     });
+
+    $("#addEquipmentButton").click(function(){
+        console.log("add equipment modal");
+    });
 });
