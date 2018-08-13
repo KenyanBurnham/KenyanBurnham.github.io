@@ -1,4 +1,4 @@
-.reserved-text{
+.reserved-text {
     color: #007bff;
 }
 
@@ -7,20 +7,20 @@ tr.time-item:hover {
     color: white;
 }
 
-tr.time-item, tr.chosen {
+.chosen {
     background-color: #007bff !important;
     color: white;
 }
 
-.pending-text{
+.pending-text {
     color: #007bff;
 }
 
-.list-item-section{
+.list-item-section {
     background-color: 	#F0FFFF;
 }
 
-.scheduleHeader{
+.scheduleHeader {
     background-color: #20c997;
     color: white;
     font-size: 2vh;
