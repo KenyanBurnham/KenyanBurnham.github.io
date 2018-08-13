@@ -152,7 +152,7 @@ function filter(timeStamp){
         console.log("Error: #b1 and #b2 may have the same identifier.");
     }
     firebase.database().ref("reservation/" + benchChoice + "pending/" + timeStamp).once("value").then(function(pendingSnapshot){
-        firebase.database().ref("reservation/" + benchChoice + "approved/" = timeStamp).once("value").then(function(approvedSnapshot){
+        firebase.database().ref("reservation/" + benchChoice + "approved/" + timeStamp).once("value").then(function(approvedSnapshot){
             if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
                 //then bench is open for reservation
                 $("tr[data-timestamp='" + timeStamp + "']").click(function(){
