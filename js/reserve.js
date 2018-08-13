@@ -325,5 +325,6 @@ $( document ).ready(function() {
 
     $("#addEquipmentButton").click(function(){
         console.log("add equipment modal");
+        $("#addEquipmentModal").modal("show");
     });
 });
