@@ -254,7 +254,7 @@ function fillTable(selector){
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
-                      "<td id='tdEquipment" + newTimeStamp + "'></td>" +
+                      "<td id='tdEquipment" + newTimeStamp + "'><span class='badge badge-dark'>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
         filter(newTimeStamp);
