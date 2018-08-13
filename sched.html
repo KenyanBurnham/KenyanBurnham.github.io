@@ -157,27 +157,6 @@
           </div>
       </section><br><br>
 
-      <section>
-        <div class="row justify-content-center">
-            <div class="col"></div>
-            <div class="col-6">
-                <h3>Choose Equipment.</h3><br>
-                <p>This will help you understand what equipment is unavailable when.</p>
-                  <div class="form-group">
-                      <select id="equipInput" class="form-control" multiple="multiple">
-                      </select>
-                      <small>Select equipment to add it to the list below.</small>
-                  </div> <br>
-
-                  <h3>Review and Edit Equipment.</h3><br>
-                  <div class="form-group">
-                      <div id="equipmentChosen" class="list-group">
-                      </div>
-                      <small>To remove equipment press the "X".</small>
-                  </div> <br>
-              </div>
-              <div class="col"></div>
-      </section><br><hr><br>
 
       <section>
         <div class="row justify-content-center">
@@ -238,6 +217,27 @@
           </div><br><br>
       </section>
 
+      <section>
+        <div class="row justify-content-center">
+            <div class="col"></div>
+            <div class="col-6">
+                <h3>Choose Equipment.</h3><br>
+                <p>Equipment that is being used at the same time as a current reservation will be automatically excluded. Refer to the table above.</p>
+                  <div class="form-group">
+                      <select id="equipInput" class="form-control" multiple="multiple">
+                      </select>
+                  </div> <br>
+
+                  <h3>Review and Edit Equipment.</h3><br>
+                  <div class="form-group">
+                      <div id="equipmentChosen" class="list-group">
+                      </div>
+                      <small>To remove equipment press the "X".</small>
+                  </div> <br>
+              </div>
+              <div class="col"></div>
+      </section><br><hr><br>
+
       <hr><br>
       <section>
           <div class="row justify-content-center">
@@ -249,6 +249,8 @@
               <div class="col-2"></div>
           </div>
       </section>
+
+
 
       <script src="hello-week-master/dist/helloweek.min.js"></script>
       <script src="js/reserve.js"></script>
