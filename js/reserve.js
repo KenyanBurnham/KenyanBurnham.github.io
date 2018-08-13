@@ -53,7 +53,7 @@ function submitRequest(){
         }
     });
 }
-*/
+
 function equipmentList(){
       $("#equipInput").empty();
       firebase.database().ref("equipment").once("value").then(function(inventory){
@@ -88,7 +88,7 @@ function equipmentList(){
       });
 }
 
-/*
+
 function humanReadableTime(hour, minute){
     let time = new Object();
     let timeWhole = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
@@ -136,7 +136,7 @@ function modalBuilder(timeStamp){
     equipmentList();
     $("#reservationModal").modal("show");
 }
-  */
+*/
 function filter(timeStamp){
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
