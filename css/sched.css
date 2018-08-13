@@ -2,7 +2,7 @@
     color: #007bff;
 }
 
-.reservedTR:hover {
+tr.reservedTR:hover {
     /*Will add if necessary*/
     background-color: #ffa07a;
 }
