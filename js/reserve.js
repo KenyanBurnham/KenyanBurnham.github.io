@@ -164,14 +164,14 @@ function filter(timeStamp){
                 $("#td" + timeStamp).text("Pending Reservation");
                 $("#td" + timeStamp).addClass("pending-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
+                $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
             } else if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == true)){
                 // then there is an approved reservation here
                 //then there is a penidng reservation here
                 $("#td" + timeStamp).text("Reserved");
                 $("#td" + timeStamp).addClass("reserved-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
+                $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
             }else{
                 //handle error
                 console.log("ERROR: pending reservation snapshot (" + pendingSnapshot.exists() + ") and approved reservation snapshot (" + approvedSnapshot.exists() + ") do not meet the required boolean value.");
