@@ -155,6 +155,10 @@ function filter(timeStamp){
         firebase.database().ref("reservation/" + benchChoice + "approved/" = timeStamp).once("value").then(function(approvedSnapshot){
             if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
                 //then bench is open for reservation
+                $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+
+                    //build an object of some sort
+                });
             } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
                 //then there is a penidng reservation here
                 $("#td" + timeStamp).text("Pending Reservation");
@@ -163,6 +167,11 @@ function filter(timeStamp){
                 $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
             } else if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == true)){
                 // then there is an approved reservation here
+                //then there is a penidng reservation here
+                $("#td" + timeStamp).text("Pending Reservation");
+                $("#td" + timeStamp).addClass("pending-text");
+                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
             }else{
                 //handle error
                 console.log("ERROR: pending reservation snapshot (" + pendingSnapshot.exists() + ") and approved reservation snapshot (" + approvedSnapshot.exists() + ") do not meet the required boolean value.");
