@@ -87,15 +87,18 @@ function equipmentList(){
 }
 
 function humanReadableTime(hour, minute){
+    let time = new Object();
     let timeWhole = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
     let timeHalf = ["9:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "1:30 PM", "2:30 PM", "3:30 PM", "4:30 PM"];
     let toReturn ="";
     if(minute != 0){
-        toReturn = timeHalf[Number(hour - 9)];
+        time.beginning = timeHalf[Number(hour - 9)];
+        time.ending = timeHalf[Number(hour - 8)];
     }else{
-        toReturn = timeWhole[Number(hour - 9)];
+        time.beginning = timeWhole[Number(hour - 9)];
+        time.ending = timeWhole[Number(hour - 8)];
     }
-    return toReturn;
+    return time;
 }
 
 function humanReadableDate(day, date, month){
@@ -111,7 +114,7 @@ function humanReadableDate(day, date, month){
     }else{
         formattedDate = days[day] + ", " + months[month] + " " + date + "th";
     }
-    return formattedDate.toString();
+    return formattedDate;
 }
 
 function modalBuilder(timeStamp){
@@ -123,8 +126,8 @@ function modalBuilder(timeStamp){
     let hour = grabNewDate.getHours();
     let minute = grabNewDate.getMinutes();
     let dateToDisplay = humanReadableDate(day, date, month);
-    let timeToDisplay = humanReadableTime(hour, minute);
-    $("#freeAlert").text( dateToDisplay + " at " + timeToDisplay + " is available.");
+    let timeObject = humanReadableTime(hour, minute);
+    $("#freeAlert").text( dateToDisplay + " at " + timeObject.beggining + " to " + timeObject.ending + " is available.");
     $("#freeAlert").prop("hidden", false);
     $("#modalTitle").prop("data-reservation", timeStamp);
     equipmentList();
