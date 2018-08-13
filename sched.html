@@ -127,11 +127,54 @@
           </div>
         </div>
 
-        <div class="modal fade" id="addEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="addEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Add Equipment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <h3>Equipment Category</h3><br>
+                                  <select class="form-control" id="categoryInput" placeholder="Choose Category..." required></select>
+                              </div>
+                              <div class="col-2"></div>
+                          </div><br>
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <h3>Equipment Type</h3><br>
+                                  <select class="form-control" id="typeInput" placeholder="Choose type..." required disabled></select>
+                              </div>
+                              <div class="col-2"></div>
+                          </div><br>
+                          <div class="row">
+                              <div class="col-2"></div>
+                              <div class="col">
+                                  <h3>Equipment Model</h3><br>
+                                  <select class="form-control" id="modelInput" placeholder="Choose type..." required disabled></select>
+                              </div>
+                              <div class="col-2"></div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addEquipmentToPage()" disabled>Add</button>
+                    </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="viewEquipmentAtThisTimeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                          <h5 class="modal-title" id="modalTitle">Add Equipment</h5>
+                          <h5 class="modal-title" id="modalTitle">Equipment at...></h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
@@ -140,27 +183,52 @@
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="col">
-                                    <h3>Equipment Category</h3><br>
-                                    <select class="form-control" id="categoryInput" placeholder="Choose Category..." required></select>
+                                    <h3>Reserved Equipment</h3><br>
+                                    <ul id="reservedEquipmentListGroup" class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
                                 </div>
                                 <div class="col-2"></div>
-                            </div><br>
+                            </div><br><hr><br>
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="col">
-                                    <h3>Equipment Type</h3><br>
-                                    <select class="form-control" id="typeInput" placeholder="Choose type..." required disabled></select>
+                                    <h3>Stocked Equipment</h3><br>
+                                    <p>Bench 1</p>
+                                    <ul id="reservedEquipmentListGroup" class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                    </ul>
+                                    <p>Bench 2</p>
+                                    <ul id="reservedEquipmentListGroup" class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                    </ul>
+                                    <p>Bench 3</p>
+                                    <ul id="reservedEquipmentListGroup" class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                    </ul>
+                                    <p>Bench 4</p>
+                                    <ul id="reservedEquipmentListGroup" class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                    </ul>
                                 </div>
                                 <div class="col-2"></div>
                             </div><br>
-                            <div class="row">
-                                <div class="col-2"></div>
-                                <div class="col">
-                                    <h3>Equipment Model</h3><br>
-                                    <select class="form-control" id="modelInput" placeholder="Choose type..." required disabled></select>
-                                </div>
-                                <div class="col-2"></div>
-                            </div>
                       </div>
                       <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -245,6 +313,7 @@
               <div class="col"></div>
               <div class="col-6">
                   <h3 class="">Choose times.</h3>
+                  <p>Clicking on the equipment badge will show you what is currently being used at this time. Bench equipment that is always in the lab is also included.</p>
                   <br>
                   <table class="table table-striped" style="border: 1px solid #E0EEEE;">
                       <thead class="scheduleHeader">

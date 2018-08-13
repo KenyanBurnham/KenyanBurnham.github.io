@@ -137,6 +137,13 @@ function modalBuilder(timeStamp){
     $("#reservationModal").modal("show");
 }
 */
+
+function viewEquipment(timeStamp){
+    //clears modal sections
+    //build's information on modal
+    //then shows modal
+}
+
 function filter(timeStamp){
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
@@ -254,9 +261,13 @@ function fillTable(selector){
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
-                      "<td id='tdEquipment" + newTimeStamp + "'><span class='badge badge-dark'>16</span></td>" +
+                      "<td id='tdEquipment" + newTimeStamp + "'><span data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' onclick='viewEquipment()'>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
+        $("span[data-badgeTimeStamp='" + newTimeStamp + "']").click(function(){
+            viewEquipment(newTimeStamp);
+        });
+        //Fill table needs to know what equipment is in use at this time
         filter(newTimeStamp);
     }
   }
@@ -324,7 +335,6 @@ $( document ).ready(function() {
     });
 
     $("#addEquipmentButton").click(function(){
-        console.log("add equipment modal");
         $("#addEquipmentModal").modal("show");
     });
 });
