@@ -2,7 +2,7 @@
     color: #007bff;
 }
 
-tr.time-item : hover {
+tr.time-item:hover {
     background-color: #ffa07a;
 }
 
