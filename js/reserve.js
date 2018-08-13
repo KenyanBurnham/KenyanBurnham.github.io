@@ -1,3 +1,5 @@
+
+/*
 let reservation = new Object();
 let equipIndex = 0;
 let equipmentToSend = [];
@@ -129,6 +131,7 @@ function modalBuilder(timeStamp){
     let timeObject = humanReadableTime(hour, minute);
     $("#freeAlert").text( dateToDisplay + " at " + timeObject.beggining + " to " + timeObject.ending + " is available.");
     $("#freeAlert").prop("hidden", false);
+    //Add the next time unless it's 4:30
     $("#modalTitle").prop("data-reservation", timeStamp);
     equipmentList();
     $("#reservationModal").modal("show");
@@ -197,10 +200,16 @@ function fillTable(selector){
     let times = ["9:00 AM", " ", "10:00 AM", " ", "11:00 AM", " ", "12:00 PM", " ", "1:00 PM", " ", "2:00 PM", " ", "3:00 PM", " ", "4:00 PM", " "];
     let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
-        /*Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
-        then adds the number of half hours (1800 seconds * i) to get the time*/
+        //Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
+        //then adds the number of half hours (1800 seconds * i) to get the time
         let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
-        let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' class='time-item'>" +
+        //Next timesStamp gives you an hour
+        let nextTimeStamp = (Number(timeStamp) + (3600*10) + Number(1800*i));
+        if(i == 15){
+            nextTimeStamp = 42;
+        }
+
+        let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
                   "</tr>";
@@ -208,6 +217,8 @@ function fillTable(selector){
         filter(newTimeStamp);
     }
   }
+  */
+
 
 /*=============================================================================
 cleanUpDate function:
