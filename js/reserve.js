@@ -53,7 +53,7 @@ function submitRequest(){
         }
     });
 }
-
+*/
 function equipmentList(){
       $("#equipInput").empty();
       firebase.database().ref("equipment").once("value").then(function(inventory){
@@ -88,6 +88,7 @@ function equipmentList(){
       });
 }
 
+/*
 function humanReadableTime(hour, minute){
     let time = new Object();
     let timeWhole = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
@@ -118,7 +119,6 @@ function humanReadableDate(day, date, month){
     }
     return formattedDate;
 }
-
 function modalBuilder(timeStamp){
     //let now = 	Math.round(new Date().getTime()/1000);
     let grabNewDate = new Date(Number(timeStamp)*1000);
