@@ -168,8 +168,8 @@ function filter(timeStamp){
             } else if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == true)){
                 // then there is an approved reservation here
                 //then there is a penidng reservation here
-                $("#td" + timeStamp).text("Pending Reservation");
-                $("#td" + timeStamp).addClass("pending-text");
+                $("#td" + timeStamp).text("Reserved");
+                $("#td" + timeStamp).addClass("reserved-text");
                 $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                 $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
             }else{
