@@ -4,6 +4,12 @@
 
 tr.time-item:hover {
     background-color: #ffa07a !important;
+    color: white;
+}
+
+tr.time-item, tr.chosen {
+    background-color: #007bff !important;
+    color: white;
 }
 
 .pending-text{

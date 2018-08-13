@@ -156,7 +156,7 @@ function filter(timeStamp){
             if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
                 //then bench is open for reservation
                 $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-
+                    this.addClass("chosen");
                     //build an object of some sort
                 });
             } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
