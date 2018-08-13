@@ -136,11 +136,43 @@ function modalBuilder(timeStamp){
     equipmentList();
     $("#reservationModal").modal("show");
 }
-
+  */
 function filter(timeStamp){
+    //What am I evaluating?
+    //If this half hour slot is reserved
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
+    let benchChoice = "";
     if (b1 == true && b2 == false){
+        benchChoice = "bench1/";
+    }if (b2 == true && b1 == false){
+        benchChoice = "bench2/";
+    }else{
+        //Need an error handling scheme
+        console.log("Error: #b1 and #b2 may have the same identifier.");
+    }
+    firebase.database().ref("reservation/" + benchChoice + "pending/" + timeStamp).once("value").then(function(pendingSnapshot){
+        firebase.database().ref("reservation/" + benchChoice + "approved/" = timeStamp).once("value").then(function(approvedSnapshot){
+            if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
+                //then bench is open for reservation
+            } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
+                //then there is a penidng reservation here
+                $("#td" + timeStamp).text("Pending Reservation");
+                $("#td" + timeStamp).addClass("pending-text");
+                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                $("tr[data-timestamp='" + timeStamp + "']").addClass("reservedTR");
+            } else if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == true)){
+                // then there is an approved reservation here
+            }else{
+                //handle error
+                console.log("ERROR: pending reservation snapshot (" + pendingSnapshot.exists() + ") and approved reservation snapshot (" + approvedSnapshot.exists() + ") do not meet the required boolean value.");
+            }
+        });
+    });
+
+/*
+//--------------------------------------------------
+      if (b1 == true && b2 == false){
       //then Bench one is the one that needs to be filtered
         firebase.database().ref("reservation/bench1/pending/" + timeStamp).once("value").then(function(pendingBench1Snap){
             firebase.database().ref("reservation/bench1/approved/" + timeStamp).once("value").then(function(approveBench1Snap){
@@ -188,8 +220,9 @@ function filter(timeStamp){
         //There is an error somewhere
         console.log("Error: #b1 and #b2 may have the same identifier.");
     }
+    */
 }
-  */
+
 
 function fillTable(selector){
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
