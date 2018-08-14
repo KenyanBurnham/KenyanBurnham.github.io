@@ -350,7 +350,7 @@ new HelloWeek({
 $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
-        $('#btn1').click(function() {
+        $('#b1').click(function() {
             $('#btn1').toggleClass('active');
             $('#btn2').toggleClass('active');
             console.log("btn1 before fillTable");
@@ -364,7 +364,7 @@ $( document ).ready(function() {
             }
       });
 
-      $('#btn2').click(function() {
+      $('#b2').click(function() {
           $('#btn1').toggleClass('active');
           $('#btn2').toggleClass('active');
           console.log("btn2 before fillTable");
