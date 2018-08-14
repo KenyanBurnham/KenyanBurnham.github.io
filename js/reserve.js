@@ -142,6 +142,7 @@ function viewEquipment(timeStamp){
     //clears modal sections
     //build's information on modal
     //then shows modal
+    $("").
     $("#reservedEquipmentListGroup").empty();
     firebase.database("reservation/").ref().once("value").then(function(snapshot){
 
@@ -183,6 +184,7 @@ function filter(timeStamp){
                               }
                           });
                           $("#span" + timeStamp).text("" + counter + "");
+                          $("#span" + timeStamp).prop("hidden", false);
                           //--------------------------------------------------
                       }
                       if((individual.approvedStatus == false) && (individual.pendingStatus == true) && (individual.completedStatus == false)){
@@ -200,6 +202,7 @@ function filter(timeStamp){
                               }
                           });
                           $("#span" + timeStamp).text("" + indicator + "");
+                          $("#span" + timeStamp).prop("hidden", false);
                           //----------------------------------------------
                       }
                   }else{
@@ -238,7 +241,7 @@ function fillTable(selector){
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
-                      "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' class='badge badge-dark' onclick='viewEquipment()' hidden>16</span></td>" +
+                      "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
         $("span[data-badgeTimeStamp='" + newTimeStamp + "']").click(function(){
