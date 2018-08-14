@@ -140,42 +140,17 @@
                           <div class="row">
                               <div class="col-2"></div>
                               <div class="col">
-                                  <h3>Equipment Category</h3><br>
-                                  <select class="form-control" id="categoryInput" placeholder="Choose Category..." required>
-                                      <option value="benchtop" selected>Bench Top</option>
-                                      <option value="testingsystem">Testing System</option>
-                                  </select>
-                              </div>
-                              <div class="col-2"></div>
-                          </div><br>
-                          <div class="row">
-                              <div class="col-2"></div>
-                              <div class="col">
-                                  <h3>Equipment Type</h3><br>
-                                  <select class="form-control" id="typeInput" placeholder="Choose type..."  disabled></select>
-                              </div>
-                              <div class="col-2"></div>
-                          </div><br>
-                          <div class="row">
-                              <div class="col-2"></div>
-                              <div class="col">
-                                  <h3>Equipment Model</h3><br>
-                                  <select class="form-control" id="modelInput" placeholder="Choose type..."  disabled></select>
-                              </div>
-                              <div class="col-2"></div>
-                          </div>
-                          <div class="row">
-                              <div class="col-2"></div>
-                              <div class="col">
-                                  <h3>Let's save time</h3><br>
-                                  <select class="form-control" id="timeToSave" placeholder="Choose type..."></select>
+                                  <h3>Adding equipment to reservation</h3><br>
+                                  <p>Select individual equipment and click the  "+" to add and "- to remove."</p>
+                                  <select class="form-control" id="timeToSave" size="10" placeholder="Choose type..."></select>
                               </div>
                               <div class="col-2"></div>
                           </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="addEquipmentToPage()" disabled>Add</button>
+                        <button type="button" class="btn btn-danger" onclick="removeEquipmentFromPage()" disabled>-</button>
+                        <button type="button" class="btn btn-success" onclick="addEquipmentToPage()" disabled>+</button>
                     </div>
               </div>
           </div>
