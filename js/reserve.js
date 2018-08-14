@@ -141,7 +141,7 @@ function modalBuilder(timeStamp){
 function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
     console.log(equipmentToMove);
-    
+
 }
 
 function addEquipment(){
@@ -159,10 +159,6 @@ function addEquipment(){
             } else {
                 $("#optgroup" + equipmentData.sku).append(newEquipment);
             }
-            $("#option"+ equipmentData.sku).click(function(){
-                $("#addButtonEquipment").prop("disabled", false);
-                $("#removeButtonEquipment").prop("disabled", false);
-            });
         });
     });
     $("#chosenMessage").prop("hidden", false);
