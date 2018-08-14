@@ -346,8 +346,8 @@ $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
         $('#b1').click(function() {
-            $('#btn1').toggleClass('active');
-            $('#btn2').toggleClass('active');
+            $('#b1').toggleClass('active');
+            $('#b2').toggleClass('active');
             if($(".is-selected").hasClass("is-active")){
                 fillTable(".is-selected");
             }
@@ -357,8 +357,8 @@ $( document ).ready(function() {
       });
 
       $('#b2').click(function() {
-          $('#btn1').toggleClass('active');
-          $('#btn2').toggleClass('active');
+          $('#b1').toggleClass('active');
+          $('#b2').toggleClass('active');
           if($(".is-selected").hasClass("is-active")){
               fillTable(".is-selected");
           }
