@@ -123,6 +123,8 @@ function addOrRemoveEquipmentFromPage(decider){
         case 1:
             firebase.database().ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
                 let equipmentData = equipment.val();
+                //need to ask if any highlighted times match a reservation time already assined
+                //then i need to make it human readable and declare this will not be allowed at this time
                 let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</li>"
                 $("#equipmentChosen").append(li);
             });
@@ -233,8 +235,10 @@ function filter(timeStamp){
                       $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                           if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                               $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                              //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                              //add time to reservation data
                           }
                         });
                   }
