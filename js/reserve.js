@@ -147,7 +147,7 @@ function viewEquipment(timeStamp){
         allReservations.forEach(function(eachReservation){
             let equipment = eachReservation.equipment;
             if(equipment.hasChild()){
-                
+
             }
         });
     });
@@ -165,22 +165,22 @@ function filter(timeStamp){
       //Need an error handling scheme
       console.log("Error: #b1 and #b2 may have the same identifier.");
   }
-    firebase.database().ref("reservation").once("value").then(function(reservations){
-        reservations.forEach(function(individual){
-              let individualKey = individual.key;
-              let individualChild = individual.val();
+    firebase.database().ref("reservation").once("value").then(function(allReservations){
+        allReservations.forEach(function(individualReservation){
+              let individualKey = individualReservation.key;
+              let individualChild = individualReservation.val();
               if(individualChild.bench == benchChoice){
-                  let reservationTime = individual.reservationTime;
+                  let reservationTime = individualChild.reservationTime;
                   if(reservationTime == timeStamp){
                       //then it is the right bench and right time
-                      if((individual.approvedStatus == true) && (individual.pendingStatus == false) && (individual.completedStatus == false)){
+                      if((individualChild.approvedStatus == true) && (individualChild.pendingStatus == false) && (individualChild.completedStatus == false)){
                           // then there is an approved reservation here
                           $("#td" + timeStamp).text("Reserved");
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
                           //-------------------------------------------------
-                          let approvedEquipment = individual.equipment;
+                          let approvedEquipment = individualChild.equipment;
                           let counter = 0;
                           approvedEquipment.forEach(function(eachApprovedEquipment){
                               if(eachApprovedEquipment){
@@ -191,14 +191,14 @@ function filter(timeStamp){
                           $("#span" + timeStamp).prop("hidden", false);
                           //--------------------------------------------------
                       }
-                      if((individual.approvedStatus == false) && (individual.pendingStatus == true) && (individual.completedStatus == false)){
+                      if((individualChild.approvedStatus == false) && (individualChild.pendingStatus == true) && (individualChild.completedStatus == false)){
                           //then there is a penidng reservation here
                           $("#td" + timeStamp).text("Pending Reservation");
                           $("#td" + timeStamp).addClass("pending-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
                           //----------------------------------------------
-                          let pendingEquipment = individual.equipment;
+                          let pendingEquipment = individualChild.equipment;
                           let indicator = 0;
                           pendingEquipment.forEach(function(eachPendingEquipment){
                               if(eachPendingEquipment){
