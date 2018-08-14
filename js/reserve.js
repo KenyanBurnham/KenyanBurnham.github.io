@@ -223,8 +223,8 @@ function filter(timeStamp){
               });
               let individualKey = individualReservation.key;
               let individualChild = individualReservation.val();
+              let reservationTime = individualChild.reservationTime;
               if(individualChild.bench == benchChoice){
-                  let reservationTime = individualChild.reservationTime;
                   if(reservationTime == timeStamp){
                       //then it is the right bench and right time
                       if((individualChild.approvedStatus == true) && (individualChild.pendingStatus == false) && (individualChild.completedStatus == false)){
@@ -265,7 +265,17 @@ function filter(timeStamp){
                           }
                         });
                   }
-              }//else it doesn't matter
+              }else if((individualChild.bench != benchChoice) && (reservationTime == timeStamp)){
+                    //then equipment is reserved at this time on a different bench
+                    if(equipmentCounter > 0){
+                        $("#span" + timeStamp).text("" + equipmentCounter + "");
+                        $("#span" + timeStamp).prop("hidden", false);
+                        $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                            viewEquipment(timeStamp);
+                        });
+                    }
+              }
+              //else it doesn't matter
         });
     });
 }
