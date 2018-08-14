@@ -248,7 +248,14 @@ function filter(timeStamp){
                         $("#span" + timeStamp).text("" + equipmentCounter + "");
                         $("#span" + timeStamp).prop("hidden", false);
                         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                            viewEquipment(timeStamp);
+                            if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
+                                $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                                //remove from time reservation
+                            } else {
+                                $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                                viewEquipment(timeStamp);
+                                //add time to reservation data
+                            }
                         });
                     }
               }
