@@ -106,6 +106,13 @@ function beginSubmission(){
     // find all equipment. create a list of keys,
     // get bench info
     // Add to reservation object
+    let times = [];
+    $('.chosen').each(function(i, ) {
+        //test
+        let timeStamp = $(this).prop("data-timestamp");
+        console.log(timeStamp);
+    });
+
 
     //Create modal with all other information
     //refer to reservation object to display final reservation
