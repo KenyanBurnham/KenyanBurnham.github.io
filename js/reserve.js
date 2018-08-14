@@ -255,6 +255,7 @@ function fillTable(selector){
                   "</tr>";
         $("#tableToFill").append(tr);
         $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
+            console.log("Clicked on tr, next is view equipment");
             viewEquipment(newTimeStamp);
         });
         //Fill table needs to know what equipment is in use at this time
