@@ -138,6 +138,14 @@ function modalBuilder(timeStamp){
 }
 */
 
+function addEquipmentToPage(){
+    console.log("Add");
+}
+
+function removeEquipmentFromPage(){
+    console.log("remove");
+}
+
 function addEquipment(){
     $("#timeToSave").empty();
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
