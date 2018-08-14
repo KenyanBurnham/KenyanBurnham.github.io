@@ -141,6 +141,7 @@ function modalBuilder(timeStamp){
 function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
     console.log(equipmentToMove);
+    
 }
 
 function addEquipment(){
