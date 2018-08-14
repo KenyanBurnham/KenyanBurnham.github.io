@@ -158,6 +158,7 @@ function viewEquipment(timeStamp){
             });
         });
     });
+    $("#viewEquipmentAtThisTimeModal").modal("show");
 }
 
 function filter(timeStamp){
