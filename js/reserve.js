@@ -138,6 +138,8 @@ function modalBuilder(timeStamp){
 }
 */
 
+
+
 function viewEquipment(timeStamp){
     //clears modal sections
     //build's information on modal
@@ -147,7 +149,9 @@ function viewEquipment(timeStamp){
         allReservations.forEach(function(eachReservation){
             let equipment = eachReservation.equipment;
             if(equipment.hasChild()){
-
+                //Somehow I need to get the child and ask the
+                //build an li
+                //
             }
         });
     });
@@ -167,6 +171,14 @@ function filter(timeStamp){
   }
     firebase.database().ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(individualReservation){
+              //------------------------------------------
+              let equipmentCounter = 0;
+              individualReservation.forEach(function(individualValues){
+                  if(individualValues.val() == "equipment"){
+                      equipmentCounter = equipmentCounter + 1;
+                  }
+              });
+              //------------------------------------------
               let individualKey = individualReservation.key;
               let individualChild = individualReservation.val();
               if(individualChild.bench == benchChoice){
@@ -180,15 +192,10 @@ function filter(timeStamp){
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
                           //-------------------------------------------------
-                          let approvedEquipment = individualChild.equipment;
-                          let counter = 0;
-                          approvedEquipment.forEach(function(eachApprovedEquipment){
-                              if(eachApprovedEquipment){
-                                  counter = counter + 1;
-                              }
-                          });
-                          $("#span" + timeStamp).text("" + counter + "");
-                          $("#span" + timeStamp).prop("hidden", false);
+                          if(equipmentCounter > 0){
+                              $("#span" + timeStamp).text("" + equipmentCounter + "");
+                              $("#span" + timeStamp).prop("hidden", false);
+                          }
                           //--------------------------------------------------
                       }
                       if((individualChild.approvedStatus == false) && (individualChild.pendingStatus == true) && (individualChild.completedStatus == false)){
@@ -197,17 +204,12 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("pending-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-                          //----------------------------------------------
-                          let pendingEquipment = individualChild.equipment;
-                          let indicator = 0;
-                          pendingEquipment.forEach(function(eachPendingEquipment){
-                              if(eachPendingEquipment){
-                                  indicator = indicator + 1;
-                              }
-                          });
-                          $("#span" + timeStamp).text("" + indicator + "");
-                          $("#span" + timeStamp).prop("hidden", false);
-                          //----------------------------------------------
+                          //-------------------------------------------------
+                          if(equipmentCounter > 0){
+                              $("#span" + timeStamp).text("" + equipmentCounter + "");
+                              $("#span" + timeStamp).prop("hidden", false);
+                          }
+                          //--------------------------------------------------
                       }
                   }else{
                       //then bench is open for reservation
