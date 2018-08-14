@@ -138,10 +138,6 @@ function modalBuilder(timeStamp){
 }
 */
 
-function buildLI(model, type, manufacturer, url){
-
-}
-
 function viewEquipment(timeStamp){
     $("#reservedEquipmentListGroup").empty();
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
@@ -155,9 +151,6 @@ function viewEquipment(timeStamp){
             });
         });
     });
-    if(counter > 0){
-
-    }
     $("#viewEquipmentAtThisTimeModal").modal("show");
 }
 
@@ -196,8 +189,8 @@ function filter(timeStamp){
                           if(equipmentCounter > 0){
                               $("#span" + timeStamp).text("" + equipmentCounter + "");
                               $("#span" + timeStamp).prop("hidden", false);
-                              $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-                                  viewEquipment(newTimeStamp);
+                              $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                                  viewEquipment(timeStamp);
                               });
                           }
                       }
@@ -210,8 +203,8 @@ function filter(timeStamp){
                           if(equipmentCounter > 0){
                               $("#span" + timeStamp).text("" + equipmentCounter + "");
                               $("#span" + timeStamp).prop("hidden", false);
-                              $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-                                  viewEquipment(newTimeStamp);
+                              $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                                  viewEquipment(timeStamp);
                               });
                           }
                       }
