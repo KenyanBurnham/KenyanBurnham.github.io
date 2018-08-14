@@ -142,10 +142,14 @@ function viewEquipment(timeStamp){
     //clears modal sections
     //build's information on modal
     //then shows modal
-    $("").
     $("#reservedEquipmentListGroup").empty();
-    firebase.database("reservation/").ref().once("value").then(function(snapshot){
-
+    firebase.database("reservation/").ref().once("value").then(function(allReservations){
+        allReservations.forEach(function(eachReservation){
+            let equipment = eachReservation.equipment;
+            if(equipment.hasChild()){
+                
+            }
+        });
     });
 }
 
