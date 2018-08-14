@@ -229,7 +229,7 @@ function viewEquipment(timeStamp){
             let equipmentData = eachEquipment.val();
             eachEquipment.forEach(function(eachValue){
                 if(eachValue.key == timeStamp){
-                    let li = "<li class='list-group-item'><a href='" + equipmentData.url + "'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</a></li>";
+                    let li = "<li class='list-group-item'><a href='javascript:window.open('" + equipmentData.url + "');'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</a></li>";
                     $("#reservedEquipmentListGroup").append(li);
                 }
             });
