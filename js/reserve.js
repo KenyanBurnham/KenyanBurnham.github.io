@@ -146,8 +146,9 @@ function addOrRemoveEquipmentFromPage(decider){
         break;
         case 1:
             firebase.database().ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
-                equipmentData = equipment.val();
-                let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + + "</li>"
+                let equipmentData = equipment.val();
+                let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</li>"
+                $("#equipmentChosen").append(li);
             });
         break;
     }
