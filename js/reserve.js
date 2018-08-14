@@ -323,10 +323,20 @@ new HelloWeek({
 $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
-      $('.btn-toggle').click(function() {
-          $(this).find('#btn1').toggleClass('active');
-          $(this).find('#btn2').toggleClass('active');
+        $('#btn1').click(function() {
+            $('#btn1').toggleClass('active');
+            $('#btn2').toggleClass('active');
+            if($(".is-selected").hasClass("active")){
+                fillTable(".is-selected");
+            }
+            if($(".is-today").hasClass("active")){
+                fillTable(".is-today");
+            }
+      });
 
+      $('#btn2').click(function() {
+          $('#btn1').toggleClass('active');
+          $('#btn2').toggleClass('active');
           if($(".is-selected").hasClass("active")){
               fillTable(".is-selected");
           }
@@ -334,6 +344,7 @@ $( document ).ready(function() {
               fillTable(".is-today");
           }
     });
+
     $("#addEquipmentButton").click(function(){
         addEquipment();
     });
