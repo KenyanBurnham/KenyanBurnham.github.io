@@ -140,8 +140,17 @@ function modalBuilder(timeStamp){
 
 function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
-    console.log(equipmentToMove);
-
+    switch (decider) {
+        case 0:
+          $("#reservationEquipment" + equipmentToMove).detach();
+        break;
+        case 1:
+            firebase.database().ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
+                equipmentData = equipment.val();
+                let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + + "</li>"
+            });
+        break;
+    }
 }
 
 function addEquipment(){
