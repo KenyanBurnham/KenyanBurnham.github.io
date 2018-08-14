@@ -143,9 +143,6 @@ function buildLI(model, type, manufacturer, url){
 }
 
 function viewEquipment(timeStamp){
-    //clears modal sections
-    //build's information on modal
-    //then shows modal
     $("#reservedEquipmentListGroup").empty();
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
         allEquipment.forEach(function(eachEquipment){
