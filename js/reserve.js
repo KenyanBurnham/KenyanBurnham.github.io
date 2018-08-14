@@ -174,6 +174,16 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
+                          //-------------------------------------------------
+                          let approvedEquipment = individual.equipment;
+                          let counter = 0;
+                          approvedEquipment.forEach(function(eachApprovedEquipment){
+                              if(eachApprovedEquipment){
+                                  counter = counter + 1;
+                              }
+                          });
+                          $("#span" + timeStamp).text("" + counter + "");
+                          //--------------------------------------------------
                       }
                       if((individual.approvedStatus == false) && (individual.pendingStatus == true) && (individual.completedStatus == false)){
                           //then there is a penidng reservation here
@@ -181,6 +191,16 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("pending-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
+                          //----------------------------------------------
+                          let pendingEquipment = individual.equipment;
+                          let indicator = 0;
+                          pendingEquipment.forEach(function(eachPendingEquipment){
+                              if(eachPendingEquipment){
+                                  indicator = indicator + 1;
+                              }
+                          });
+                          $("#span" + timeStamp).text("" + indicator + "");
+                          //----------------------------------------------
                       }
                   }else{
                       //then bench is open for reservation
@@ -193,7 +213,6 @@ function filter(timeStamp){
                         });
                   }
               }//else it doesn't matter
-
         });
     });
 }
@@ -219,7 +238,7 @@ function fillTable(selector){
         let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' data-nextstamp='" + nextTimeStamp + "' class='time-item'>" +
                       "<td>" + times[i] + "</td>" +
                       "<td id='td" + newTimeStamp + "'></td>" +
-                      "<td id='tdEquipment" + newTimeStamp + "'><span data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' onclick='viewEquipment()'>16</span></td>" +
+                      "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' class='badge badge-dark' onclick='viewEquipment()' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
         $("span[data-badgeTimeStamp='" + newTimeStamp + "']").click(function(){
