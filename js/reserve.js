@@ -138,21 +138,24 @@ function modalBuilder(timeStamp){
 }
 */
 
+function buildLI(model, type, manufacturer, url){
 
+}
 
 function viewEquipment(timeStamp){
     //clears modal sections
     //build's information on modal
     //then shows modal
     $("#reservedEquipmentListGroup").empty();
-    firebase.database("reservation/").ref().once("value").then(function(allReservations){
-        allReservations.forEach(function(eachReservation){
-            let equipment = eachReservation.equipment;
-            if(equipment.hasChild()){
-                //Somehow I need to get the child and ask the
-                //build an li
-                //
-            }
+    firebase.database().ref("equipment").once("value").then(function(allEquipment){
+        allEquipment.forEach(function(eachEquipment){
+            let equipmentData = eachEquipment.val();
+            eachEquipment.forEach(function(eachValue){
+                if(eachValue.key == timeStamp){
+                    let li = "<li class='list-group-item'><a href='" + equipmentData.url + "'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</a></li>";
+                    $("#reservedEquipmentListGroup").append(li);
+                }
+            });
         });
     });
 }
@@ -250,7 +253,7 @@ function fillTable(selector){
                       "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        $("span[data-badgeTimeStamp='" + newTimeStamp + "']").click(function(){
+        $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
             viewEquipment(newTimeStamp);
         });
         //Fill table needs to know what equipment is in use at this time
