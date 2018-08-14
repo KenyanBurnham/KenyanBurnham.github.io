@@ -1,8 +1,4 @@
-
-/*
 let reservation = new Object();
-let equipIndex = 0;
-let equipmentToSend = [];
 
 function submitRequest(){
     reservation.equipment = equipmentToSend;
@@ -54,40 +50,6 @@ function submitRequest(){
     });
 }
 
-function equipmentList(){
-      $("#equipInput").empty();
-      firebase.database().ref("equipment").once("value").then(function(inventory){
-          inventory.forEach(function(equipment){
-              let equipmentData = equipment.val();
-              let newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
-              //if this optgroup does not exist
-              //https://www.sitepoint.com/jquery-check-element-exists/
-              if ($("#optgroup" + equipmentData.sku).length == 0) {
-                    let newOptGroup = "<optgroup id='optgroup" + equipmentData.sku + "' label ='" + equipmentData.type + "'></optgroup>";
-                    $("#equipInput").append(newOptGroup);
-                    $("#optgroup" + equipmentData.sku).append(newEquipment);
-              } else {
-                  $("#optgroup" + equipmentData.sku).append(newEquipment);
-              }
-              $("#option" + equipment.key).click(function(){
-                  equipmentToSend.push(equipment.key);
-                  $("#option" + equipment.key).prop("disabled", true);
-                  let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
-                  "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
-                  "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
-                  "<small>" + equipmentData.type + "</small>" + "</a>";
-                  $("#equipmentChosen").append(selected);
-                  $("#xButton" + equipment.key).click(function(){
-                      $("#option" + equipment.key).prop("disabled", false);
-                      let editIndex = equipmentToSend.indexOf(equipment.key);
-                      equipmentToSend.splice(editIndex, 1);
-                      $("#" + equipment.key).detach();
-                  });
-              });
-          });
-      });
-}
-
 
 function humanReadableTime(hour, minute){
     let time = new Object();
@@ -119,6 +81,7 @@ function humanReadableDate(day, date, month){
     }
     return formattedDate;
 }
+
 function modalBuilder(timeStamp){
     //let now = 	Math.round(new Date().getTime()/1000);
     let grabNewDate = new Date(Number(timeStamp)*1000);
@@ -136,7 +99,14 @@ function modalBuilder(timeStamp){
     equipmentList();
     $("#reservationModal").modal("show");
 }
-*/
+//-------------------------------------------------------------------
+
+function beginSubmission(){
+    //find all selected time tiles and create an array, a reservation will be made for each one
+    // find all equipment. create a list of keys,
+    //add the reservation to the equipment
+    //make sure each equipment is added to each reservation
+}
 
 function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
