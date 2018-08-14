@@ -149,99 +149,53 @@ function viewEquipment(timeStamp){
 }
 
 function filter(timeStamp){
-    let b1 = $("#b1").hasClass("active");
-    let b2 = $("#b2").hasClass("active");
-    let benchChoice = "";
-    if (b1 == true && b2 == false){
-        benchChoice = "bench1/";
-    }if (b2 == true && b1 == false){
-        benchChoice = "bench2/";
-    }else{
-        //Need an error handling scheme
-        console.log("Error: #b1 and #b2 may have the same identifier.");
-    }
-    firebase.database().ref("reservation/" + benchChoice + "pending/" + timeStamp).once("value").then(function(pendingSnapshot){
-        firebase.database().ref("reservation/" + benchChoice + "approved/" + timeStamp).once("value").then(function(approvedSnapshot){
-            if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == false)){
-                //then bench is open for reservation
-                $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                    if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
-                        $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-                    } else {
-                        $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                    }
-                  });
-            } else if ((pendingSnapshot.exists() == true) && (approvedSnapshot.exists() == false)){
-                //then there is a penidng reservation here
-                $("#td" + timeStamp).text("Pending Reservation");
-                $("#td" + timeStamp).addClass("pending-text");
-                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-            } else if ((pendingSnapshot.exists() == false) && (approvedSnapshot.exists() == true)){
-                // then there is an approved reservation here
-                //then there is a penidng reservation here
-                $("#td" + timeStamp).text("Reserved");
-                $("#td" + timeStamp).addClass("reserved-text");
-                $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-            }else{
-                //handle error
-                console.log("ERROR: pending reservation snapshot (" + pendingSnapshot.exists() + ") and approved reservation snapshot (" + approvedSnapshot.exists() + ") do not meet the required boolean value.");
-            }
+  let b1 = $("#b1").hasClass("active");
+  let b2 = $("#b2").hasClass("active");
+  let benchChoice = "";
+  if (b1 == true && b2 == false){
+      benchChoice = "bench1";
+  }if (b2 == true && b1 == false){
+      benchChoice = "bench2";
+  }else{
+      //Need an error handling scheme
+      console.log("Error: #b1 and #b2 may have the same identifier.");
+  }
+    firebase.database().ref("reservation").once("value").then(function(reservations){
+        reservations.forEach(function(individual){
+              let individualKey = individual.key;
+              let individualChild = individual.val();
+              if(individualChild.bench == benchChoice){
+                  let reservationTime = individual.reservationTime;
+                  if(reservationTime == timeStamp){
+                      //then it is the right bench and right time
+                      if((individual.approvedStatus == true) && (individual.pendingStatus == false) && (individual.completedStatus == false)){
+                          // then there is an approved reservation here
+                          $("#td" + timeStamp).text("Reserved");
+                          $("#td" + timeStamp).addClass("reserved-text");
+                          $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                          $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
+                      }
+                      if((individual.approvedStatus == false) && (individual.pendingStatus == true) && (individual.completedStatus == false)){
+                          //then there is a penidng reservation here
+                          $("#td" + timeStamp).text("Pending Reservation");
+                          $("#td" + timeStamp).addClass("pending-text");
+                          $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                          $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
+                      }
+                  }else{
+                      //then bench is open for reservation
+                      $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                          if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
+                              $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                          } else {
+                              $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                          }
+                        });
+                  }
+              }//else it doesn't matter
+
         });
     });
-
-/*
-//--------------------------------------------------
-      if (b1 == true && b2 == false){
-      //then Bench one is the one that needs to be filtered
-        firebase.database().ref("reservation/bench1/pending/" + timeStamp).once("value").then(function(pendingBench1Snap){
-            firebase.database().ref("reservation/bench1/approved/" + timeStamp).once("value").then(function(approveBench1Snap){
-                  let bench1PendingStatus = pendingBench1Snap.exists();
-                  let bench1ApproveStatus = approveBench1Snap.exists();
-                  if ((bench1PendingStatus == false) && (bench1ApproveStatus == false)){
-                        $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                            $("#freeAlert").prop("hidden", true);
-                            modalBuilder(timeStamp);
-                        });
-                  } else if ((bench1PendingStatus == true) || (bench1ApproveStatus == false)){
-                        $("#td" + timeStamp).text("Pending Reservation");
-                        $("#td" + timeStamp).addClass("pending-text");
-                        $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                  } else if ((bench1PendingStatus == false) || (bench1ApproveStatus == true)){
-                        $("#td" + timeStamp).text("Reserved");
-                        $("#td" + timeStamp).addClass("reserved-text");
-                        $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                  }
-            });
-        });
-    } else if(b2 == true && b1 == false){
-      //then Bench 2 is the one that needs to be filtered through
-        firebase.database().ref("reservation/bench2/pending/" + timeStamp).once("value").then(function(pendingBench2Snap){
-            firebase.database().ref("reservation/bench2/approved/" + timeStamp).once("value").then(function(approveBench2Snap){
-                  let bench2PendingStatus = pendingBench2Snap.exists();
-                  let bench2ApproveStatus = approveBench2Snap.exists();
-                  if ((bench2PendingStatus == false) && (bench2ApproveStatus == false)){
-                        $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                            $("#freeAlert").prop("hidden", true);
-                            modalBuilder(timeStamp);
-                        });
-                  } else if ((bench2PendingStatus == true) || (bench2ApproveStatus == false)){
-                        $("#td" + timeStamp).text("Pending Reservation");
-                        $("#td" + timeStamp).addClass("pending-text");
-                        $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                  } else if ((bench2PendingStatus == false) || (bench2ApproveStatus == true)){
-                        $("#td" + timeStamp).text("Reserved");
-                        $("#td" + timeStamp).addClass("reserved-text");
-                        $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
-                  }
-            });
-        });
-    } else{
-        //There is an error somewhere
-        console.log("Error: #b1 and #b2 may have the same identifier.");
-    }
-    */
 }
 
 
