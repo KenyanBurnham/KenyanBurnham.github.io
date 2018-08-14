@@ -273,7 +273,7 @@ function fillTable(selector){
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
     //If there is anything other than ".is-selected" it will default to "is-today"
     //Need another case for the hello_week left and right buttons
-    if((selector == null) || (selector != ".is-selected") || (selector == undefined)){
+    if($(".is-today").hasClass("is-selected")){
         selector = ".is-today";
     }
     $("#tableToFill").empty();
@@ -348,22 +348,20 @@ $( document ).ready(function() {
         $('#b1').click(function() {
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
-            if($(".is-selected").hasClass("is-active")){
-                fillTable(".is-selected");
-            }
-            if($(".is-today").hasClass("is-active")){
+            if($(".is-today").hasClass("is-selected")){
                 fillTable(".is-today");
+            }else{
+                fillTable(".is-selected");
             }
       });
 
       $('#b2').click(function() {
           $('#b1').toggleClass('active');
           $('#b2').toggleClass('active');
-          if($(".is-selected").hasClass("is-active")){
-              fillTable(".is-selected");
-          }
-          if($(".is-today").hasClass("is-active")){
+          if($(".is-today").hasClass("is-selected")){
               fillTable(".is-today");
+          }else{
+              fillTable(".is-selected");
           }
     });
 
