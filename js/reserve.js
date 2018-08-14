@@ -262,7 +262,10 @@ function filter(timeStamp){
                             }
                             viewEquipment(timeStamp);
                         });
+                    }else{
+                      
                     }
+
               }
               //else it doesn't matter
         });
