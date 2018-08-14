@@ -148,7 +148,6 @@ function viewEquipment(timeStamp){
         allEquipment.forEach(function(eachEquipment){
             let equipmentData = eachEquipment.val();
             eachEquipment.forEach(function(eachValue){
-                console.log(eachValue.key);
                 if(eachValue.key == timeStamp){
                     let li = "<li class='list-group-item'><a href='" + equipmentData.url + "'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</a></li>";
                     $("#reservedEquipmentListGroup").append(li);
@@ -156,6 +155,9 @@ function viewEquipment(timeStamp){
             });
         });
     });
+    if(counter > 0){
+
+    }
     $("#viewEquipmentAtThisTimeModal").modal("show");
 }
 
@@ -173,14 +175,12 @@ function filter(timeStamp){
   }
     firebase.database().ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(individualReservation){
-              //------------------------------------------
               let equipmentCounter = 0;
               individualReservation.forEach(function(individualValues){
                   if(individualValues.val() == "equipment"){
                       equipmentCounter = equipmentCounter + 1;
                   }
               });
-              //------------------------------------------
               let individualKey = individualReservation.key;
               let individualChild = individualReservation.val();
               if(individualChild.bench == benchChoice){
@@ -193,12 +193,13 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-                          //-------------------------------------------------
                           if(equipmentCounter > 0){
                               $("#span" + timeStamp).text("" + equipmentCounter + "");
                               $("#span" + timeStamp).prop("hidden", false);
+                              $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
+                                  viewEquipment(newTimeStamp);
+                              });
                           }
-                          //--------------------------------------------------
                       }
                       if((individualChild.approvedStatus == false) && (individualChild.pendingStatus == true) && (individualChild.completedStatus == false)){
                           //then there is a penidng reservation here
@@ -206,12 +207,13 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("pending-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-                          //-------------------------------------------------
                           if(equipmentCounter > 0){
                               $("#span" + timeStamp).text("" + equipmentCounter + "");
                               $("#span" + timeStamp).prop("hidden", false);
+                              $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
+                                  viewEquipment(newTimeStamp);
+                              });
                           }
-                          //--------------------------------------------------
                       }
                   }else{
                       //then bench is open for reservation
@@ -252,10 +254,6 @@ function fillTable(selector){
                       "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-            console.log("Clicked on tr, next is view equipment");
-            viewEquipment(newTimeStamp);
-        });
         //Fill table needs to know what equipment is in use at this time
         filter(newTimeStamp);
     }
