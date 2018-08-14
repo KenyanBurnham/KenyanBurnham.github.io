@@ -138,12 +138,9 @@ function modalBuilder(timeStamp){
 }
 */
 
-function addEquipmentToPage(){
-    console.log("Add");
-}
-
-function removeEquipmentFromPage(){
-    console.log("remove");
+function addOrRemoveEquipmentFromPage(decider){
+    let equipmentToMove = $("#timeToSave").val();
+    console.log(equipmentToMove);
 }
 
 function addEquipment(){
