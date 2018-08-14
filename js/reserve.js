@@ -102,8 +102,14 @@ function modalBuilder(timeStamp){
 //-------------------------------------------------------------------
 
 function beginSubmission(){
-    //find all selected time tiles and create an array, a reservation will be made for each one
+    // find all selected time tiles and create an array, a reservation will be made for each one
     // find all equipment. create a list of keys,
+    // get bench info
+    // Add to reservation object
+
+    //Create modal with all other information
+    //refer to reservation object to display final reservation
+
     //add the reservation to the equipment
     //make sure each equipment is added to each reservation
 }
