@@ -273,12 +273,10 @@ function filter(timeStamp){
 
 
 function fillTable(selector){
-    console.log("filltable");
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
     //If there is anything other than ".is-selected" it will default to "is-today"
     //Need another case for the hello_week left and right buttons
     if((selector == null) || (selector != ".is-selected") || (selector == undefined)){
-        console.log("went to edge case");
         selector = ".is-today";
     }
     $("#tableToFill").empty();
