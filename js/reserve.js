@@ -184,17 +184,14 @@ function viewEquipment(timeStamp){
 }
 
 function filter(timeStamp){
-  let b1 = $("#b1").hasClass("active");
-  let b2 = $("#b2").hasClass("active");
-  let benchChoice = "";
-  if (b1 == true && b2 == false){
-      benchChoice = "bench1";
-  }if (b2 == true && b1 == false){
-      benchChoice = "bench2";
-  }else{
-      //Need an error handling scheme
-      console.log("Error: #b1 and #b2 may have the same identifier.");
-  }
+    let b1 = $("#b1").hasClass("active");
+    let b2 = $("#b2").hasClass("active");
+    let benchChoice = "";
+    if (b1 == true && b2 == false){
+        benchChoice = "bench1";
+    }if (b2 == true && b1 == false){
+        benchChoice = "bench2";
+    }
     firebase.database().ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(individualReservation){
               let equipmentCounter = 0;
