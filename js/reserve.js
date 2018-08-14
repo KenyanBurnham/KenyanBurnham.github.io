@@ -273,10 +273,12 @@ function filter(timeStamp){
 
 
 function fillTable(selector){
+    console.log("filltable");
     // This is to correct the fillTable() called at the Bench 1 and Bench 2 button presses
     //If there is anything other than ".is-selected" it will default to "is-today"
     //Need another case for the hello_week left and right buttons
     if((selector == null) || (selector != ".is-selected") || (selector == undefined)){
+        console.log("went to edge case");
         selector = ".is-today";
     }
     $("#tableToFill").empty();
@@ -340,7 +342,7 @@ new HelloWeek({
     weekStart: 0,
     range: false,
     onLoad: () => { fillTable(".is-today") },
-    onChange: () => { /** callback function */ },
+    onChange: () => { fillTable(".is-selected") },
     onSelect: () => { fillTable(".is-selected") },
     onClear: () => { /** callback function */ },
 });
@@ -351,10 +353,13 @@ $( document ).ready(function() {
         $('#btn1').click(function() {
             $('#btn1').toggleClass('active');
             $('#btn2').toggleClass('active');
+            console.log("btn1 before fillTable");
             if($(".is-selected").hasClass("active")){
+                console.log("btn1 is-selected");
                 fillTable(".is-selected");
             }
             if($(".is-today").hasClass("active")){
+                console.log("btn1 is-today");
                 fillTable(".is-today");
             }
       });
@@ -362,10 +367,13 @@ $( document ).ready(function() {
       $('#btn2').click(function() {
           $('#btn1').toggleClass('active');
           $('#btn2').toggleClass('active');
+          console.log("btn2 before fillTable");
           if($(".is-selected").hasClass("active")){
+              console.log("btn2 is-selected");
               fillTable(".is-selected");
           }
           if($(".is-today").hasClass("active")){
+              console.log("btn2 is-today");
               fillTable(".is-today");
           }
     });
