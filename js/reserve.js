@@ -138,6 +138,57 @@ function modalBuilder(timeStamp){
 }
 */
 
+/*
+function equipmentList(){
+      $("#equipInput").empty();
+      firebase.database().ref("equipment").once("value").then(function(inventory){
+          inventory.forEach(function(equipment){
+              let equipmentData = equipment.val();
+              let newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+              //if this optgroup does not exist
+              //https://www.sitepoint.com/jquery-check-element-exists/
+              if ($("#optgroup" + equipmentData.sku).length == 0) {
+                    let newOptGroup = "<optgroup id='optgroup" + equipmentData.sku + "' label ='" + equipmentData.type + "'></optgroup>";
+                    $("#equipInput").append(newOptGroup);
+                    $("#optgroup" + equipmentData.sku).append(newEquipment);
+              } else {
+                  $("#optgroup" + equipmentData.sku).append(newEquipment);
+              }
+              $("#option" + equipment.key).click(function(){
+                  equipmentToSend.push(equipment.key);
+                  $("#option" + equipment.key).prop("disabled", true);
+                  let selected = "<a href='#' id='" + equipment.key + "' class='list-group-item list-group-item-action flex-column align-items-start'>" +
+                  "<small id='xButton" + equipment.key + "' style='float:right'>X</small>" +
+                  "<p class='mb-1'><b>" + equipmentData.manufacturer + " " + equipmentData.model + "</b></p>" +
+                  "<small>" + equipmentData.type + "</small>" + "</a>";
+                  $("#equipmentChosen").append(selected);
+                  $("#xButton" + equipment.key).click(function(){
+                      $("#option" + equipment.key).prop("disabled", false);
+                      let editIndex = equipmentToSend.indexOf(equipment.key);
+                      equipmentToSend.splice(editIndex, 1);
+                      $("#" + equipment.key).detach();
+                  });
+              });
+          });
+      });
+}
+
+*/
+
+function addEquipment(){
+    firebase.database().ref("equipment").once("value").then(function(allEquipment){
+        allEquipment.forEach(function(individualEquipment){
+            individualData = individualEquipment.val();
+            let category = individualData.category;
+            if($("#option" + ).exists()){
+
+            }
+        });
+    });
+    $("#chosenMessage").prop("hidden", false);
+    $("#addEquipmentModal").modal("show");
+}
+
 function viewEquipment(timeStamp){
     $("#reservedEquipmentListGroup").empty();
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
@@ -298,8 +349,6 @@ new HelloWeek({
 });
 
 $( document ).ready(function() {
-
-
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
       $('.btn-toggle').click(function() {
@@ -313,8 +362,7 @@ $( document ).ready(function() {
               fillTable(".is-today");
           }
     });
-
     $("#addEquipmentButton").click(function(){
-        $("#addEquipmentModal").modal("show");
+        addEquipment();
     });
 });

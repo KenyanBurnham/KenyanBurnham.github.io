@@ -141,7 +141,10 @@
                               <div class="col-2"></div>
                               <div class="col">
                                   <h3>Equipment Category</h3><br>
-                                  <select class="form-control" id="categoryInput" placeholder="Choose Category..." required></select>
+                                  <select class="form-control" id="categoryInput" placeholder="Choose Category..." required>
+                                      <option value="benchtop" selected>Bench Top</option>
+                                      <option value="testingsystem">Testing System</option>
+                                  </select>
                               </div>
                               <div class="col-2"></div>
                           </div><br>
@@ -297,7 +300,7 @@
                   <div class="form-group">
                       <div id="equipmentChosen" class="list-group">
                       </div>
-                      <small hidden>To remove equipment press the "X".</small>
+                      <small id="chosenMessage" hidden>To remove equipment press the "X".</small>
                   </div> <br>
               </div>
               <div class="col"></div>
