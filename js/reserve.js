@@ -353,13 +353,10 @@ $( document ).ready(function() {
         $('#b1').click(function() {
             $('#btn1').toggleClass('active');
             $('#btn2').toggleClass('active');
-            console.log("btn1 before fillTable");
-            if($(".is-selected").hasClass("active")){
-                console.log("btn1 is-selected");
+            if($(".is-selected").hasClass("is-active")){
                 fillTable(".is-selected");
             }
-            if($(".is-today").hasClass("active")){
-                console.log("btn1 is-today");
+            if($(".is-today").hasClass("is-active")){
                 fillTable(".is-today");
             }
       });
@@ -367,13 +364,10 @@ $( document ).ready(function() {
       $('#b2').click(function() {
           $('#btn1').toggleClass('active');
           $('#btn2').toggleClass('active');
-          console.log("btn2 before fillTable");
-          if($(".is-selected").hasClass("active")){
-              console.log("btn2 is-selected");
+          if($(".is-selected").hasClass("is-active")){
               fillTable(".is-selected");
           }
-          if($(".is-today").hasClass("active")){
-              console.log("btn2 is-today");
+          if($(".is-today").hasClass("is-active")){
               fillTable(".is-today");
           }
     });
