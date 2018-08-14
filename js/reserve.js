@@ -280,7 +280,7 @@ function fillTable(selector){
         //Fill table needs to know what equipment is in use at this time
         filter(newTimeStamp);
     }
-  }
+}
 
 /*=============================================================================
 cleanUpDate function:
