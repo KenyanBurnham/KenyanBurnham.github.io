@@ -141,10 +141,10 @@ function modalBuilder(timeStamp){
 function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
     switch (decider) {
-        case 0:
+        case 1:
           $("#reservationEquipment" + equipmentToMove).detach();
         break;
-        case 1:
+        case 0:
             firebase.database().ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
                 let equipmentData = equipment.val();
                 let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</li>"
