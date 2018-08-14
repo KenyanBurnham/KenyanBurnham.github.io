@@ -148,6 +148,7 @@ function viewEquipment(timeStamp){
         allEquipment.forEach(function(eachEquipment){
             let equipmentData = eachEquipment.val();
             eachEquipment.forEach(function(eachValue){
+                console.log(eachValue.key);
                 if(eachValue.key == timeStamp){
                     let li = "<li class='list-group-item'><a href='" + equipmentData.url + "'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</a></li>";
                     $("#reservedEquipmentListGroup").append(li);
