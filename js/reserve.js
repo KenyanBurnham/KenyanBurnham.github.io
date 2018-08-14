@@ -135,7 +135,14 @@ function addEquipment(){
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
         allEquipment.forEach(function(equipment){
             let equipmentData = equipment.val();
-            let newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+            let newEquipment = "";
+            if(equipmentData.onBench == true){
+                //Then disable this
+                newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "' disabled>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+            }else{
+                //dont disable
+                newEquipment = "<option id='option" + equipment.key + "' value='" + equipment.key + "'>" + equipmentData.manufacturer + " " + equipmentData.model + "</option>";
+            }
             //if this optgroup does not exist
             //https://www.sitepoint.com/jquery-check-element-exists/
             if ($("#optgroup" + equipmentData.sku).length == 0) {
