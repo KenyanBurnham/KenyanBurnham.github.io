@@ -235,7 +235,15 @@ function filter(timeStamp){
                       $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                           if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                               $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-                                database.ref("reservation/" + reservation).child(timeStamp).remove();
+                              database.ref("reservation/" + reservation).once("value").then(function(reservation){
+                                  reservation.forEach(function(eachName){
+                                      let nameData = eachName.val();
+                                      let nameKey = eachName.key;
+                                      if(nameData == timeStamp){
+                                          database.ref("reservation/" + reservation).child(eachName.key).remove();
+                                      }
+                                  });
+                              });
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
