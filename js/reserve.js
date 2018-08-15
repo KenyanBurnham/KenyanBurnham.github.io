@@ -239,9 +239,7 @@ function filter(timeStamp){
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                              let numberCovert = Number(timeStamp);
-                              let newObject = {numberCovert : "reservation"};
-                              database.ref("reservation/" + reservation).update(newObject, errorFunction);
+                              database.ref("reservation/" + reservation).update(timeStamp, errorFunction);
                               //add time to reservation data
                           }
                       });
@@ -266,7 +264,6 @@ function filter(timeStamp){
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                let numberConvert = Number(timeStamp);
                                 database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                                 //add time to reservation data
                             }
