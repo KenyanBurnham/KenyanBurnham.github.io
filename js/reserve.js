@@ -1,4 +1,5 @@
-let reservation = new Object();
+let reservation = Math.round(new Date().getTime()/1000);
+let database = firebase.database();
 
 function submitRequest(){
     reservation.equipment = equipmentToSend;
@@ -141,6 +142,7 @@ function addOrRemoveEquipmentFromPage(decider){
 
 function addEquipment(){
     $("#timeToSave").empty();
+    //get all currently selected times
     firebase.database().ref("equipment").once("value").then(function(allEquipment){
         allEquipment.forEach(function(equipment){
             let equipmentData = equipment.val();
@@ -243,6 +245,7 @@ function filter(timeStamp){
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+
                               //add time to reservation data
                           }
                         });
@@ -255,9 +258,11 @@ function filter(timeStamp){
                         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                             if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                                 $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                                  database.ref("reservation/" + reservation).child("" + timeStamp + "").remove();
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                                database.ref("reservation/" + reservation).update({"" + timeStamp + "", "reservation"});
                                 //add time to reservation data
                             }
                             viewEquipment(timeStamp);
@@ -299,6 +304,23 @@ function fillTable(selector){
         //Fill table needs to know what equipment is in use at this time
         filter(newTimeStamp);
     }
+}
+
+function createReservation(){
+    database.ref('reservation/' + reservation).set({
+        isCompleted: false,
+        approvedStatus : false,
+        pendingStatus: false,
+        completedStatus: false,
+        reservationBeganAt: reservation
+     }, function(error) {
+         if (error) {
+             console.log("Error beginning reservation process.");
+             console.log(error.code);
+             console.log(error.message);
+         }
+     });
+
 }
 
 /*=============================================================================
@@ -373,11 +395,7 @@ $( document ).ready(function() {
         addEquipment();
     });
 
-    $(".time-item").click(function(){
-        $(this).toggleClass("clicked-once");
-        if($("clicked-once").siblings()){
-            console.log("There's more than one");
-        }
-    });
+    //creates reservation that can be updated everytime the user logs onto the schedule page
+    createReservation();
 
 });
