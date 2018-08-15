@@ -348,7 +348,7 @@ function createReservation(){
           database.ref("equipment").once("value").then(function(allEquipment){
               allEquipment.forEach(function(individualEquipment){
                   individualEquipment.forEach(function(eachKey){
-                      if(eachKey.key == childData){
+                      if(eachKey.val() == childData){
                           //Then this piece of equipment is in use at this time
                           $("#option" + individualEquipment.key).prop("disabled", true);
                       }
@@ -363,7 +363,7 @@ function createReservation(){
           database.ref("equipment").once("value").then(function(everyEquipment){
               everyEquipment.forEach(function(aEquipment){
                   aEquipment.forEach(function(eachOne){
-                      if(eachOne.key == oldChild){
+                      if(eachOne.val() == oldChild){
                           //Then this piece of equipment is in use at this time
                           $("#option" + aEquipment.key).prop("disabled", false);
                       }
