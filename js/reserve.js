@@ -119,15 +119,23 @@ function addOrRemoveEquipmentFromPage(decider){
     let equipmentToMove = $("#timeToSave").val();
     switch (decider) {
         case 0:
-          $("#reservationEquipment" + equipmentToMove).detach();
+            $("#reservationEquipment" + equipmentToMove).detach();
+            database.ref("reservation/" + reservation).once("value").then(function(thisReservation){
+                thisReservation.forEach(function(eachValue){
+                    if(eachValue.val() == equipmentToMove){
+                        database.ref("reservation/" + reservation + "/" + eachValue.key).remove();
+                    }
+                });
+            });
         break;
         case 1:
-            firebase.database().ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
+            database.ref("equipment/" + equipmentToMove).once("value").then(function(equipment){
                 let equipmentData = equipment.val();
                 //need to ask if any highlighted times match a reservation time already assined
                 //then i need to make it human readable and declare this will not be allowed at this time
                 let li = "<li id='reservationEquipment" + equipmentToMove + "' data-equipmentKey='" + equipmentToMove + "' class='final list-group-item'>" + equipmentData.manufacturer + " " + equipmentData.model + " " + equipmentData.type + "</li>"
                 $("#equipmentChosen").append(li);
+                database.ref("reservation/" + reservation).push(equipment.key, errorFunction);
             });
         break;
     }
@@ -444,7 +452,6 @@ $( document ).ready(function() {
     });
 
     $("#addEquipmentButton").click(function(){
-
         $("#chosenMessage").prop("hidden", false);
         $("#addEquipmentModal").modal("show");
     });
