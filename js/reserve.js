@@ -186,15 +186,46 @@ function filter(timeStamp){
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
     let benchChoice = "";
+    let otherBench = "";
     if (b1 == true && b2 == false){
         benchChoice = "bench1";
+        otherBench = "bench2";
     }if (b2 == true && b1 == false){
         benchChoice = "bench2";
+        otherBench = "bench1";
     }
 
     /*
       //New GamePlan
-      database.ref()
+      database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
+          database.ref("" + otherbenchChoice + "").once("value").then(function(otherSnapshot){
+              benchSnapshot.forEach(function(eachReservation){
+                  otherSnapshot.forEach(function(otherReservation){
+
+                      reservationTimeKey = eachReservation.key;
+                      reservationTimeData = eachReservation.val();
+                      otherTimeKey = otherReservation.key;
+                      otherTimeData = otherReservation.val();
+
+                          //Then the current timeStamp is not reservable because it is reserved on both benches
+                      if((timeStamp == reservationTimeData) && (timeStamp == otherTimeData)){
+
+                      }
+                          //Then the current timeStamp is reservable on ONE bench
+                          //Not sure if this case is necessary
+                      if(((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData))){
+
+                      }
+
+                          //Then the current timeStamp is reservable on both benches bench
+                      if((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)){
+
+                      }
+
+                  });
+              });
+          });
+      });
   */
 
     firebase.database().ref("reservation").once("value").then(function(allReservations){
