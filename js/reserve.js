@@ -262,7 +262,7 @@ function filter(timeStamp){
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                database.ref("reservation/" + reservation).update({timeStamp, "reservation"});
+                                database.ref("reservation/" + reservation).update(timeStamp, "reservation");
                                 //add time to reservation data
                             }
                             viewEquipment(timeStamp);
