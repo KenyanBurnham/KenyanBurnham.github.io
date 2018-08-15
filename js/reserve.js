@@ -239,6 +239,7 @@ function filter(timeStamp){
                                   reservation.forEach(function(eachName){
                                       let nameData = eachName.val();
                                       if(nameData == timeStamp){
+                                          console.log(eachName.key);
                                           database.ref("reservation/" + reservation + "/" + eachName.key).remove();
                                       }
                                   });
