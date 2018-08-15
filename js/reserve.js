@@ -321,7 +321,7 @@ function fillTable(selector){
 }
 
 function createReservation(){
-
+  /*
     database.ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(singleReservation){
             let reservationData = singleReservation.val();
@@ -330,6 +330,7 @@ function createReservation(){
             }
         });
     });
+    */
 
     //Makes the equipment selector, will use value change to update
     addEquipment();
