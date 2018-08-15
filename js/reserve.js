@@ -8,6 +8,14 @@ let errorFunction = function(error){
     }
 }
 
+function assignReservationToEquipment(){
+    //grab all accepted dates
+    //grab all accepted equipment
+
+    //go through all equipment
+    //if date & equipment from 1 & 2 match then push date into equipment
+}
+
 function submitRequest(){
     let email = $("#emailAddressInput").val();
     database.ref("reservation/" + reservation).update({email: email});
@@ -45,6 +53,8 @@ function submitRequest(){
     database.ref("reservation/" + reservation).update({
         pendingStatus: true
     });
+
+    assignReservationToEquipment();
 }
 
 /*
@@ -100,18 +110,7 @@ function modalBuilder(timeStamp){
 //-------------------------------------------------------------------
 
 function beginSubmission(){
-    // find all selected time tiles and create an array, a reservation will be made for each one
-    // find all equipment. create a list of keys,
-    // get bench info
-    // Add to reservation object
-
     $("#reservationModal").modal("show");
-
-    //Create modal with all other information
-    //refer to reservation object to display final reservation
-
-    //add the reservation to the equipment
-    //make sure each equipment is added to each reservation
 }
 
 function addOrRemoveEquipmentFromPage(decider){
