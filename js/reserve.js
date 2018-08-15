@@ -303,7 +303,7 @@ function fillTable(selector){
 }
 
 function createReservation(){
-    database.ref("reservations").once("value").then(function(allReservations){
+    database.ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(singleReservation){
             let reservationKey = singleReservation.key;
             let reservationData = singleReservation.val();
