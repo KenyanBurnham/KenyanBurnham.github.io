@@ -257,7 +257,7 @@ function filter(timeStamp){
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                let newbBject = {timeStamp: "reservation"};
+                                let newbBject = {Number(timeStamp): "reservation"};
                                 database.ref("reservation/" + reservation).update(newbBject, errorFunction);
                                 //add time to reservation data
                             }
