@@ -263,7 +263,7 @@ function filter(timeStamp){
                             viewEquipment(timeStamp);
                         });
                     }else{
-                      
+
                     }
 
               }
@@ -371,6 +371,13 @@ $( document ).ready(function() {
 
     $("#addEquipmentButton").click(function(){
         addEquipment();
+    });
+
+    $(".time-item").click(function(){
+        $(this).toggleClass("clicked-once");
+        if($("clicked-once").siblings()){
+            console.log("There's more than one");
+        }
     });
 
 });
