@@ -240,7 +240,7 @@ function filter(timeStamp){
                                       let nameData = eachName.val();
                                       let nameKey = eachName.key;
                                       if(nameData == timeStamp){
-                                          database.ref("reservation/" + reservation).child(eachName.key).remove();
+                                          database.ref("reservation/" + reservation + "/" + eachName.key).remove();
                                       }
                                   });
                               });
@@ -265,7 +265,7 @@ function filter(timeStamp){
                                           let nameData = eachName.val();
                                           let nameKey = eachName.key;
                                           if(nameData == timeStamp){
-                                              database.ref("reservation/" + reservation).child(eachName.key).remove();
+                                              database.ref("reservation/" + reservation + "/" + eachName.key).remove();
                                           }
                                       });
                                   });
