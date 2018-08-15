@@ -196,7 +196,6 @@ function filter(timeStamp){
     }
 
     /*
-      //New GamePlan
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherbenchChoice + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
@@ -208,20 +207,53 @@ function filter(timeStamp){
                       otherTimeData = otherReservation.val();
 
                           //Then the current timeStamp is not reservable because it is reserved on both benches
-                      if((timeStamp == reservationTimeData) && (timeStamp == otherTimeData)){
+                      if ((timeStamp == reservationTimeData) && (timeStamp == otherTimeData)) {
 
-                      }
-                          //Then the current timeStamp is reservable on ONE bench
-                          //Not sure if this case is necessary
-                      if(((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData))){
-
-                      }
-
-                          //Then the current timeStamp is reservable on both benches bench
-                      if((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)){
+                          $("#td" + timeStamp).text("Reserved");
+                          $("#td" + timeStamp).addClass("reserved-text");
+                          $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                          $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
 
                       }
 
+                          //Then the current timeStamp is reservable on ONE bench or TWO benches
+                      if (((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData)) || (((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)))) {
+
+                            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                                if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
+
+                                    $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+
+                                    database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
+                                        database.ref("reservation/" + reservation).once("value").then(function(reservations){
+                                            reservations.forEach(function(eachName){
+                                                benchReservations.forEach(function(eachRes){
+
+                                                    let benchData = eachRes.val();
+                                                    let nameData = eachName.val();
+
+                                                    if(nameData == timeStamp){
+                                                        database.ref("reservation/" + reservation + "/" + eachName.key).remove();
+                                                    }
+
+                                                    if(benchData == timeStamp){
+                                                        database.ref("" + benchChoice + "/" + eachRes.key).remove();
+                                                    }
+
+                                                });
+                                            });
+                                        });
+                                    });
+
+                                } else {
+
+                                    $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                                    database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
+                                    database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
+
+                                }
+                            });
+                      }
                   });
               });
           });
