@@ -239,7 +239,7 @@ function filter(timeStamp){
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                              let newOBject = {timeStamp: "reservation"};
+                              let newObject = {timeStamp: "reservation"};
                               database.ref("reservation/" + reservation).update(newObject, errorFunction);
                               //add time to reservation data
                           }
