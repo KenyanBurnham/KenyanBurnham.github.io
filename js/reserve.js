@@ -9,28 +9,27 @@ let errorFunction = function(error){
 }
 
 function submitRequest(){
-    reservation.equipment = equipmentToSend;
-
     let email = $("#emailAddressInput").val();
-    reservation.email = email;
+    database.ref("reservation/" + reservation).update({email: email});
 
     let name = $("#nameInput").val();
-    reservation.reserver = name;
+    database.ref("reservation/" + reservation).update({name: name});
 
     let group = $("#groupMemberInput").val();
     if((group == "") || (group == null) || (group == undefined)){
         group = "None";
     }
-    reservation.group = group;
+    database.ref("reservation/" + reservation).update({group: group});
 
     let inClass = $("#classInput").val();
-    reservation.inClass = inClass;
+    database.ref("reservation/" + reservation).update({inClass: inClass});
 
     let additional = $("#requestsInput").val();
     if((additional == "") || (additional == null) || (additional == undefined)){
         additional = "None";
     }
-    reservation.additional = additional;
+    database.ref("reservation/" + reservation).update({additional: additional});
+
     let bench = 1;
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
@@ -39,9 +38,7 @@ function submitRequest(){
     } else if ((b1 == true) && (b2 == false)){
         bench = "bench1";
     }
-    reservation.bench = bench;
-    let reservationName = $("#modalTitle").prop("data-reservation");
-    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, errorfunction);
+    database.ref("reservation/" + reservation).update({bench: bench});
 }
 
 
