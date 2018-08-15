@@ -41,9 +41,13 @@ function submitRequest(){
     database.ref("reservation/" + reservation).update({bench: bench});
     $("#reservationModal").modal("hide");
     $("#summaryModal").modal("show");
+
+    database.ref("reservation/" + reservation).update({
+        pendingStatus: true
+    });
 }
 
-
+/*
 function humanReadableTime(hour, minute){
     let time = new Object();
     let timeWhole = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
@@ -92,6 +96,7 @@ function modalBuilder(timeStamp){
     equipmentList();
     $("#reservationModal").modal("show");
 }
+*/
 //-------------------------------------------------------------------
 
 function beginSubmission(){
@@ -316,22 +321,20 @@ function fillTable(selector){
 }
 
 function createReservation(){
-    /*
-        database.ref("reservation").once("value").then(function(allReservations){
-            allReservations.forEach(function(singleReservation){
-                let reservationKey = singleReservation.key;
-                let reservationData = singleReservation.val();
-                if(reservationData.isCompleted == false){
-                    database.ref("reservation").child(reservationKey).remove();
-                }
-            });
+
+    database.ref("reservation").once("value").then(function(allReservations){
+        allReservations.forEach(function(singleReservation){
+            let reservationData = singleReservation.val();
+            if(reservationData.pendingStatus == false){
+                database.ref("reservation").child(singleReservation.key).remove();
+            }
         });
-    */
+    });
+
     //Makes the equipment selector, will use value change to update
     addEquipment();
 
     database.ref('reservation/' + reservation).set({
-        isCompleted: false,
         approvedStatus : false,
         pendingStatus: false,
         completedStatus: false,
