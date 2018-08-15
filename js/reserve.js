@@ -158,8 +158,6 @@ function addEquipment(){
             }
         });
     });
-    $("#chosenMessage").prop("hidden", false);
-    $("#addEquipmentModal").modal("show");
 }
 
 function viewEquipment(timeStamp){
@@ -327,6 +325,8 @@ function createReservation(){
             });
         });
     */
+    //Makes the equipment selector, will use value change to update
+    addEquipment();
 
     database.ref('reservation/' + reservation).set({
         isCompleted: false,
@@ -344,9 +344,34 @@ function createReservation(){
 
      database.ref('reservation/' + reservation).on('child_added', function(childSnapshot, prevChildKey) {
           let childData = childSnapshot.val();
-          console.log("data: " + childData);
-          console.log("key: " + childSnapshot.key);
+          //Check all equipment to see if this equipment is being used at this time
+          database.ref("equipment").once("value").then(function(allEquipment){
+              allEquipment.forEach(function(individualEquipment){
+                  individualEquipment.forEach(function(eachKey){
+                      if(eachKey.key == childData){
+                          //Then this piece of equipment is in use at this time
+                          $("#option" + individualEquipment.key).prop("disabled", true);
+                      }
+                  });
+              });
+          });
      });
+
+     database.ref('reservation/' + reservation).on('child_removed', function(oldChildSnapshot) {
+          let oldChild = oldChildSnapshot.val();
+          //Check all equipment to see if this equipment is being used at this time
+          database.ref("equipment").once("value").then(function(everyEquipment){
+              everyEquipment.forEach(function(aEquipment){
+                  aEquipment.forEach(function(eachOne){
+                      if(eachOne.key == oldChild){
+                          //Then this piece of equipment is in use at this time
+                          $("#option" + aEquipment.key).prop("disabled", false);
+                      }
+                  });
+              });
+          });
+     });
+
 
 }
 
@@ -419,7 +444,9 @@ $( document ).ready(function() {
     });
 
     $("#addEquipmentButton").click(function(){
-        addEquipment();
+
+        $("#chosenMessage").prop("hidden", false);
+        $("#addEquipmentModal").modal("show");
     });
 
     //creates reservation that can be updated everytime the user logs onto the schedule page
