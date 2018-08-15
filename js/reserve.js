@@ -39,6 +39,8 @@ function submitRequest(){
         bench = "bench1";
     }
     database.ref("reservation/" + reservation).update({bench: bench});
+    $("#reservationModal").modal("hide");
+    $("#summaryModal").modal("show");
 }
 
 
