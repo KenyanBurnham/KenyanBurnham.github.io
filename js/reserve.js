@@ -242,13 +242,14 @@ function filter(timeStamp){
                       $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                           if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                               $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                                database.ref("reservation/" + reservation).child(timeStamp).remove();
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-
+                              database.ref("reservation/" + reservation).update(timeStamp, "reservation");
                               //add time to reservation data
                           }
-                        });
+                      });
                   }
               }else if((individualChild.bench != benchChoice) && (reservationTime == timeStamp)){
                     //then equipment is reserved at this time on a different bench
