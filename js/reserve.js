@@ -342,6 +342,12 @@ function createReservation(){
          }
      });
 
+     database.ref('reservation/' + reservation).on('child_added', function(childSnapshot, prevChildKey) {
+          let childData = childSnapshot.val();
+          console.log("data: " + childData);
+          console.log("key: " + childSnapshot.key);
+     });
+
 }
 
 /*=============================================================================
