@@ -239,7 +239,7 @@ function filter(timeStamp){
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                              database.ref("reservation/" + reservation).update(timeStamp, errorFunction);
+                              database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                               //add time to reservation data
                           }
                       });
