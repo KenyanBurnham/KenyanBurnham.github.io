@@ -238,7 +238,6 @@ function filter(timeStamp){
                               database.ref("reservation/" + reservation).once("value").then(function(reservation){
                                   reservation.forEach(function(eachName){
                                       let nameData = eachName.val();
-                                      let nameKey = eachName.key;
                                       if(nameData == timeStamp){
                                           database.ref("reservation/" + reservation + "/" + eachName.key).remove();
                                       }
@@ -263,7 +262,6 @@ function filter(timeStamp){
                                   database.ref("reservation/" + reservation).once("value").then(function(reservation){
                                       reservation.forEach(function(eachName){
                                           let nameData = eachName.val();
-                                          let nameKey = eachName.key;
                                           if(nameData == timeStamp){
                                               database.ref("reservation/" + reservation + "/" + eachName.key).remove();
                                           }
