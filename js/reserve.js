@@ -1,5 +1,12 @@
 let reservation = Math.round(new Date().getTime()/1000);
 let database = firebase.database();
+let errorFunction = function(error){
+    if(error){
+          console.log("Error setting reservation to database.");
+          console.log(error.code);
+          console.log(error.message);
+    }
+}
 
 function submitRequest(){
     reservation.equipment = equipmentToSend;
@@ -34,21 +41,7 @@ function submitRequest(){
     }
     reservation.bench = bench;
     let reservationName = $("#modalTitle").prop("data-reservation");
-    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, function(error){
-        if(!error){
-              //Need to say it was sent
-              console.log("successful reservation");
-              $("#successAlert").prop("hidden", false);
-              setTimeout(function(){
-                  window.location.reload(true); //eventually change
-              }, 3000);
-        }
-        if(error){
-              console.log("Error setting reservation to database.");
-              console.log(error.code);
-              console.log(error.message);
-        }
-    });
+    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, errorfunction()});
 }
 
 
@@ -246,7 +239,8 @@ function filter(timeStamp){
                               //remove from time reservation
                           } else {
                               $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                              database.ref("reservation/" + reservation).update(timeStamp, "reservation");
+                              let newOBject = {timeStamp: "reservation"};
+                              database.ref("reservation/" + reservation).update(newObject, errorFunction);
                               //add time to reservation data
                           }
                       });
@@ -263,7 +257,8 @@ function filter(timeStamp){
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                database.ref("reservation/" + reservation).update(timeStamp, "reservation");
+                                let newbBject = {timeStamp: "reservation"};
+                                database.ref("reservation/" + reservation).update(newbBject, errorFunction);
                                 //add time to reservation data
                             }
                             viewEquipment(timeStamp);
