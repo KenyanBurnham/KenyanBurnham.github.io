@@ -303,6 +303,15 @@ function fillTable(selector){
 }
 
 function createReservation(){
+    database.ref("reservations").once("value").then(function(allReservations){
+        allReservations.forEach(function(singleReservation){
+            let reservationKey = singleReservation.key;
+            let reservationData = singleReservation.val();
+            if(reservationData.isCompleted == false){
+                database.ref("reservation").child(reservationKey).remove();
+            }
+        });
+    });
     database.ref('reservation/' + reservation).set({
         isCompleted: false,
         approvedStatus : false,
