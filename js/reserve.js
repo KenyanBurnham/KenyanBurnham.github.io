@@ -258,11 +258,11 @@ function filter(timeStamp){
                         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                             if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                                 $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-                                  database.ref("reservation/" + reservation).child("" + timeStamp + "").remove();
+                                  database.ref("reservation/" + reservation).child(Number(timeStamp)).remove();
                                 //remove from time reservation
                             } else {
                                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                database.ref("reservation/" + reservation).update({"" + timeStamp + "", "reservation"});
+                                database.ref("reservation/" + reservation).update({Number(timeStamp), "reservation"});
                                 //add time to reservation data
                             }
                             viewEquipment(timeStamp);
