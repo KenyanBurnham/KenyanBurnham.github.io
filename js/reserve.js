@@ -235,8 +235,8 @@ function filter(timeStamp){
                       $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                           if ($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
                               $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-                              database.ref("reservation/" + reservation).once("value").then(function(reservation){
-                                  reservation.forEach(function(eachName){
+                              database.ref("reservation/" + reservation).once("value").then(function(reservations){
+                                  reservations.forEach(function(eachName){
                                       let nameData = eachName.val();
                                       if(nameData == timeStamp){
                                           console.log(eachName.key);
