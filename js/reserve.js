@@ -41,7 +41,7 @@ function submitRequest(){
     }
     reservation.bench = bench;
     let reservationName = $("#modalTitle").prop("data-reservation");
-    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, errorfunction()});
+    firebase.database().ref("reservation/" + bench + "/pending/" + reservationName).set(reservation, errorfunction);
 }
 
 
