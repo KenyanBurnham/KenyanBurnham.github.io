@@ -194,8 +194,6 @@ function filter(timeStamp){
         benchChoice = "bench2";
         otherBench = "bench1";
     }
-
-    /*
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherbenchChoice + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
@@ -258,7 +256,6 @@ function filter(timeStamp){
               });
           });
       });
-  */
   /*
     firebase.database().ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(individualReservation){
