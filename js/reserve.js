@@ -51,7 +51,7 @@ function submitRequest(){
     }
     database.ref("reservation/" + reservation).update({additional: additional});
 
-    database.ref("reservation/" + reservation).update({bench: bench});
+    database.ref("reservation/" + reservation).update({bench: benchChoice});
 
     completeReservation();
 }
