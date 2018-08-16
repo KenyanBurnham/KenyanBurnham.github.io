@@ -1,5 +1,7 @@
 let reservation = Math.round(new Date().getTime()/1000);
 let database = firebase.database();
+let benchChoice = "bench1";
+let otherChoice = "bench2";
 let errorFunction = function(error){
     if(error){
           console.log("Error setting reservation to database.");
@@ -38,14 +40,6 @@ function submitRequest(){
     }
     database.ref("reservation/" + reservation).update({additional: additional});
 
-    let bench = 1;
-    let b1 = $("#b1").hasClass("active");
-    let b2 = $("#b2").hasClass("active");
-    if ((b1 == false) && (b2 == true)){
-        bench = "bench2";
-    } else if ((b1 == true) && (b2 == false)){
-        bench = "bench1";
-    }
     database.ref("reservation/" + reservation).update({bench: bench});
     $("#reservationModal").modal("hide");
     $("#summaryModal").modal("show");
@@ -183,18 +177,6 @@ function viewEquipment(timeStamp){
 }
 
 function filter(timeStamp){
-    console.log("does it make it to filter?");
-    let b1 = $("#b1").hasClass("active");
-    let b2 = $("#b2").hasClass("active");
-    let benchChoice = "";
-    let otherBench = "";
-    if (b1 == true && b2 == false){
-        benchChoice = "bench1";
-        otherBench = "bench2";
-    }if (b2 == true && b1 == false){
-        benchChoice = "bench2";
-        otherBench = "bench1";
-    }
 
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
@@ -535,6 +517,17 @@ $( document ).ready(function() {
         $('#b1').click(function() {
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
+            //Updates the global variable
+            let b1 = $("#b1").hasClass("active");
+            let b2 = $("#b2").hasClass("active");
+            if (b1 == true && b2 == false){
+                benchChoice = "bench1";
+                otherBench = "bench2";
+            }if (b2 == true && b1 == false){
+                benchChoice = "bench2";
+                otherBench = "bench1";
+            }
+            //re-calls fill table
             if($(".is-today").hasClass("is-selected")){
                 fillTable(".is-today");
             }else{
@@ -545,6 +538,17 @@ $( document ).ready(function() {
       $('#b2').click(function() {
           $('#b1').toggleClass('active');
           $('#b2').toggleClass('active');
+          //Updates the global variable
+          let b1 = $("#b1").hasClass("active");
+          let b2 = $("#b2").hasClass("active");
+          if (b1 == true && b2 == false){
+              benchChoice = "bench1";
+              otherBench = "bench2";
+          }if (b2 == true && b1 == false){
+              benchChoice = "bench2";
+              otherBench = "bench1";
+          }
+          //re-calls fill table
           if($(".is-today").hasClass("is-selected")){
               fillTable(".is-today");
           }else{
