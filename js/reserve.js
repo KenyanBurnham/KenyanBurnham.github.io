@@ -194,6 +194,7 @@ function filter(timeStamp){
         benchChoice = "bench2";
         otherBench = "bench1";
     }
+    console.log("is there something wrong with my db call?");
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
@@ -381,6 +382,7 @@ function fillTable(selector){
                   "</tr>";
         $("#tableToFill").append(tr);
         //Fill table needs to know what equipment is in use at this time
+        console.log(" I should see this step 16 times");
         filter(newTimeStamp);
     }
 }
