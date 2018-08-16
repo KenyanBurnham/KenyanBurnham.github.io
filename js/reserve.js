@@ -517,7 +517,7 @@ new HelloWeek({
 $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
-        $('#b1').click(function() {
+        $('#btnGroup').click(function() {
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
             //Updates the global variable
@@ -537,27 +537,6 @@ $( document ).ready(function() {
                 fillTable(".is-selected");
             }
       });
-
-      $('#b2').click(function() {
-          $('#b1').toggleClass('active');
-          $('#b2').toggleClass('active');
-          //Updates the global variable
-          let b1 = $("#b1").hasClass("active");
-          let b2 = $("#b2").hasClass("active");
-          if (b1 == true && b2 == false){
-              benchChoice = "bench1";
-              otherChoice = "bench2";
-          }if (b2 == true && b1 == false){
-              benchChoice = "bench2";
-              otherChoice = "bench1";
-          }
-          //re-calls fill table
-          if($(".is-today").hasClass("is-selected")){
-              fillTable(".is-today");
-          }else{
-              fillTable(".is-selected");
-          }
-    });
 
     $("#addEquipmentButton").click(function(){
         $("#chosenMessage").prop("hidden", false);
