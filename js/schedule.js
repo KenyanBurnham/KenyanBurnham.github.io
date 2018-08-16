@@ -78,17 +78,18 @@ function fillTable(selector){
           //This handles filtering the elements
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
-                console.log(has);
                 if(has == true){
                     //then remove this class
                     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
                     chosen.splice((chosen.indexOf(newTimeStamp)), 1);
                     $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
+                    console.log(chosen);
                 }
                 if(has == false){
                     //then add the class
                     chosen.push(newTimeStamp);
                     $("tr[data-timestamp='" + newTimeStamp + "']").addClass("chosen");
+                    console.log(chosen);
                 }
           });
           //This will handle filtering via the database
