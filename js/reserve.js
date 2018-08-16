@@ -206,7 +206,7 @@ function filter(timeStamp){
 
                           //Then the current timeStamp is not reservable because it is reserved on both benches
                       if ((timeStamp == reservationTimeData) && (timeStamp == otherTimeData)) {
-
+                          console.log(" or is there something I am missing?");
                           $("#td" + timeStamp).text("Reserved");
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
@@ -216,7 +216,7 @@ function filter(timeStamp){
 
                           //Then the current timeStamp is reservable on ONE bench or TWO benches
                       if (((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData)) || (((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)))) {
-
+                            console.log("Does the logic not make sense?");
                             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                                 if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
 
@@ -244,7 +244,7 @@ function filter(timeStamp){
                                     });
 
                                 } else {
-
+                                  console.log("What about this else satement");
                                     $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
                                     database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                                     database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
