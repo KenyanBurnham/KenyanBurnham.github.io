@@ -146,7 +146,6 @@ $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
         $('#btnGroup').click(function() {
-            console.log("button function");
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
             //Updates the global variable
@@ -163,7 +162,13 @@ $( document ).ready(function() {
             }
 
             //re-calls fill table, shouldn't matter if it is "is today"
-            fillTable(".is-selected");
+            if($(".is-today").hasClass("is-selected")){
+                fillTable(".is-today");
+            }else if(($(".is-today").hasClass("is-selected")) == false){
+                fillTable(".is-today");
+            }else{
+                fillTable(".is-selected");
+            }
       });
 
       $("#addEquipmentButton").click(function(){
