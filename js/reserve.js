@@ -366,10 +366,8 @@ function fillTable(selector){
                       "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        console.log("Before the click listener");
         //Add click listener
         $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-          console.log("Does this ever get attached?");
             if($("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen")){
               console.log("if, its been selected before");
                 $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
