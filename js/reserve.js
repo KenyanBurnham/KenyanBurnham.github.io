@@ -381,11 +381,11 @@ function fillTable(selector){
         $("#tableToFill").append(tr);
         console.log("Before the click listener");
         //Add click listener
-        $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+        $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
           console.log("Does this ever get attached?");
-            if($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
+            if($("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen")){
               console.log("if, its been selected before");
-                $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+                $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
                 /*
                 database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
                     database.ref("reservation/" + reservation).once("value").then(function(reservations){
@@ -411,9 +411,9 @@ function fillTable(selector){
 
             }else{
                 console.log("else it's never been selected");
-                $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
-                database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
+                $("tr[data-timestamp='" + newTimeStamp + "']").addClass("chosen");
+                database.ref("reservation/" + reservation).push(newTimeStamp, errorFunction);
+                database.ref("" + benchChoice + "").push(newTimeStamp, errorFunction);
 
             }
         });
