@@ -25,12 +25,18 @@ function filter(timeStamp){
 
                       //If both benches are reserved at this time
                       if((timeStamp == benchChoiceValue) && (timeStamp == otherChoiceValue)){
-                          //if both are reserved it's disabled
+                          $("#td" + timeStamp).text("Reserved");
+                          $("#td" + timeStamp).addClass("reserved-text");
+                          $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                          $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
                       }
 
                       //If the other bench is reserved at this time, then it can be reserved
                       if((timeStamp != benchChoiceValue) && (timeStamp == otherChoiceValue)){
-
+                          $("#td" + timeStamp).text("Reserved");
+                          $("#td" + timeStamp).addClass("reserved-text");
+                          $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
+                          $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
                       }
 
                       //If the other bench is reserved at this time, then it can be reserved
