@@ -194,41 +194,6 @@ function filter(timeStamp){
         benchChoice = "bench2";
         otherBench = "bench1";
     }
-    //Automatically attaches this to all of them, then asks the database if it needs to change things
-    $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-        if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
-
-            $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-
-            database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
-                database.ref("reservation/" + reservation).once("value").then(function(reservations){
-                    reservations.forEach(function(eachName){
-                        benchReservations.forEach(function(eachRes){
-
-                            let benchData = eachRes.val();
-                            let nameData = eachName.val();
-
-                            if(nameData == timeStamp){
-                                database.ref("reservation/" + reservation + "/" + eachName.key).remove();
-                            }
-
-                            if(benchData == timeStamp){
-                                database.ref("" + benchChoice + "/" + eachRes.key).remove();
-                            }
-
-                        });
-                    });
-                });
-            });
-
-        } else {
-            $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-            database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
-            database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
-
-        }
-    });
-
 
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
@@ -245,9 +210,8 @@ function filter(timeStamp){
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
                           $("tr[data-timestamp='" + timeStamp + "']").removeClass("time-item");
-
                       }
-
+                      /*//Pretty sure I don't even need this case
                           //Then the current timeStamp is reservable on ONE bench or TWO benches
                       if (((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData)) || (((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)))) {
                             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
@@ -284,40 +248,8 @@ function filter(timeStamp){
                                 }
                             });
                       } else {
-                            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-                                if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
-
-                                    $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-
-                                    database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
-                                        database.ref("reservation/" + reservation).once("value").then(function(reservations){
-                                            reservations.forEach(function(eachName){
-                                                benchReservations.forEach(function(eachRes){
-
-                                                    let benchData = eachRes.val();
-                                                    let nameData = eachName.val();
-
-                                                    if(nameData == timeStamp){
-                                                        database.ref("reservation/" + reservation + "/" + eachName.key).remove();
-                                                    }
-
-                                                    if(benchData == timeStamp){
-                                                        database.ref("" + benchChoice + "/" + eachRes.key).remove();
-                                                    }
-
-                                                });
-                                            });
-                                        });
-                                    });
-
-                                } else {
-                                    $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
-                                    database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
-                                    database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
-
-                                }
-                            });
                       }
+                      */
                   });
               });
           });
@@ -446,7 +378,43 @@ function fillTable(selector){
                       "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
                   "</tr>";
         $("#tableToFill").append(tr);
-        //Fill table needs to know what equipment is in use at this time
+
+        //Add click listener
+        $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+            if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
+
+                $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+
+                database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
+                    database.ref("reservation/" + reservation).once("value").then(function(reservations){
+                        reservations.forEach(function(eachName){
+                            benchReservations.forEach(function(eachRes){
+
+                                let benchData = eachRes.val();
+                                let nameData = eachName.val();
+
+                                if(nameData == timeStamp){
+                                    database.ref("reservation/" + reservation + "/" + eachName.key).remove();
+                                }
+
+                                if(benchData == timeStamp){
+                                    database.ref("" + benchChoice + "/" + eachRes.key).remove();
+                                }
+
+                            });
+                        });
+                    });
+                });
+
+            } else {
+                $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
+                database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
+
+            }
+        });
+
+        //Then disable any that are reserved
         filter(newTimeStamp);
     }
 }
