@@ -194,12 +194,11 @@ function filter(timeStamp){
         benchChoice = "bench2";
         otherBench = "bench1";
     }
-    console.log("is there something wrong with my db call?");
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
           database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
                   otherSnapshot.forEach(function(otherReservation){
-                    console.log("Alright, let's see what is happening"); 
+                    console.log("Alright, let's see what is happening");
                       reservationTimeKey = eachReservation.key;
                       reservationTimeData = eachReservation.val();
                       otherTimeKey = otherReservation.key;
@@ -207,7 +206,6 @@ function filter(timeStamp){
 
                           //Then the current timeStamp is not reservable because it is reserved on both benches
                       if ((timeStamp == reservationTimeData) && (timeStamp == otherTimeData)) {
-                          console.log(" or is there something I am missing?");
                           $("#td" + timeStamp).text("Reserved");
                           $("#td" + timeStamp).addClass("reserved-text");
                           $("tr[data-timestamp='" + timeStamp + "']").prop("disabled", true);
@@ -217,7 +215,6 @@ function filter(timeStamp){
 
                           //Then the current timeStamp is reservable on ONE bench or TWO benches
                       if (((timeStamp == reservationTimeData) && (timeStamp != otherTimeData)) || ((timeStamp != reservationTimeData) && (timeStamp == otherTimeData)) || (((timeStamp != reservationTimeData) && (timeStamp != otherTimeData)))) {
-                            console.log("Does the logic not make sense?");
                             $("tr[data-timestamp='" + timeStamp + "']").click(function(){
                                 if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
 
@@ -245,7 +242,6 @@ function filter(timeStamp){
                                     });
 
                                 } else {
-                                  console.log("What about this else satement");
                                     $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
                                     database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                                     database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
@@ -382,7 +378,6 @@ function fillTable(selector){
                   "</tr>";
         $("#tableToFill").append(tr);
         //Fill table needs to know what equipment is in use at this time
-        console.log(" I should see this step 16 times");
         filter(newTimeStamp);
     }
 }
