@@ -195,7 +195,7 @@ function filter(timeStamp){
         otherBench = "bench1";
     }
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
-          database.ref("" + otherbenchChoice + "").once("value").then(function(otherSnapshot){
+          database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
                   otherSnapshot.forEach(function(otherReservation){
 
