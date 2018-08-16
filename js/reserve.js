@@ -259,7 +259,7 @@ function filter(timeStamp){
           });
       });
   */
-
+  /*
     firebase.database().ref("reservation").once("value").then(function(allReservations){
         allReservations.forEach(function(individualReservation){
               let equipmentCounter = 0;
@@ -356,6 +356,7 @@ function filter(timeStamp){
               //else it doesn't matter
         });
     });
+    */
 }
 
 
