@@ -77,6 +77,7 @@ function fillTable(selector){
           //Add a listener to the row
           //This handles filtering the elements
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
+                console.log("Did it make it here?");
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
 
                 if(has == true){
