@@ -184,7 +184,7 @@ function viewEquipment(timeStamp){
 function filter(timeStamp){
 
       database.ref("" + benchChoice + "").once("value").then(function(benchSnapshot){
-          database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
+          database.ref("" + otherChoice + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
                   otherSnapshot.forEach(function(otherReservation){
                       reservationTimeKey = eachReservation.key;
@@ -527,10 +527,10 @@ $( document ).ready(function() {
             let b2 = $("#b2").hasClass("active");
             if (b1 == true && b2 == false){
                 benchChoice = "bench1";
-                otherBench = "bench2";
+                otherChoice = "bench2";
             }if (b2 == true && b1 == false){
                 benchChoice = "bench2";
-                otherBench = "bench1";
+                otherChoice = "bench1";
             }
             //re-calls fill table
             if($(".is-today").hasClass("is-selected")){
@@ -548,10 +548,10 @@ $( document ).ready(function() {
           let b2 = $("#b2").hasClass("active");
           if (b1 == true && b2 == false){
               benchChoice = "bench1";
-              otherBench = "bench2";
+              otherChoice = "bench2";
           }if (b2 == true && b1 == false){
               benchChoice = "bench2";
-              otherBench = "bench1";
+              otherChoice = "bench1";
           }
           //re-calls fill table
           if($(".is-today").hasClass("is-selected")){
