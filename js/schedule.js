@@ -96,11 +96,6 @@ function fillTable(selector){
       }
 }
 
-function begin(){
-    $("#addEquipmentButton").prop("disable", true);
-    $("#beginFinalSubmisisonBtn").prop("disable", true);
-}
-
 /*=============================================================================
 cleanUpDate function:
 1. primitive way of formating the date to be correct for the calendar
@@ -171,8 +166,5 @@ $( document ).ready(function() {
           $("#chosenMessage").prop("hidden", false);
           $("#addEquipmentModal").modal("show");
       });
-
-    //creates reservation that can be updated everytime the user logs onto the schedule page
-    begin();
 
 });
