@@ -30,11 +30,12 @@ function fillTable(selector){
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
                 if(has == true){
                     //then remove this class
-
+                    //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
+                    chosen.splice((chosen.indexOf(newTimeStamp)), 1);
                 }
                 if(has == false){
                     //then add the class
-                    chosen.push(timeStamp);
+                    chosen.push(newTimeStamp);
                 }
 
                 chosen.forEach(function(value){
