@@ -31,13 +31,20 @@ function filter(timeStamp){
 
                       //If the other bench is reserved at this time, then it can be reserved
                       if((timeStamp != benchChoiceValue) && (timeStamp == otherChoiceValue)){
-                        
+
                       }
 
                       //If the other bench is reserved at this time, then it can be reserved
-                      if((timeStamp == benchChoiceValue) && (timeStamp != otherChoiceValue)){}
+                      if((timeStamp == benchChoiceValue) && (timeStamp != otherChoiceValue)){
+
+                      }
+
                       //If neither bench are reserved at this time than it shoul be available
-                      if((timeStamp != benchChoiceValue) && (timeStamp != otherChoiceValue)){}
+                      if((timeStamp != benchChoiceValue) && (timeStamp != otherChoiceValue)){
+
+                      }
+                      
+                      //---------------
                   });
               });
         });
