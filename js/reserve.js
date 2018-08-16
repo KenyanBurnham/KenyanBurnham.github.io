@@ -381,7 +381,7 @@ function fillTable(selector){
 
         //Add click listener
         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
-            if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
+            if($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
 
                 $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
                 /*
@@ -407,7 +407,7 @@ function fillTable(selector){
                 });
                 */
 
-            } else {
+            }else{
                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
                 database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                 database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
