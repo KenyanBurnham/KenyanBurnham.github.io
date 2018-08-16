@@ -1,14 +1,50 @@
+let reservation = Math.round(new Date().getTime()/1000);
+let database = firebase.database();
+let benchChoice = "bench1";
+let otherChoice = "bench2";
+let errorFunction = function(error){
+    if(error){
+          console.log("Error setting reservation to database.");
+          console.log(error.code);
+          console.log(error.message);
+    }
+}
 let times = ["9:00 AM", "&nbsp;", "10:00 AM", "&nbsp;", "11:00 AM", "&nbsp;", "12:00 PM", "&nbsp;", "1:00 PM", "&nbsp;", "2:00 PM", "&nbsp;", "3:00 PM", "&nbsp;", "4:00 PM", "&nbsp;"];
-let chosen = [];
+let bench1 = [];
+let bench2 = [];
 //------------GLOBALS-----------------------------------------------------
 
+//filters individual timeStamps
 function filter(timeStamp){
-    //filters individual timeStamps
-    chosen.forEach(function(value){
-        console.log(value);
+    //needs to now which bench, starts with benchChoice as one
+    database.ref("" + benchChoice + "").once("value").then(function(benchChoiceSnapshot){
+        database.ref("" + otherChoice + "").once("value").then(function(otherChoiceSnapshot){
+              benchChoiceSnapshot.forEach(function(benchChoiceReservation){
+                  otherChoiceSnapshot.forEach(function(otherChoiceReservation){
+                      let benchChoiceValue = benchChoiceSnapshot.val();
+                      let otherChoiceValue = otherChoiceSnapshot.val();
+
+                      //If both benches are reserved at this time
+                      if((timeStamp == benchChoiceValue) && (timeStamp == otherChoiceValue)){
+                          //if both are reserved it's disabled
+                      }
+
+                      //If the other bench is reserved at this time, then it can be reserved
+                      if((timeStamp != benchChoiceValue) && (timeStamp == otherChoiceValue)){
+                        
+                      }
+
+                      //If the other bench is reserved at this time, then it can be reserved
+                      if((timeStamp == benchChoiceValue) && (timeStamp != otherChoiceValue)){}
+                      //If neither bench are reserved at this time than it shoul be available
+                      if((timeStamp != benchChoiceValue) && (timeStamp != otherChoiceValue)){}
+                  });
+              });
+        });
     });
 }
 
+//Creates table and adds a listener that allows selection
 function fillTable(selector){
     $("#tableToFill").empty();
 
@@ -27,7 +63,7 @@ function fillTable(selector){
           $("#tableToFill").append(tr);
 
           //Add a listener to the row
-
+          //This handles filtering the elements
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
                 if(has == true){
@@ -46,9 +82,9 @@ function fillTable(selector){
                     console.log(value);
                 });
           });
+          //This will handle filtering via the database
           filter(newTimeStamp);
       }
-
 }
 
 function begin(){
@@ -117,12 +153,9 @@ $( document ).ready(function() {
                 benchChoice = "bench2";
                 otherChoice = "bench1";
             }
-            //re-calls fill table
-            if($(".is-today").hasClass("is-selected")){
-                fillTable(".is-today");
-            }else{
-                fillTable(".is-selected");
-            }
+
+            //re-calls fill table, shouldn't matter if it is "is today"
+            fillTable(".is-selected");
       });
 
       $("#addEquipmentButton").click(function(){
