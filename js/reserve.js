@@ -371,7 +371,7 @@ function fillTable(selector){
             if($("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen")){
               console.log("if, its been selected before");
                 $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
-                /*
+                //Now I need it to start cleaning up after itself
                 database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
                     database.ref("reservation/" + reservation).once("value").then(function(reservations){
                         reservations.forEach(function(eachName){
@@ -392,7 +392,7 @@ function fillTable(selector){
                         });
                     });
                 });
-                */
+
 
             }else{
                 console.log("else it's never been selected: " + newTimeStamp);
