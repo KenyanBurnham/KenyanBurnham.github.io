@@ -384,7 +384,7 @@ function fillTable(selector){
             if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
 
                 $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
-
+                /*
                 database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
                     database.ref("reservation/" + reservation).once("value").then(function(reservations){
                         reservations.forEach(function(eachName){
@@ -405,6 +405,7 @@ function fillTable(selector){
                         });
                     });
                 });
+                */
 
             } else {
                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
