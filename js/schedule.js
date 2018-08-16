@@ -96,7 +96,7 @@ function fillTable(selector){
 
 function begin(){
     $("#addEquipmentButton").prop("disable", true);
-    $("#beginFinalSubmisisonBtn").("disable", true);
+    $("#beginFinalSubmisisonBtn").prop("disable", true);
 }
 
 /*=============================================================================
