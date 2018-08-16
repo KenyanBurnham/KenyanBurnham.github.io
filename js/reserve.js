@@ -199,7 +199,7 @@ function filter(timeStamp){
           database.ref("" + otherBench + "").once("value").then(function(otherSnapshot){
               benchSnapshot.forEach(function(eachReservation){
                   otherSnapshot.forEach(function(otherReservation){
-
+                    console.log("Alright, let's see what is happening"); 
                       reservationTimeKey = eachReservation.key;
                       reservationTimeData = eachReservation.val();
                       otherTimeKey = otherReservation.key;
