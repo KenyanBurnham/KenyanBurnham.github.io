@@ -395,7 +395,7 @@ function fillTable(selector){
                 */
 
             }else{
-                console.log("else it's never been selected");
+                console.log("else it's never been selected: " + newTimeStamp);
                 $("tr[data-timestamp='" + newTimeStamp + "']").addClass("chosen");
                 database.ref("reservation/" + reservation).push(newTimeStamp, errorFunction);
                 database.ref("" + benchChoice + "").push(newTimeStamp, errorFunction);
