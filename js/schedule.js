@@ -77,9 +77,8 @@ function fillTable(selector){
           //Add a listener to the row
           //This handles filtering the elements
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
-                console.log("Did it make it here?");
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
-
+                console.log(has);
                 if(has == true){
                     //then remove this class
                     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
@@ -89,7 +88,7 @@ function fillTable(selector){
                 if(has == false){
                     //then add the class
                     chosen.push(newTimeStamp);
-                    $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
+                    $("tr[data-timestamp='" + newTimeStamp + "']").addClass("chosen");
                 }
           });
           //This will handle filtering via the database
