@@ -2,7 +2,8 @@ let times = ["9:00 AM", "&nbsp;", "10:00 AM", "&nbsp;", "11:00 AM", "&nbsp;", "1
 let chosen = [];
 //------------GLOBALS-----------------------------------------------------
 
-function filter(){
+function filter(timeStamp){
+    //filters individual timeStamps
     chosen.forEach(function(value){
         console.log(value);
     });
@@ -24,6 +25,7 @@ function fillTable(selector){
                     "</tr>";
           //Append Row
           $("#tableToFill").append(tr);
+
           //Add a listener to the row
 
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
@@ -32,10 +34,12 @@ function fillTable(selector){
                     //then remove this class
                     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
                     chosen.splice((chosen.indexOf(newTimeStamp)), 1);
+                    $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
                 }
                 if(has == false){
                     //then add the class
                     chosen.push(newTimeStamp);
+                    $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
                 }
 
                 chosen.forEach(function(value){
@@ -44,6 +48,7 @@ function fillTable(selector){
           });
           filter(newTimeStamp);
       }
+
 }
 
 function begin(){
