@@ -43,7 +43,7 @@ function filter(timeStamp){
                       if((timeStamp != benchChoiceValue) && (timeStamp != otherChoiceValue)){
 
                       }
-                      
+
                       //---------------
                   });
               });
