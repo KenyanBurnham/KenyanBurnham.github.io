@@ -382,7 +382,7 @@ function fillTable(selector){
         //Add click listener
         $("tr[data-timestamp='" + timeStamp + "']").click(function(){
             if($("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen")){
-
+              console.log("if, its been selected before");
                 $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
                 /*
                 database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
@@ -408,6 +408,7 @@ function fillTable(selector){
                 */
 
             }else{
+                console.log("else it's never been selected");
                 $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
                 database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
                 database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
