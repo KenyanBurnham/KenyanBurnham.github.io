@@ -18,6 +18,17 @@ function assignReservationToEquipment(){
     //if date & equipment from 1 & 2 match then push date into equipment
 }
 
+function completeReservation(){
+      $("#reservationModal").modal("hide");
+      $("#summaryModal").modal("show");
+
+      database.ref("reservation/" + reservation).update({
+          pendingStatus: true
+      });
+
+      assignReservationToEquipment();
+}
+
 function submitRequest(){
     let email = $("#emailAddressInput").val();
     database.ref("reservation/" + reservation).update({email: email});
@@ -41,14 +52,8 @@ function submitRequest(){
     database.ref("reservation/" + reservation).update({additional: additional});
 
     database.ref("reservation/" + reservation).update({bench: bench});
-    $("#reservationModal").modal("hide");
-    $("#summaryModal").modal("show");
 
-    database.ref("reservation/" + reservation).update({
-        pendingStatus: true
-    });
-
-    assignReservationToEquipment();
+    completeReservation();
 }
 
 /*
