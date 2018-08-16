@@ -146,17 +146,20 @@ $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
         $('#btnGroup').click(function() {
+            console.log("button function");
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
             //Updates the global variable
             let b1 = $("#b1").hasClass("active");
             let b2 = $("#b2").hasClass("active");
-            if (b1 == true && b2 == false){
+            if ((b1 == true) && (b2 == false)){
                 benchChoice = "bench1";
                 otherChoice = "bench2";
-            }if (b2 == true && b1 == false){
+            } else if ((b2 == true) && (b1 == false)){
                 benchChoice = "bench2";
                 otherChoice = "bench1";
+            }else{
+                console.log("This could be my problem");
             }
 
             //re-calls fill table, shouldn't matter if it is "is today"
