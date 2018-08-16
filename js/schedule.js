@@ -10,8 +10,7 @@ let errorFunction = function(error){
     }
 }
 let times = ["9:00 AM", "&nbsp;", "10:00 AM", "&nbsp;", "11:00 AM", "&nbsp;", "12:00 PM", "&nbsp;", "1:00 PM", "&nbsp;", "2:00 PM", "&nbsp;", "3:00 PM", "&nbsp;", "4:00 PM", "&nbsp;"];
-let bench1 = [];
-let bench2 = [];
+let chosen = [];
 //------------GLOBALS-----------------------------------------------------
 
 //filters individual timeStamps
@@ -73,6 +72,7 @@ function fillTable(selector){
           //This handles filtering the elements
           $("tr[data-timestamp='" + newTimeStamp + "']").click(function(){
                 let has = $("tr[data-timestamp='" + newTimeStamp + "']").hasClass("chosen");
+
                 if(has == true){
                     //then remove this class
                     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
@@ -84,10 +84,6 @@ function fillTable(selector){
                     chosen.push(newTimeStamp);
                     $("tr[data-timestamp='" + newTimeStamp + "']").removeClass("chosen");
                 }
-
-                chosen.forEach(function(value){
-                    console.log(value);
-                });
           });
           //This will handle filtering via the database
           filter(newTimeStamp);
