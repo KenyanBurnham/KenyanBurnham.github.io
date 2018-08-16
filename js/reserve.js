@@ -183,6 +183,7 @@ function viewEquipment(timeStamp){
 }
 
 function filter(timeStamp){
+    console.log("does it make it to filter?");
     let b1 = $("#b1").hasClass("active");
     let b2 = $("#b2").hasClass("active");
     let benchChoice = "";
