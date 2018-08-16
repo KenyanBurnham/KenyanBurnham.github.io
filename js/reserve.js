@@ -248,6 +248,40 @@ function filter(timeStamp){
 
                                 }
                             });
+                      } else {
+                            $("tr[data-timestamp='" + timeStamp + "']").click(function(){
+                                if ( $("tr[data-timestamp='" + timeStamp + "']").hasClass("chosen") ) {
+
+                                    $("tr[data-timestamp='" + timeStamp + "']").removeClass("chosen");
+
+                                    database.ref("" + benchChoice + "").once("value").then(function(benchReservations){
+                                        database.ref("reservation/" + reservation).once("value").then(function(reservations){
+                                            reservations.forEach(function(eachName){
+                                                benchReservations.forEach(function(eachRes){
+
+                                                    let benchData = eachRes.val();
+                                                    let nameData = eachName.val();
+
+                                                    if(nameData == timeStamp){
+                                                        database.ref("reservation/" + reservation + "/" + eachName.key).remove();
+                                                    }
+
+                                                    if(benchData == timeStamp){
+                                                        database.ref("" + benchChoice + "/" + eachRes.key).remove();
+                                                    }
+
+                                                });
+                                            });
+                                        });
+                                    });
+
+                                } else {
+                                    $("tr[data-timestamp='" + timeStamp + "']").addClass("chosen");
+                                    database.ref("reservation/" + reservation).push(timeStamp, errorFunction);
+                                    database.ref("" + benchChoice + "").push(timeStamp, errorFunction);
+
+                                }
+                            });
                       }
                   });
               });
