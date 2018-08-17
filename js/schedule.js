@@ -1,7 +1,7 @@
-let reservation = Math.round(new Date().getTime()/1000);
+//let reservation = Math.round(new Date().getTime()/1000);
 let database = firebase.database();
-let benchChoice = "bench1";
-let otherChoice = "bench2";
+//let benchChoice = "bench1";
+//let otherChoice = "bench2";
 let errorFunction = function(error){
     if(error){
           console.log("Error setting reservation to database.");
@@ -10,7 +10,7 @@ let errorFunction = function(error){
     }
 }
 let times = ["9:00 AM", "&nbsp;", "10:00 AM", "&nbsp;", "11:00 AM", "&nbsp;", "12:00 PM", "&nbsp;", "1:00 PM", "&nbsp;", "2:00 PM", "&nbsp;", "3:00 PM", "&nbsp;", "4:00 PM", "&nbsp;"];
-let chosen = [];
+//let chosen = [];
 //------------GLOBALS-----------------------------------------------------
 
 //filters individual timeStamps
@@ -60,13 +60,24 @@ function filter(timeStamp){
 function fillTable(selector){
     $("#tableToFill").empty();
 
-    let timeStamp = $(selector.toString()).attr("data-timestamp");
+    //let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
+        let tr =  "<tr id='tr" + i + "' class='time-item'></tr>";
+        for(let j = 0; j<6; j++){
+          let td = "<td></td>";
+          let tdTime = "<td>" + times[i] + "</td>";
+          if(j == 0){
+              $("#tr" + i).append(tdTime);
+          }else{
+              $("#tr"  + i).append(td);
+          }
+        }
+        /*
           //Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
           //then adds the number of half hours (1800 seconds * i) to get the time
-          let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i));
+          let newTimeStamp = (Number(timeStamp) + (3600*9) + Number(1800*i) + Number(86400 * j));
           //Build row
-          let tr =  "<tr id='tr" + i + "' data-timestamp='" + newTimeStamp + "' class='time-item'>" +
+          let tr =  "<tr id='tr' class='time-item'>" +
                         "<td>" + times[i] + "</td>" +
                         "<td id='td" + newTimeStamp + "'></td>" +
                         "<td id='tdEquipment" + newTimeStamp + "'><span id='span" + newTimeStamp + "' data-badgeTimeStamp='" + newTimeStamp + "' class='badge badge-dark' hidden>16</span></td>" +
@@ -95,6 +106,7 @@ function fillTable(selector){
           //This will handle filtering via the database
           filter(newTimeStamp);
       }
+      */
 }
 
 /*=============================================================================
