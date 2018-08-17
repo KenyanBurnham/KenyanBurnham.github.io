@@ -11,6 +11,7 @@
       <!-- Custom styles for this template -->
       <link href="css/index.css" rel="stylesheet">
       <link href="css/float.css" rel="stylesheet">
+      <link href="css/stickynote.css" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
       <!-- Firebase App is always required and must be first -->
@@ -22,6 +23,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
       <!-- Enable bootstrap 4 theme -->
       <script>window.__theme = 'bs4';</script>
+      <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 
       <script>
         // Initialize Firebase
@@ -195,13 +197,12 @@
                 <div class="col-8">
                     <br><br>
                     <h5>Research your device.</h5><br>
-                    <p>Generally, you need to build a device interface board and choose what equipment you need. The following questions may be helpful when planning your test:</p>
+                    <p>Whether you're testing a device or a board it always pays to take some time to research. Knowing your device past the first page will give you a better idea of what you <i>actually</i> need. The following questions may be helpful when planning your test:</p>
                     <br>
                     <ul>
                         <li>What test am I being asked to perform?</li>
+                        <li>What are the limits of the device under test?</li>
                         <li>What configuration modes or setting does the device have internally?</li>
-                        <li>How long do I have to complete this test?</li>
-                        <li>When will I have the time to complete this test?</li>
                     </ul>
                 </div>
                 <div class="col-2"></div>
@@ -211,17 +212,15 @@
                 <div class="col-8">
                     <br><br>
                     <h5>Research Equipment.</h5><br>
-                    <p>All available equipment is listed on <a href="ref.html">Equipment Page</a>. When you reserve a bench you can add equipment in addition to what is already located in the lab.</p>
-                    <br>
-                    <p>Here is a list of questions you might consider when researching equipment options:</p>
+                    <p>All available equipment is listed on <a href="ref.html">Equipment Page</a>. If you know your device and test well then then finding the right equipment should be a sinch. Here is a list of questions you might consider when researching equipment options:</p>
                     <ul>
                         <li>Will I need more than one channel?</li>
                         <li>What resolution or threshold is necessary to perform the desired test? </li>
                         <li>What minimum and maximum specifications does this device operate within? </li>
                         <li>What additional resources are required, besides testing equipment?</li>
                     </ul>
-                    <br><br>
-                    <h5>All of the equipment currently in the PSPE lab is listed below:</p>
+                    <br>
+                    <p>The lab is outfitted with standard setups depending on the semester. Below is a list of this semester's setup on each bench.</p>
                     <br>
                 </div>
                 <div class="col-2"></div>
@@ -497,19 +496,17 @@
                 <div class="col-2"></div>
                 <div class="col-8">
                     <br><br>
-                    <h5>Check the schedule.</h5><br>
-                    <p>Look at the schedule and determine what time works best for you and your group.</p>
+                    <h5>Plan ahead.</h5><br>
+                    <p>Whether you are reserving a bench or not, it's a good idea to look at the schedule. The testing lab is not a big lab and it can get hot. It's a good idea to look at the class and or work schedule to determine what time works best for you and your group.</p>
                     <br>
                     <p> The following are some suggestions you might consider when choosing your reservation time:</p>
                     <ul>
-                        <li>What test am I being asked to perform?</li>
-                        <li>What configuration modes or setting does the device have internally?</li>
-                        <li>What resolution or threshold is necessary to perform the desired test? </li>
-                        <li>What minimum and maximum specifications does this device operate within? </li>
-                        <li>What additional resources are required, besides testing equipment?</li>
                         <li>How long do I have to complete this test?</li>
                         <li>When will I have the time to complete this test?</li>
+                        <li>How many of my group members can meet at this time?</li>
                     </ul>
+                    <br>
+                    <p>Keep in mind, there's a ton of prep-work that can happen before you actually test. Eliminating work before entering the lab can save you a lot of unneeded grief. </p>
                 </div>
                 <div class="col-2"></div>
             </div>
@@ -539,18 +536,34 @@
             <div class="row justify-content-center">
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <h5>Reserve.</h5><br>
+                    <h5>Now it's time to schedule some lab time.</h5><br>
                     <p>Reserving is fairly straightforward.</p>
                     <ol>
-                        <li>Clicking on bench selector will choose what bench time you will see.</li>
-                        <li>Clicking a date on the calendar will display the available times (blank) and the reseved times (blue text) on that day.</li>
-                        <li>Clicking on the time table will reserve the hour following that time.</li>
-                        <li>A window will appear with a summary of the time selected and a form to fill out.</li>
-                        <li>Submit the form and the lab manager will contact you.</li>
-                        <li>The lab manager will tell you if a reservation is approved or denied and why.</li>
+                        <li>Go to the <a href="reserve.html">Reservation Page</a></li>
+                        <li>Fill out the form.</li>
+                        <li>Wait for confirmation or a decline from the lab manager.</li>
+                        <li>Accept (or ignore, live your best life) the Outlook Calendar invite.</li>
+                        <li>Show up to your reservation.</li>
+                        <li>Rinse and repeat.</li>
                     </ol>
-                    <p>Keep in mind, equipment is only placed in the lab during daily business hours.</p>
                     <br>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </section><br><br>
+
+        <section class="sched-sections">
+            <div class="row justify-content-center">
+                <div class="col-2"></div>
+                <div style="text-align: center;" class="col-6">
+                  <ul class="sticky-note-ul">
+                    <li class="sticky-note-il">
+                        <a class="sticky-note-a" href="#">
+                            <h2 class="sticky-note-text">Title #1</h2>
+                            <p class="sticky-note-text">Text Content #1</p>
+                        </a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="col-2"></div>
             </div>
