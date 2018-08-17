@@ -24,8 +24,8 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
   background-color: white;
 	box-sizing: border-box;
 	border-radius: 50%;
-	margin-left: calc(100%/3 - 100px/2);
-  margin-right: calc(100%/3 - 100px/2);
+	margin-left: calc(100%/2 - 100px);
+  margin-right: calc(100%/2 - 100px);
 	margin-top: calc(20% - 75px);
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -40,8 +40,8 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
   background-color: white;
 	box-sizing: border-box;
 	border-radius: 50%;
-	margin-left: calc(100%/3 - 100px/2);
-  margin-right: calc(100%/3 - 100px/2);
+	margin-left: calc(100%/2 - 100px);
+  margin-right: calc(100%/2 - 100px);
 	margin-top: calc(20% - 75px);
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -56,8 +56,8 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
   background-color: white;
 	box-sizing: border-box;
 	border-radius: 50%;
-	margin-left: calc(100%/3 - 100px/2);
-  margin-right: calc(100%/3 - 100px/2);
+	margin-left: calc(100%/2 - 100px);
+  margin-right: calc(100%/2 - 100px);
 	margin-top: calc(20% - 75px);
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -72,8 +72,8 @@ Source: https://codepen.io/MarioDesigns/pen/woJgeo
   background-color: white;
 	box-sizing: border-box;
 	border-radius: 50%;
-	margin-left: calc(100%/3 - 100px/2);
-  margin-right: calc(100%/3 - 100px/2);
+	margin-left: calc(100%/2 - 100px);
+  margin-right: calc(100%/2 - 100px);
 	margin-top: calc(20% - 75px);
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
