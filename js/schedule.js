@@ -57,7 +57,7 @@ function filter(timeStamp){
 }
 
 //Creates table and adds a listener that allows selection
-function fillTable(selector){
+function fillTable(){
     $("#tableToFill").empty();
 
     //let timeStamp = $(selector.toString()).attr("data-timestamp");
@@ -158,6 +158,8 @@ new HelloWeek({
 $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
+
+      fillTable();
       /*
         $('#btnGroup').click(function() {
             $('#b1').toggleClass('active');
