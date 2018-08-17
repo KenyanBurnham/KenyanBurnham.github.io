@@ -195,15 +195,34 @@
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="col">
-                                    <h3>Reserved Equipment</h3><br>
-                                    <p>Does not include stocked equipment found <a href="javascript:window.open('https://kenyanburnham.github.io/index.html#stockedEquipment');">here</a>. </p>
-                                    <ul id="reservedEquipmentListGroup" class="list-group">
-                                        <li class="list-group-item">Cras justo odio</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                                        <li class="list-group-item">Morbi leo risus</li>
-                                        <li class="list-group-item">Porta ac consectetur ac</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                    </ul>
+                                      <section>
+                                          <div class="row">
+                                              <div class="col"></div>
+                                              <div class="col-6">
+                                                  <h3>Choose a day.</h3><br>
+                                                  <p>Weekend days and days in the past aren't reservable. Reservations made the day of are not likely to be approved.</p>
+                                                  <section class="calendar" style="border: 1px solid #E0EEEE;">
+                                                      <div class="hello-week">
+                                                          <div class="hello-week__header">
+                                                              <div class="hello-week__label"></div>
+                                                          </div>
+                                                          <div class="hello-week__week"></div>
+                                                          <div class="hello-week__month"></div>
+                                                      </div>
+                                                  </section>
+                                                  <br>
+                                                  <div id="btnGroup" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label id="b1" class="btn btn-lg btn-secondary active">
+                                                            <input type="radio" name="options"  autocomplete="off" checked> Bench 1
+                                                        </label>
+                                                        <label id="b2" class="btn btn-lg btn-secondary">
+                                                            <input type="radio" name="options"  autocomplete="off"> Bench 2
+                                                        </label>
+                                                    </div>
+                                              </div>
+                                              <div class="col"></div>
+                                            </div>
+                                      </section>
                                 </div>
                                 <div class="col-2"></div>
                             </div><br>
@@ -245,42 +264,12 @@
               <div class="col"></div>
           </div>
       </section><br><br>
-<!--
-      <section>
-          <div class="row">
-              <div class="col"></div>
-              <div class="col-6">
-                  <h3>Choose a day.</h3><br>
-                  <p>Weekend days and days in the past aren't reservable. Reservations made the day of are not likely to be approved.</p>
-                  <section class="calendar" style="border: 1px solid #E0EEEE;">
-                      <div class="hello-week">
-                          <div class="hello-week__header">
-                              <div class="hello-week__label"></div>
-                          </div>
-                          <div class="hello-week__week"></div>
-                          <div class="hello-week__month"></div>
-                      </div>
-                  </section>
-                  <br>
-                  <div id="btnGroup" class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label id="b1" class="btn btn-lg btn-secondary active">
-                            <input type="radio" name="options"  autocomplete="off" checked> Bench 1
-                        </label>
-                        <label id="b2" class="btn btn-lg btn-secondary">
-                            <input type="radio" name="options"  autocomplete="off"> Bench 2
-                        </label>
-                    </div>
-              </div>
-              <div class="col"></div>
-            </div><br><hr><br>
-      </section>
-    -->
 
       <section>
           <div class="row">
               <div class="col"></div>
               <div class="col-6">
-                  <h3 class="">Choose times.</h3>
+                  <h3 class="">Week Schedule.</h3>
                   <p>Clicking on empty times will highlight it (so that you can reserve these times). Clicking on reserved times will show you what is currently being used at this time.</p>
                   <br>
                   <table class="table table-striped" style="border: 1px solid #E0EEEE;">
