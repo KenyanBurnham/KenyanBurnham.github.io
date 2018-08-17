@@ -72,6 +72,7 @@ function fillTable(selector){
               $("#tr"  + i).append(td);
           }
         }
+      }
         /*
           //Takes the date timestamp at 12 AM and adds 9 hours * 3600 seconds
           //then adds the number of half hours (1800 seconds * i) to get the time
@@ -157,6 +158,7 @@ new HelloWeek({
 $( document ).ready(function() {
       //https://codepen.io/kwsim/pen/xqNpLQ
       //Kenneth Sim
+      /*
         $('#btnGroup').click(function() {
             $('#b1').toggleClass('active');
             $('#b2').toggleClass('active');
@@ -187,5 +189,6 @@ $( document ).ready(function() {
           $("#chosenMessage").prop("hidden", false);
           $("#addEquipmentModal").modal("show");
       });
+      */
 
 });
