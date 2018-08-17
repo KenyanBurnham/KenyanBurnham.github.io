@@ -21,8 +21,8 @@ ul.sticky-note-ul li.sticky-note-il a.sticky-note-a{
   color:#000;
   background:#ffc;
   display:block;
-  height:10em;
-  width:10em;
+  height:15em;
+  width:15em;
   padding:1em;
   /* Firefox */
   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
@@ -43,6 +43,7 @@ ul.sticky-note-ul li.sticky-note-il{
 
 ul.sticky-note-ul li.sticky-note-il h2.sticky-note-text{
   font-size:140%;
+  font-family:"Reenie Beanie",arial,sans-serif;
   font-weight:bold;
   padding-bottom:10px;
 }
