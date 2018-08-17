@@ -251,6 +251,9 @@
                       <li class="nav-item">
                           <a class="nav-link"  href="sched.html"><b>Schedule</b></a>
                       </li>
+                      <li class="nav-item">
+                          <a class="nav-link"  href="reserve.html"><b>Reserve</b></a>
+                      </li>
               </div>
           </nav>
       </header>
@@ -266,63 +269,13 @@
       </section><br><br>
 
       <section>
-          <div class="row">
-              <div class="col"></div>
-              <div class="col-6">
-                  <h3 class="">Week Schedule.</h3>
-                  <p>Clicking on empty times will highlight it (so that you can reserve these times). Clicking on reserved times will show you what is currently being used at this time.</p>
-                  <br>
-                  <table class="table table-striped" style="border: 1px solid #E0EEEE;">
-                      <thead class="scheduleHeader">
-                          <tr>
-                              <th scope="col"></th>
-                              <th scope="col">Monday</th>
-                              <th scope="col">Tuesday</th>
-                              <th scope="col">Wednesday</th>
-                              <th scope="col">Thursday</th>
-                              <th scope="col">Friday</th>
-                          </tr>
-                      </thead>
-                      <tbody id="tableToFill"></tbody>
-                  </table>
-            </div>
-            <div class="col"></div>
-          </div><br><hr><br>
-      </section>
-
-      <section id="addEquipmentSection" hidden>
-        <div class="row justify-content-center">
-            <div class="col"></div>
-            <div class="col-6">
-                <h3>Add Equipment.</h3><br>
-                  <div class="form-group">
-                      <button id="addEquipmentButton" type="button" class="btn btn-primary">Add +</button>
-                  </div> <br>
-
-                  <div class="form-group">
-                      <div id="equipmentChosen" class="list-group">
-                      </div><br>
-                      <small id="chosenMessage" hidden>To remove equipment press the "X".</small>
-                  </div> <br>
-              </div>
-              <div class="col"></div>
-        </div>
-      </section><br><hr><br>
-
-      <section id="submissionSection" hidden>
-        <div class="row justify-content-center">
-            <div class="col"></div>
-            <div class="col-6">
-                <h3>Finish reservation by completing this form.</h3><br>
-                  <div class="form-group">
-                      <button id="beginFinalSubmisisonBtn" type="button" class="btn btn-primary" onclick="beginSubmission()">Reservation Form</button>
-                  </div>
-            </div>
-            <div class="col"></div>
-        </div>
-      </section><br><hr><br>
-
-
+          <div class="row justify-content-center">
+              <div class="col-2"></div>
+              <div class="col-8">
+                  <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ploa8kthfighp6nog7ubeit1c4%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FChicago" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+              <div class="col-2"></div>
+          </div>
+      </section><br><br><hr><br>
 
       <section>
           <div class="row justify-content-center">

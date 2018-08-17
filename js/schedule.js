@@ -11,6 +11,7 @@ let errorFunction = function(error){
 }
 let times = ["9:00 AM", "&nbsp;", "10:00 AM", "&nbsp;", "11:00 AM", "&nbsp;", "12:00 PM", "&nbsp;", "1:00 PM", "&nbsp;", "2:00 PM", "&nbsp;", "3:00 PM", "&nbsp;", "4:00 PM", "&nbsp;"];
 //let chosen = [];
+let timeStamps = [];
 //------------GLOBALS-----------------------------------------------------
 
 //filters individual timeStamps
@@ -57,10 +58,12 @@ function filter(timeStamp){
 }
 
 //Creates table and adds a listener that allows selection
-function fillTable(){
-    $("#tableToFill").empty();
+function fillTable(selector){
 
-    //let timeStamp = $(selector.toString()).attr("data-timestamp");
+    $("#tableToFill").empty();
+    let timeStamp = $(selector.toString()).attr("data-timestamp");
+
+    
     for(let i = 0; i<16; i++){
         let tr =  "<tr id='tr" + i + "' class='time-item'></tr>";
         $("#tableToFill").append(tr);
