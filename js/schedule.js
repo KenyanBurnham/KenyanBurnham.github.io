@@ -63,6 +63,7 @@ function fillTable(){
     //let timeStamp = $(selector.toString()).attr("data-timestamp");
     for(let i = 0; i<16; i++){
         let tr =  "<tr id='tr" + i + "' class='time-item'></tr>";
+        $("#tableToFill").append(tr);
         for(let j = 0; j<6; j++){
           let td = "<td></td>";
           let tdTime = "<td>" + times[i] + "</td>";
