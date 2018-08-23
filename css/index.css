@@ -33,6 +33,28 @@
     padding-left: 2vw;
 }
 
+.my-nav-link{
+    color: white;
+}
+
+.my-nav-brand{
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 1vh;
+}
+a.my-nav-brand:hover{
+  color: white;
+  font-size: 2.6em;
+  text-decoration: none !important;
+}
+
+a.my-nav-link:hover{
+    background-color: #20c997;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none !important;
+}
+
 .heading-salmon{
     background-color: #ffa07a;
     color: white;
@@ -45,11 +67,6 @@
     color: white;
     font-size: 3vh;
     padding-left: 2vw;
-}
-
-
-.to-scrollspy{
-    overflow-y: scroll;
 }
 
 .equipment-section-header{
@@ -67,4 +84,13 @@
     background-color: #20c997;
     color: white;
     font-weight: bold;
+}
+
+.content-spacing{
+    margin-left: 5vw;
+}
+
+.badge-format{
+    display: inline;
+    margin-left: 1vw;
 }

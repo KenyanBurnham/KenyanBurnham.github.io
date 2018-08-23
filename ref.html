@@ -38,7 +38,7 @@
       </script>
 
   </head>
-  <body class="to-scrollspy">
+  <body >
     <header class="main-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.html"><b>PSPE</b> Student Portal</a>
@@ -60,569 +60,732 @@
         </nav>
     </header>
 
-      <section class="salmon-sections">
-          <div class="row justify-content-center">
-              <div class="col"></div>
-              <div class="col-8">
-                  <h1 style="margin-top: 5vh; font-size: 10vh;"> Equipment</h1><br><br>
-              </div>
-              <div class="col"></div>
-          </div>
-      </section>
+    <section class="salmon-sections" hidden>
+        <div class="row justify-content-center">
+            <div class="col"></div>
+            <div class="col-8">
+                <h1 style="margin-top: 5vh; font-size: 10vh;"> Equipment</h1><br><br>
+            </div>
+            <div class="col"></div>
+        </div>
+    </section>
 
-<!-- TODO: Format each part in this to be separate like above -->
-      <section class="">
-          <div class="row justify-content-center">
-              <div class="col"></div>
-              <div class="col-8" >
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <br><br>
-                          <h3 id="top-equipment">Welcome to the equipment page.</h3><br>
-                          <p>You can find information on each of the featured items by clicking on it. Equipment with a "<a href="#" class="badge badge-info">GPIB</a>" symbol will have a GPIB port and can be used in automated testing.</p>
-
-
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br><hr><br>
-
-                  <div class="row justify-content-center salmon-sections">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h1 id="bench-equipment" class="equipment-section-header">Bench-Top Equipment</h1>
-                          <br>
-                          <p>This section contains individual pieces of equipment that are part of standard bench testing setups. Bench-top setups can be chained with GPIB cords to perform automated tests.</p>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br><hr><br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id="dc-power-supplies" class="salmon-header">DC Power Supplies</h2>
-                              <ul>
-                                  <li> <a href="../docs/datasheets/power-supplys/Agilent_E3630A.pdf">Agilent E3630A</a> </li>
-                                  <li> <a href="../docs/datasheets/power-supplys/Agilent_E3648A.pdf">Agilent E3648A</a>  <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/power-supplys/GoodWillInstruments_GPC-3030D.pdf">Good Will Instruments GPC-3030D</a> </li>
-                                  <li> <a href="../docs/datasheets/power-supplys/protek_3003l.pdf">Protek 3003l</a></li>
-                                  <li> <a href="../docs/datasheets/power-supplys/ShenzenMastech_HY3002D-2.pdf">Shenzen Mastech HY3002D-2</a> </li>
-                                  <li> <a href="../docs/datasheets/power-supplys/Tektronix_E361xA.pdf">Tektronix E361xA</a> </li>
-                                  <li> <a href="../docs/datasheets/power-supplys/HP_6443B.pdf">Hewlett Packard 6443B</a> </li>
-                                  <li> <a href="../docs/datasheets/power-supplys/Agilent_e3640a.pdf">Agilent E3640A</a>  <a href="#" class="badge badge-info">GPIB</a></li>
-                              </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "function-generators" class = "salmon-header"> Function Generators </h2>
-                              <ul>
-                                  <li> <a href="../docs/datasheets/function-generators/HP_33120a.pdf">Hewlett Packard 33120a</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/function-generators/Rigol_DG10x2.pdf">Rigol DG10x2</a> </li>
-                                  <li> <a href="../docs/datasheets/function-generators/SRS_DS345.pdf">Standford Research Systems DS345</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/function-generators/Agilent_33220A.pdf">Agilent 33220A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/function-generators/Agilent_8165A.pdf">Agilent 8165A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "source-meters" class = "salmon-header"> Source Meters </h2>
-                              <ul>
-                                  <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2400 Series</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2410</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2420</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2440</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                                  <li> <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf">Keithley 2450</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "oscilloscopes" class = "salmon-header"> Oscilloscopes</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO9254A.pdf">Agilent MSO9254A</a> </li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_2445A.pdf">Tektronix 2445A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS210</a> </li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf">Tektronix TDS220</a> </li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS320.pdf">Tektronix TDS320</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/HP_54502a.pdf">Hewlett Packard 54502A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO6054A.pdf">Agilent MSO6054A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "multimeters" class = "salmon-header"> Multimeters</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf">Agilent 34401A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Multimeters/Fluke_8840A.pdf">Fluke 8840A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Multimeters/Fluke_45.pdf">Fluke 45</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/Multimeters/Fluke_8010a.pdf">Fluke 8010A</a></li>
-                              <li> <a href="../docs/datasheets/Multimeters/HP_3466a.pdf">Hewlett Packard 3466A</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "electronic-loads" class = "salmon-header"> DC Electronic Loads</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8500Series.pdf">BK Precision 8500 Series</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                              <li> <a href="../docs/datasheets/electronic-loads/BKPrecision_8600Series.pdf">BK Precision 8600 Series</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "lcr-meters" class = "salmon-header"> LCR Meters</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/lcr-meters/Agilent_4284A.pdf">Agilent 4284A</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "spectrum-analyzers" class = "salmon-header"> Spectrum Analyzers</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/spectrum-analyzer/Rigol_DSA800.pdf">Rigol DSA800</a> </li>
-                              <li> <a href="../docs/datasheets/spectrum-analyzer/SRS_SR760m.pdf">Standard Research Systems SR760</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "picoammeters" class = "salmon-header"> Picoammeters</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/Picoammeter/Keithley_6485.pdf">Keithley 6485</a> <a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "current-probes" class = "salmon-header"> Current Probes</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/current-probes/Keysight_N2780B.pdf">Keysight N2782B</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-
-                  <br><hr><br>
-                  <div class="row justify-content-center salmon-sections">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h1 id="testing-systems" class="equipment-section-header">Testing Systems</h1>
-                          <br>
-                          <p>This section contains complete testing packages or vendor specific testing setups. These instruments tyically have multiple sub-utilities and instruments that can be configured via a vendor software.</p>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br><hr><br>
-
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "virtual-benches" class = "salmon-header"> National Instruments Virtual Bench</h2>
-                          <ul>
-                              <li> <a href="../docs/datasheets/virtual-benches/NI_VirtualBench_8012.pdf">NI Virtual Bench 8012</a> </li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "pxis" class = "salmon-header">National Instruments PXI </h2>
-                          <ul>
-                              <li><a href="../docs/datasheets/pxi/pxi-1000B/pxi_1000B_datasheet.pdf">PXI-1000B</a> </li>
-                              <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042</a> </li>
-                              <li><a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf">PXI-1042Q</a> </li>
-                              <li><a href="../docs/datasheets/pxi/pxi-1075/pxi_1075_datasheet.pdf">PXIe-1075 Chassis</a> </li>
-                          </ul>
-                          <blockquote cite="http://www.ni.com/pxi/whatis/">
-                            The PSPE program has 4 distinct PXI chassis and certain PXI cards are cross-compatible. Refer to the list and table below for chassis specifics, card datasheets, and cross-compatibility.
-                          </blockquote>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                        <div class="panel panel-default">
-                            <!-- Default panel contents -->
-                            <div class="panel-heading heading-teal">PXI Card Compatibility</div>
-                            <div class="panel-body">
-                                <br><p>*The PXI-5610 RF Upconverter datasheet has not been found.</p>
-                            </div>
-                            <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th scope="col">Model</th>
-                                      <th scope="col">Card Type</th>
-                                      <th scope="col">Description</th>
-                                      <th scope="col">PXI-1000B</th>
-                                      <th scope="col">PXI-1042</th>
-                                      <th scope="col">PXI-1042Q</th>
-                                      <th scope="col">PXIe-1075</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td> PXI-8187 </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_8187.pdf">Embedded Controller</a> </td>
-                                      <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6025E </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6025E.pdf">Multifunction I/O</a> </td>
-                                      <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6071E </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6071E.pdf">Multifunction I/O</a></td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6031E </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6031E.pdf">Multifunction I/O</a> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6528 </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6528.pdf">Isolated Digital I/O</a> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6259 </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6259.pdf">M Series Multifunction DAQ</a> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-7831R </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_7831R.pdf">Reconfigurable I/O</a> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6723 </td>
-                                      <td> PXI 1000B Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6723.pdf"> 32 Channel AO, 13 Bit</a> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-8196 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (1)</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-8196 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (2)</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-5600 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_5600.pdf"> RF Downconverter</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-5610 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> RF Upconverter * </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-5421 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5421.pdf">16-Bit 100 MS/s AWG</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-5620 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5620.pdf">64 MS/s Digitizer</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6552 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6552.pdf">100 MHZ Digital I/O</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-2515 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2515.pdf">High Speed Digital Signal Insertion Switch</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-8464 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8464.pdf">CAN/XS Series 2</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-2567 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2567.pdf">64 Channel Relay Driver Module </a></td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-2568 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2568.pdf">31 SPST Relay Module</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6132 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf"> S Series 4Ch, 14 bit, 2.5 MS/s Multifunctional DAQ </a></td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-6133 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf">16-Bit Analog Output</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXI-4130 </td>
-                                      <td> PXI 1042 Card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_4130.pdf">Power SMU</a> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
-                                      <td class="pxi-yes"> 8 slots </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXIe-8133 </td>
-                                      <td> PXIe card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_8133.pdf">Embedded Controller </a></td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXIe-4132 </td>
-                                      <td> PXIe card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4132.pdf"> Precision SMU</a> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                  </tr>
-                                  <tr>
-                                      <td> PXIe-4141 </td>
-                                      <td> PXIe card </td>
-                                      <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4141.pdf">4-CH Precision SMU</a> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td> </td>
-                                      <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                          <h2 id = "sts" class = "salmon-header">National Instruments Semiconductor Testing System</h2>
-                          <ul>
-                            <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Testing System</a><a href="#" class="badge badge-info">GPIB</a></li>
-                          </ul>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-
-                  <div class="row justify-content-center">
-                      <div class="col"></div>
-                      <div class="col-10">
-                        <div class="panel panel-default">
-                            <!-- Default panel contents -->
-                            <div class="panel-heading heading-teal">Current STS Configuration</div>
-                            <div class="panel-body">
-                                <p> The National Instruments Semiconductor Testing System ("STS") houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
-                                <br><p>Resources on the current device interface board can be found below:</p>
-                                <ul>
-                                    <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
-                                    <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
-                                    <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
-                                    <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
-                                    <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
-                                    <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
-                                </ul>
-                            </div>
-
-                            <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th scope="col">Model</th>
-                                      <th scope="col">Card Type</th>
-                                      <th scope="col">Description</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
-                                      <td>PXIe Card</td>
-                                      <td>4-CH Precision SMU</td>
-                                  </tr>
-                                  <tr>
-                                      <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
-                                      <td>PXIe Card</td>
-                                      <td>Digital Waveform Generator/Analyzer with PPMU</td>
-                                  </tr>
-                                  <tr>
-                                      <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
-                                      <td>PXI Card</td>
-                                      <td>64 Pin Relay Driver</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="col"></div>
-                  </div>
-                  <br>
-              </div>
-              <div class="col"></div>
-          </div>
-      </section>
-
-      <hr><br>
+    <div class="container-fluid">
       <section>
-          <div class="row justify-content-center">
-              <div class="col-2"></div>
-              <div class="col-8">
-
-                  <p>Developed by <a>Kenyan Burnham</a> for the <a href="http://www.depts.ttu.edu/ece/research/pspe/">PSPE Program</a>, <a href="https://www.ttu.edu/">Texas Tech University<a> in 2018.</p>
-                  <p>Contact Kenyan at: kenyan.burnham@ttu.edu.</p>
+        <div class="row">
+          <div class="col-2" style="background-color: #ffa07a">
+              <div style="position: sticky;">
+                      <nav id="equipmentNavbar" class="navbar">
+                      <a class="navbar-brand my-nav-brand" href="#">Equipment <br><hr style="background-color: white;">  </a>
+                          <nav class="nav nav-pills flex-column">
+                              <a class="nav-link my-nav-link" href="#benchEquipment"><b>Bench-Top Equipment</b></a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3  my-nav-link" href="#dCPowerSupplies">Power Supply</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#funcitonGenerators">Function Generators</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#smus">Source Meters</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#oscopes">Oscilloscopes</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#multimeters">Multimeters</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#electronicLoads">DC Electronic Loads</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#lcrs">LCR Meters</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#specanalyzer">Spectrum Analyzers</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#picoammeters">Picoammeters</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#currentProbes">Current Probes</a>
+                                </nav>
+                              <a class="nav-link my-nav-link" href="#testingSystems"><b>Testing Systems</b></a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3 my-nav-link" href="#virtualbenches">Virtual Benches</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#pxis">PXIs</a>
+                                      <nav class="nav nav-pills flex-column">
+                                          <a class="nav-link ml-3 my-nav-link" href="#compatibility">Compatibility Chart</a>
+                                      </nav>
+                                    <a class="nav-link ml-3 my-nav-link" href="#sts">STS</a>
+                                </nav>
+                          </nav>
+                      </nav>
               </div>
-              <div class="col-2"></div>
-          </div>
-      </section>
 
+          </div>
+          <div class="col-10" style="padding: 0px 0px; margin: 0px 0px;">
+                <div id="listOfEquipment" style="position: relative; height: 100vh; overflow-y: scroll;"   >
+                      <div class="row content-spacing" style="padding-top: 5vw;">
+                          <div class="col-6">
+                              <h3 id="topEquipment">Welcome to the equipment page.</h3><br>
+                              <p>You can find information on each of the featured items by clicking on it. Equipment with a "<a href="#" class="badge badge-info">GPIB</a>" symbol will have a GPIB port and can be used in automated testing setups. use the navigation on the left to jump to a section.</p>
+                              <br>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-12">
+                              <hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <h1 id="benchEquipment" class="equipment-section-header">Bench-Top Equipment</h1>
+                              <br>
+                              <p>This section contains individual pieces of equipment that are part of standard bench testing setups. Bench-top setups can be chained with GPIB cords to perform automated tests.</p>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-12">
+                              <hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                              <h2 id="dCPowerSupplies">DC Power Supplies</h2>
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/power-supplys/Agilent_E3630A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent E3630A</a>
+                                    <a href="../docs/datasheets/power-supplys/Agilent_e3640a.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent E3640A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/power-supplys/Agilent_E3648A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent E3648A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/power-supplys/GoodWillInstruments_GPC-3030D.pdf" class="list-group-item list-group-item-action list-group-item-light">Good Will Instruments GPC-3030D</a>
+                                    <a href="../docs/datasheets/power-supplys/protek_3003l.pdf" class="list-group-item list-group-item-action list-group-item-light">Protek 3003l</a>
+                                    <a href="../docs/datasheets/power-supplys/ShenzenMastech_HY3002D-2.pdf" class="list-group-item list-group-item-action list-group-item-light">Shenzen Mastech HY3002D-2</a>
+                                    <a href="../docs/datasheets/power-supplys/Tektronix_E361xA.pdf" class="list-group-item list-group-item-action list-group-item-light">Tektronix E361xA</a>
+                                    <a href="../docs/datasheets/power-supplys/HP_6443B.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 6443B</a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                              <h2 id="funcitonGenerators">Function Generators</h2>
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/funcitonGenerators/HP_33120a.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 33120a <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/funcitonGenerators/Rigol_DG10x2.pdf" class="list-group-item list-group-item-action list-group-item-light">Rigol DG10x2 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/funcitonGenerators/SRS_DS345.pdf" class="list-group-item list-group-item-action list-group-item-light">Standford Research Systems DS345 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/funcitonGenerators/Agilent_33220A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 33220A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/funcitonGenerators/Agilent_8165A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 8165A <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                              <h2 id="smus">Source Meters</h2>
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2400 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2410 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2420 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2440 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2450 <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                              <h2 id="oscopes">Oscilloscopes</h2>
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO9254A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent MSO9254A</a>
+                                    <a href="../docs/datasheets/Oscilloscopes/Tektronix_2445A.pdf" class="list-group-item list-group-item-action list-group-item-light">Tektronix 2445A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf" class="list-group-item list-group-item-action list-group-item-light">Tektronix TDS210</a>
+                                    <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS210.pdf" class="list-group-item list-group-item-action list-group-item-light">Tektronix TDS220</a>
+                                    <a href="../docs/datasheets/Oscilloscopes/Tektronix_TDS320.pdf" class="list-group-item list-group-item-action list-group-item-light">Tektronix TDS320 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Oscilloscopes/HP_54502a.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 54502A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Oscilloscopes/Agilent_MSO6054A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent MSO6054A <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="multimeters">Multimeters</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 34401A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Multimeters/Fluke_8840A.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 8840A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Multimeters/Fluke_45.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 45 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Multimeters/Fluke_8010a.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 8010A</a>
+                                    <a href="../docs/datasheets/Multimeters/HP_3466a.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 3466A</a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="electronicLoads">DC Electronic Loads</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/electronicLoads/BKPrecision_8500Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8500 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/electronicLoads/BKPrecision_8600Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8600 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="lcrs">LCR Meters</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/lcrs/Agilent_4284A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 4284A <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="specanalyzer">Spectrum Analyzers</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/spectrum-analyzer/Rigol_DSA800.pdf" class="list-group-item list-group-item-action list-group-item-light">Rigol DSA800</a>
+                                    <a href="../docs/datasheets/spectrum-analyzer/SRS_SR760m.pdf" class="list-group-item list-group-item-action list-group-item-light">Standard Research Systems SR760 <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="picoammeters">Picoammeters</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/Picoammeter/Keithley_6485.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 6485 <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="currentProbes">Current Probes</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/currentProbes/Keysight_N2780B.pdf" class="list-group-item list-group-item-action list-group-item-light">Keysight N2782B</a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <!-- Testing systems-->
+
+                      <div class="row">
+                          <div class="col-12">
+                              <hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <h1 id="testingSystems" class="equipment-section-header">Testing Systems</h1>
+                              <br>
+                              <p>This section contains complete testing packages or vendor specific testing setups. These instruments tyically have multiple sub-utilities and instruments that can be configured via a vendor software.</p>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-12">
+                              <hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="virtualbenches">Virtual Benches</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                  <a href="../docs/datasheets/virtualbenches/NI_VirtualBench_8012.pdf" class="list-group-item list-group-item-action list-group-item-light">National Instruments Virtual Bench 8012</a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="pxis">PXIs</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-4">
+                                <div class="list-group">
+                                    <a href="../docs/datasheets/pxi/pxi-1000B/pxi_1000B_datasheet.pdf" class="list-group-item list-group-item-action list-group-item-light">PXI-1000B</a>
+                                    <a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf" class="list-group-item list-group-item-action list-group-item-light">PXI-1042</a>
+                                    <a href="../docs/datasheets/pxi/pxi-1042/pxi_1042_datasheet.pdf" class="list-group-item list-group-item-action list-group-item-light">PXI-1042Q</a>
+                                    <a href="../docs/datasheets/pxi/pxi-1075/pxi_1075_datasheet.pdf" class="list-group-item list-group-item-action list-group-item-light">PXIe-1075 Chassis</a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br>
+                              <blockquote cite="http://www.ni.com/pxi/whatis/">
+                                The PSPE program has 4 distinct PXI chassis and certain PXI cards are cross-compatible. Refer to the list and table below for chassis specifics, card datasheets, and cross-compatibility.
+                              </blockquote>
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div id="compatibility" class="row content-spacing">
+                          <div class="col-8">
+                              <div class="panel panel-default">
+                                  <!-- Default panel contents -->
+                                  <div class="panel-heading heading-teal">PXI Card Compatibility</div>
+                                  <div class="panel-body">
+                                      <br><p>*The PXI-5610 RF Upconverter datasheet has not been found.</p>
+                                  </div>
+                                  <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Model</th>
+                                            <th scope="col">Card Type</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">PXI-1000B</th>
+                                            <th scope="col">PXI-1042</th>
+                                            <th scope="col">PXI-1042Q</th>
+                                            <th scope="col">PXIe-1075</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> PXI-8187 </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_8187.pdf">Embedded Controller</a> </td>
+                                            <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6025E </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6025E.pdf">Multifunction I/O</a> </td>
+                                            <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6071E </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6071E.pdf">Multifunction I/O</a></td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6031E </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6031E.pdf">Multifunction I/O</a> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6528 </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6528.pdf">Isolated Digital I/O</a> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6259 </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6259.pdf">M Series Multifunction DAQ</a> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-7831R </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_7831R.pdf">Reconfigurable I/O</a> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6723 </td>
+                                            <td> PXI 1000B Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1000B/pxi_6723.pdf"> 32 Channel AO, 13 Bit</a> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-8196 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (1)</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-8196 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8196.pdf">Embedded Controller (2)</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-5600 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_5600.pdf"> RF Downconverter</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-5610 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> RF Upconverter * </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-5421 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5421.pdf">16-Bit 100 MS/s AWG</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-5620 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_5620.pdf">64 MS/s Digitizer</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6552 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6552.pdf">100 MHZ Digital I/O</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-2515 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2515.pdf">High Speed Digital Signal Insertion Switch</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-8464 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_8464.pdf">CAN/XS Series 2</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-2567 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2567.pdf">64 Channel Relay Driver Module </a></td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-2568 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_2568.pdf">31 SPST Relay Module</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6132 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td><a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf"> S Series 4Ch, 14 bit, 2.5 MS/s Multifunctional DAQ </a></td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-6133 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_6132.pdf">16-Bit Analog Output</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXI-4130 </td>
+                                            <td> PXI 1042 Card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1042/pxi_4130.pdf">Power SMU</a> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>  </td>
+                                            <td class="pxi-yes"> 8 slots </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXIe-8133 </td>
+                                            <td> PXIe card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_8133.pdf">Embedded Controller </a></td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXIe-4132 </td>
+                                            <td> PXIe card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4132.pdf"> Precision SMU</a> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> PXIe-4141 </td>
+                                            <td> PXIe card </td>
+                                            <td> <a href="../docs/datasheets/pxi/pxi-1075/pxie_4141.pdf">4-CH Precision SMU</a> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td class="pxi-yes"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                              </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br><hr><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                            <h2 id="sts">Semiconductor Testing System (STS)</h2>
+                            <br><br>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-6">
+                                <div class="list-group">
+                                    <a href="http://www.ni.com/semiconductor-test-system/" class="list-group-item list-group-item-action list-group-item-light">National Instruments Semiconductor Testing System <p class="badge badge-info badge-format">GPIB</p></a>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <br><br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-8">
+                              <div class="panel panel-default">
+                                  <!-- Default panel contents -->
+                                  <div class="panel-heading heading-teal">Current STS Configuration</div>
+                                  <div class="panel-body">
+                                      <br>
+                                      <p> The National Instruments Semiconductor Testing System ("STS") houses a <a href="http://www.ni.com/pdf/manuals/373204c.pdf">PXIe-1078</a> outfitted with the following cards:</p>
+                                      <p>Resources on the current device interface board can be found below:</p>
+                                      <ul>
+                                          <li><a href="http://www.ni.com/semiconductor-test-system/">NI Semiconductor Test System</a> </li>
+                                          <li><a href="../docs/joanna-gatlin-thesis.pdf">Joanna Gatlin's Thesis</a></li>
+                                          <li><a href="http://www.ni.com/example/30946/en/">Power Consumption Testing Technical Details (IDD, IDDQ)</a></li>
+                                          <li><a href="http://www.ni.com/white-paper/52539/en//">Testing RF Front-End ICs With STS</a> </li>
+                                          <li><a href="http://zone.ni.com/reference/en-XX/help/373892F-01/TOC1.htm">NI TestStand Semiconductor Module Help</a> </li>
+                                          <li><a href="http://www.ni.com/teststand/demos/">See TestStand In Action</a> </li>
+                                      </ul>
+                                      <br>
+                                  </div>
+
+                                  <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Model</th>
+                                            <th scope="col">Card Type</th>
+                                            <th scope="col">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-4140.pdf">PXIe-4140</a></td>
+                                            <td>PXIe Card</td>
+                                            <td>4-CH Precision SMU</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="../docs/datasheets/pxi/pxi-1078/pxie-6556.pdf">PXIe-6556</a></td>
+                                            <td>PXIe Card</td>
+                                            <td>Digital Waveform Generator/Analyzer with PPMU</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="../docs/datasheets/pxi/pxi-1042/pxi-2567.pdf">PXIe-2567</a></td>
+                                            <td>PXI Card</td>
+                                            <td>64 Pin Relay Driver</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-12">
+                              <br> <hr> <br>
+                              <p>Developed by <a>Kenyan Burnham</a> for the <a href="http://www.depts.ttu.edu/ece/research/pspe/">PSPE Program</a>, <a href="https://www.ttu.edu/">Texas Tech University<a> in 2018.</p>
+                              <p>Contact Kenyan at: kenyan.burnham@ttu.edu.</p>
+                          </div>
+                      </div>
+
+
+                      <!-- END-->
+                </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+      <script type="text/javascript">
+          //$('#listOfEquipment').scrollspy({ target: '#equipmentNavbar' })
+      </script>
       <script src="js/index.js"></script>
   </body>
 </html>
