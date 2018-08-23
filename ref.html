@@ -81,7 +81,7 @@
                               <a class="nav-link my-nav-link" href="#benchEquipment"><b>Bench-Top Equipment</b></a>
                                 <nav class="nav nav-pills flex-column">
                                     <a class="nav-link ml-3  my-nav-link" href="#dCPowerSupplies">Power Supply</a>
-                                    <a class="nav-link ml-3 my-nav-link" href="#funcitonGenerators">Function Generators</a>
+                                    <a class="nav-link ml-3 my-nav-link" href="#functionGenerators">Function Generators</a>
                                     <a class="nav-link ml-3 my-nav-link" href="#smus">Source Meters</a>
                                     <a class="nav-link ml-3 my-nav-link" href="#oscopes">Oscilloscopes</a>
                                     <a class="nav-link ml-3 my-nav-link" href="#multimeters">Multimeters</a>
@@ -107,18 +107,25 @@
 
           </div>
           <div class="col-10" style="padding: 0px 0px; margin: 0px 0px;">
-                <div id="listOfEquipment" style="position: relative; height: 100vh; overflow-y: scroll;"   >
+                <div id="listOfEquipment" style="position: relative; height: 100vh; overflow-x: hidden; overflow-y: scroll;"   >
+
+                      <div class="row" style="background-color: #ffa07a;">
+                          <div class="col-12">
+                              <br><br><br><br>
+                          </div>
+                      </div>
+
                       <div class="row content-spacing" style="padding-top: 5vw;">
                           <div class="col-6">
                               <h3 id="topEquipment">Welcome to the equipment page.</h3><br>
-                              <p>You can find information on each of the featured items by clicking on it. Equipment with a "<a href="#" class="badge badge-info">GPIB</a>" symbol will have a GPIB port and can be used in automated testing setups. use the navigation on the left to jump to a section.</p>
+                              <p>You can find information on each of the featured items by clicking on it. Use the navigation on the left to jump to a section.<br><br> Equipment with a "<a href="#" class="badge badge-info">GPIB</a>" symbol will have a GPIB port and can be used in automated testing setups. <br><br> Equipment with a "<a href="#" class="badge badge-secondary">U/A</a>" is unnavailable or not reservable for the semester, contact the lab manager regarding any questions about equipment availability.</p>
                               <br>
                           </div>
                       </div>
 
                       <div class="row">
                           <div class="col-12">
-                              <hr><br>
+                              <br><hr class="divider-hr-salmon" style="background-color: #ffa07a; height: 5px;"><br>
                           </div>
                       </div>
 
@@ -132,7 +139,7 @@
 
                       <div class="row">
                           <div class="col-12">
-                              <hr><br>
+                              <br><hr class="divider-hr-salmon" style="background-color: #ffa07a; height: 5px;"><br>
                           </div>
                       </div>
 
@@ -174,11 +181,11 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/funcitonGenerators/HP_33120a.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 33120a <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/funcitonGenerators/Rigol_DG10x2.pdf" class="list-group-item list-group-item-action list-group-item-light">Rigol DG10x2 <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/funcitonGenerators/SRS_DS345.pdf" class="list-group-item list-group-item-action list-group-item-light">Standford Research Systems DS345 <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/funcitonGenerators/Agilent_33220A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 33220A <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/funcitonGenerators/Agilent_8165A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 8165A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/function-generators/HP_33120a.pdf" class="list-group-item list-group-item-action list-group-item-light">Hewlett Packard 33120a <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/function-generators/Rigol_DG10x2.pdf" class="list-group-item list-group-item-action list-group-item-light">Rigol DG10x2 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/function-generators/SRS_DS345.pdf" class="list-group-item list-group-item-action list-group-item-light">Standford Research Systems DS345 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/function-generators/Agilent_33220A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 33220A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/function-generators/Agilent_8165A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 8165A <p class="badge badge-info badge-format">GPIB</p></a>
                                 </div>
                             </div>
                       </div>
@@ -199,11 +206,11 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2400 Series <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2410 <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2420 <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2440 <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/smus/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2450 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2400 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2410 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2420 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2440 <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/source-meters/Keithley_2400Series.pdf" class="list-group-item list-group-item-action list-group-item-light">Keithley 2450 <p class="badge badge-info badge-format">GPIB</p> <p class="badge badge-secondary badge-format-UA">U/A</p> </a>
                                 </div>
                             </div>
                       </div>
@@ -251,7 +258,7 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 34401A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/Multimeters/Agilent_34401A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 34401A <p class="badge badge-info badge-format">GPIB</p> <p class="badge badge-secondary badge-format-UA">U/A</p></a>
                                     <a href="../docs/datasheets/Multimeters/Fluke_8840A.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 8840A <p class="badge badge-info badge-format">GPIB</p></a>
                                     <a href="../docs/datasheets/Multimeters/Fluke_45.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 45 <p class="badge badge-info badge-format">GPIB</p></a>
                                     <a href="../docs/datasheets/Multimeters/Fluke_8010a.pdf" class="list-group-item list-group-item-action list-group-item-light">Fluke 8010A</a>
@@ -276,8 +283,8 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/electronicLoads/BKPrecision_8500Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8500 Series <p class="badge badge-info badge-format">GPIB</p></a>
-                                    <a href="../docs/datasheets/electronicLoads/BKPrecision_8600Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8600 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/electronic-loads/BKPrecision_8500Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8500 Series <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/electronic-loads/BKPrecision_8600Series.pdf" class="list-group-item list-group-item-action list-group-item-light">BK Precision 8600 Series <p class="badge badge-info badge-format">GPIB</p> <p class="badge badge-secondary badge-format-UA">U/A</p></a>
                                 </div>
                             </div>
                       </div>
@@ -319,7 +326,7 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/lcrs/Agilent_4284A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 4284A <p class="badge badge-info badge-format">GPIB</p></a>
+                                    <a href="../docs/datasheets/lcr-meters/Agilent_4284A.pdf" class="list-group-item list-group-item-action list-group-item-light">Agilent 4284A <p class="badge badge-info badge-format">GPIB</p></a>
                                 </div>
                             </div>
                       </div>
@@ -383,7 +390,7 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                    <a href="../docs/datasheets/currentProbes/Keysight_N2780B.pdf" class="list-group-item list-group-item-action list-group-item-light">Keysight N2782B</a>
+                                    <a href="../docs/datasheets/current-probes/Keysight_N2780B.pdf" class="list-group-item list-group-item-action list-group-item-light">Keysight N2782B</a>
                                 </div>
                             </div>
                       </div>
@@ -392,7 +399,7 @@
 
                       <div class="row">
                           <div class="col-12">
-                              <hr><br>
+                              <br><br><hr class="divider-hr-salmon" style="background-color: #ffa07a; height: 5px;"><br>
                           </div>
                       </div>
 
@@ -406,7 +413,7 @@
 
                       <div class="row">
                           <div class="col-12">
-                              <hr><br>
+                              <hr class="divider-hr-salmon" style="background-color: #ffa07a; height: 5px;"><br>
                           </div>
                       </div>
 
@@ -420,7 +427,7 @@
                       <div class="row content-spacing">
                           <div class="col-4">
                                 <div class="list-group">
-                                  <a href="../docs/datasheets/virtualbenches/NI_VirtualBench_8012.pdf" class="list-group-item list-group-item-action list-group-item-light">National Instruments Virtual Bench 8012</a>
+                                  <a href="../docs/datasheets/virtual-benches/NI_VirtualBench_8012.pdf" class="list-group-item list-group-item-action list-group-item-light">National Instruments Virtual Bench 8012</a>
                                 </div>
                             </div>
                       </div>
@@ -790,7 +797,13 @@
 
                       <div class="row">
                           <div class="col-12">
-                              <br> <hr> <br>
+                              <br><hr class="divider-hr-salmon" style="background-color: #ffa07a; height: 5px;"> <br>
+                          </div>
+                      </div>
+
+                      <div class="row content-spacing">
+                          <div class="col-12">
+                              <br> <br>
                               <p>Developed by <a>Kenyan Burnham</a> for the <a href="http://www.depts.ttu.edu/ece/research/pspe/">PSPE Program</a>, <a href="https://www.ttu.edu/">Texas Tech University<a> in 2018.</p>
                               <p>Contact Kenyan at: kenyan.burnham@ttu.edu.</p>
                           </div>

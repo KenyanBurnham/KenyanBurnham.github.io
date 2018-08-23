@@ -38,7 +38,8 @@
 }
 
 .my-nav-brand{
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 2.5em;
     margin-bottom: 1vh;
 }
@@ -49,8 +50,8 @@ a.my-nav-brand:hover{
 }
 
 a.my-nav-link:hover{
-    background-color: #20c997;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 1.1em;
     text-decoration: none !important;
 }
@@ -93,4 +94,9 @@ a.my-nav-link:hover{
 .badge-format{
     display: inline;
     margin-left: 1vw;
+}
+
+.badge-format-UA{
+    display: inline;
+    margin-left: .5vw;
 }
