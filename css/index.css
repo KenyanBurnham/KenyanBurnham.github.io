@@ -38,20 +38,20 @@
 }
 
 .my-nav-brand{
-    background-color: white;
-    color: black;
-    font-size: 2.5em;
+    background-color: #ffa07a;
+    color: white;
+    font-size: 1.5em;
     margin-bottom: 1vh;
 }
 a.my-nav-brand:hover{
   color: white;
-  font-size: 2.6em;
+  font-size: 1.6em;
   text-decoration: none !important;
 }
 
 a.my-nav-link:hover{
-    background-color: white;
-    color: black;
+    background-color: #20c997;
+    color: white;
     font-size: 1.1em;
     text-decoration: none !important;
 }
